@@ -1,0 +1,29 @@
+Etapas de Chatbots:
+Etapa 1 - Aprofundamento no Contexto
+Etapa 2 - Criação do agente conversacional e cloud functions (Opção 1 - Quando não há necessidade de Function Calling)
+2.1. Criação de agent em cloud e início de construção e testes de prompt e instruções (prompt engineering).  
+2.2. Criação de cloud functions de pesquisas, processamento de documentos e imagens, criação de documentos etc.  
+2.3. Criação de endpoint de API para conexão do agent à interface.  
+2.4. Criação de gateway para integração.
+Etapa 2 - Criação do agente conversacional com function calling e cloud functions (Opção 2 - Quando há necessidade de Function Calling)
+2.1. Criação de agent em cloud e início de construção e testes de prompt e instruções (prompt engineering).  
+2.2. Criação de cloud functions de pesquisas, processamento de documentos e imagens, criação de documentos etc.  
+2.3. Criação de function calling personalizados integrados a scripts na cloud para automatizar as tarefas através do chatbot.  
+2.3.1. A partir disso, o chatbot reconhece a intenção do usuário em que tarefa quer fazer e executa-a automaticamente.  
+2.4. Criação de endpoint de API para conexão do agent à interface.
+Etapa 3 - Criação de banco vetorial e treino do modelo com dados externos
+3.1. Criação de banco vetorial para armazenar os embeddings (dados vetorizados) necessários.  
+3.2. Criação de vector storage com ajuste de dimensionalidade para indexação vetorial dos dados.  
+3.3. Ajuste de dados para melhores técnicas de RAG (retrieval augmented generation) com chunking e criação de embeddings em banco vetorial.  
+3.4. Treino do modelo com dados extras, testando novas informações vetorizadas e ajustando conforme necessário.
+Etapa 4 - Criação da interface e integração com agente e funções
+4.1. Criação da interface (Streamlit programável em Python, Power Apps integrado).  
+4.2. Integração da interface com agent através de endpoint de API.  
+4.3. Integração das funções do agente com botões e funcionalidades nativas da interface.  
+4.4. Adequação para múltiplos chats, contexto, modos do agent (geração de imagem/arquivo, pesquisa profunda, pensamento estendido), resposta gerada aos poucos, cloud functions criadas.
+Etapa 5 - Fine-tuning e melhorias finais com testes
+5.1. Monitoramento e testes de casos de uso do chatbot, buscando entender pontos de melhoria.  
+5.2. Ajustes finos do chatbot e fine-tuning para adequação do modelo de LLM para restrições e personalizações necessárias.  
+5.3. Ajuste dos prompts, instruções e dados embedded, além de criação de perguntas e respostas exemplos para fine-tuning.  
+5.4. Validação contínua com equipe para melhorias através de ajustes de prompt engineering, RAG e fine-tuning.
+Etapa 6 - Validação e documentação final do projeto

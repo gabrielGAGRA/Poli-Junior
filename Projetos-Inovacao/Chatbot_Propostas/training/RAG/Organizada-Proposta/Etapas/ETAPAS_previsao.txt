@@ -1,0 +1,25 @@
+Etapas do Projeto:
+Etapa 1 - Imersão no contexto
+Etapa 2 - Extração dos dados (OPCIONAL. APENAS SE O CLIENTE NAO TIVER OS DADOS OU DESEJAR DADOS EXTERNOS)
+2.1. Determinação das fontes de extração dos dados;
+2.2. Determinação de métricas a serem avaliadas (exemplos);
+2.3. Construção dos códigos de extração automatizada dos dados;
+2.4. Tratamento e consolidação dos dados;
+2.5. (Exemplos de dados extraidos);
+Etapa 3 - Determinação de métricas e estudo estatístico
+3.1. Realizar o estudo e o tratamento dos dados (valores nulos, outliers e incongruências);
+3.2. Estudo estatístico da base histórica;
+3.3. Formulação de hipóteses;
+3.4. Teste de hipóteses, correlações e análise multivariada, facilitando futuras manipulações;
+3.5. Estudar o comportamento das features individualmente e em conjunto;
+Etapa 4 - Seleção de variáveis e construção do modelo
+4.1. Seleção e remoção de features desnecessárias para o modelo;
+4.2. Tratamentos necessários como encoding, normalização e demais iterações;
+4.3. Construção do modelo de previsão de ...;
+Etapa 5 - Teste de modelos e tuning de algoritmos
+5.1. Testar quais tipos de alterações e transformações impactam mais os algoritmos segundo as métricas de sucesso elencadas;
+5.2. Comparação de desempenho dos modelos elaborados;
+5.3. Compreender e ajustar os hiperparâmetros para obter as melhores métricas de sucesso e comportamento desejado pelo algoritmo;
+5.4. Documentar a análise obtida e repassar para a equipe da (EMPRESA);
+Etapa 6 - Processo iterativo. Melhoria da classificação e previsão de ...;
+Etapa 7 - Testes, validação e documentação

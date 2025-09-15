@@ -1,0 +1,72 @@
+Diagnóstico:
+RESUMO: Atualmente, a Livraria Cultura enfrenta desafios relacionados à baixa previsibilidade de demanda e à falta de inteligência na reposição do acervo, tanto físico quanto online. Isso compromete a eficiência operacional e gera perda de oportunidades comerciais, dificultando a atuação em um mercado editorial cada vez mais dinâmico e competitivo.
+SITUACAO: A empresa identifica uma oportunidade estratégica de modernizar seu modelo de abastecimento, especialmente para lançamentos e títulos fora do radar dos grandes marketplaces, que representam até 45% das vendas semanais. Hoje, a reposição é feita com base em critérios pouco assertivos — em parte por ausência de histórico de vendas ou leitura de tendências.
+PROBLEMA: A baixa assertividade resulta em estoques ineficientes, baixa rentabilidade e risco de ruptura em livros de alto potencial. Com mais de 30 anos de dados e 8,5 milhões de CPFs cadastrados, há um potencial significativo de aplicar modelos preditivos e integrar fontes externas como redes sociais e portais especializados (ex: blogs, Instagram de contas profissionais e comentários de editoras independentes).
+IMPACTOS POSITIVOS: Nesse sentido, a Cultura busca construir um modelo inteligente de previsão de demanda, que una dados históricos, perfis de clientes e tendências externas. Isso permitirá evitar compras desnecessárias, maximizar o giro de estoque, automatizar curadorias, reduzir desperdícios e melhorar a experiência do cliente, tanto nas lojas físicas quanto no e-commerce.
+
+Objetivos do projeto:
+TITULO DE OBJETIVO 1: Otimizar a curadoria e reposição de acervo com inteligência preditiva
+OBJETIVO 1: Por meio de modelos baseados em dados históricos e sinais externos (como portais e tendências de mercado), a Cultura poderá identificar com maior precisão quais livros terão demanda futura - especialmente fora da lista dos mais vendidos. Isso permitirá reduzir compras ineficientes, melhorar o giro de estoque e potencializar a rentabilidade de nichos e lançamentos, com maior retorno sobre o investimento.
+TITULO DE OBJETIVO 2: Aumentar a satisfação do cliente e consolidar a loja física como diferencial competitivo
+OBJETIVO 2: Com previsões mais assertivas de demanda, o projeto permitirá à Cultura antecipar-se aos interesses dos leitores e ampliar a disponibilidade de títulos relevantes — inclusive desconhecidos — tanto no online quanto no ponto físico. Isso fortalece a experiência do cliente, reduz perdas por falta de estoque, e transforma a loja física em um espaço mais conectado às tendências.
+
+Etapas do Projeto:
+Aprofundamento no Contexto
+Extração e tratamento de dados 
+Análise exploratória e determinação de modelos e métricas de avaliação
+Seleção e tratamento de variáveis
+Teste de Modelos e Tuning de Algoritmos
+Validação de Resultados e Documentação de Insights
+
+ETAPA 1
+Entender os pontos focais do projeto;
+Realizar alinhamentos iniciais com a equipe da Livraria Cultura;
+Acesso às bases históricas da empresa (vendas, assinaturas, localização, devoluções) e fontes externas (sites de concorrentes, artigos de opinião) ;
+Levantamento de hipóteses como: correlação entre perfil de cliente e consumo com assinatura e troca de livros externos,  entendimento da correlação entre comentários positivos e avanço no nível de consumo.
+Elaboração de cronograma.
+
+Etapa 2
+Realizar o tratamento dos dados (valores nulos, outliers e incongruências);
+Estudo estatístico da base histórica;
+Monitorar eventos atípicos e elencar principais fontes de dados (em torno de 5 fontes);
+Extração de blogs e sites de opinião sobre livros, avaliação da prioridade de cada extração elencada e configuração de recorrência semanal;
+Estruturação no ambiente da Livraria Cultura e estudo das atualizações de cada fonte, necessidade de recorrência e granularidade. 
+
+Etapa 3
+Pesquisa do modelo de demanda e compras adequado e métricas para sua avaliação;
+Formulação e teste estático de hipóteses do comportamento de compra para reposição dos livros e modelagem estatística multivariada;
+Tratamentos necessários como encoding, normalização e demais iterações de variáveis qualitativas;
+Consolidação da base em ambiente da cultura para utilização contínua e determinação de pesos para diferentes informações.
+
+Etapa 4
+Analisar o comportamento das variáveis coletadas (ex: livros em pauta nas últimas semanas, demanda histórica, correlação entre pontos de venda );
+Seleção e remoção de features desnecessárias para o modelo;
+Identificar variáveis com baixa correlação ou redundância (ex: campos inconsistentes entre preço e popularidade, duplicações);
+Tratar variáveis faltantes ou ruidosas provenientes de extrações, avaliações subjetivas e comentários de fontes específicas;
+Reavaliar hipóteses com base nos dados filtrados, ajustando critérios para os modelos preditivos de recomendação de estoque.
+
+Etapa 5
+Testar quais tipos de alterações e transformações impactam mais os algoritmos segundo as métricas de sucesso elencadas;
+Comparação de desempenho e recombinação dos modelos elaborados;
+Compreender e ajustar os hiperparâmetros para obter as melhores métricas de sucesso e comportamento desejado pelo algoritmo;
+Documentar a análise obtida e repassar para a equipe da Cultura;
+Construir o modelo de previsão para os melhores títulos a serem alocados para as livrarias, com maior entendimento dos consumidores.
+
+Etapa 6
+Validação final com o time da Livraria Cultura;
+Documentação do código e entrega do modelo;
+Construção de um relatório com os principais insights;
+Apresentação final do projeto.
+Treinamento do time da livraria Cultura e manutenção;
+
+Entregas
+Relatório de usabilidade e manutenção, além de capacitação para os funcionários da empresa para utilização do modelo
+Extrações recorrentes e modelo preditivo para livros e modelos de clusterização por perfil de cliente e título, integrado às bases extraídas.
+Jupyter Notebook das diversas análises de indicativos realizadas durante o processo, com dados dos títulos externos e clientes
+
+Resultados
+Compreensão aprofundada dos perfis de leitores, permitindo decisões de curadoria mais personalizadas de mais de 8,5 milhões de registros históricos.
+Aumento da rotatividade de estoque e da margem, com reposições mais alinhadas às tendências de mercado.
+Reposição mais eficiente do acervo, com potencial de redução de até R$90 mil mensais em compras pouco rentáveis (considerando R$18 por livro em volumes de baixa demanda).
+
+

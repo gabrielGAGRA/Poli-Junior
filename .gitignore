@@ -1,0 +1,34 @@
+# Ignorar tudo
+*
+
+# Garantir que subpastas não sejam ignoradas
+!*/
+
+# Excluir da ignorância em qualquer diretório
+!.gitignore
+!*.md
+!*.py
+!*.ipynb
+!*.txt
+!*.json
+!*.png
+!*.css
+!*.html
+!*.ico
+!*.webmanifest
+!*.js
+!*.toml
+
+# Ignorar especificamente
+config.json
+secrets.toml
+.env
+.venv
+__pycache__
+
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/

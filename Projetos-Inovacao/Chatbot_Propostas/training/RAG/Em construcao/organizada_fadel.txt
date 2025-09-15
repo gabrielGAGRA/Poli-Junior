@@ -1,0 +1,39 @@
+ATAS:
+cliente tem um grande volumetria de dados e está iniciando uma nova célula de Inteligência e Inovação dentro da empresa. Porém, está buscando novas abordagens voltadas a previsão e melhorias nas operações.
+
+Maior gasto atual é com combustíveis e manutenção dos caminhões
+
+Sente que não opera com eficiência e não tem certezas sobre algumas atitudes tomadas - contando com a sorte
+
+Eficiência de combustível seria o maior valor a se agregar. Qual o melhor modelo de caminhão para rodar em determinada região?
+
+Existe espaço para trazer essa abordagem preditiva em diversos setores não só logística
+
+tem muitos dados mas não consegue prever nada
+Usa ERP (proteus) extrairíamos com SQL
+Banco em csv. exportados de campo 
+relatório de de viagem a viagem
+balanço de disponibilidade de veículos 
+milhões de gastos a serem reduzidos
+
+controle de manutenção / custo por caminhão (placa) 
+consumo de litros/km percorrido por caminhão 
+melhor marca de pneu para rodar em cada cidade (tem controle de manutenção por pneu)
+balanço de valor de compra do caminhão e gastos atrelados, em quanto tempo? quando vender?
+
+gostaria de extrapolar a base, procurar opções na concorrência
+
+montar um datalake com as informações do proteu (ERP) e para organizar as informações e começar fazendo uma analise de manutenção. 
+
+Trabalham com SQL, manteríamos isso, conseguem gerar uma API para coletarmos os dados e passar pra Cloud
+
+1500 veiculos
+
+Base de dados precisa ser relacionados, cloud + BigQuerry
+
+O OBJETIVO DO PROJETO É:
+Modelo preditivo para manutenção de caminhões (qual é o tempo previsto para alteração das peças)
+Para isso vamos ter uma etapa de construção do datalake para armazenar e correlacionar os dados
+
+
+ATA ORGANIZADA:

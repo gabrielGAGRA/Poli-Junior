@@ -1,0 +1,374 @@
+[
+    {
+        "Tipo": 1,
+        "Dispositivo": "6º",
+        "Prazo": "5 dias úteis",
+        "Descrição": "realizar as alterações cadastrais"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "6º",
+        "Prazo": "10 dias úteis",
+        "Descrição": "realizar as alterações cadastrais, com visita técnica"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "56",
+        "Prazo": "30 dias",
+        "Descrição": "fornecer o orçamento estimado"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "78",
+        "Prazo": "10 dias úteis",
+        "Descrição": "disponibilizar estudos do orçamento"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "136",
+        "Prazo": "30 dias",
+        "Descrição": "informar as condições para a revisão da demanda contratada em projetos de eficiência energética"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "222, I",
+        "Prazo": "30 dias",
+        "Descrição": "enquadramento na modalidade tarifária horária branca"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "223",
+        "Prazo": "30 dias",
+        "Descrição": "retorno à modalidade tarifária convencional"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "243, § 1º",
+        "Prazo": "15 dias",
+        "Descrição": "providenciar o reparo do meio utilizado para o acompanhamento da leitura de medição externa"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "257, §4º",
+        "Prazo": "5 dias úteis",
+        "Descrição": "fornecer cópia do processo de defeito na medição"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "393, § 3º",
+        "Prazo": "5 dias úteis",
+        "Descrição": "fornecer cópia da gravação da chamada telefônica"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "418, p .único",
+        "Prazo": "3 dias úteis",
+        "Descrição": "informar a relação dos registros do histórico das demandas"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "435",
+        "Prazo": "30 dias",
+        "Descrição": "informações relacionadas aos indicadores de continuidade, compensações e interrupções"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "463, §8º",
+        "Prazo": "5 dias úteis",
+        "Descrição": "fornecer cópia do processo de levantamento cadastral de iluminação pública"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "464",
+        "Prazo": "30 dias",
+        "Descrição": "disponibilizar informações do sistema de informação geográfica"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "598, §4º",
+        "Prazo": "5 dias úteis",
+        "Descrição": "fornecer cópia do processo de irregularidade"
+    },
+    {
+        "Tipo": 1,
+        "Dispositivo": "604",
+        "Prazo": "5 dias úteis",
+        "Descrição": "fornecer cópia do processo de ressarcimento de danos"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "51, I",
+        "Prazo": "30 dias",
+        "Descrição": "informar o resultado da análise de projeto"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "51, II",
+        "Prazo": "10 dias úteis",
+        "Descrição": "informar o resultado da reanálise de projeto em caso de análise anterior incompleta"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "86, §2º, I",
+        "Prazo": "10 dias úteis",
+        "Descrição": "disponibilizar o projeto e demais informações em caso de antecipação de obra"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "94",
+        "Prazo": "3 dias úteis",
+        "Descrição": "encaminhar o relatório de vistoria em caso de reprovação"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "112, caput",
+        "Prazo": "30 dias",
+        "Descrição": "comunicar o resultado do comissionamento de obras"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "112, §1º",
+        "Prazo": "10 dias úteis",
+        "Descrição": "comunicar o resultado do comissionamento de obras no caso de informação anterior incompleta"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "203",
+        "Prazo": "5 dias úteis",
+        "Descrição": "informar o resultado da análise de classificação tarifária"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "203",
+        "Prazo": "10 dias úteis",
+        "Descrição": "informar o resultado da análise de classificação tarifária, caso haja necessidade de visita técnica"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "250",
+        "Prazo": "30 dias",
+        "Descrição": "inspeção do sistema de medição de faturamento e demais providências"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "296",
+        "Prazo": "5 dias úteis",
+        "Descrição": "para informar o resultado da análise de reconhecimento de sazonalidade"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "296",
+        "Prazo": "10 dias úteis",
+        "Descrição": "informar o resultado da análise de reconhecimento de sazonalidade, caso haja necessidade de visita técnica"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "325, §3º",
+        "Prazo": "15 dias",
+        "Descrição": "solucionar reclamação de compensação de faturamento  Tipo  Dispositivo  Prazo  Descrição"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "408, I",
+        "Prazo": "5 dias úteis",
+        "Descrição": "solução de reclamações, sem visita técnica, exceto as que possuam prazo próprio"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "408, II",
+        "Prazo": "10 dias úteis",
+        "Descrição": "solução de reclamações, com visita técnica, exceto as que possuam prazo próprio"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "409",
+        "Prazo": "30 dias",
+        "Descrição": "atendimento de solicitações que não disponham de prazo próprio"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "421, § 1º, II",
+        "Prazo": "10 dias úteis",
+        "Descrição": "comunicar as providências adotadas na Ouvidoria da distribuidora 2 art. 421, § 2º prazo informado  comunicar as providências adotadas na Ouvidoria da distribuidora  em caso de prorrogação do prazo"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "438, §1º, I",
+        "Prazo": "15 dias",
+        "Descrição": "realizar a inspeção técnica, a medição instantânea e demais providências em casos de reclamação de tensão"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "438, §1º, II",
+        "Prazo": "30 dias",
+        "Descrição": "realizar a medição pelo período de 168 horas e entregar o laudo técnico do resultado"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "477, §2º",
+        "Prazo": "30 dias",
+        "Descrição": "fornecer informações sobre a arrecadação da contribuição para o custeio do serviço de iluminação pública"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "525",
+        "Prazo": "30 dias",
+        "Descrição": "avaliar reclamação sobre disponibilidade mensal insuficiente"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "525, p .único",
+        "Prazo": "60 dias",
+        "Descrição": "adotar medidas corretivas em caso de disponibilidade mensal insuficiente"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "543, III",
+        "Prazo": "60 dias",
+        "Descrição": "regularizar nível tensão, sistema MIGDI ou SIGFI 2 art. 613, I  1 dia útil  verificação ou retirada do equipamento danificado utilizado para o acondicionamento de alimentos perecíveis ou de medicamentos"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "613, II",
+        "Prazo": "10 dias",
+        "Descrição": "verificação ou retirada do equipamento danificado"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "617, I",
+        "Prazo": "15 dias",
+        "Descrição": "informar o resultado da solicitação de ressarcimento feita em até 90 dias"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "617, II",
+        "Prazo": "30 dias",
+        "Descrição": "informar o resultado da solicitação de ressarcimento feita com mais de 90 dias"
+    },
+    {
+        "Tipo": 2,
+        "Dispositivo": "618",
+        "Prazo": "20 dias",
+        "Descrição": "efetuar o ressarcimento em caso de deferimento"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "49, § 4º",
+        "Prazo": "10 dias úteis",
+        "Descrição": "instalação do padrão de entrada gratuito"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "64, I",
+        "Prazo": "15 dias",
+        "Descrição": "fornecer o orçamento de conexão , conexão de unidades consumidoras, inclusive com micro GD em tensão menor que 69kV, sem obras"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "64, II",
+        "Prazo": "30 dias",
+        "Descrição": "fornecer o orçamento de conexão , conexão de unidades consumidoras, inclusive com micro GD em tensão menor que 69kV, com obras"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "64, III",
+        "Prazo": "45 dias",
+        "Descrição": "fornecer o orçamento de conexão , demais conexões"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "84",
+        "Prazo": "5 dias úteis",
+        "Descrição": "entregar os contratos e demais documentos"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "88, I",
+        "Prazo": "60 dias",
+        "Descrição": "concluir as obras de conexão, tensão menor que 2,3 kV"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "88, II",
+        "Prazo": "120 dias",
+        "Descrição": "concluir as obras de conexão, tensão maior ou igual a 2,3 kV e menor que 69 kV, até 1km"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "88, III",
+        "Prazo": "365 dias",
+        "Descrição": "concluir as obras em tensão menor que 69 kV  Tipo  Dispositivo  Prazo  Descrição 3 art. 88, §1º  cronograma  concluir demais obras não previstas nos critérios anteriores"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "90",
+        "Prazo": "45 dias",
+        "Descrição": "conexão - Lei nº 14.195, de 26 de agosto de 2021"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "91, I",
+        "Prazo": "5 dias úteis",
+        "Descrição": "vistoria  e instalação de medição , conexão menor que  2,3 kV"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "91, II",
+        "Prazo": "10 dias úteis",
+        "Descrição": "vistoria  e instalação de medição , conexão maior ou igual a 2,3 kV e menor que 69 kV"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "91, III",
+        "Prazo": "15 dias úteis",
+        "Descrição": "vistoria  e instalação de medição , conexão maior ou igual a 69 kV 3 art. 96, §1º  cronograma  Implantação/adequação do sistema de medição  no ACL"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "97, II",
+        "Prazo": "10 dias úteis",
+        "Descrição": "aprovar o projeto de medição de central geradora, importador e exportador de energia"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "97, IV",
+        "Prazo": "10 dias úteis",
+        "Descrição": "comunicar a avaliação do relatório de comissionamento do sistema de medição"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "138, §4º",
+        "Prazo": "3 dias úteis",
+        "Descrição": "alteração de titularidade , área urbana"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "138, §4º",
+        "Prazo": "5 dias úteis",
+        "Descrição": "alteração de titularidade , área rural"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "166, §3º, I",
+        "Prazo": "10 dias úteis",
+        "Descrição": "notificar o consumidor em caso de migração (Incluído pela REN ANEEL 1.081, de 12.12.2023)"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "252, II",
+        "Prazo": "30 dias",
+        "Descrição": "substituir o medidor e demais equipamentos de medição após a data de constatação do defeito 3 art. 362, I  4 horas  religação em caso de suspensão indevida 3 art. 362, II  4 horas  religação de urgência em área urbana 3 art. 362, III  8 horas  religação de urgência em área rural 3 art. 362, IV  24 horas  religação normal em área urbana 3 art. 362, V  48 horas  religação normal em área rural"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "527",
+        "Prazo": "10 dias úteis",
+        "Descrição": "vistoria para conexão, sistema MIGDI ou SIGFI"
+    },
+    {
+        "Tipo": 3,
+        "Dispositivo": "528",
+        "Prazo": "10 dias úteis",
+        "Descrição": "conexão, sistema MIGDI ou SIGFI 3 art. 533  120 horas  religação, sistema MIGDI ou SIGFI 3 art. 534  72 horas  religação em caso de suspensão indevida , sistema MIGDI ou SIGFI"
+    }
+]

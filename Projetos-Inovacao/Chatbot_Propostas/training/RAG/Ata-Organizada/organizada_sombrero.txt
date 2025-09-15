@@ -1,0 +1,92 @@
+ATAS:
+presidente da sombrero, Leonardo, seguradora de grandes riscos, principalmente agronegócio
+em março começaram uma empresa de tecnologia voltado a seguros, fornece a outras seguradoras
+área de substituição de agrícola, produtos e precificação
+fellipe mais técnico, leonardo é advogado
+marcio é o diretor técnico da sombrero, subscrição de riscos e sinistros
+empresa da UFRJ teve projeto com eles
+tem muita correlação com seguros
+empresa júnior pode cobrar mais barato (eles estão buscando isso)
+tem problema de ter boas ideias para fazer com dados mas não tem braço, capacidade de pessoas para fazer o trabalho, se aprofundar, descer no detalhe
+tem grande volume de dados recebido mas poderiam explorar muito melhor essa base de dados para gerar insights, relatórios
+tem um BI estático, mas precisariam de muito mais relatórios, geração a partir do BI
+tem muitas coisas passando mas faltam muitas ideias
+tem feito muito negócio, tem muito dado de apólice, sinistro, muita cotação que perde negócio
+tem material rico
+operação sem papel, seguradora 100% digital, tem controle de cada apólice emitida, cada negócio, sistema SRO de registro de operações em que cada operação é devidamente registrada
+desde nascimento com sistema único, que tenha o mínimo de customização, que seja mais robusto mas que gere consistências de dados, mas não para gera informações, mas para mexer em estruturação, não é feito para retroalimentar decisões, eles entendem que tem informação, tem ocmo fazer essa transformação,
+BI é muito relacionado a grandes planilhas, para o dia a dia, para fazer extração de
+mil sinistros por safra, 10 mil apólices geram isso, desses parte está coberto e paga indenização e parte não --> não usam nenhuma ferramenta de analytics para identificarem tendências que podem apontar fraudes em sinistro, ent4ender se laudos são inteligentes ou não, comparar um perito com outro, comparar um produtor rural com outro para entender se há indício de fraude
+campo da subescrição - precisam ter diversificação de risco, precisam fazer uma análise de onde ter negócios, fazem isso de forma empírica hoje, automatizar esses processos para gerar gráficos dinâmicos, relatórios, insights de oportunidades de melhoria
+carteira de maquina e equipamento, se tem problema de precificação com cada lugar, barato saber se remunera a seguradora pelos riscos que ela cobra, saber se está caro demais, análises com oportunidade para gerar informação de forma automatizada e o ser humano entenedr no final
+sistema ERP E4Pro, que também faz emissão de apólice, faz documentação de sinistro, mas também faz bastante coisa na área financeira
+parte de precificação não está dentro dele, os negócios que ainda não sabem se vai fechar não estão nele, não fica com os casos que não fecharam, trabalha só com o que deu certo
+precificação está fora e aí tem sistemas menores integrados por API, coração da empresa é esse E4Pro
+Reembolso de despesas para colaboradores não está lá
+o transacional de operações que não são o core da empresa não tem, tem informações financeiras mas não tem todas as informações
+granularidade muito grande de informação, quantidade de linhas de
+apólices em 3 anos e pouco tem aproximadamente 100 mil, garantia deu 18 mil, apólice gera endosso, gera sinistro que gera um numero adicional de sinistro
+60 mil, 70 mil registros, sessão de resseguro para cada apólice
+apólice morre, tem uma vigencia por 12 meses, se deu sinistro ou não apaga
+relacionamento com o cliente, com o fornecedor que vive, que é improtante
+acabaram de implementar CRM em sales force
+querem tirar mais relatórios para as áreas filtrando quantidades de informações e trazendo para as áreas
+dar geral na base de dados
+deixar de depender de pessoal da TI para extrair
+ter mais ideias ao começar a ver, dá mais informação para moldar próximos passos também
+Seguro agrícola --> veem quanto problema teve em cada município por questões climáticas --> fazem modelos de previsão acima disso (análise preditiva em cima de clima, últimos 10 anos que aconteceu, pegar próximos 6 meses previstos e tirar um preço, uma condição nova para isso, cada vez que entra uma safra nova ela é diferente da que saiu)
+ter ferramentas que ajudem a antecipar qual o nível de preço e cobertura de risco para a próxima safra, mistura de dados climatológicos com dados históricos de seguros
+hoje leem a previsão do tempo, olham dados pra trás e calibram isso no olho para chegar em alguma coisa
+modelo que sugira um valor
+area de seguro agrícola,
+presidência, ver muito mais coisa
+financeiro com área meio, área técnica, 5 ou 6 áreas de subscrição, 1 área de sinistro e 1 área de risco (visão mais ), 1 área de resseguro e 1 área operacional
+geração de relatórios no BI é mais urgente
+
+
+ATA ORGANIZADA:
+Contexto do Cliente:
+A Sombrero é uma seguradora de grandes riscos, com foco principal no agronegócio. Leonardo (Presidente e advogado), Marcio (Diretor Técnico de subscrição de riscos e sinistros) e Fellipe (mais técnico).
+
+Situação Atual e Dores:
+Tem problema de "ter boas ideias para fazer com dados mas não tem braço, capacidade de pessoas para fazer o trabalho, se aprofundar, descer no detalhe".
+Apesar de terem grande volume de dados recebido, poderiam explorar muito melhor essa base de dados para gerar insights, relatórios. Tem muitas coisas passando mas faltam muitas ideias.
+Atualmente, contam com um BI estático, mas precisariam de muito mais relatórios, geração a partir do BI.
+A empresa realiza muito negócio, tem muito dado de apólice, sinistro, muita cotação que perde negócio.
+Não utilizam ferramentas de analytics para identificar tendências que podem apontar fraudes em sinistro, entender se laudos são inteligentes ou não, comparar um perito com outro, comparar um produtor rural com outro para entender se há indício de fraude. A diversificação de risco é feita de forma empírica, a análise de onde atuar é baseada em testes, não em dados.
+Análises de precificação feitas de forma manual, sem automação. Parte de precificação não está dentro do ERP, negócios que ainda não sabem se vai fechar não estão nele. Reembolso de despesas para colaboradores não está no ERP.
+Além disso, operações transacionais que não são o core da empresa não possuem todas as informações centralizadas, criando dependência do time de TI para extração de relatórios.
+Ausência de ferramentas para antecipar preço e cobertura de risco para próxima safra.
+
+Objetivos e Resultados Desejados:
+Automatizar processos para gerar gráficos dinâmicos, relatórios, insights de oportunidades de melhoria
+Gerar informação de forma automatizada para apoiar decisões humanas
+Tirar mais relatórios para as áreas, filtrando informações relevantes
+Ter ferramentas que ajudem a antecipar preço e cobertura de risco para a próxima safra
+
+Infraestrutura e Dados:
+A operação da Sombrero é 100% digital, sem papel, com controle detalhado de cada apólice emitida e cada negócio realizado. Utilizam o sistema SRO para registro de operações, garantindo que cada transação seja devidamente registrada.
+Desde nascimento com sistema único, que tenha o mínimo de customização, que seja mais robusto mas que gere consistências de dados, mas não para gerar informações, mas para mexer em estruturação, não é feito para retroalimentar decisões, eles entendem que tem informação, tem como fazer essa transformação
+O BI é utilizado principalmente para manipulação de grandes planilhas e extração de dados para o dia a dia.
+Em média, cada safra gera mil sinistros a partir de cerca de 10 mil apólices, sendo que parte desses sinistros é coberta e paga indenização, enquanto outra parte não é.
+O ERP E4Pro é responsável pela emissão de apólices, documentação de sinistros e gestão financeira.
+A precificação, porém, está fora do ERP, sendo realizada em sistemas menores integrados por API.
+A granularidade das informações é alta: em pouco mais de três anos, foram aproximadamente 100 mil apólices, 18 mil garantias, além de que apólice gera endosso, que gera sinistro que gera um número adicional de sinistro.
+60 mil, 70 mil registros, sessão de resseguro para cada apólice.
+Cada apólice tem vigência de 12 meses e, ao final, é encerrada.
+Acabaram de implementar CRM em Salesforce.
+
+Informações Relevantes Adicionais:
+A empresa atua fortemente na área de substituição agrícola, produtos e precificação.
+Existe interesse em desenvolver modelos que sugiram valores para seguro agrícola, considerando que cada safra é diferente da anterior e que a análise preditiva baseada em clima e histórico é fundamental para a precificação.
+
+Informações Não Prioritárias:
+Empresa da UFRJ teve projeto com eles
+Tem material rico
+Tem muita correlação com seguros
+Empresa júnior pode cobrar mais barato (eles estão buscando isso)
+Em março começaram uma empresa de tecnologia voltada a seguros, fornece a outras seguradoras
+Relacionamento com o cliente, com o fornecedor é importante
+Cada safra nova é diferente da anterior
+Área de seguro agrícola
+Financeiro com área meio, área técnica, 5 ou 6 áreas de subscrição, 1 área de sinistro e 1 área de risco, 1 área de resseguro e 1 área

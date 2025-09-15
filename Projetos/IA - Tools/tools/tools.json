@@ -1,0 +1,34 @@
+{
+    "name": "construtorConsultaFiscal",
+    "description": "Cria consultas SQL baseadas em parâmetros fiscais opcionais.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dataInicial": {
+          "type": "string",
+          "description": "Data inicial (opcional) - formato: DD/MM/AAAA"
+        },
+        "dataFinal": {
+          "type": "string",
+          "description": "Data final (opcional) - formato: DD/MM/AAAA"
+        },
+        "cnpjEmitente": {
+          "type": "string",
+          "description": "CNPJ do emitente (opcional)"
+        },
+        "cnpjDestinatario": {
+          "type": "string",
+          "description": "CNPJ do destinatário (opcional)"
+        },
+        "ufDestinatario": {
+          "type": "string",
+          "description": "UF do destinatário (ex.: SP, RJ) (opcional)"
+        },
+        "tipoImposto": {
+          "type": "string",
+          "description": "Tipo de imposto (ICMS, IPI, PIS, etc.) (opcional)"
+        }
+      }
+    },
+    "function": "gerarConsultaSQL" 
+  }

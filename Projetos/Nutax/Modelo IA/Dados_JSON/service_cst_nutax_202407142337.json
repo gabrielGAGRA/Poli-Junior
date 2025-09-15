@@ -1,0 +1,1130 @@
+[
+    {
+        "cst": "CST_ICMS",
+        "desc_cst": "DESC_CST",
+        "abrev_tributacao": "Abreviação Tributação",
+        "abrev_origem": "Abreviação Origem",
+        "dt_ini": "DT_INI",
+        "dt_fin": "DT_FIM"
+    },
+    {
+        "cst": "000",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "002",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3 a 5 da Tabela A - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Nacional",
+        "dt_ini": "14022023",
+        "dt_fin": "31032024"
+    },
+    {
+        "cst": "010",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "015",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3 a 5 da Tabela A - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Nacional",
+        "dt_ini": "14022023",
+        "dt_fin": "31032024"
+    },
+    {
+        "cst": "020",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "030",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "040",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "041",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "050",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "051",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "053",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3 a 5 da Tabela A - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Nacional",
+        "dt_ini": "14022023",
+        "dt_fin": "31032024"
+    },
+    {
+        "cst": "060",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "061",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3 a 5 da Tabela A - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Nacional",
+        "dt_ini": "14022023",
+        "dt_fin": "31032024"
+    },
+    {
+        "cst": "070",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "090",
+        "desc_cst": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "101",
+        "desc_cst": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "abrev_tributacao": " Simples com crédito",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "102",
+        "desc_cst": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "abrev_tributacao": " Simples sem crédito",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "103",
+        "desc_cst": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "abrev_tributacao": "Simples isenta",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "220",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "270",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "251",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "260",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "240",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "230",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "241",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "290",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "250",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "215",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "261",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "253",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "210",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "200",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "201",
+        "desc_cst": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": " Simples com crédito e ST",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "202",
+        "desc_cst": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": " Simples sem crédito e com ST",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "203",
+        "desc_cst": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Simples isento e com ST",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "300",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "302",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "310",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "315",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "320",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "330",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "340",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "341",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "350",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "351",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "353",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "360",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "361",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "370",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "390",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 40% e inferior ou igual a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "400",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "402",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "410",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "415",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "420",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "430",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Ienta ou não tributada e com ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "440",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "441",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "450",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "451",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "453",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "460",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "461",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "470",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/16 - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "490",
+        "desc_cst": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/17 - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Nacional",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "500",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "502",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "510",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "515",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "520",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "530",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "540",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "541",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "550",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "551",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "553",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "560",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "561",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "570",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "590",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Nacional - conteúdo de importação inferior ou igual a 40%",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "120",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "170",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "151",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "160",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "140",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "130",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "141",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "190",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "150",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "115",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "161",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "153",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "110",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "100",
+        "desc_cst": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Estrangeira - Importação direta",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "600",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "602",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "610",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "615",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "620",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "630",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "640",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "641",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "650",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "651",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "653",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "660",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "661",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "670",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "690",
+        "desc_cst": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Estrangeira - Importação direta, sem similar nacional CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "700",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "702",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "710",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "715",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "720",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "730",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "740",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "741",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "750",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "751",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "753",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "760",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "761",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "770",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "790",
+        "desc_cst": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Estrangeira - Adquirida no mercado interno, sem similar nacional, CAMEX",
+        "dt_ini": "1012013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "800",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "abrev_tributacao": "Tributada integralmente",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "802",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributação monofásica própria sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica combustíveis",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "810",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Tributada e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "815",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributação monofásica própria e com responsabilidade pela retenção sobre combustíveis",
+        "abrev_tributacao": "Tributação monofásica com retenção combustíveis",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "820",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "abrev_tributacao": "Redução de base",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "830",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Isenta ou não tributada e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "840",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "abrev_tributacao": "Isenta",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "841",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "abrev_tributacao": "Não tributada",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "850",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Suspensão",
+        "abrev_tributacao": "Suspenção",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "851",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Diferimento",
+        "abrev_tributacao": "Diferimento",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "853",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributação monofásica sobre combustíveis com recolhimento diferido",
+        "abrev_tributacao": "Tributação monofásica combustíveis diferido",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "860",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "abrev_tributacao": "ICMS cobrado por ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "861",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributação monofásica sobre combustíveis cobrada anteriormente",
+        "abrev_tributacao": "Tributação monofásica combustíveis cobrada anteriormente",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1042023",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "870",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "abrev_tributacao": "Redução de base e com ST",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "890",
+        "desc_cst": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "abrev_tributacao": "Outras",
+        "abrev_origem": "Nacional - conteúdo de importação superior a 70%",
+        "dt_ini": "1082013",
+        "dt_fin": NaN
+    },
+    {
+        "cst": "900",
+        "desc_cst": "Simples Nacional - Outros",
+        "abrev_tributacao": "Simples outras",
+        "abrev_origem": "SIMPLES",
+        "dt_ini": "1102010",
+        "dt_fin": NaN
+    }
+]

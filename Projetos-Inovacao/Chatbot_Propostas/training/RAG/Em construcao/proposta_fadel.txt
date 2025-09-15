@@ -1,0 +1,64 @@
+PROPOSTA:
+Diagnóstico:
+1. A Fadel está buscando usufruir melhor dos seus bancos de dados, trazendo novas abordagens voltadas para previsão e melhorias nas suas operações.
+1.1. Atualmente, a Fadel Transportes possui uma frota de aproximadamente 1500 veículos, com grande volume de dados gerados via ERP (Proteus) e registros de campo (CSV). Entretanto, não consegue gerar previsões sobre manutenção, vida útil de componentes, eficiência de combustível ou o momento ideal para renovação de caminhões. As decisões são tomadas com baixa base analítica, o que gera altos custos com combustível e manutenção e reduz a eficiência operacional.
+1.2. Portanto, buscando estruturar uma base confiável e construir modelos preditivos de manutenção, consumo e eficiência, é necessário desenvolver um Data Lake integrado ao Cloud Storage e BigQuery, com extrações via API do ERP. Assim, será possível antecipar falhas, otimizar gastos, melhorar a eficiência de frota por tipo de veículo e região, e ampliar a capacidade de tomada de decisão estratégica baseada em dados, agregando valor à nova célula de Inteligência e Inovação da empresa.
+
+Objetivos do projeto:
+1. Estruturar e integrar mais de 1500 bases de veículos de forma escalável
+1.1. Através da estruturação de um DataLake na nuvem integrado ao TOTVS poderemos organizar e construir o fluxo de dados de forma mais eficiente e de fácil consulta, garantindo o armazenamento ea usabilidade e escalabilidade das informações para análises futuras.
+2. Otimizar custos de combustível e operações, diretamente impactando gastos com manutenção
+2.1. Por meio de modelos preditivos será possível antecipar e prevenir gastos recorrentes no dia a dia operacional da Fadel, mitigando milhões alocados ineficientemente na empresa hoje, devido à subutilização dos dados coletados para análises mais robustas.
+
+Etapas do Projeto:
+Etapa 1 - Imersão no contexto
+Etapa 2 - Levantamento de requisitos e infraestrutura na TOTVS
+2.1. Mapear todos os endpoints da API do Protheus e SQL Server (dados de clientes, pedidos, financeiro, etc.) necessários para o modelo;
+2.2. Definir um esquema simples para armazenamento;
+2.3. Avaliar volume de dados para definir tamanho e configuração inicial dos serviços.
+2.4. Acessos necessários - ambiente de treinamento e base de dados atual;
+2.5. Criar novas tabelas no TOTVS (utilizando o dicionário de dados do Protheus e estrutura do TOTVS e da Cloud interna para criação do datalake);
+2.6. Configurar perfis de usuário e permissões no Protheus para permitir que outras ferramentas autorizadas acessem os dados exportados ou integrados;
+2.7. Armazenar as credenciais da API do Protheus, utilizando variáveis de ambiente no servidor de aplicação;
+2.8. Design da arquitetura necessária para o modelo.
+Etapa 3 - Extração dos dados
+3.1. Desenvolver uma rotina automatizada no Protheus ou em ferramenta externa integrada para:
+3.1.1. Conectar-se à API Protheus e autenticar-se com as credenciais armazenadas de forma segura;
+3.1.2. Extrair os dados necessários, tratando paginações, limites de requisição e eventuais falhas na resposta da API;
+3.1.3. Salvar os arquivos extraídos em estrutura na Cloud da empresa organizada;
+3.2. Monitorar falhas e testar extrações.
+Etapa 4 - Análise exploratória e descritiva
+4.1. Realizar o estudo e o tratamento necessário das informações (valores nulos, outliers e incongruências);
+4.2. Entendimento do histórico da base. Formulação de hipóteses sobre a manutenção dos veículos;
+4.3. Estudar o comportamento das features individualmente e em conjunto;
+4.4. Determinar como cada variável impacta o tempo de troca de cada peça dos veículos.
+Etapa 5 - Confecção do modelo classificador
+5.1. Construção de um algoritmo classificador para determinar qual será a próxima peça a ser trocada;
+5.2. Mapear quais peças são mais trocadas por modelo de caminhão, quilometragem e tempo de uso, usando contagens e percentuais.
+5.3. Criação de regras ou tabelas de probabilidade;
+5.4. Avaliação e ajuste baseado em acurácia simples.
+Etapa 6 - Previsão de tempo de manutenção
+6.1. Seleção das features que entrarão no modelo preditivo;
+6.2. Tratamentos necessários como encoding, normalização e demais iterações;
+6.3. Testagem de diferentes modelos de regressão com base nos features selecionados;
+6.4. Seleção do melhor modelo de previsão.
+Etapa 7 - Tuning do modelo
+7.1. Processo iterativo. Melhoria da classificação e previsão de tempo de manutenção;
+7.2. Documentação dos principais parâmetros e modelos encontrados para cada situação;
+7.3. Validação constante acerca da classificação das peças com maior probabilidade a serem trocadas, assim como o tempo de troca.
+Etapa 8 - Testes, validação e documentação
+8.1. Validação final com o time da Fadel Transportes;
+8.2. Documentação do código e entrega do modelo;
+8.3. Construção de um relatório com os principais insights;
+8.4. Apresentação final do projeto.
+
+Entregas:
+- Reports semanais com entregas parciais do projeto.
+- Armazenamento de dados em nuvem e construção do modelo preditivo para manutenção de peças.
+- Documentação final para consulta e possíveis otimizações e incrementações futuras.
+
+Impacto:
+- Redução de perdas operacionais ao identificar falhas e ineficiências que hoje passam despercebidas em mais de 80 usinas, permitindo decisões proativas baseadas em dados.
+- Apoio direto ao trabalho dos mais de 100 técnicos em campo, com visualizações acessíveis e interpretáveis, sem necessidade de conhecimento técnico avançado.
+- Identificação de padrões de subperformance por tipo de manutenção ou equipamento, permitindo ações corretivas mais rápidas e maior aproveitamento da capacidade instalada.
+- Ganho de inteligência operacional com análises que correlacionam milhares de variáveis, facilitando a priorização de ações técnicas e a melhoria contínua da performance das usinas.

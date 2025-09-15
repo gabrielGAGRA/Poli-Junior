@@ -1,0 +1,182 @@
+"id_dt_ini", "id_dt_fin" - para definicao de datas e periodos
+"id_cnpj"	- para definicao de quem vendeu
+"cnpj_destinatario", "cpf_destinatario"	- para definicao de quem comprou (PJ ou PF)
+"nome_destinatario" - quando ha um cpf_destinatario, o nome eh o nome da PF. quando nao ha, eh "CONSUMIDOR FINAL"
+"nome_mun_destinatario","uf_destinatario","pais_destinatario" - para definicao de geolocalizacao da compra
+"num_item" - para quantas unidades foram compradas
+"descr_compl" - para descricao do item vendido
+"tipo"- revenda, transferência - revenda
+'origem'- Dentro do estado
+'unid'- UF 
+'qtd'- quanti
+'vl_unit' - valor unitario do produto
+'vl_item'
+'eantrib' tributo
+'unid_trib', 'qtd_trib'
+
+
+
+apuracao_difal_202407142340:
+dt_ini = data inicial ?
+dt_fin = data final ?
+id_cnpj = id unico gerado para cada cnpj
+reg = "E300" ?
+uf = unidade federativa de emissao da nota
+vl_or = valor ? (tem  muitas casas decimais)
+cod_rec = 100102 (provavelmente unico da empresa)
+id_importation = 6601c26ae4d1f54a569c6d53 (unico da empresa)
+id_tenant = nome da empresa, serve como id
+dt_created = data de emissao da nota ?
+dt_updated = data ?
+year
+month
+day
+hour
+minute
+dt_created/updated ? dividida
+rown = row ? coluna?
+
+
+
+apuracao_icms_a_pagar_202407142339:
+dt_ini
+dt_fin
+id_cnpj
+reg = "E001" ?
+ind_mov = "0" ? indice de algo ?
+cod_or = "000" ? codigo de algo ?
+vl_or = valor de ICMS (duas casas decimais)
+dt_vcto = data de vencimento (formatado sem barras, como "19122022")
+cod_rec = codigo de ?
+id_importation
+id_tenant
+dt_created
+dt_updated
+year
+month
+day
+hour
+minute
+rown
+
+
+
+apuracao_icms_st_a_pagar_202407142339: BASE DE DEMONSTRACAO, DADOS RANDOM
+id_dt_ini
+id_dt_fin
+id_cnpj
+reg
+ind_mov
+uf
+cod_or
+vl_or
+cod_rec
+id_importation
+id_tenant
+dt_created
+dt_updated
+year
+month
+day
+hour
+minute
+rown
+
+
+
+base_saidas_202407142342:
+id_dt_ini = data inicial, mas ID ?
+id_dt_fin = data final, mas ID ?
+id_cnpj
+id_sped
+reg
+num_doc
+chv_nfe
+cod_part
+cnpj_destinatario
+cpf_destinatario
+nome_destinatario
+cod_mum_destinatario
+nome_mun_destinatario
+uf_destinatario
+cod_pais_destinatario
+pais_destinatario
+num_item
+cod_item
+cod_ean
+descr_compl
+ncm
+cest
+extipi
+cfop
+tipo
+origem
+unid
+qtd
+vl_unit
+vl_item
+eantrib
+unid_trib
+qtd_trib
+v_frete
+v_seg
+vl_desc
+outras_despesas
+cst_icms
+vl_bc_icms
+aliq_icms
+vl_icms
+vdeson
+mot_des_icms
+modbc_icms_st
+pmvast_icms
+predbcst_imcs
+aliq_st_icms
+vl_icms_st
+pred_bc
+vbcstret
+vstret
+pfcpst
+vfcp
+vfcpst
+vbcfcpst
+vbc
+vdespadu
+vii
+viof
+vbcufddest
+pfcpufddest
+picmsinter
+picmsinterpart
+vfcpufdest
+vicmsufdest
+vicmsufremet
+imposto_ipi_cst
+imposto_ipi_vbc
+imposto_ipi_pipi
+imposto_ipi_vipi
+imposto_pis_cst
+imposto_pis_vbc
+imposto_pis_ppis
+imposto_pis_vpis
+imposto_cofins_cst
+imposto_cofins_vbc
+imposto_cofins_pcofins
+imposto_cofins_vcofins
+id_importation
+id_tenant
+dt_created
+dt_updated
+year
+month
+day
+hour
+minute
+classificacao_gerencial
+sub_classificacao_gerencial
+ncm_abrev
+cfop_cst
+rown
+cod_ncm_desc
+cod_cst_desc
+dt_doc

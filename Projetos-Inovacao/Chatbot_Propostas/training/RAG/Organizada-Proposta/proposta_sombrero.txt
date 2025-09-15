@@ -1,0 +1,82 @@
+ATA ORGANIZADA:
+Contexto do Cliente:
+A Sombrero é uma seguradora de grandes riscos, com foco principal no agronegócio. Leonardo (Presidente e advogado), Marcio (Diretor Técnico de subscrição de riscos e sinistros) e Fellipe (mais técnico).
+
+Situação Atual e Dores:
+Tem problema de "ter boas ideias para fazer com dados mas não tem braço, capacidade de pessoas para fazer o trabalho, se aprofundar, descer no detalhe".
+Apesar de terem grande volume de dados recebido, poderiam explorar muito melhor essa base de dados para gerar insights, relatórios. Tem muitas coisas passando mas faltam muitas ideias.
+Atualmente, contam com um BI estático, mas precisariam de muito mais relatórios, geração a partir do BI.
+A empresa realiza muito negócio, tem muito dado de apólice, sinistro, muita cotação que perde negócio.
+Não utilizam ferramentas de analytics para identificar tendências que podem apontar fraudes em sinistro, entender se laudos são inteligentes ou não, comparar um perito com outro, comparar um produtor rural com outro para entender se há indício de fraude. A diversificação de risco é feita de forma empírica, a análise de onde atuar é baseada em testes, não em dados.
+Análises de precificação feitas de forma manual, sem automação. Parte de precificação não está dentro do ERP, negócios que ainda não sabem se vai fechar não estão nele. Reembolso de despesas para colaboradores não está no ERP.
+Além disso, operações transacionais que não são o core da empresa não possuem todas as informações centralizadas, criando dependência do time de TI para extração de relatórios.
+Ausência de ferramentas para antecipar preço e cobertura de risco para próxima safra.
+
+Objetivos e Resultados Desejados:
+Automatizar processos para gerar gráficos dinâmicos, relatórios, insights de oportunidades de melhoria
+Gerar informação de forma automatizada para apoiar decisões humanas
+Tirar mais relatórios para as áreas, filtrando informações relevantes
+Ter ferramentas que ajudem a antecipar preço e cobertura de risco para a próxima safra
+
+Infraestrutura e Dados:
+A operação da Sombrero é 100% digital, sem papel, com controle detalhado de cada apólice emitida e cada negócio realizado. Utilizam o sistema SRO para registro de operações, garantindo que cada transação seja devidamente registrada.
+Desde nascimento com sistema único, que tenha o mínimo de customização, que seja mais robusto mas que gere consistências de dados, mas não para gerar informações, mas para mexer em estruturação, não é feito para retroalimentar decisões, eles entendem que tem informação, tem como fazer essa transformação
+O BI é utilizado principalmente para manipulação de grandes planilhas e extração de dados para o dia a dia.
+Em média, cada safra gera mil sinistros a partir de cerca de 10 mil apólices, sendo que parte desses sinistros é coberta e paga indenização, enquanto outra parte não é.
+O ERP E4Pro é responsável pela emissão de apólices, documentação de sinistros e gestão financeira.
+A precificação, porém, está fora do ERP, sendo realizada em sistemas menores integrados por API.
+A granularidade das informações é alta: em pouco mais de três anos, foram aproximadamente 100 mil apólices, 18 mil garantias, além de que apólice gera endosso, que gera sinistro que gera um número adicional de sinistro.
+60 mil, 70 mil registros, sessão de resseguro para cada apólice.
+Cada apólice tem vigência de 12 meses e, ao final, é encerrada.
+Acabaram de implementar CRM em Salesforce.
+
+Informações Relevantes Adicionais:
+A empresa atua fortemente na área de substituição agrícola, produtos e precificação.
+Existe interesse em desenvolver modelos que sugiram valores para seguro agrícola, considerando que cada safra é diferente da anterior e que a análise preditiva baseada em clima e histórico é fundamental para a precificação.
+
+Informações Não Prioritárias:
+Empresa da UFRJ teve projeto com eles
+Tem material rico
+Tem muita correlação com seguros
+Empresa júnior pode cobrar mais barato (eles estão buscando isso)
+Em março começaram uma empresa de tecnologia voltada a seguros, fornece a outras seguradoras
+Relacionamento com o cliente, com o fornecedor é importante
+Cada safra nova é diferente da anterior
+Área de seguro agrícola
+Financeiro com área meio, área técnica, 5 ou 6 áreas de subscrição, 1 área de sinistro e 1 área de risco, 1 área de resseguro e 1 área
+
+
+PROPOSTA:
+Diagnóstico:
+1. A Sombrero Seguros busca otimizar suas análises de sinistros, apólices, laudos, peritos e produtores rurais associados, visando um fluxo de dados automatizado e visuais interativos que auxiliem na identificação de padrões e na tomada de decisão diária.
+1.1. A Sombrero Seguros enfrenta dificuldades na análise financeira, técnica e de incidentes de parceiros devido à limitação do BI atual, que é muito raso para a quantidade de informação gerada pela empresa e pouco interativo. A falta de visualizações estruturadas para cada área, separadas por filtros e detalhadas, impede comparações eficientes, afetando a otimização de custos e a tomada de decisões estratégicas.
+1.2. Sendo uma seguradora 100% digital, a limitação na geração dos relatórios significa também uma subutilização da riqueza de ativos gerados na área de dados, dificultando análises e tomando tempo diário dos colaboradores, que buscam acesso às informações em mais de 7 diferentes áreas.
+1.3. Dessa forma, a falta de insights estruturados de clientes também reduz a eficiência comercial e financeira, comprometendo o entendimento de riscos e custos e a checagem de sinistros. Além disso, a baixa usabilidade e dificuldade de centralização das informações podem gerar retrabalho e obstáculos em visões macro atualizadas da presidência.
+
+Objetivos do projeto:
+1. Gerar insights sobre tendências e fundamentar a tomada de decisões
+1.1. Desenvolver uma solução de BI mais flexível e interativa, permitindo que as equipes de 7 diferentes áreas visualizem e explorem dados de forma mais eficiente, identificando tendências e outliers de forma atualizada.
+2. Aprimorar a usabilidade e integração dos dados
+2.1. Implementar uma ferramenta intuitiva e acessível, que garanta uma extração de dados limpa e automatizada do ERP I4Pro. Isso permitirá maior confiabilidade nas informações e análises mais robustas conectadas, reduzindo retrabalho e aumentando a eficiência operacional e a checagem de informações de terceiros.
+
+Etapas do Projeto:
+Etapa 1 - Imersão no contexto
+Etapa 2 - Extração e Tratamento dos Dados
+2.1. Elaboração da estrutura dos dados a serem extraídos do I4Pro e de outros sistemas menores da empresa (com as respectivas APIs);
+2.2. Desenvolvimento de um script de extração do ERP da I4Pro;
+2.3. Tratamento e Processamento inicial dos dados extraídos do I4Pro;
+2.4. Limpeza e Análise inicial dos dados;
+Etapa 3 - Confecção da Dashboard
+3.1. Conectar a base de dados de forma automatizada e atualizada recorrentemente com o Power BI;
+3.2. Montar o dashboard, com foco na análise das informações do I4Pro, sistema que representa o coração de dados da empresa, tendo cerca de:
+  - 10 páginas (1 análise macro das métricas principais, voltada ao entendimento da presidência, 1 página para a área técnica, 5 páginas para áreas de subscrição, 1 página para sinistros, 1 para a área de resseguros e 1 página operacional);
+3.3. Trazer foco em visualizações integradas e interativas.
+Etapa 4 - Validação e Documentação Final
+4.1. Reports semanais com as entregas parciais do projeto;
+4.2. Extração dos dados, limpeza e análise exploratória, e integração com a Dashboard interativa, englobando a visão geral e detalhada da empresa;
+4.3. Documentação final extensiva para consulta e possíveis adições futuras, registro da análise exploratória.
+
+Entregas:
+- Reports semanais com as entregas parciais do projeto.
+- Extração dos dados, limpeza e análise exploratória, e integração com a Dashboard interativa, englobando a visão geral e detalhada da empresa.
+- Documentação final extensiva para consulta e possíveis adições futuras, registro da análise exploratória.
