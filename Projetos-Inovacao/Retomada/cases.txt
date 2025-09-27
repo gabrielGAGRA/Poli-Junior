@@ -1,0 +1,109 @@
+1. Hypera Pharma 
+Situação: A Hypera Pharma utilizava uma previsão de demanda para seu planejamento estratégico e alocação de recursos. 
+Complicação: O modelo existente apresentava um erro médio de 5% (MAPE), com instabilidade significativa em períodos de sazonalidade e feriados. Essa imprecisão no planejamento resultava em perdas financeiras estimadas em R$ 30 milhões mensais. 
+Resolução: Foi desenvolvido um novo modelo de séries temporais que reduziu o erro percentual absoluto médio em 3.5 pontos percentuais. A solução tem o potencial de gerar uma redução de perdas de até R$ 252 milhões anuais, além de garantir o preparo adequado das lojas para picos de demanda. 
+
+2. Colgate-Palmolive 
+Situação: A Colgate-Palmolive necessitava otimizar a previsão de demanda de sell-out para sua operação. 
+Complicação: A ausência de dados estruturados e acessíveis impedia a realização de previsões assertivas. Isso levava a perdas financeiras diretas, seja por excesso de estoque acumulado ou pela incapacidade de suprir a demanda do mercado. 
+Resolução: O banco de dados da empresa foi enriquecido para viabilizar análises e um novo modelo de previsão de alta assertividade foi desenvolvido. A iniciativa permitiu a otimização de estoque e logística, com consequente redução de custos e aumento da eficiência operacional. 
+
+3. Bom pra Crédito 
+Situação: A Bom pra Crédito, uma fintech de crédito, utilizava um modelo estatístico para a concessão de crédito a seus clientes. 
+Complicação: O modelo estava desatualizado e não conseguia prever com acurácia o risco de inadimplência associado a cada cliente. Essa ineficiência expunha a empresa a riscos elevados e limitava seu potencial de crescimento sustentável. 
+Resolução: Foi criado, testado e validado um novo modelo de machine learning (XGBoost) para classificação de risco. O novo algoritmo permite uma melhor segmentação de clientes, diminuindo o risco e as perdas operacionais decorrentes da inadimplência. 
+
+4. Empresa de Tênis e Calçados 
+Situação: Uma das cinco maiores empresas globais do segmento de calçados definia a curva de tamanho de seus produtos por meio de um processo manual em Excel. 
+Complicação: A falta de insights estratégicos nesse processo resultava em baixa assertividade, gerando acúmulo de estoque para alguns tamanhos e perda de vendas por falta de produto em outros. 
+Resolução: Foram desenvolvidas análises em Python para determinar as curvas reais de demanda por tamanho. Isso gerou insights valiosos que capacitaram a empresa a estruturar melhor seus pedidos, maximizar a eficiência do estoque e, consequentemente, aumentar o faturamento. 
+
+5. Zoetis 
+Situação: A Zoetis, empresa de saúde animal, buscava um entendimento aprofundado sobre o comportamento de compra e o pareamento de produtos por parte de seus clientes. 
+Complicação: Hipóteses de negócio sobre o padrão de consumo e gestão de estoque não eram validadas por dados, o que limitava a eficácia de ações de marketing e vendas. 
+Resolução: Foi conduzida uma análise detalhada da cesta de produtos, criando indicadores de paridade para validar as hipóteses. O projeto entregou insights que permitiram à Zoetis executar campanhas de marketing mais direcionadas e otimizar o gerenciamento futuro de estoque. 
+
+6. Centauro 
+Situação: A Centauro buscava implementar uma cultura Data Driven em sua Área de Negócios para orientar decisões. 
+Complicação: A equipe enfrentava desafios para determinar, com base em dados, os melhores pareamentos de produtos e identificar os Best Sellers de forma precisa, o que impactava a estratégia comercial. 
+Resolução: Foi desenvolvido um script em Python para as análises centrais e criados dashboards interativos em Power BI para democratizar o acesso aos dados. A solução viabilizou a tomada de decisões baseada em dados históricos, com potencial de aumento de vendas a partir do maior conhecimento do cliente. 
+
+7. Chilli Beans 
+Situação: Em fase de expansão de franquias, a Chilli Beans gerenciava dados de múltiplas plataformas de CRM de forma manual, utilizando o Excel. 
+Complicação: O processo manual era intensivo em trabalho, gerava retrabalho e retardava a obtenção de insights, dificultando a tomada de decisões ágeis e assertivas, cruciais para a expansão. 
+Resolução: Foram criados dashboards consolidados no Power BI, unificando as fontes de dados (CRM, redes sociais). A automação fortaleceu a cultura Data Driven e reduziu custos operacionais, aumentando a capacidade estratégica para impulsionar o crescimento da rede. 
+
+8. Dengo Chocolates 
+Situação: A Dengo Chocolates necessitava de insights de negócio para orientar decisões estratégicas sobre seu portfólio de produtos e operações. 
+Complicação: A empresa não possuía uma quantificação clara do impacto financeiro de desafios como canibalização de produtos, falta de estoque e um entendimento limitado sobre o perfil de seu público. 
+Resolução: Por meio de análises aprofundadas, como clusterização RFM e simulações, o projeto quantificou a receita perdida. Foi identificado que R$ 4,5 milhões anuais eram perdidos devido à canibalização de produtos, permitindo a criação de ações de recuperação direcionadas. 
+
+9. DUX Trucking 
+Situação: A transportadora DUX Trucking realizava a coleta e consolidação de dados de forma manual, utilizando o sistema Brudam e planilhas Excel. 
+Complicação: A ausência de dados completos sobre a quilometragem das entregas tornava o cálculo de indicadores de qualidade impreciso. O processo manual gerava retrabalho e impedia decisões estratégicas baseadas em dados. 
+Resolução: Foram desenvolvidos dashboards em Power BI e implementada uma integração via API para captura automática da quilometragem. A automação reduziu custos operacionais e permitiu a identificação de métricas para aumentar a lucratividade a partir de um conhecimento aprofundado dos fretes. 
+
+10. Estapar 
+Situação: A Estapar, rede de estacionamentos em expansão, dependia do Excel para a visualização e análise de dados de suas operações. 
+Complicação: O processo manual e repetitivo era ineficiente e limitava a capacidade de analisar a performance em diferentes localidades, informação crucial para suportar decisões de expansão. 
+Resolução: Foi desenvolvido um dashboard interativo em Power BI com filtros avançados para comparação de desempenho. A solução otimizou o tempo de análise, reduziu o trabalho manual e proveu um melhor direcionamento estratégico para a expansão do negócio. 
+
+11. Klabin 
+Situação: A Klabin, maior produtora de celulose do Brasil, possuía um processo estabelecido para análise decisória. 
+Complicação: Este processo era sobrecarregado por esforço manual e retrabalho, consumindo tempo valioso da equipe que deveria ser focado em atividades estratégicas. A necessidade de otimizar essas operações era urgente para ganho de eficiência. 
+Resolução: Foi desenvolvido um script em Python para a captação, limpeza e transformação 100% automatizada das bases de dados. A solução, conectada a dashboards interativos no Power BI, resultou na redução de 10 horas semanais de trabalho operacional manual, permitindo maior agilidade e precisão na tomada de decisões estratégicas. 
+
+12. Ultragaz 
+Situação: A Ultragaz enfrentava desafios no acompanhamento do controle de qualidade e da eficiência na fabricação de botijões de gás. 
+Complicação: A falta de métricas consolidadas prejudicava decisões operacionais e estratégicas, ocultando problemas e oportunidades de melhoria nos processos. 
+Resolução: Foram estruturados 5 novos indicadores em ETL, com a criação de queries SQL no Azure Databricks para consolidar dados históricos. Os indicadores desenvolvidos proporcionaram um direcionamento estratégico mais assertivo nas fábricas, com visões macro e históricas para otimização contínua. 
+
+13. Grande Empresa de Jornalismo 
+Situação: Uma grande empresa de jornalismo necessitava de dados e insights sobre o sentimento da população brasileira acerca do veganismo para a produção de artigos. 
+Complicação: A empresa não possuía uma estrutura consolidada para analisar grandes volumes de dados de redes sociais, necessitando de material visual e analítico para suportar a pesquisa. 
+Resolução: Foi criada uma ferramenta em Google Colab que utiliza NLP para capturar e classificar sentimentos de tweets, gerando visualizações automáticas. A solução permitiu testar hipóteses com alta assertividade e atingir uma profundidade de análise e tamanho amostral acima do esperado em um curto período. 
+
+14. Grande Banco Brasileiro 
+Situação: Um dos três maiores bancos do Brasil enfrentava dificuldades em identificar padrões de comportamento em clientes que aderiram ao Open Finance. 
+Complicação: A falta de conhecimento sobre o perfil desses clientes impedia a criação de ações de marketing direcionadas e eficazes para otimizar a estratégia de Open Finance. 
+Resolução: Foi realizada uma análise exploratória em 2 bilhões de linhas de dados e desenvolvida uma solução de Machine Learning (clusterização e classificação) com mais de 30 parâmetros. O resultado foi um maior conhecimento sobre o perfil ideal de cliente, permitindo maior assertividade nas ações estratégicas e a otimização do investimento em marketing. 
+
+15. Tembici 
+Situação: A Tembici, empresa de compartilhamento de bicicletas, sofria prejuízos recorrentes devido ao roubo de seus ativos. 
+Complicação: A ausência de uma visão clara sobre os locais e períodos de maior risco impedia a implementação de ações preventivas eficazes para mitigar as perdas. 
+Resolução: Foi desenvolvido um modelo de séries temporais em Python que alcançou aproximadamente 95% de assertividade na previsão de roubos por local. Isso permitiu um melhor planejamento de ações preventivas, resultando em uma redução significativa das perdas financeiras e uma alocação mais estratégica de recursos. 
+
+16. V.tal 
+Situação: A V.tal operava com painéis internos e automações dispersas, o que gerava preocupações de ineficiência na alta gestão. 
+Complicação: Essa dispersão limitava a otimização de tarefas e criava riscos de segurança com o uso de dados sigilosos em plataformas externas de chatbot. Uma solução unificada era crítica para acelerar a produtividade e garantir a governança dos dados. 
+Resolução: Foi desenvolvido um agente copiloto de IA generativa (utilizando Gemini na GCP) para apoiar a alta gestão. A solução economizou mais de 400 horas mensais (um valor superior a R$ 45.000 em recursos), otimizando a produtividade e fortalecendo a cibersegurança. 
+
+17. Riachuelo 
+Situação: A Riachuelo possuía um ambiente Databricks descentralizado, onde estruturas antigas e novas conviviam. 
+Complicação: Essa dualidade gerava altos custos operacionais, ineficiência na gestão de clusters e dificultava a exploração de dados, tornando essencial a unificação em um ambiente moderno. 
+Resolução: O pipeline do Azure foi adaptado para um novo ambiente unificado e os dados foram migrados para um datalake moderno. A mudança resultou em uma redução significativa de custos com infraestrutura e habilitou a empresa para novas frentes de inovação com IA. 
+
+18. Mecalor 
+Situação: A Mecalor enfrentava dificuldades em seu processo de vendas, sem insights claros sobre os motivos de perda de negócios e suas taxas de conversão. 
+Complicação: A empresa não tinha previsibilidade de receita nem uma visualização completa de suas métricas, o que a impedia de transformar dados de vendas em uma estratégia acionável. 
+Resolução: Foi desenvolvida uma solução de Machine Learning integrada ao Power BI para previsão de receita e sazonalidade. O projeto permitiu à Mecalor obter maior assertividade em suas ações estratégicas de produção e vendas, além de melhorar a capacidade de planejamento com previsões claras de receita. 
+
+19. Plataforma de Aluguel de Imóveis 
+Situação: Uma plataforma de aluguel de imóveis comprava dados de concorrentes sobre preços e ocupação para suas análises estratégicas. 
+Complicação: Os dados adquiridos eram incompletos, limitando seu valor estratégico, e geravam custos recorrentes e elevados. Havia a necessidade de obter informações mais completas de forma autônoma. 
+Resolução: Foram desenvolvidos scripts em Python para extrair dados detalhados de plataformas concorrentes de forma automática. A solução zerou os custos com a aquisição de dados e gerou novos insumos para análises, aumentando o potencial estratégico da empresa frente à concorrência. 
+
+20. LEO RAD 
+Situação: A LEO RAD oferecia um modelo de reconhecimento de voz como SaaS para a transcrição de laudos de radiologia. 
+Complicação: O modelo apresentava baixo desempenho com jargões médicos e sotaques regionais, o que impedia a LEO RAD de ter uma solução mais robusta e aplicada. Adicionalmente, a empresa não possuía mão de obra especializada para se dedicar ao desenvolvimento. 
+Resolução: Foi conduzido um projeto para tratar e filtrar 10 mil laudos e criar uma base com 8 milhões de frases de treino. O trabalho resultou em uma melhoria de mais de 3% na assertividade geral do modelo e um aumento de 30% na assertividade de termos médicos, aumentando seu potencial competitivo. 
+
+21. Grande Empresa Farmacêutica 
+Situação: Uma das 25 maiores farmacêuticas do mundo planejava utilizar dados contidos em 77 mil PDFs de moléculas para o desenvolvimento de novos medicamentos. Para essa análise, a empresa contratava uma consultoria externa. 
+Complicação: Havia um grande desafio em realizar as análises individuais de forma assertiva e eficiente. Adicionalmente, a consultoria cobrava R$300 mil por molécula analisada, o que elevava a necessidade de otimizar o processo e diminuir os custos operacionais. 
+Resolução: Foi desenvolvido um código em Python para a extração de informações de cada um dos PDFs e um dashboard que atribuía uma nota objetiva a cada molécula de forma automática. A solução permitiu análises mais precisas e eficientes, uma economia de R$300 mil por análise ao eliminar os custos com a consultoria e maior agilidade na tomada de decisões estratégicas de P&D. 
+
+22. Grande Empresa de Seguros 
+Situação: Uma empresa, entre as 3 maiores do setor de seguros, enfrentava um processo manual para a previsão do volume mensal de cálculos. 
+Complicação: Essa abordagem, sem uma solução de previsão robusta, era menos de 80% assertiva e gerava incertezas no planejamento de recursos e atrasos operacionais. Era necessário, portanto, aumentar a previsibilidade para otimizar a alocação de recursos e agilizar as decisões. 
+Resolução: Foi desenvolvido um modelo preditivo em Python para estimar o volume de cálculos mensais, utilizando métricas tarifárias, produção histórica e indicadores internos. A solução entregou um modelo com 95% de assertividade, garantindo maior previsibilidade operacional e uma economia anual superior a R$ 20 milhões através da otimização de recursos.
