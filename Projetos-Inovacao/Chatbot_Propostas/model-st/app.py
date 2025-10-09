@@ -5,6 +5,12 @@ import time
 import os
 from typing import Dict, List
 from pydantic import BaseModel
+from google import genai
+from google.genai import types
+import json
+
+# --- Classe para Streaming de Resposta ---
+from openai import AssistantEventHandler
 
 
 # --- Modelos de Configuração (de config.py) ---
@@ -30,13 +36,14 @@ AVAILABLE_ASSISTANTS: Dict[str, AssistantConfig] = {
         name="Criador de Propostas Comerciais",
         description="Especialista em criar propostas comerciais persuasivas",
     ),
+    "pesquisador_insights": AssistantConfig(
+        id="gemini-2.5-pro",
+        name="Pesquisador de Insights",
+        description="Especialista em Inteligência de Mercado e Pesquisa para vendas B2B",
+    ),
 }
 
 DEFAULT_ASSISTANT = "ata_para_proposta"
-
-# --- Classe para Streaming de Resposta (Melhoria do backend.py) ---
-# Usa o EventHandler para um streaming real e eficiente
-from openai import AssistantEventHandler
 
 
 class StreamingEventHandler(AssistantEventHandler):
@@ -58,10 +65,85 @@ class StreamingEventHandler(AssistantEventHandler):
         return self.full_response
 
 
-# --- Função para processar o workflow de ata para proposta ---
+def process_insights_research(contexto_negocio: str, instrucao_pesquisa: str = None):
+    """
+    Executa pesquisa de insights usando Gemini com Google Search
+    """
+    try:
+        # Inicializa o cliente Gemini
+        gemini_client = genai.Client(
+            api_key=st.secrets.get("GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY")
+        )
+
+        # Se não houver instrução específica, usa uma instrução padrão
+        if not instrucao_pesquisa:
+            instrucao_pesquisa = f"""Pesquise os principais desafios e tendências de mercado relevantes para o seguinte contexto de negócio. 
+            Foque em insights de consultorias renomadas (McKinsey, BCG, Accenture, Bain, PwC) que possam fundamentar uma proposta comercial."""
+
+        # Prepara o conteúdo da pesquisa
+        prompt_completo = f"""{instrucao_pesquisa}
+
+**CONTEXTO DO NEGÓCIO:**
+{contexto_negocio}
+"""
+
+        contents = [
+            types.Content(
+                role="user",
+                parts=[types.Part.from_text(text=prompt_completo)],
+            ),
+        ]
+
+        tools = [types.Tool(googleSearch=types.GoogleSearch())]
+
+        generate_content_config = types.GenerateContentConfig(
+            temperature=0.7,
+            thinking_config=types.ThinkingConfig(thinking_budget=-1),
+            tools=tools,
+            system_instruction=[
+                types.Part.from_text(
+                    text="""Você é um Agente de IA especialista em Inteligência de Mercado e Pesquisa para vendas B2B, atuando como um analista para o Núcleo de Dados & IA da Poli Júnior. A sua tarefa é executar uma instrução de pesquisa específica, baseada no contexto de um negócio, e entregar um dossiê de inteligência estruturado em JSON.
+
+**REGRAS DE OURO:**
+
+1. **PRECISÃO E FONTES REAIS:** Você **DEVE** usar a ferramenta de busca (`Google Search`) para basear as suas descobertas em fontes reais e de alta credibilidade. As suas fontes prioritárias são relatórios de consultorias de renome (ex: McKinsey, BCG, Accenture, Bain, PwC). Você **NUNCA** deve inventar fatos, links ou nomes de fontes.
+2. **FOCO CIRÚRGICO:** Você não escreve conteúdo criativo. Você executa uma tarefa de pesquisa e entrega um resumo estruturado e objetivo do que encontrou, citando a fonte.
+3. **RELEVÂNCIA CONTEXTUAL:** A sua pesquisa não é genérica. O insight encontrado deve ser diretamente relevante para o contexto do negócio fornecido (empresa, setor e desafio).
+
+**FORMATO DA RESPOSTA:**
+A sua resposta DEVE ser um texto que contenha um único bloco JSON válido, sem texto adicional. Se a pesquisa não retornar nada relevante que atenda aos critérios de qualidade, os campos `fonte_url` e `insight_chave` devem retornar `null`.
+
+```json
+{
+  "fonte_nome": "Nome da Publicação ou Relatório (ex: McKinsey Technology Trends 2025)",
+  "fonte_url": "URL completa, real e verificável da fonte",
+  "insight_chave": "Um resumo conciso e factual (1-2 frases) da descoberta mais importante para o contexto do negócio."
+}
+```"""
+                )
+            ],
+        )
+
+        # Gera a resposta com streaming
+        full_response = ""
+        for chunk in gemini_client.models.generate_content_stream(
+            model="gemini-2.5-pro",
+            contents=contents,
+            config=generate_content_config,
+        ):
+            if hasattr(chunk, "text"):
+                full_response += chunk.text
+
+        return full_response
+
+    except Exception as e:
+        st.error(f"Erro durante a pesquisa de insights: {e}", icon="🚨")
+        return None
+
+
 def process_ata_to_proposal_workflow(user_prompt):
     """
-    Processa o workflow completo: ata desorganizada -> ata organizada -> proposta
+    Processa o workflow completo: ata desorganizada -> ata organizada -> pesquisa insights -> proposta
     """
     try:
         # Etapa 1: Organizar a ata
@@ -100,17 +182,71 @@ def process_ata_to_proposal_workflow(user_prompt):
             }
         )
 
-        # Etapa 2: Criar proposta
+        # Etapa 2: Pesquisar Insights de Mercado
+        st.info("🔄 Pesquisando insights de mercado...", icon="🔍")
+
+        # Extrair contexto da ata organizada para a pesquisa
+        insights_response = process_insights_research(
+            contexto_negocio=ata_organizada,
+            instrucao_pesquisa="Pesquise insights relevantes de consultorias renomadas que possam fundamentar a proposta comercial.",
+        )
+
+        if insights_response:
+            # Tentar extrair o JSON da resposta
+            try:
+                # Procura pelo bloco JSON na resposta
+                json_start = insights_response.find("{")
+                json_end = insights_response.rfind("}") + 1
+                if json_start != -1 and json_end > json_start:
+                    insights_json = json.loads(insights_response[json_start:json_end])
+
+                    # Formatar insights para exibição
+                    insights_formatado = f"""**Fonte:** {insights_json.get('fonte_nome', 'N/A')}
+**URL:** {insights_json.get('fonte_url', 'N/A')}
+**Insight Chave:** {insights_json.get('insight_chave', 'N/A')}"""
+                else:
+                    insights_formatado = insights_response
+            except json.JSONDecodeError:
+                insights_formatado = insights_response
+
+            # Mostrar os insights
+            with st.chat_message(
+                "assistant", avatar=os.path.join(SCRIPT_DIR, "assets", "img", "gpt.png")
+            ):
+                st.markdown("### 🔍 Insights de Mercado")
+                st.markdown(insights_formatado)
+
+            # Adicionar ao histórico
+            st.session_state.messages.append(
+                {
+                    "role": "assistant",
+                    "content": f"### 🔍 Insights de Mercado\n\n{insights_formatado}",
+                }
+            )
+        else:
+            insights_formatado = (
+                "Não foi possível obter insights de mercado no momento."
+            )
+
+        # Etapa 3: Criar proposta
         st.info("🔄 Construindo proposta comercial...", icon="💼")
 
         # Criar thread para o criador de propostas
         thread_proposta = client.beta.threads.create()
 
-        # Adicionar a ata organizada como input para a proposta
+        # Adicionar a ata organizada E os insights como input para a proposta
+        prompt_proposta = f"""Com base na seguinte ata organizada e nos insights de mercado, crie uma proposta comercial:
+
+**ATA ORGANIZADA:**
+{ata_organizada}
+
+**INSIGHTS DE MERCADO:**
+{insights_formatado}"""
+
         client.beta.threads.messages.create(
             thread_id=thread_proposta.id,
             role="user",
-            content=f"Com base na seguinte ata organizada, crie uma proposta comercial:\n\n{ata_organizada}",
+            content=prompt_proposta,
         )
 
         # Executar o criador de propostas
@@ -145,6 +281,34 @@ def process_ata_to_proposal_workflow(user_prompt):
     except Exception as e:
         st.error(f"Erro durante o processamento do workflow: {e}", icon="🚨")
         return False
+
+
+try:
+    # Inicializa o cliente OpenAI usando as secrets do Streamlit
+    client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+except Exception as e:
+    st.error(
+        "Chave da API da OpenAI não encontrada. Por favor, configure seus secrets no Streamlit Cloud.",
+        icon="🚨",
+    )
+    st.stop()
+
+# --- Inicialização do Estado da Sessão ---
+# O st.session_state é o equivalente do Streamlit ao localStorage ou variáveis de classe do JS
+
+if "session_id" not in st.session_state:
+    st.session_state.session_id = (
+        f"session_{int(time.time())}"  # ID único para a sessão
+    )
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+if "thread_id" not in st.session_state:
+    st.session_state.thread_id = None
+
+if "assistant_key" not in st.session_state:
+    st.session_state.assistant_key = DEFAULT_ASSISTANT
 
 
 # --- Configuração da Página e Estilos ---
@@ -431,36 +595,6 @@ p, div, span, label {
     unsafe_allow_html=True,
 )
 
-# --- Lógica de Backend (Integrada do backend.py) ---
-
-try:
-    # Inicializa o cliente OpenAI usando as secrets do Streamlit
-    client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-except Exception as e:
-    st.error(
-        "Chave da API da OpenAI não encontrada. Por favor, configure seus secrets no Streamlit Cloud.",
-        icon="🚨",
-    )
-    st.stop()
-
-# --- Inicialização do Estado da Sessão ---
-# O st.session_state é o equivalente do Streamlit ao localStorage ou variáveis de classe do JS
-
-if "session_id" not in st.session_state:
-    st.session_state.session_id = (
-        f"session_{int(time.time())}"  # ID único para a sessão
-    )
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-if "thread_id" not in st.session_state:
-    st.session_state.thread_id = None
-
-if "assistant_key" not in st.session_state:
-    st.session_state.assistant_key = DEFAULT_ASSISTANT
-
-
 # --- Interface da Sidebar (de index.html) ---
 with st.sidebar:
     st.title("💬 Agente Comercial")
@@ -563,7 +697,7 @@ for msg in st.session_state.messages:
         st.markdown(msg["content"])
 
 
-# Input do usuário (substitui o <textarea> e <button>)
+# Input do usuário
 if prompt := st.chat_input("Digite sua mensagem aqui..."):
     # Adiciona e exibe a mensagem do usuário
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -572,15 +706,33 @@ if prompt := st.chat_input("Digite sua mensagem aqui..."):
     ):
         st.markdown(prompt)
 
-    # Verifica se é o workflow de ata para proposta
     if st.session_state.assistant_key == "ata_para_proposta":
         # Processa o workflow automatizado
         success = process_ata_to_proposal_workflow(prompt)
         if not success:
             # Remove a última mensagem do usuário se houve erro
             st.session_state.messages.pop()
+    elif st.session_state.assistant_key == "pesquisador_insights":
+        # Usa o pesquisador de insights standalone
+        with st.chat_message(
+            "assistant", avatar=os.path.join(SCRIPT_DIR, "assets", "img", "gpt.png")
+        ):
+            response_placeholder = st.empty()
+            response_placeholder.markdown("🔍 Pesquisando insights de mercado...")
+
+            insights_response = process_insights_research(contexto_negocio=prompt)
+
+            if insights_response:
+                response_placeholder.markdown(insights_response)
+                st.session_state.messages.append(
+                    {"role": "assistant", "content": insights_response}
+                )
+            else:
+                response_placeholder.markdown(
+                    "Não foi possível obter insights no momento."
+                )
+                st.session_state.messages.pop()
     else:
-        # Comportamento normal para outros assistentes
         # Prepara para receber a resposta do assistente
         with st.chat_message(
             "assistant", avatar=os.path.join(SCRIPT_DIR, "assets", "img", "gpt.png")
