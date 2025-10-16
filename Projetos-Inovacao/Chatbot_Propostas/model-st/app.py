@@ -13,7 +13,7 @@ import json
 from openai import AssistantEventHandler
 
 
-# --- Modelos de Configuração (de config.py) ---
+# --- Modelos de Configuraçã ---
 class AssistantConfig(BaseModel):
     id: str
     name: str
