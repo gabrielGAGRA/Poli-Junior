@@ -84,7 +84,7 @@ if button_minas:
 
     update_frequency = 10
     # Usando ThreadPoolExecutor
-    with ThreadPoolExecutor(max_workers=16) as executor:
+    with ThreadPoolExecutor(max_workers=22) as executor:
         futures = [executor.submit(dm.get_all_info, url_marca) for url_marca in urls_marcas]
         total_futures = len(futures)
         
