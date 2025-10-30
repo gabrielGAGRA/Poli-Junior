@@ -69,8 +69,13 @@ AVAILABLE_ASSISTANTS: Dict[str, AssistantConfig] = {
     ),
     "pesquisador_insights": AssistantConfig(
         id="gemini-2.5-pro",
-        name="🔍 Pesquisador de Insights",
+        name="🔍 Pesquisador de Insights para Proposta",
         description="Inteligência de Mercado com Google Search (Gemini)",
+    ),
+    "pesquisador_tendencias": AssistantConfig(
+        id="gemini-2.5-pro",
+        name="📈 Pesquisador de Tendências para AT",
+        description="Análise de Tendências de Mercado com Google Search (Gemini)",
     ),
 }
 
@@ -247,11 +252,19 @@ def process_with_assistant(prompt: str, file_ids: Optional[List[str]] = None) ->
         "content": prompt,
     }
 
+    # Anexar arquivos de acordo com o tipo de ferramenta do assistente
     if file_ids:
-        message_params["attachments"] = [
-            {"file_id": fid, "tools": [{"type": "code_interpreter"}]}
-            for fid in file_ids
-        ]
+        if assistant_info.supports_code_interpreter:
+            # Para assistentes com Code Interpreter (ex: análise de dados, gráficos)
+            message_params["attachments"] = [
+                {"file_id": fid, "tools": [{"type": "code_interpreter"}]}
+                for fid in file_ids
+            ]
+        elif assistant_info.supports_files:
+            # Para assistentes com Vector Store/File Search (RAG)
+            message_params["attachments"] = [
+                {"file_id": fid, "tools": [{"type": "file_search"}]} for fid in file_ids
+            ]
 
     # Adicionar mensagem
     client.beta.threads.messages.create(**message_params)
@@ -275,41 +288,60 @@ def process_with_assistant(prompt: str, file_ids: Optional[List[str]] = None) ->
 def process_insights_research(
     contexto_negocio: str, instrucao_pesquisa: Optional[str] = None
 ) -> Optional[str]:
-    """Pesquisa com Gemini (mantido do código original)"""
-    # ...existing code...
+    """
+    Executa pesquisa de insights usando Gemini com Google Search
+    """
     try:
+        # Inicializa o cliente Gemini
         gemini_client = genai.Client(
             api_key=st.secrets.get("GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY")
         )
 
-        if not instrucao_pesquisa:
-            instrucao_pesquisa = f"""Pesquise os principais desafios e tendências de mercado relevantes para o seguinte contexto de negócio. 
-            Foque em insights de consultorias renomadas (McKinsey, BCG, Accenture, Bain, PwC) que possam fundamentar uma proposta comercial."""
+        # System instruction para pesquisador de insights
+        system_instruction = """
+Você é um Agente de IA especialista em pesquisa de mercado e inteligência de negócios para DADOS, ANALYTICS, INTELIGENCIA ARTIFICIAL e BUSINESS INTELLIGENCE.
 
-        prompt_completo = f"""{instrucao_pesquisa}
+REGRAS DE PESQUISA:
 
-**CONTEXTO DO NEGÓCIO:**
-{contexto_negocio}
+1.  **REGRA CRÍTICA DE VERACIDADE:** Você DEVE usar sua ferramenta de busca interna para encontrar fontes e links REAIS. É terminantemente proibido inventar (alucinar) links, fontes ou URLs. A precisão do link é sua prioridade máxima.
+
+2.  **FLEXIBILIDADE DE FONTE:** Dê preferência a fontes de alta credibilidade (McKinsey, BCG, Bain, Accenture, Gartner, HBR). Contudo, um link REAL de uma fonte confiável (ex: Forbes, TechCrunch, relatórios de indústria) é MIL VEZES melhor do que um link falso ou quebrado de uma fonte prioritária.
+
+3.  **FOCO:** Mantenha o foco em transformação digital, data-driven decision making, IA, BI, ROI de projetos de dados, tendências em analytics e casos de sucesso.
+
+4.  **ATUALIDADE:** Priorize fontes dos últimos 36 meses, mas não ignore insights fundamentais mais antigos se forem os únicos disponíveis.
+
+5.  **RELEVÂNCIA:** Pare a pesquisa quando encontrar insights que sejam diretamente acionáveis ou muito relevantes para o contexto do cliente, evitando informações genéricas.
+
+FORMATO DA RESPOSTA:
+
+-   O campo "link" DEVE ser a URL real e verificável encontrada na pesquisa.
+-   Se um insight relevante for encontrado, mas um link direto e funcional não puder ser verificado pela ferramenta de busca, você DEVE retornar link: null.
+-   Nunca preencha o campo "link" com uma URL que você não tenha verificado.
+
+Conteudo: "descrição detalhada do insight",
+Fonte: "nome da fonte real (ex: McKinsey & Company, BCG)",
+Link: "URL completa e real da fonte, ou null"
 """
 
+        # Mensagem do usuário
         contents = [
             types.Content(
-                role="user", parts=[types.Part.from_text(text=prompt_completo)]
-            )
+                role="user",
+                parts=[types.Part.from_text(text=contexto_negocio)],
+            ),
         ]
+
         tools = [types.Tool(googleSearch=types.GoogleSearch())]
 
         generate_content_config = types.GenerateContentConfig(
             temperature=0.7,
             thinking_config=types.ThinkingConfig(thinking_budget=-1),
             tools=tools,
-            system_instruction=[
-                types.Part.from_text(
-                    text="""Você é um Agente de IA especialista em Inteligência de Mercado..."""
-                )
-            ],
+            system_instruction=[types.Part.from_text(text=system_instruction)],
         )
 
+        # Gera a resposta com streaming
         full_response = ""
         for chunk in gemini_client.models.generate_content_stream(
             model="gemini-2.5-pro",
@@ -326,11 +358,261 @@ def process_insights_research(
         return None
 
 
-def process_ata_to_proposal_workflow(user_prompt: str):
-    """Workflow completo (mantido do código original)"""
-    # ...existing code...
-    pass
+def process_tendencias_research(
+    contexto_negocio: str, instrucao_pesquisa: Optional[str] = None
+) -> Optional[str]:
+    """
+    Executa pesquisa de tendências usando Gemini com Google Search
+    """
+    try:
+        # Inicializa o cliente Gemini
+        gemini_client = genai.Client(
+            api_key=st.secrets.get("GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY")
+        )
 
+        # System instruction para pesquisador de tendências
+        system_instruction = """
+# ROLE AND GOAL
+Você é um Consultor Estratégico Sênior da Poli Júnior, especialista em análise de mercado, na metodologia "The Challenger Sale" e em posicionar soluções de Dados & IA como alavancas de valor de negócio. Seu objetivo é criar o conteúdo para um "One-Slide Opener" de diagnóstico para uma reunião de vendas consultiva. Este slide deve ensinar algo novo e valioso ao cliente sobre o mundo dele, gerar credibilidade instantânea e provocar uma conversa estratégica, conectando os desafios do mercado às soluções que oferecemos.
+
+# CONTEXT & KNOWLEDGE BASE
+Para executar sua tarefa, você deve operar com base no seguinte conhecimento prévio sobre a Poli Júnior e nossa metodologia:
+
+1.  **Nossas Soluções (em termos de negócio):**
+    *   **Fase 1: Construindo a Fundação para a Inteligência:** Nós resolvemos problemas de dados inacessíveis, silos de informação e processos manuais. Criamos uma "fonte única da verdade", automatizamos o trabalho repetitivo e garantimos dados confiáveis para habilitar a inovação e a resiliência do negócio. [1, 1]
+    *   **Fase 2: Gerando Vantagem Competitiva com Insights:** Nós transformamos dados em respostas. Ajudamos empresas a entender o comportamento do seu negócio, antecipar o futuro (demanda, riscos) e otimizar decisões, entregando esses insights de forma visual e acionável para que possam agir com confiança. [1, 1]
+    *   **Fase 3: Atingindo a Vanguarda da Inovação:** Nós implementamos IA de ponta para criar novas frentes de valor, como capacitar equipes com "copilotos" de IA, automatizar o atendimento ao cliente de forma personalizada e extrair inteligência de dados não estruturados (imagens, voz, documentos). [1, 1]
+
+2.  **Filosofia "The Challenger Sale":** Sua abordagem deve seguir o princípio "Teach, Tailor, Take Control". O objetivo do slide de tendências é o "Teach" (Ensinar): introduzir uma perspectiva nova e disruptiva que cria uma "tensão construtiva", fazendo o cliente perceber o custo da inação. [1]
+
+3.  **Estrutura do "One-Slide Opener":** Cada tendência que você criar DEVE seguir esta estrutura de três partes:
+    *   **Insight Disruptivo:** Uma afirmação provocadora que desafia o status quo e ensina algo novo sobre o setor ou a função do cliente.
+    *   **Ponto de Dados de Apoio:** Um dado quantitativo de uma fonte respeitável (McKinsey, BCG, Bain, Gartner, Deloitte, etc.) que ancora o insight na realidade e gera credibilidade.
+    *   **Conexão com Nossas Soluções:** Uma ponte clara e explícita que conecta o desafio apresentado a uma de nossas fases de solução (listadas no item 1).
+
+# STEP-BY-STEP INSTRUCTIONS
+
+1.  **Análise do Input:** Primeiro, analise profundamente as variáveis de entrada fornecidas pelo usuário: a empresa, o cargo do interlocutor e o segmento de atuação.
+2.  **Pesquisa Direcionada:** Realize uma pesquisa focada para encontrar as tendências e desafios mais recentes e relevantes para a intersecção do `{SEGMENTO_DE_ATUAÇÃO}` e da função do `{CARGO_DO_INTERLOCUTOR}`. Priorize relatórios, artigos e análises de fontes de consultoria de elite (McKinsey, BCG, Bain, Gartner, Deloitte) e publicações de mercado respeitadas. Busque especificamente por dados quantificáveis (porcentagens, valores financeiros, estatísticas de mercado).
+3.  **Brainstorm e Seleção Estratégica:** Com base na pesquisa, identifique de 5 a 7 tendências ou desafios potenciais. Em seguida, selecione as 3 mais potentes. Uma tendência "potente" atende a três critérios:
+    a. Conecta-se a uma dor de negócio clara e, preferencialmente, quantificável (custo, risco, perda de oportunidade).
+    b. É um insight não óbvio, que provavelmente o cliente ainda não considerou daquela forma.
+    c. Conecta-se DIRETAMENTE a pelo menos uma das nossas três fases de solução.
+4.  **Construção das Tendências:** Para cada uma das 3 tendências selecionadas, redija o conteúdo seguindo a estrutura de três partes definida na `KNOWLEDGE BASE`. Seja conciso, direto e use a linguagem de negócios. A "Conexão com nossas soluções" deve ser explícita, mencionando a fase e o resultado de negócio que ela gera.
+5.  **Elaboração da Pergunta de Transição:** Ao final, crie a "Pergunta de Transição". Esta pergunta deve ser aberta, estratégica e forçar uma escolha entre os desafios apresentados, convidando o cliente a iniciar o diagnóstico. Ela deve ser formulada para pivotar a conversa do mercado geral para a realidade específica da empresa dele.
+
+# INPUT VARIABLES
+*   `{NOME_DA_EMPRESA}`: [Nome da empresa do cliente]
+*   `{CARGO_DO_INTERLOCUTOR}`: [Cargo da pessoa com quem será a reunião]
+*   `{DESCRIÇÃO_DA_EMPRESA}`:
+*   `{SEGMENTO_DE_ATUAÇÃO}`:
+
+# OUTPUT FORMAT
+A sua resposta final deve ser formatada em Markdown, seguindo estritamente o modelo abaixo, sem adicionar nenhuma introdução ou comentário fora da estrutura.
+
+---
+
+### **Slide de Abertura: ""**
+
+*(Este slide deve ser apresentado em menos de três minutos, com o objetivo de provocar uma conversa estratégica, não de dar uma aula.)*
+
+#### **1.**
+
+*   **Insight:**
+*   **Ponto de Dados de Apoio:**
+*   **(Conexão com suas soluções:**)
+
+#### **2.**
+
+*   **Insight:**
+*   **Ponto de Dados de Apoio:**
+*   **(Conexão com suas soluções:**)
+
+#### **3.**
+
+*   **Insight:**
+*   **Ponto de Dados de Apoio:**
+*   **(Conexão com suas soluções:**)
+
+---
+
+### **A Transição para o Diálogo (A Pergunta Final)**
+
+**""**
+
+# CONSTRAINTS & GUIDELINES
+*   Pense como um consultor, não como um assistente de pesquisa. Seu valor está na síntese e na conexão estratégica, não na listagem de fatos.
+*   Evite jargão técnico a todo custo. Fale a língua do negócio (ROI, eficiência, risco, vantagem competitiva).
+*   Priorize a dor de negócio. Cada insight deve apontar para um problema que custa dinheiro, tempo ou oportunidade.
+*   A "Conexão com nossas soluções" é a parte mais importante. Ela deve ser explícita e direta, mostrando ao cliente que você não está apenas identificando problemas, mas que tem um caminho para resolvê-los.
+*   Seja conciso e impactante. Cada palavra conta.
+"""
+
+        # Mensagem do usuário
+        contents = [
+            types.Content(
+                role="user",
+                parts=[types.Part.from_text(text=contexto_negocio)],
+            ),
+        ]
+
+        tools = [types.Tool(googleSearch=types.GoogleSearch())]
+
+        generate_content_config = types.GenerateContentConfig(
+            temperature=0.7,
+            thinking_config=types.ThinkingConfig(thinking_budget=-1),
+            tools=tools,
+            system_instruction=[types.Part.from_text(text=system_instruction)],
+        )
+
+        # Gera a resposta com streaming
+        full_response = ""
+        for chunk in gemini_client.models.generate_content_stream(
+            model="gemini-2.5-pro",
+            contents=contents,
+            config=generate_content_config,
+        ):
+            if hasattr(chunk, "text"):
+                full_response += chunk.text
+
+        return full_response
+
+    except Exception as e:
+        st.error(f"Erro durante a pesquisa de tendências: {e}", icon="🚨")
+        return None
+
+
+def process_ata_to_proposal_workflow(user_prompt: str):
+    """
+    Processa o workflow completo: ata desorganizada -> ata organizada -> pesquisa insights -> proposta
+    """
+    try:
+        # Etapa 1: Organizar a ata
+        st.info("🔄 Organizando a ata...", icon="📝")
+
+        # Criar thread para o organizador de atas
+        thread_ata = client.beta.threads.create()
+
+        # Adicionar mensagem do usuário
+        client.beta.threads.messages.create(
+            thread_id=thread_ata.id, role="user", content=user_prompt
+        )
+
+        # Executar o organizador de atas
+        run_ata = client.beta.threads.runs.create_and_poll(
+            thread_id=thread_ata.id,
+            assistant_id=AVAILABLE_ASSISTANTS["organizador_atas"].id,
+        )
+
+        # Obter a resposta organizada
+        messages_ata = client.beta.threads.messages.list(thread_id=thread_ata.id)
+        ata_organizada = messages_ata.data[0].content[0].text.value
+
+        # Mostrar a ata organizada
+        with st.chat_message(
+            "assistant", avatar=os.path.join(SCRIPT_DIR, "assets", "img", "gpt.png")
+        ):
+            st.markdown("### 📋 Ata Organizada")
+            st.markdown(ata_organizada)
+
+        # Adicionar ao histórico
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": f"### 📋 Ata Organizada\n\n{ata_organizada}",
+            }
+        )
+
+        # Etapa 2: Pesquisar Insights de Mercado
+        st.info("🔄 Pesquisando insights de mercado...", icon="🔍")
+
+        # Extrair contexto da ata organizada para a pesquisa
+        insights_response = process_insights_research(
+            contexto_negocio=ata_organizada,
+            instrucao_pesquisa="Pesquise insights relevantes de consultorias renomadas que possam fundamentar a proposta comercial.",
+        )
+        # Mostrar os insights
+        if insights_response:
+            with st.chat_message(
+                "assistant", avatar=os.path.join(SCRIPT_DIR, "assets", "img", "gpt.png")
+            ):
+                st.markdown("### 🔍 Insights de Mercado")
+                st.markdown(insights_response)
+
+            # Adicionar ao histórico
+            st.session_state.messages.append(
+                {
+                    "role": "assistant",
+                    "content": f"### 🔍 Insights de Mercado\n\n{insights_response}",
+                }
+            )
+        else:
+            insights_response = "Não foi possível obter insights de mercado no momento."
+
+        # Etapa 3: Criar proposta
+        st.info("🔄 Construindo proposta comercial...", icon="💼")
+
+        # Criar thread para o criador de propostas
+        thread_proposta = client.beta.threads.create()
+
+        # Adicionar a ata organizada E os insights como input para a proposta
+        prompt_proposta = f"""Com base na seguinte ata organizada e nos insights de mercado, crie uma proposta comercial:
+
+**ATA ORGANIZADA:**
+{ata_organizada}
+
+**INSIGHTS DE MERCADO:**
+{insights_response}"""
+
+        client.beta.threads.messages.create(
+            thread_id=thread_proposta.id,
+            role="user",
+            content=prompt_proposta,
+        )
+
+        # Executar o criador de propostas
+        run_proposta = client.beta.threads.runs.create_and_poll(
+            thread_id=thread_proposta.id,
+            assistant_id=AVAILABLE_ASSISTANTS["criador_propostas"].id,
+        )
+
+        # Obter a proposta criada
+        messages_proposta = client.beta.threads.messages.list(
+            thread_id=thread_proposta.id
+        )
+        proposta_criada = messages_proposta.data[0].content[0].text.value
+
+        # Mostrar a proposta
+        with st.chat_message(
+            "assistant", avatar=os.path.join(SCRIPT_DIR, "assets", "img", "gpt.png")
+        ):
+            st.markdown("### 💼 Proposta Comercial")
+            st.markdown(proposta_criada)
+
+        # Adicionar ao histórico
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": f"### 💼 Proposta Comercial\n\n{proposta_criada}",
+            }
+        )
+
+        return True
+
+    except Exception as e:
+        st.error(f"Erro durante o processamento do workflow: {e}", icon="🚨")
+        return False
+
+
+try:
+    # Inicializa o cliente OpenAI usando as secrets do Streamlit
+    client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+except Exception as e:
+    st.error(
+        "Chave da API da OpenAI não encontrada. Por favor, configure seus secrets no Streamlit Cloud.",
+        icon="🚨",
+    )
+    st.stop()
 
 # ==================== INTERFACE SIDEBAR ====================
 
@@ -525,9 +807,270 @@ def main():
     # CSS (mantido do código original)
     st.markdown(
         """
-    <style>
-    /* ...existing code... (seu CSS completo aqui) */
-    </style>
+<style>
+/* Importa fontes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis CSS personalizadas */
+:root {
+    --primary-purple: #8c52ff;
+    --purple-light: #a06eff;
+    --purple-dark: #6b3acc;
+    --purple-ultra-light: rgba(140, 82, 255, 0.1);
+    --purple-semi-light: rgba(140, 82, 255, 0.2);
+    --background-gradient: linear-gradient(135deg, #f8f7ff 0%, #f0ebff 100%);
+}
+
+/* Fundo principal com padrão de dados */
+.main .block-container {
+    background: var(--background-gradient);
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    color: #333333;
+}
+
+.main .block-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        /* Padrão de dados/pontos pequenos */
+        radial-gradient(circle at 10% 10%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 30% 20%, var(--purple-ultra-light) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 50% 15%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 70% 25%, var(--purple-ultra-light) 2px, transparent 2px),
+        radial-gradient(circle at 90% 10%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 85% 30%, var(--purple-ultra-light) 1.5px, transparent 1.5px),
+        
+        /* Segunda camada de dados */
+        radial-gradient(circle at 15% 40%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 35% 45%, var(--purple-ultra-light) 2px, transparent 2px),
+        radial-gradient(circle at 55% 35%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 75% 50%, var(--purple-ultra-light) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 95% 45%, var(--purple-ultra-light) 1px, transparent 1px),
+        
+        /* Terceira camada de dados */
+        radial-gradient(circle at 20% 70%, var(--purple-ultra-light) 2px, transparent 2px),
+        radial-gradient(circle at 40% 65%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 60% 75%, var(--purple-ultra-light) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 80% 70%, var(--purple-ultra-light) 1px, transparent 1px),
+        
+        /* Quarta camada de dados */
+        radial-gradient(circle at 25% 90%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 45% 95%, var(--purple-ultra-light) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 65% 85%, var(--purple-ultra-light) 1px, transparent 1px),
+        radial-gradient(circle at 85% 95%, var(--purple-ultra-light) 2px, transparent 2px),
+        
+        /* Linhas sutis conectando dados */
+        linear-gradient(45deg, transparent 45%, var(--purple-ultra-light) 47%, var(--purple-ultra-light) 48%, transparent 50%),
+        linear-gradient(-45deg, transparent 45%, var(--purple-ultra-light) 47%, var(--purple-ultra-light) 48%, transparent 50%);
+    
+    background-size: 
+        /* Tamanhos variados para simular dados dispersos */
+        80px 80px, 120px 120px, 90px 90px, 110px 110px, 70px 70px, 100px 100px,
+        95px 95px, 130px 130px, 85px 85px, 105px 105px, 75px 75px,
+        140px 140px, 80px 80px, 115px 115px, 90px 90px,
+        125px 125px, 95px 95px, 85px 85px, 135px 135px,
+        /* Linhas de conexão */
+        200px 200px, 180px 180px;
+    
+    background-position: 
+        /* Posições aleatórias para simular distribuição de dados */
+        0 0, 25px 25px, 50px 15px, 75px 35px, 100px 10px, 125px 30px,
+        15px 40px, 45px 60px, 70px 45px, 95px 65px, 120px 50px,
+        20px 80px, 50px 75px, 80px 85px, 110px 80px,
+        30px 100px, 60px 105px, 90px 95px, 120px 110px,
+        /* Linhas */
+        0 0, 100px 100px;
+    
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Adiciona padrão extra de dados flutuantes */
+.main .block-container::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        /* Pequenos quadrados e retângulos representando dados */
+        linear-gradient(45deg, var(--purple-ultra-light) 2px, transparent 2px),
+        linear-gradient(-45deg, var(--purple-ultra-light) 1px, transparent 1px),
+        /* Círculos maiores ocasionais */
+        radial-gradient(circle at 33% 33%, var(--purple-ultra-light) 3px, transparent 3px),
+        radial-gradient(circle at 66% 66%, var(--purple-ultra-light) 2.5px, transparent 2.5px);
+    background-size: 150px 150px, 180px 180px, 300px 300px, 250px 250px;
+    background-position: 0 0, 50px 50px, 75px 75px, 125px 125px;
+    opacity: 0.2;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Remove a borda padrão do topo do header */
+header[data-testid="stHeader"] {
+    border-top: none;
+    background: linear-gradient(90deg, var(--primary-purple), var(--purple-light));
+    height: 4px;
+}
+
+/* Estilização da sidebar */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #ffffff 0%, #faf9ff 100%);
+    border-right: 2px solid var(--purple-ultra-light);
+}
+
+section[data-testid="stSidebar"] > div {
+    background: transparent;
+}
+
+/* Força texto escuro em todos os elementos */
+.stApp {
+    color: #333333 !important;
+}
+
+/* Botões personalizados */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary-purple), var(--purple-light));
+    color: white !important;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(140, 82, 255, 0.3);
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, var(--purple-dark), var(--primary-purple));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(140, 82, 255, 0.4);
+}
+
+/* Selectbox personalizado */
+.stSelectbox > div > div {
+    background-color: white;
+    border: 2px solid var(--purple-ultra-light);
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    color: #333333 !important;
+}
+
+.stSelectbox > div > div:focus-within {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px var(--purple-ultra-light);
+}
+
+/* Estiliza os containers das mensagens para se parecerem com os balões de chat */
+[data-testid="stChatMessage"] {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--purple-ultra-light);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(140, 82, 255, 0.1);
+    transition: all 0.3s ease;
+    color: #333333 !important;
+}
+
+[data-testid="stChatMessage"]:hover {
+    box-shadow: 0 6px 25px rgba(140, 82, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Mensagens do usuário */
+[data-testid="stChatMessage"]:has(img[alt*="user"]) {
+    background: linear-gradient(135deg, var(--primary-purple), var(--purple-light));
+    color: white !important;
+    margin-left: 2rem;
+}
+
+/* Mensagens do assistente */
+[data-testid="stChatMessage"]:has(img[alt*="assistant"]) {
+    background: rgba(255, 255, 255, 0.95);
+    margin-right: 2rem;
+    color: #333333 !important;
+}
+
+/* Estilo para avatares */
+img[data-testid="stAvatar"] {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-purple);
+    box-shadow: 0 2px 10px rgba(140, 82, 255, 0.3);
+}
+
+/* Input de chat personalizado */
+.stChatInput > div {
+    background: white;
+    border: 2px solid var(--purple-ultra-light);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.stChatInput > div:focus-within {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px var(--purple-ultra-light);
+}
+
+/* Títulos personalizados */
+h1, h2, h3 {
+    color: var(--purple-dark) !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Texto geral */
+p, div, span, label {
+    color: #333333 !important;
+}
+
+/* Alertas e notificações */
+.stAlert {
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid var(--primary-purple);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: #333333 !important;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--purple-ultra-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-purple);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-dark);
+}
+
+/* Animação de loading */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.loading-text {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+</style>
     """,
         unsafe_allow_html=True,
     )
