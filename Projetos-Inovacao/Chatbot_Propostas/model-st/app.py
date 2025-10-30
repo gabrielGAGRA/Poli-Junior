@@ -814,10 +814,10 @@ def main():
 /* Variáveis CSS personalizadas */
 :root {
     --primary-purple: #8c52ff;
-    --purple-light: #a06eff;
-    --purple-dark: #6b3acc;
-    --purple-ultra-light: rgba(140, 82, 255, 0.1);
-    --purple-semi-light: rgba(140, 82, 255, 0.2);
+    --purple-light: #8c52ff;
+    --purple-dark: #8c52ff;
+    --purple-ultra-light: #8c52ff;
+    --purple-semi-light: #8c52ff;
     --background-gradient: linear-gradient(135deg, #f8f7ff 0%, #f0ebff 100%);
 }
 
