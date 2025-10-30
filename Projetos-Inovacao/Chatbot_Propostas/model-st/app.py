@@ -4,7 +4,6 @@ import openai
 import time
 import os
 import json
-import tiktoken
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
 from pydantic import BaseModel
