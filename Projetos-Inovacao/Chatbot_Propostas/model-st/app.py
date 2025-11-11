@@ -127,7 +127,7 @@ def save_conversation(conversation: Conversation):
     """Salva conversa em arquivo JSON"""
     filepath = os.path.join(CONVERSATIONS_DIR, f"{conversation.id}.json")
     with open(filepath, "w", encoding="utf-8") as f:
-        json.dump(conversation.dict(), f, ensure_ascii=False, indent=2)
+        json.dump(conversation.model_dump(), f, ensure_ascii=False, indent=2)
 
 
 def load_conversation(conversation_id: str) -> Optional[Conversation]:
@@ -358,9 +358,7 @@ Link: "URL completa e real da fonte, ou null"
         return None
 
 
-def process_tendencias_research(
-    contexto_negocio: str, instrucao_pesquisa: Optional[str] = None
-) -> Optional[str]:
+def process_tendencias_research(contexto_negocio: str) -> Optional[str]:
     """
     Executa pesquisa de tendências usando Gemini com Google Search
     """
@@ -1104,8 +1102,8 @@ p, div, span, label {
             if msg.get("timestamp"):
                 st.caption(f"🕐 {msg['timestamp']}")
 
-            # Ações (apenas para mensagens do assistente)
-            if msg["role"] == "assistant":
+    # Botões de controle
+    col1, col2, col3, _ = st.columns([2, 2, 2, 6])
                 render_message_actions(idx)
 
     # Botões de controle
@@ -1122,12 +1120,11 @@ p, div, span, label {
                 file_name=f"conversa_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
                 mime="text/markdown",
                 use_container_width=True,
-            )
-
-    with col2:
-        if st.session_state.messages:
             if st.button("🔄 Regenerar", use_container_width=True):
                 # Remove última resposta e regenera
+                if len(st.session_state.messages) >= 2:
+                    st.session_state.messages.pop()  # Remove resposta do assistente
+                    st.rerun()
                 if len(st.session_state.messages) >= 2:
                     st.session_state.messages.pop()  # Remove resposta do assistente
                     last_user_msg = st.session_state.messages[-1]["content"]
@@ -1146,7 +1143,7 @@ p, div, span, label {
         user_message = Message(
             role="user", content=prompt, timestamp=datetime.now().strftime("%H:%M:%S")
         )
-        st.session_state.messages.append(user_message.dict())
+        st.session_state.messages.append(user_message.model_dump())
 
         # Exibir mensagem do usuário
         with st.chat_message(
@@ -1174,7 +1171,17 @@ p, div, span, label {
                             content=response,
                             timestamp=datetime.now().strftime("%H:%M:%S"),
                         )
-                        st.session_state.messages.append(assistant_message.dict())
+                        st.session_state.messages.append(assistant_message.model_dump())
+                elif st.session_state.assistant_key == "pesquisador_tendencias":
+                    response = process_tendencias_research(prompt)
+                    if response:
+                        st.markdown(response)
+                        assistant_message = Message(
+                            role="assistant",
+                            content=response,
+                            timestamp=datetime.now().strftime("%H:%M:%S"),
+                        )
+                        st.session_state.messages.append(assistant_message.model_dump())
                 else:
                     response = process_with_assistant(prompt, file_ids)
 
@@ -1183,7 +1190,7 @@ p, div, span, label {
                         content=response,
                         timestamp=datetime.now().strftime("%H:%M:%S"),
                     )
-                    st.session_state.messages.append(assistant_message.dict())
+                    st.session_state.messages.append(assistant_message.model_dump())
 
                 # Salvar conversa
                 if st.session_state.current_conversation_id:
