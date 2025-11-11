@@ -1104,7 +1104,7 @@ p, div, span, label {
 
     # Botões de controle
     col1, col2, col3, _ = st.columns([2, 2, 2, 6])
-                render_message_actions(idx)
+    render_message_actions(idx)
 
     # Botões de controle
     col1, col2, col3, col4 = st.columns([2, 2, 2, 6])
