@@ -1103,10 +1103,6 @@ p, div, span, label {
                 st.caption(f"🕐 {msg['timestamp']}")
 
     # Botões de controle
-    col1, col2, col3, _ = st.columns([2, 2, 2, 6])
-    render_message_actions(idx)
-
-    # Botões de controle
     col1, col2, col3, col4 = st.columns([2, 2, 2, 6])
 
     with col1:
@@ -1120,15 +1116,18 @@ p, div, span, label {
                 file_name=f"conversa_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
                 mime="text/markdown",
                 use_container_width=True,
-            if st.button("🔄 Regenerar", use_container_width=True):
-                # Remove última resposta e regenera
-                if len(st.session_state.messages) >= 2:
-                    st.session_state.messages.pop()  # Remove resposta do assistente
-                    st.rerun()
-                if len(st.session_state.messages) >= 2:
-                    st.session_state.messages.pop()  # Remove resposta do assistente
-                    last_user_msg = st.session_state.messages[-1]["content"]
-                    st.rerun()
+            )
+
+    with col2:
+        if st.button("🔄 Regenerar", use_container_width=True):
+            # Remove última resposta e regenera
+            if len(st.session_state.messages) >= 2:
+                st.session_state.messages.pop()  # Remove resposta do assistente
+                st.rerun()
+            if len(st.session_state.messages) >= 2:
+                st.session_state.messages.pop()  # Remove resposta do assistente
+                last_user_msg = st.session_state.messages[-1]["content"]
+                st.rerun()
 
     with col3:
         if st.session_state.get("generating", False):
