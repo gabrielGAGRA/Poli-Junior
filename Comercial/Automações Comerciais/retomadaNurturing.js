@@ -352,11 +352,13 @@ var PipedriveRepository = (function () {
  * Manages communication with OpenAI API
  */
 var OpenAIRepository = (function () {
-    var HEADERS = {
-        'Authorization': 'Bearer ' + OPENAI_API_KEY,
-        'Content-Type': 'application/json',
-        'OpenAI-Beta': 'assistants=v2'
-    };
+    function getHeaders() {
+        return {
+            'Authorization': 'Bearer ' + OPENAI_API_KEY,
+            'Content-Type': 'application/json',
+            'OpenAI-Beta': 'assistants=v2'
+        };
+    }
 
     /**
      * Creates a new thread
@@ -365,7 +367,7 @@ var OpenAIRepository = (function () {
         var url = 'https://api.openai.com/v1/threads';
         var options = {
             method: 'post',
-            headers: HEADERS,
+            headers: getHeaders(),
             payload: JSON.stringify({}),
             muteHttpExceptions: true
         };
@@ -394,7 +396,7 @@ var OpenAIRepository = (function () {
 
         var options = {
             method: 'post',
-            headers: HEADERS,
+            headers: getHeaders(),
             payload: JSON.stringify({
                 role: 'user',
                 content: content
@@ -426,7 +428,7 @@ var OpenAIRepository = (function () {
 
         var options = {
             method: 'post',
-            headers: HEADERS,
+            headers: getHeaders(),
             payload: JSON.stringify({
                 assistant_id: assistantId
             }),
@@ -456,7 +458,7 @@ var OpenAIRepository = (function () {
         var url = 'https://api.openai.com/v1/threads/' + threadId + '/runs/' + runId;
         var options = {
             method: 'get',
-            headers: HEADERS,
+            headers: getHeaders(),
             muteHttpExceptions: true
         };
 
@@ -473,7 +475,7 @@ var OpenAIRepository = (function () {
         var url = 'https://api.openai.com/v1/threads/' + threadId + '/messages';
         var options = {
             method: 'get',
-            headers: HEADERS,
+            headers: getHeaders(),
             muteHttpExceptions: true
         };
 

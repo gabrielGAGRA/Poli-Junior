@@ -9,14 +9,14 @@
  * API Keys, Pipedrive URL, request options, call limits
  * =================================================================================
  *
- * IMPORTANT: Secrets (API keys, tokens) are now loaded from environment variables
+ * IMPORTANT: Secrets (API keys, tokens) are loaded from environment variables
  * defined in a local .env.local file that is ignored by Git.
  *
  * - Do NOT commit real keys to this repository.
  * - To run locally, create ".env.local" in this folder and define:
- *     PIPEDRIVE_API_TOKEN=...
- *     GEMINI_API_KEY=...
- *     OPENAI_API_KEY=...
+ *     PIPEDRIVE_API_TOKEN=
+ *     GEMINI_API_KEY=
+ *     OPENAI_API_KEY=
  */
 
 const PIPEDRIVE_API_TOKEN = typeof process !== 'undefined' && process.env && process.env.PIPEDRIVE_API_TOKEN
