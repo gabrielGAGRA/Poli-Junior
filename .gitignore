@@ -2,13 +2,9 @@
 venv/
 env/
 .env
+.env.local
 ENV/
-env.bak/
-venv.bak/
 .venv/
 config.json
 secrets.toml
 __pycache__
-
-Projetos/Nutax/Modelo IA/Dados_JSON/*.json
-Projetos/Nutax/Modelo IA/Dados_JSON_limpos/*.json
