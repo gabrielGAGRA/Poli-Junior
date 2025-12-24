@@ -18,7 +18,7 @@
  */
 
 // --- CONFIGURAÇÃO MANUAL  ---
-const MANUAL_OVERRIDE_ROW = null; // Se definido, força o reprocessamento desta linha específica, ignorando o histórico.
+const MANUAL_OVERRIDE_ROW = 685; // Se definido, força o reprocessamento desta linha específica, ignorando o histórico.
 
 /* ==========================================================================
    LAYER 1: NETWORK & INFRASTRUCTURE
@@ -149,11 +149,24 @@ class JobScheduler {
      * @param {SpreadsheetApp.Sheet} controlSheet 
      */
     determineTargets(controlSheet) {
-        const lastRealRow = this._findLastTimestampRow(controlSheet);
+        let lastRealRow = this._findLastTimestampRow(controlSheet);
 
         // Pointer is located at Row 2, Col 6 (F2)
         const pointerRange = controlSheet.getRange(2, 6);
         let currentPointer = parseInt(pointerRange.getValue(), 10);
+
+        console.log(`[DEBUG] Pointer: ${currentPointer} | LastRow(Col A): ${lastRealRow} | Override: ${MANUAL_OVERRIDE_ROW}`);
+
+        // Override Logic: If manual row is beyond detected data, trust the user and extend the range.
+        if (MANUAL_OVERRIDE_ROW && MANUAL_OVERRIDE_ROW > lastRealRow) {
+            console.warn(`[OVERRIDE] Target row ${MANUAL_OVERRIDE_ROW} is beyond detected last row ${lastRealRow}. Extending range.`);
+            lastRealRow = MANUAL_OVERRIDE_ROW;
+        }
+
+        // Override Logic: Force start pointer to the manual row
+        if (MANUAL_OVERRIDE_ROW) {
+            currentPointer = MANUAL_OVERRIDE_ROW;
+        }
 
         // Fail-safe default
         if (isNaN(currentPointer) || currentPointer < 2) currentPointer = 2;
