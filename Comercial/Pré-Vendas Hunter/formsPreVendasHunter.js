@@ -17,6 +17,9 @@
  * - Layer 5: Controller (Orchestration)
  */
 
+// --- CONFIGURAÇÃO MANUAL  ---
+const MANUAL_OVERRIDE_ROW = null; // Se definido, força o reprocessamento desta linha específica, ignorando o histórico.
+
 /* ==========================================================================
    LAYER 1: NETWORK & INFRASTRUCTURE
    ========================================================================== */
@@ -169,7 +172,10 @@ class JobScheduler {
         let cursor = currentPointer;
 
         while (cursor <= lastRealRow && candidates.length < this.MAX_BATCH_SIZE) {
-            if (!this._isRowProcessed(cursor)) {
+            // Check for Manual Override (Global Config)
+            const isForced = (cursor === MANUAL_OVERRIDE_ROW);
+
+            if (isForced || !this._isRowProcessed(cursor)) {
                 candidates.push(cursor);
             }
             cursor++;
@@ -412,9 +418,13 @@ function runOnSubmit() {
                     processCsvImport(csvId, ss, runtime);
 
                     // Process Sheet at Index 2
-                    processDealsCreation(hunterName, coreTeam, ss, runtime);
+                    const isSuccess = processDealsCreation(hunterName, coreTeam, ss, runtime);
 
-                    rowsToMarkDone.push(rowNum);
+                    if (isSuccess) {
+                        rowsToMarkDone.push(rowNum);
+                    } else {
+                        console.warn(`[BATCH FAIL] Row ${rowNum} had 0 successful deals. Not marking as done.`);
+                    }
                 } else {
                     console.warn(`[SKIP] Invalid CSV ID at row ${rowNum}`);
                 }
@@ -456,13 +466,13 @@ function processCsvImport(fileId, ss, runtime) {
  * Helper: Processes Data Sheet (Index 2) -> API -> Batch Status Update
  */
 function processDealsCreation(hunterName, coreTeam, ss, runtime) {
-    if (!hunterName || !coreTeam) return;
+    if (!hunterName || !coreTeam) return false;
 
     const service = new PipedriveService();
     const sheet = runtime.getSheetByIndex(ss, runtime.INDICES.DATA);
 
     const lastRow = sheet.getLastRow();
-    if (lastRow <= 1) return;
+    if (lastRow <= 1) return true; // Empty sheet is technically "done"
 
     const STATUS_COLUMN_INDEX = CONFIG.CSV_COLUMNS.STATUS + 1;
     sheet.getRange(1, STATUS_COLUMN_INDEX).setValue("Status Processamento");
@@ -474,16 +484,18 @@ function processDealsCreation(hunterName, coreTeam, ss, runtime) {
 
     if (!hunterId || !labelId) {
         sheet.getRange(2, STATUS_COLUMN_INDEX).setValue(`[CRITICAL] Metadata missing (Hunter/Label).`);
-        return;
+        return false;
     }
 
     const statusUpdates = [];
+    let successCount = 0;
 
     for (let i = 0; i < data.length; i++) {
         const row = data[i];
 
         if (row[CONFIG.CSV_COLUMNS.STATUS] === 'SUCESSO') {
             statusUpdates.push(['SUCESSO']);
+            successCount++;
             continue;
         }
 
@@ -528,6 +540,7 @@ function processDealsCreation(hunterName, coreTeam, ss, runtime) {
 
             service.createDeal(dealPayload);
             statusUpdates.push(["SUCESSO"]);
+            successCount++;
 
         } catch (e) {
             console.error(`Row ${i} Error: ${e.message}`);
@@ -538,4 +551,8 @@ function processDealsCreation(hunterName, coreTeam, ss, runtime) {
     if (statusUpdates.length > 0) {
         sheet.getRange(2, STATUS_COLUMN_INDEX, statusUpdates.length, 1).setValues(statusUpdates);
     }
+
+    // Return true if at least one deal succeeded, or if there were no deals to process.
+    // If 100% failed, return false to allow retry.
+    return (data.length === 0) || (successCount > 0);
 }
