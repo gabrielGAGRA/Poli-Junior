@@ -10,7 +10,7 @@
  */
 const CONFIG = {
     // Core API Configuration
-    API_KEY: '6d4e98aeb357d49a34321ac2cedc440b979501ae',
+    API_KEY: PropertiesService.getScriptProperties().getProperty('PIPEDRIVE_API_TOKEN'),
     PAGINATION_LIMIT: 500,
 
     /**
@@ -39,10 +39,6 @@ const CONFIG = {
         16: { name: 'Nurturing', priority: 6 },
     },
 
-    /**
-     * Credits / Authorship Metadata
-     * Static data to be written to the 'Créditos' sheet.
-     */
     CREDITS_METADATA: {
         SHEET_NAME: 'Créditos',
         CONTENT: [

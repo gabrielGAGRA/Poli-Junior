@@ -18,7 +18,7 @@
  */
 
 // --- CONFIGURAÇÃO MANUAL  ---
-const MANUAL_OVERRIDE_ROW = 685; // Se definido, força o reprocessamento desta linha específica, ignorando o histórico.
+const MANUAL_OVERRIDE_ROW = null; // Se definido, força o reprocessamento desta linha específica, ignorando o histórico.
 
 /* ==========================================================================
    LAYER 1: NETWORK & INFRASTRUCTURE

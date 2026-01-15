@@ -10,7 +10,7 @@
  * @const
  */
 const CONFIG = Object.freeze({
-    API_KEY: '6d4e98aeb357d49a34321ac2cedc440b979501ae', // Consider moving to ScriptProperties for security
+    API_KEY: PropertiesService.getScriptProperties().getProperty('PIPEDRIVE_API_TOKEN'),
     BASE_URL: 'https://api.pipedrive.com/v1',
 
     // User and Stage Constants

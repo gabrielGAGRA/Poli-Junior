@@ -8,20 +8,8 @@
  * GENERAL CONFIGURATION
  * API Keys, Pipedrive URL, request options, call limits
  * =================================================================================
- *
- * IMPORTANT: Secrets (API keys, tokens) are loaded from environment variables
- * defined in a local .env.local file that is ignored by Git.
- *
- * - Do NOT commit real keys to this repository.
- * - To run locally, create ".env.local" in this folder and define:
- *     PIPEDRIVE_API_TOKEN=
- *     GEMINI_API_KEY=
- *     OPENAI_API_KEY=
  */
-
-const PIPEDRIVE_API_TOKEN = typeof process !== 'undefined' && process.env && process.env.PIPEDRIVE_API_TOKEN
-    ? process.env.PIPEDRIVE_API_TOKEN
-    : (typeof PIPEDRIVE_API_TOKEN !== 'undefined' ? PIPEDRIVE_API_TOKEN : '');
+const PIPEDRIVE_API_TOKEN = PropertiesService.getScriptProperties().getProperty('PIPEDRIVE_API_TOKEN');
 const PIPEDRIVE_API_BASE_URL = "https://polijunior.pipedrive.com/api/v1";
 
 const DEFAULT_REQUEST_OPTIONS = {
@@ -43,12 +31,8 @@ const MAX_CALL_LIMIT = 80000;
  * RETOMADA CONFIGURATION
  * =================================================================================
  */
-const GEMINI_API_KEY = typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY
-    ? process.env.GEMINI_API_KEY
-    : (typeof GEMINI_API_KEY !== 'undefined' ? GEMINI_API_KEY : '');
-const OPENAI_API_KEY = typeof process !== 'undefined' && process.env && process.env.OPENAI_API_KEY
-    ? process.env.OPENAI_API_KEY
-    : (typeof OPENAI_API_KEY !== 'undefined' ? OPENAI_API_KEY : '');
+const GEMINI_API_KEY = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY');
+const OPENAI_API_KEY = PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY');
 
 const CUSTOM_FIELDS = {
     EMAIL_TITLE: "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d",
