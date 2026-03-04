@@ -97,7 +97,7 @@ colunas_significados = {
     "imposto_pis_vbc": "Valor da base de cálculo do imposto PIS",
     "vl_out_deb_st": "Valor de outros débitos ST",
     "total_ajuste_credtios_st": "Total de ajuste de créditos ST",
-    "vfcpufdest": "Valor do FCP (Fundo de Combate à Pobreza) do destinatário",
+    "vfcpufdest": "Valor do FCP do destinatário",
     "operacao_saida_icms": "Operação de saída do ICMS",
     "imposto_cofins_vcofins": "Valor do imposto COFINS",
     "vii": "Valor do Imposto de Importação",

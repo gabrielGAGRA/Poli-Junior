@@ -1,571 +1,1063 @@
 // Autor: Gabriel Agra de Castro Motta
-// Data de Atualização: 12/12/2025
-// Descrição: Arquivo de configuração centralizado com tokens de API, constantes de ambiente e mapeamentos de campos do Pipedrive para automações de pré-vendas.
-// Licença: MIT - Modificada. Os Direitos Patrimoniais de uso, reprodução e modificação são concedidos à Poli Júnior. 
-// Termos: Todos os Direitos Morais do Autor são reservados. A remoção, supressão ou alteração da indicação de autoria original em qualquer cópia, total ou parcial, constitui violação legal. 
+// Data de Atualização: 03/03/2025
+// Licença: MIT - Modificada. Os Direitos Patrimoniais de uso, reprodução e modificação são concedidos à Poli Júnior.
+// Termos: Todos os Direitos Morais do Autor são reservados. A remoção, supressão ou alteração da indicação de autoria original em qualquer cópia, total ou parcial, constitui violação legal.
 
+/* ==========================================================================
+   UTILITÁRIO DE LOG
+   Wrapper sobre console.* para padronizar nível, contexto e formato em todos
+   os logs gravados no Cloud Logging (Stackdriver) do Apps Script.
+   Formato: [LEVEL] [Contexto] Mensagem
+   ========================================================================== */
+const Log = {
+    /** @param {string} ctx  Classe ou função de origem  @param {string} msg */
+    info: (ctx, msg) => console.log(`[INFO]  [${ctx}] ${msg}`),
+    /** @param {string} ctx  @param {string} msg */
+    warn: (ctx, msg) => console.warn(`[WARN]  [${ctx}] ${msg}`),
+    /** @param {string} ctx  @param {string} msg */
+    error: (ctx, msg) => console.error(`[ERROR] [${ctx}] ${msg}`),
+    /** Usado apenas para diagnóstico local; remova em produção se gerar ruído. */
+    debug: (ctx, msg) => console.log(`[DEBUG] [${ctx}] ${msg}`),
+};
 
-/**
- * @fileoverview Core Pipedrive Integration System.
- * Implements strict positional binding, environment integrity enforcement,
- * and intelligent batch scheduling.
- * * Architecture:
- * - Layer 1: Network (Http/Retry)
- * - Layer 2: Runtime (Environment Integrity & Signature Enforcement)
- * - Layer 3: Scheduling (Pointer Logic & History)
- * - Layer 4: Service (Business Logic)
- * - Layer 5: Controller (Orchestration)
- */
-
-// --- CONFIGURAÇÃO MANUAL  ---
-const MANUAL_OVERRIDE_ROW = null; // Se definido, força o reprocessamento desta linha específica, ignorando o histórico.
+// Mapeamento das colunas da planilha de controle para índices base-0.
+// Mantido fixo por índice para garantir compatibilidade com os formulários existentes.
+const FORM_INDEX = {
+    CSV: 1, // Coluna B – URL do arquivo Google Drive com os leads
+    HUNTER: 3, // Coluna C – Identificador do Hunter responsável
+    NUCLEO: 2, // Coluna D – Núcleo/equipe do Hunter (usado como Label no Pipedrive)
+    EMAIL: 4, // Coluna E – E-mail de contato informado no formulário
+    POINTER: 5  // Coluna F – Ponteiro estável de progresso (célula F2)
+};
 
 /* ==========================================================================
    LAYER 1: NETWORK & INFRASTRUCTURE
    ========================================================================== */
 
+/**
+ * Cliente HTTP com política de retry exponencial para chamadas à API do Pipedrive.
+ * Centraliza o tratamento de erros transitórios (rate limit, falhas de rede)
+ * para evitar duplicação de lógica nos serviços de domínio.
+ */
 class NetworkClient {
     /**
-     * Executes HTTP requests with exponential backoff strategy.
-     * @param {string} url - Endpoint URL.
-     * @param {Object} options - Request configuration.
-     * @param {string} context - Debug context.
-     * @return {Object} Parsed response.
+     * Executa uma requisição HTTP com até 3 tentativas e backoff exponencial.
+     * Lança o erro da última tentativa caso todas falhem.
+     *
+     * @param {string} url     URL completa da requisição (sem o token – inclua na querystring).
+     * @param {Object} options Opções do UrlFetchApp (method, contentType, payload, etc.).
+     * @param {string} context Identificador legível da operação (ex.: "Create Deal") para logs.
+     * @returns {Object} Corpo JSON da resposta parseado.
+     * @throws {Error} Após 3 tentativas malsucedidas ou resposta com success=false.
      */
     static fetchWithRetry(url, options, context) {
-        const MAX_RETRIES = 3;
         let attempt = 0;
-        let backoffMs = 1000;
-
-        while (attempt < MAX_RETRIES) {
+        while (attempt < 3) {
             try {
-                const response = UrlFetchApp.fetch(url, options);
-                if (response.getResponseCode() >= 400) throw new Error(`HTTP ${response.getResponseCode()}`);
+                const response = UrlFetchApp.fetch(url, { ...options, muteHttpExceptions: true });
+                const code = response.getResponseCode();
 
-                const result = JSON.parse(response.getContentText());
-                if (result.success === false && result.error) throw new Error(`API Error: ${result.error}`);
-
-                return result;
-            } catch (error) {
-                attempt++;
-                if (attempt >= MAX_RETRIES) {
-                    console.error(`[FATAL] ${context} failed after ${attempt} attempts.`, error);
-                    throw error;
+                if (code === 429) {
+                    // Rate limit do Pipedrive: aguarda antes de retentar.
+                    Log.warn('NetworkClient', `[${context}] Rate limit atingido. Aguardando 2s antes de retentar.`);
+                    Utilities.sleep(2000);
+                    throw new Error("Rate Limit Pipedrive");
                 }
-                Utilities.sleep(backoffMs);
-                backoffMs *= 2;
+                if (code >= 400) {
+                    throw new Error(`HTTP ${code}: ${response.getContentText().substring(0, 150)}`);
+                }
+
+                const res = JSON.parse(response.getContentText());
+                if (res.success === false) throw new Error(JSON.stringify(res.error));
+
+                Log.debug('NetworkClient', `[${context}] Requisição bem-sucedida (HTTP ${code}).`);
+                return res;
+
+            } catch (e) {
+                attempt++;
+                if (attempt >= 3) {
+                    Log.error('NetworkClient', `[${context}] Falha após 3 tentativas: ${e.message}`);
+                    throw e;
+                }
+                const waitMs = Math.pow(2, attempt) * 1000;
+                Log.warn('NetworkClient', `[${context}] Tentativa ${attempt} falhou. Retentando em ${waitMs}ms. Motivo: ${e.message}`);
+                Utilities.sleep(waitMs);
             }
         }
+    }
+
+    /**
+     * Executa múltiplas requisições em paralelo com retry em lote (chunks de 20).
+     * Traz redução drástica de tempo comparado aos loops HTTP unitários.
+     *
+     * @param {Array<{id: string, url: string, options: Object}>} requests
+     * @param {string} context Identificador para logs.
+     * @returns {Array<{id: string, data?: Object, error?: string}>} Resultados indexados por ID.
+     */
+    static fetchAllWithRetry(requests, context) {
+        const CHUNK_SIZE = 20; // Batch dinâmico conservador para não acionar rate-limits HTTP maciços
+        const finalResults = [];
+
+        if (requests.length > 0) {
+            Log.info('NetworkClient', `[${context}] Iniciando batch de ${requests.length} requisições.`);
+        }
+
+        for (let i = 0; i < requests.length; i += CHUNK_SIZE) {
+            const chunk = requests.slice(i, i + CHUNK_SIZE);
+            const fetchSpecs = chunk.map(r => ({
+                url: r.url,
+                method: (r.options && r.options.method) ? r.options.method : 'get',
+                contentType: (r.options && r.options.contentType) ? r.options.contentType : 'application/json',
+                payload: (r.options && r.options.payload) ? r.options.payload : undefined,
+                muteHttpExceptions: true
+            }));
+
+            let attempt = 0;
+            let success = false;
+
+            while (attempt < 3 && !success) {
+                try {
+                    const responses = UrlFetchApp.fetchAll(fetchSpecs);
+
+                    // Verifica se algum request retornou 429
+                    let has429 = false;
+                    for (let j = 0; j < responses.length; j++) {
+                        if (responses[j].getResponseCode() === 429) {
+                            has429 = true;
+                            break;
+                        }
+                    }
+
+                    if (has429) {
+                        Log.warn('NetworkClient', `[${context}] Rate Limit 429 no chunk. Aguardando...`);
+                        Utilities.sleep(2000 * Math.pow(2, attempt));
+                        attempt++;
+                        continue;
+                    }
+
+                    // Processa resultados
+                    for (let j = 0; j < responses.length; j++) {
+                        const code = responses[j].getResponseCode();
+                        const id = chunk[j].id;
+                        if (code >= 400) {
+                            finalResults.push({ id, error: `HTTP ${code}: ${responses[j].getContentText().substring(0, 150)}` });
+                        } else {
+                            const res = JSON.parse(responses[j].getContentText() || '{}');
+                            if (res.success === false) {
+                                finalResults.push({ id, error: JSON.stringify(res.error) });
+                            } else {
+                                finalResults.push({ id, data: res.data });
+                            }
+                        }
+                    }
+                    success = true;
+
+                } catch (e) {
+                    attempt++;
+                    Log.warn('NetworkClient', `[${context}] Falha no batch fetch (tentativa ${attempt}): ${e.message}`);
+                    if (attempt >= 3) {
+                        chunk.forEach(r => finalResults.push({ id: r.id, error: e.message }));
+                    } else {
+                        Utilities.sleep(1000 * Math.pow(2, attempt));
+                    }
+                }
+            }
+        }
+        return finalResults;
     }
 }
 
 /* ==========================================================================
-   LAYER 2: RUNTIME ENVIRONMENT (Positional Integrity)
-   CRITICAL: Manages sheet binding by INDEX, not name.
+   LAYER 2: RUNTIME & TIME GUARD
    ========================================================================== */
 
+/**
+ * Encapsula os índices das abas da planilha para evitar "magic numbers" espalhados
+ * pelo código. Os índices refletem a ordem física das abas no Spreadsheet.
+ */
 class RuntimeEnvironment {
     constructor() {
-        this._sigBuffer = [71, 97, 98, 114, 105, 101, 108, 32, 65, 103, 114, 97];
-
-        // Strict Positional Mapping (0-based index)
-        this.INDICES = {
-            CONTROL: 0, // 1st Tab (Control/Form Responses)
-            AUX: 1,     // 2nd Tab (Hunter ID/Aux)
-            DATA: 2     // 3rd Tab (Data Processing)
-        };
-    }
-
-    _getSig() {
-        return this._sigBuffer.map(c => String.fromCharCode(c)).join('');
-    }
-
-    getSessionHash() {
-        return Utilities.base64Encode(this._getSig().split('').reverse().join(''));
+        // CONTROL=0 (fila de formulários), AUX=1 (reservado), DATA=2 (CSV importado)
+        this.INDICES = { CONTROL: 0, AUX: 1, DATA: 2 };
     }
 
     /**
-     * ENFORCEMENT PROTOCOL.
-     * @param {SpreadsheetApp.Spreadsheet} ss 
-     */
-    validateConsistency(ss) {
-        const signature = `: ${this._getSig()}`;
-        const sheets = ss.getSheets();
-
-        // Targets: The first 3 sheets based on physical order
-        const targets = [this.INDICES.CONTROL, this.INDICES.AUX, this.INDICES.DATA];
-
-        targets.forEach(index => {
-            if (index < sheets.length) {
-                const sheet = sheets[index];
-                const currentName = sheet.getName();
-
-                if (!currentName.endsWith(signature)) {
-                    try {
-                        const newName = `${currentName}${signature}`;
-                        sheet.setName(newName);
-                    } catch (e) {
-                        console.warn(`[ENV] Integrity check skipped for index ${index}: ${e.message}`);
-                    }
-                }
-            }
-        });
-    }
-
-    /**
-     * Retrieves a sheet object strictly by its positional index.
-     * @param {SpreadsheetApp.Spreadsheet} ss 
-     * @param {number} index 
-     * @return {SpreadsheetApp.Sheet}
+     * Retorna a aba pelo índice, lançando um erro claro caso a planilha não exista.
+     * Prefira este método a `ss.getSheets()[n]` diretamente para facilitar debugging.
+     *
+     * @param {GoogleAppsScript.Spreadsheet.Spreadsheet} ss
+     * @param {number} index Índice 0-based da aba.
+     * @returns {GoogleAppsScript.Spreadsheet.Sheet}
+     * @throws {Error} Se o índice estiver fora dos limites.
      */
     getSheetByIndex(ss, index) {
-        // Enforce environment rules before access
-        this.validateConsistency(ss);
-
         const sheets = ss.getSheets();
         if (index >= sheets.length) {
-            throw new Error(`[CRITICAL] Sheet Index ${index} out of bounds. Environment corrupted.`);
+            throw new Error(`[CRITICAL] Aba de índice ${index} não encontrada. Total de abas: ${sheets.length}.`);
         }
         return sheets[index];
     }
 }
 
 /* ==========================================================================
-   LAYER 3: JOB SCHEDULER
-   Smart pointer management, drift correction & execution history.
+   LAYER 3: SCHEDULER (MEMÓRIA DE ESTADO)
+   Persiste o progresso em ScriptProperties para sobreviver a interrupções e
+   retomar do ponto correto em execuções futuras (catch-up pattern).
    ========================================================================== */
-
 class JobScheduler {
-    constructor(runtime) {
-        this.runtime = runtime;
+    constructor() {
         this.props = PropertiesService.getScriptProperties();
-        this.HISTORY_KEY_PREFIX = `HIST_${this.runtime.getSessionHash()}_`;
-        this.RETENTION_DAYS = 90;
-        this.MAX_BATCH_SIZE = 3;
+
+        // Prefixos de chave usados no ScriptProperties para rastrear estado por linha
+        this.KEY_INTERNAL_POINTER = 'LAST_STABLE_POINTER';
+        this.KEY_ACTIVE_CSV = 'LAST_IMPORTED_CSV_ID';
+        this.KEY_BATCH_STATE = 'EXEC_BATCH_STATE'; // Mantém as flags de conclusão na RAM antes de salvar
+
+        this.state = this._loadState();
+    }
+
+    _loadState() {
+        const raw = this.props.getProperty(this.KEY_BATCH_STATE);
+        return raw ? JSON.parse(raw) : {};
+    }
+
+    _saveState() {
+        this.props.setProperty(this.KEY_BATCH_STATE, JSON.stringify(this.state));
     }
 
     /**
-     * Calculates processing plan based on Pointer vs Data Column.
-     * @param {SpreadsheetApp.Sheet} controlSheet 
+     * Determina quais linhas da planilha de controle ainda precisam ser processadas
+     * neste ciclo, respeitando o ponteiro de progresso e o limite de batch.
+     *
+     * @param {GoogleAppsScript.Spreadsheet.Sheet} controlSheet Aba de controle (índice 0).
+     * @returns {{ targets: number[], pointerRange: GoogleAppsScript.Spreadsheet.Range }}
      */
     determineTargets(controlSheet) {
-        let lastRealRow = this._findLastTimestampRow(controlSheet);
-
-        // Pointer is located at Row 2, Col 6 (F2)
         const pointerRange = controlSheet.getRange(2, 6);
-        let currentPointer = parseInt(pointerRange.getValue(), 10);
+        // Lê o ponteiro persistido ou inicia na linha 2 (a linha 1 é o cabeçalho)
+        let currentPointer = parseInt(this.props.getProperty(this.KEY_INTERNAL_POINTER), 10) || 2;
+        pointerRange.setValue(currentPointer);
 
-        console.log(`[DEBUG] Pointer: ${currentPointer} | LastRow(Col A): ${lastRealRow} | Override: ${MANUAL_OVERRIDE_ROW}`);
-
-        // Override Logic: If manual row is beyond detected data, trust the user and extend the range.
-        if (MANUAL_OVERRIDE_ROW && MANUAL_OVERRIDE_ROW > lastRealRow) {
-            console.warn(`[OVERRIDE] Target row ${MANUAL_OVERRIDE_ROW} is beyond detected last row ${lastRealRow}. Extending range.`);
-            lastRealRow = MANUAL_OVERRIDE_ROW;
-        }
-
-        // Override Logic: Force start pointer to the manual row
-        if (MANUAL_OVERRIDE_ROW) {
-            currentPointer = MANUAL_OVERRIDE_ROW;
-        }
-
-        // Fail-safe default
-        if (isNaN(currentPointer) || currentPointer < 2) currentPointer = 2;
-
-        // Logic 1: Forward Drift Correction (Pointer > Real Data)
-        // If pointer is ahead of data, reset to the last real data row to re-sync.
-        if (currentPointer > lastRealRow) {
-            console.warn(`[SCHEDULER] Drift detected. Resetting pointer ${currentPointer} -> ${lastRealRow}`);
-            currentPointer = lastRealRow > 1 ? lastRealRow : 2;
-            pointerRange.setValue(currentPointer);
-        }
-
-        // Logic 2: Backlog Processing
-        // Scan from current pointer onwards to find unprocessed rows (up to Batch Size)
-        const candidates = [];
+        const lastRow = this._findLastDataRow(controlSheet);
+        const targets = [];
         let cursor = currentPointer;
 
-        while (cursor <= lastRealRow && candidates.length < this.MAX_BATCH_SIZE) {
-            // Check for Manual Override (Global Config)
-            const isForced = (cursor === MANUAL_OVERRIDE_ROW);
-
-            if (isForced || !this._isRowProcessed(cursor)) {
-                candidates.push(cursor);
+        while (cursor <= lastRow && targets.length < CONFIG_STRICT.MAX_BATCH_CATCHUP) {
+            if (!this.isRowDone(cursor)) {
+                targets.push(cursor);
             }
             cursor++;
         }
 
-        return {
-            targets: candidates,
-            pointerRange: pointerRange,
-            // Logic 3: Next pointer should be the end of the current batch + 1
-            nextPointerShouldBe: candidates.length > 0 ? candidates[candidates.length - 1] + 1 : currentPointer
-        };
-    }
-
-    markAsProcessed(rowNum) {
-        const now = new Date().getTime();
-        this.props.setProperty(this.HISTORY_KEY_PREFIX + rowNum, now.toString());
-    }
-
-    _isRowProcessed(rowNum) {
-        const val = this.props.getProperty(this.HISTORY_KEY_PREFIX + rowNum);
-        if (!val) return false;
-
-        const timestamp = parseInt(val, 10);
-        const diffDays = (new Date().getTime() - timestamp) / (1000 * 60 * 60 * 24);
-
-        // Cleanup expired history
-        if (diffDays > this.RETENTION_DAYS) {
-            this.props.deleteProperty(this.HISTORY_KEY_PREFIX + rowNum);
-            return false;
-        }
-        return true;
+        Log.info('JobScheduler', `Ponteiro: linha ${currentPointer}. Última linha: ${lastRow}. Linhas pendentes no batch: ${targets.length}.`);
+        return { targets, pointerRange };
     }
 
     /**
-     * Finds last row in Column A (Timestamp) efficiently.
+     * @param {number} rowNum Número de linha 1-based.
+     * @returns {boolean}
      */
-    _findLastTimestampRow(sheet) {
-        const lastRow = sheet.getLastRow();
-        if (lastRow < 2) return 0;
+    isRowDone(rowNum) {
+        return this.state[rowNum] && this.state[rowNum].done === true;
+    }
 
-        // Optimizing I/O: Read only Column A
-        const timestamps = sheet.getRange(1, 1, lastRow, 1).getValues();
+    /**
+     * Marca uma linha como concluída e limpa seu contador de retry para liberar
+     * espaço no ScriptProperties.
+     *
+     * @param {number} rowNum
+     */
+    markRowDone(rowNum) {
+        if (!this.state[rowNum]) this.state[rowNum] = {};
+        this.state[rowNum].done = true;
+        delete this.state[rowNum].retries; // libera espaço serializado
+        this._saveState();
+        Log.info('JobScheduler', `Linha ${rowNum} marcada como concluída.`);
+    }
 
-        for (let i = timestamps.length - 1; i >= 0; i--) {
-            if (timestamps[i][0] && String(timestamps[i][0]).trim() !== '') {
-                return i + 1; // Convert 0-based array index to 1-based row
-            }
+    /**
+     * Avança o ponteiro estável até a próxima linha não concluída e persiste o valor
+     * tanto no ScriptProperties quanto na célula da planilha (visibilidade operacional).
+     *
+     * @param {GoogleAppsScript.Spreadsheet.Sheet} controlSheet
+     */
+    slideStablePointer(controlSheet) {
+        let pointer = parseInt(this.props.getProperty(this.KEY_INTERNAL_POINTER), 10) || 2;
+        const lastRow = this._findLastDataRow(controlSheet);
+
+        while (pointer <= lastRow && this.isRowDone(pointer)) {
+            pointer++;
         }
-        return 0;
+
+        this.props.setProperty(this.KEY_INTERNAL_POINTER, pointer.toString());
+        controlSheet.getRange(2, 6).setValue(pointer);
+        Log.info('JobScheduler', `Ponteiro estável atualizado para linha ${pointer}.`);
+    }
+
+    /**
+     * Escaneia a coluna A de baixo para cima para encontrar a última linha com dado,
+     * evitando getLastRow() que pode retornar linhas com formatação vazia.
+     *
+     * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet
+     * @returns {number} Número de linha 1-based.
+     */
+    _findLastDataRow(sheet) {
+        const data = sheet.getRange("A:A").getValues();
+        for (let i = data.length - 1; i >= 0; i--) {
+            if (data[i][0] && data[i][0] !== "") return i + 1;
+        }
+        return 2; // Retorna 2 quando a planilha está vazia (linha 1 = cabeçalho)
+    }
+
+    /** @param {number} rowNum @returns {number} */
+    getRetryCount(rowNum) {
+        return this.state[rowNum] ? (this.state[rowNum].retries || 0) : 0;
+    }
+
+    /**
+     * Incrementa e persiste o contador de tentativas de uma linha.
+     * @param {number} rowNum
+     * @returns {number} Novo valor do contador após incremento.
+     */
+    incrementRetry(rowNum) {
+        if (!this.state[rowNum]) this.state[rowNum] = {};
+        const count = (this.state[rowNum].retries || 0) + 1;
+        this.state[rowNum].retries = count;
+        this._saveState();
+        Log.warn('JobScheduler', `Linha ${rowNum}: tentativa ${count}/${CONFIG_STRICT.MAX_RETRIES}.`);
+        return count;
     }
 }
 
 /* ==========================================================================
-   LAYER 4: DOMAIN SERVICE (Pipedrive)
+   LAYER 4: COMUNICAÇÃO & ERROS
    ========================================================================== */
 
-class PipedriveService {
-    constructor() {
-        this.orgCache = new Map();
-        this.personCache = new Map();
-        this.fieldCache = null;
+/**
+ * Centraliza o envio de alertas por e-mail para dois públicos distintos:
+ * - Diretoria comercial: falhas técnicas irrecuperáveis (após MAX_RETRIES).
+ * - Hunter: erros de dados em leads individuais (linha importada com dado inválido).
+ */
+class ErrorNotifier {
+    /**
+     * Envia alerta de falha fatal à diretoria comercial. Chamado quando uma linha
+     * esgota todas as tentativas, evitando que erros silenciosos travem a fila.
+     *
+     * @param {string} errorMsg Mensagem técnica da exceção capturada.
+     * @param {Array}  rowData  Dados brutos da linha da planilha de controle.
+     */
+    static sendFatalAlert(errorMsg, rowData) {
+        Log.error('ErrorNotifier', `Enviando alerta fatal para diretoria. Linha: ${rowData[0]}. Motivo: ${errorMsg}`);
+
+        const body = `
+            ALERTA DE SISTEMA
+            O arquivo da linha ${rowData[0]} foi descartado após ${CONFIG_STRICT.MAX_RETRIES} tentativas falhas.
+
+            MOTIVO TÉCNICO: ${errorMsg}
+            HUNTER: ${rowData[FORM_INDEX.HUNTER]}
+            NÚCLEO: ${rowData[FORM_INDEX.NUCLEO]}
+            URL: ${rowData[FORM_INDEX.CSV]}
+        `;
+        MailApp.sendEmail({
+            to: CONFIG_STRICT.NOTIFICATION_EMAIL_CC,
+            subject: `[SISTEMA] Erro de Automação`,
+            body: body
+        });
     }
 
+    /**
+     * Envia relatório HTML ao Hunter listando os leads que falharam na importação.
+     * Chamado quando a taxa de sucesso fica abaixo do threshold, mas a fila não é
+     * bloqueada pois o problema é de dados (responsabilidade do Hunter corrigir).
+     *
+     * @param {string}   hunterId    Prefixo do e-mail do Hunter (sem domínio).
+     * @param {Array<{empresa: string, email: string, erro: string}>} failedItems
+     */
+    static sendHunterItemReport(hunterId, failedItems) {
+        const hunterEmail = `${hunterId}${CONFIG_STRICT.DOMAIN}`;
+        Log.info('ErrorNotifier', `Enviando relatório de ${failedItems.length} lead(s) falho(s) para ${hunterId}.`);
+
+        const tableRows = failedItems.map(item =>
+            `<tr>
+                <td style="border:1px solid #ddd; padding:8px;">${item.empresa}</td>
+                <td style="border:1px solid #ddd; padding:8px;">${item.email}</td>
+                <td style="border:1px solid #ddd; padding:8px; color:red;">${item.erro}</td>
+            </tr>`
+        ).join('');
+
+        const htmlBody = `
+            <div style="font-family: Arial, sans-serif;">
+                <h3>Olá ${hunterId}, a importação foi concluída, mas alguns leads falharam:</h3>
+                <table style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr style="background-color: #f2f2f2;">
+                            <th style="border:1px solid #ddd; padding:8px;">Empresa</th>
+                            <th style="border:1px solid #ddd; padding:8px;">E-mail</th>
+                            <th style="border:1px solid #ddd; padding:8px;">Erro</th>
+                        </tr>
+                    </thead>
+                    <tbody>${tableRows}</tbody>
+                </table>
+            </div>`;
+
+        MailApp.sendEmail({
+            to: hunterEmail,
+            subject: `[PIPEDRIVE] Relatório de leads não importados`,
+            htmlBody: htmlBody
+        });
+    }
+}
+
+/* ==========================================================================
+   LAYER 5: DOMAIN SERVICE (Pipedrive)
+   ========================================================================== */
+
+/**
+ * Abstrai todas as operações com a API do Pipedrive.
+ * Usa caches em memória (Map) para org/person e ScriptProperties para dealFields,
+ * reduzindo chamadas de API repetidas dentro do mesmo ciclo de execução.
+ */
+class PipedriveService {
+    constructor() {
+        this.orgCache = new Map(); // Evita buscas duplicadas de organizações no mesmo batch
+        this.personCache = new Map(); // Evita buscas duplicadas de contatos no mesmo batch
+        this.fieldCache = null;      // Carregado uma vez por instância
+        this.props = PropertiesService.getScriptProperties();
+    }
+
+    /**
+     * Retorna os campos de deals do Pipedrive com estratégia de cache em 3 camadas:
+     * 1. Memória da instância (mais rápido).
+     * 2. ScriptProperties (persiste entre execuções do mesmo dia).
+     * 3. Chamada à API (fallback quando não há cache ou forceRefresh=true).
+     *
+     * @param {boolean} [forceRefresh=false] Força busca na API ignorando caches.
+     * @returns {Array} Lista de campos de deal do Pipedrive.
+     */
     getDealFields(forceRefresh = false) {
-        if (!forceRefresh && this.fieldCache) return this.fieldCache;
+        if (!forceRefresh && this.fieldCache) {
+            Log.debug('PipedriveService', 'Cache de dealFields em memória utilizado.');
+            return this.fieldCache;
+        }
 
-        const props = PropertiesService.getScriptProperties();
-        const cachedStr = props.getProperty('DEAL_FIELDS_CACHE');
-
+        const cachedStr = this.props.getProperty('DEAL_FIELDS_CACHE');
         if (!forceRefresh && cachedStr) {
+            Log.debug('PipedriveService', 'Cache de dealFields lido do ScriptProperties.');
             this.fieldCache = JSON.parse(cachedStr);
             return this.fieldCache;
         }
 
+        Log.info('PipedriveService', 'Cache de dealFields ausente. Buscando na API do Pipedrive.');
         const url = `${CONFIG.BASE_URL}/dealFields?api_token=${CONFIG.API_KEY}`;
         const result = NetworkClient.fetchWithRetry(url, {}, 'Get Deal Fields');
-
-        if (result.success) {
-            props.setProperty('DEAL_FIELDS_CACHE', JSON.stringify(result.data));
-            this.fieldCache = result.data;
-            return result.data;
-        }
-        return [];
+        this.props.setProperty('DEAL_FIELDS_CACHE', JSON.stringify(result.data));
+        this.fieldCache = result.data;
+        return result.data;
     }
 
+    /**
+     * Resolve o ID numérico de uma opção de campo customizado do Pipedrive a partir
+     * dos seus nomes legíveis. Necessário porque a API exige IDs, não os labels.
+     *
+     * @param {string} fieldName  Nome do campo (ex.: "Hunter", "Etiqueta").
+     * @param {string} optionLabel Texto da opção (ex.: "joao.silva").
+     * @returns {number|null} ID da opção, ou null se não encontrado.
+     */
     getFieldOptionId(fieldName, optionLabel) {
         const fields = this.getDealFields();
         const targetField = fields.find(f => f.name === fieldName);
-
         if (!targetField) {
-            if (!this.fieldCache) {
-                this.getDealFields(true);
-                return this.getFieldOptionId(fieldName, optionLabel);
-            }
+            Log.warn('PipedriveService', `Campo "${fieldName}" não encontrado nos dealFields.`);
             return null;
         }
-
-        const option = targetField.options.find(opt => opt.label === optionLabel);
+        const cleanLabel = String(optionLabel).trim().toLowerCase();
+        const option = targetField.options.find(opt => opt.label.trim().toLowerCase() === cleanLabel);
+        if (!option) {
+            Log.warn('PipedriveService', `Opção "${optionLabel}" não encontrada no campo "${fieldName}".`);
+        }
         return option ? option.id : null;
     }
 
+    /**
+     * Busca o ID de uma organização existente no Pipedrive por nome exato,
+     * com cache em memória para evitar chamadas repetidas no mesmo batch.
+     *
+     * @param {string} name Nome da organização.
+     * @returns {number|null}
+     */
     getOrganizationId(name) {
         if (!name) return null;
-        if (this.orgCache.has(name)) return this.orgCache.get(name);
+        if (this.orgCache.has(name)) {
+            Log.debug('PipedriveService', `Org "${name}" resolvida via cache.`);
+            return this.orgCache.get(name);
+        }
+
+        Log.warn('PipedriveService', `Fallback sync (evite isso!): Buscando Org ${name} fora do Batch.`);
         const url = `${CONFIG.BASE_URL}/organizations/search?api_token=${CONFIG.API_KEY}&term=${encodeURIComponent(name)}&fields=name&exact_match=true`;
-        const result = NetworkClient.fetchWithRetry(url, {}, `Search Org`);
-        if (result.data && result.data.items.length > 0) {
-            const id = result.data.items[0].item.id;
+        const result = NetworkClient.fetchWithRetry(url, {}, 'Search Org');
+        const id = (result.data && result.data.items.length > 0) ? result.data.items[0].item.id : null;
+        if (id) {
             this.orgCache.set(name, id);
-            return id;
+            Log.info('PipedriveService', `Org "${name}" encontrada via fallback (id=${id}).`);
+        } else {
+            Log.info('PipedriveService', `Org "${name}" não encontrada no fallback.`);
         }
-        return null;
+        return id;
     }
 
-    createOrganization(name) {
-        const url = `${CONFIG.BASE_URL}/organizations?api_token=${CONFIG.API_KEY}`;
-        const result = NetworkClient.fetchWithRetry(url, {
-            method: 'POST',
-            contentType: 'application/json',
-            payload: JSON.stringify({ name: name })
-        }, `Create Org`);
-        if (result.data && result.data.id) {
-            this.orgCache.set(name, result.data.id);
-            return result.data.id;
-        }
-        throw new Error('Failed to create Organization');
-    }
-
+    /**
+     * Busca o ID de um contato pelo e-mail, com cache em memória.
+     *
+     * @param {string} email
+     * @returns {number|null}
+     */
     getPersonId(email) {
         if (!email) return null;
-        if (this.personCache.has(email)) return this.personCache.get(email);
+        if (this.personCache.has(email)) {
+            Log.debug('PipedriveService', `Contato "${email}" resolvido via cache.`);
+            return this.personCache.get(email);
+        }
+
+        Log.warn('PipedriveService', `Fallback sync (evite isso!): Buscando Contato ${email} fora do Batch.`);
         const url = `${CONFIG.BASE_URL}/persons/search?api_token=${CONFIG.API_KEY}&term=${encodeURIComponent(email)}&fields=email&exact_match=true`;
-        const result = NetworkClient.fetchWithRetry(url, {}, `Search Person`);
-        if (result.data && result.data.items.length > 0) {
-            const id = result.data.items[0].item.id;
+        const result = NetworkClient.fetchWithRetry(url, {}, 'Search Person');
+        const id = (result.data && result.data.items.length > 0) ? result.data.items[0].item.id : null;
+        if (id) {
             this.personCache.set(email, id);
-            return id;
+            Log.info('PipedriveService', `Contato "${email}" encontrado via fallback (id=${id}).`);
+        } else {
+            Log.info('PipedriveService', `Contato "${email}" não encontrado no fallback.`);
         }
-        return null;
+        return id;
     }
 
-    createPerson(firstName, lastName, email, orgId, title) {
-        const url = `${CONFIG.BASE_URL}/persons?api_token=${CONFIG.API_KEY}`;
-        const payload = {
-            name: `${firstName} ${lastName}`,
-            email: email,
-            org_id: orgId,
-            [CONFIG.FIELDS.JOB_TITLE]: title
-        };
-        const result = NetworkClient.fetchWithRetry(url, {
-            method: 'POST',
-            contentType: 'application/json',
-            payload: JSON.stringify(payload)
-        }, `Create Person`);
-        if (result.data && result.data.id) {
-            this.personCache.set(email, result.data.id);
-            return result.data.id;
-        }
-        throw new Error('Failed to create Person');
+    /** ----------------------------------------------------
+     * MÉTODOS BATCH: PROCESSAMENTO EM LARGA ESCALA
+     * ----------------------------------------------------- */
+
+    batchResolveOrganizations(companyNames) {
+        const toSearch = [...new Set(companyNames)].filter(n => n && !this.orgCache.has(n));
+        if (toSearch.length === 0) return;
+
+        Log.info('PipedriveService', `Buscando ${toSearch.length} organizações em lote.`);
+        const requests = toSearch.map(name => ({
+            id: name,
+            url: `${CONFIG.BASE_URL}/organizations/search?api_token=${CONFIG.API_KEY}&term=${encodeURIComponent(name)}&fields=name&exact_match=true`,
+            options: { method: 'get' }
+        }));
+
+        const results = NetworkClient.fetchAllWithRetry(requests, 'Batch Search Org');
+        results.forEach(res => {
+            if (!res.error && res.data && res.data.items && res.data.items.length > 0) {
+                this.orgCache.set(res.id, res.data.items[0].item.id);
+            }
+        });
     }
 
-    createDeal(dealPayload) {
-        const url = `${CONFIG.BASE_URL}/deals?api_token=${CONFIG.API_KEY}`;
-        return NetworkClient.fetchWithRetry(url, {
-            method: 'POST',
-            contentType: 'application/json',
-            payload: JSON.stringify(dealPayload)
-        }, `Create Deal`);
+    batchCreateOrganizations(companyNames) {
+        const toCreate = [...new Set(companyNames)].filter(n => n && !this.orgCache.has(n));
+        if (toCreate.length === 0) return;
+
+        Log.info('PipedriveService', `Criando ${toCreate.length} organizações em lote.`);
+        const requests = toCreate.map(name => ({
+            id: name,
+            url: `${CONFIG.BASE_URL}/organizations?api_token=${CONFIG.API_KEY}`,
+            options: {
+                method: 'post',
+                contentType: 'application/json',
+                payload: JSON.stringify({ name })
+            }
+        }));
+
+        const results = NetworkClient.fetchAllWithRetry(requests, 'Batch Create Org');
+        results.forEach(res => {
+            if (!res.error && res.data && res.data.id) {
+                this.orgCache.set(res.id, res.data.id);
+            } else if (res.error) {
+                Log.error('PipedriveService', `Falha ao criar org "${res.id}": ${res.error}`);
+            }
+        });
     }
 
+    batchResolvePersons(emails) {
+        const toSearch = [...new Set(emails)].filter(e => e && !this.personCache.has(e));
+        if (toSearch.length === 0) return;
+
+        Log.info('PipedriveService', `Buscando ${toSearch.length} contatos em lote.`);
+        const requests = toSearch.map(email => ({
+            id: email,
+            url: `${CONFIG.BASE_URL}/persons/search?api_token=${CONFIG.API_KEY}&term=${encodeURIComponent(email)}&fields=email&exact_match=true`,
+            options: { method: 'get' }
+        }));
+
+        const results = NetworkClient.fetchAllWithRetry(requests, 'Batch Search Person');
+        results.forEach(res => {
+            if (!res.error && res.data && res.data.items && res.data.items.length > 0) {
+                this.personCache.set(res.id, res.data.items[0].item.id);
+            }
+        });
+    }
+
+    batchCreatePersons(personsData) {
+        const toCreate = personsData.filter(p => p.email && !this.personCache.has(p.email));
+
+        const uniqueToCreate = [];
+        const seen = new Set();
+        toCreate.forEach(p => {
+            if (!seen.has(p.email)) {
+                seen.add(p.email);
+                uniqueToCreate.push(p);
+            }
+        });
+
+        if (uniqueToCreate.length === 0) return;
+
+        Log.info('PipedriveService', `Criando ${uniqueToCreate.length} contatos em lote.`);
+        const requests = uniqueToCreate.map(p => ({
+            id: p.email,
+            url: `${CONFIG.BASE_URL}/persons?api_token=${CONFIG.API_KEY}`,
+            options: {
+                method: 'post',
+                contentType: 'application/json',
+                payload: JSON.stringify({
+                    name: `${p.firstName || ''} ${p.lastName || ''}`.trim(),
+                    email: p.email,
+                    org_id: p.orgId,
+                    [CONFIG.FIELDS.JOB_TITLE]: p.title
+                })
+            }
+        }));
+
+        const results = NetworkClient.fetchAllWithRetry(requests, 'Batch Create Person');
+        results.forEach(res => {
+            if (!res.error && res.data && res.data.id) {
+                this.personCache.set(res.id, res.data.id);
+            } else if (res.error) {
+                Log.error('PipedriveService', `Falha ao criar Person p/ "${res.id}": ${res.error}`);
+            }
+        });
+    }
+
+    batchCreateDeals(dealsData) {
+        if (dealsData.length === 0) return [];
+        Log.info('PipedriveService', `Criando/Registrando ${dealsData.length} deals em lote.`);
+        const requests = dealsData.map(d => ({
+            id: d.index.toString(),
+            url: `${CONFIG.BASE_URL}/deals?api_token=${CONFIG.API_KEY}`,
+            options: {
+                method: 'post',
+                contentType: 'application/json',
+                payload: JSON.stringify(d.payload)
+            }
+        }));
+
+        return NetworkClient.fetchAllWithRetry(requests, 'Batch Create Deal'); // Retorna os resultados com indicação do index da matriz
+    }
+
+    /**
+     * Converte um número de funcionários no ID da faixa correspondente configurada
+     * em CONFIG.EMPLOYEE_RANGES. Retorna o ID padrão para valores inválidos ou
+     * fora dos ranges cadastrados.
+     *
+     * @param {string|number} count Número de funcionários.
+     * @returns {number} ID da faixa no Pipedrive.
+     */
     getEmployeeRangeId(count) {
         const num = parseInt(count, 10);
-        if (isNaN(num)) return CONFIG.DEFAULT_EMPLOYEE_ID;
+        if (isNaN(num)) {
+            Log.warn('PipedriveService', `Valor de funcionários inválido: "${count}". Usando ID padrão.`);
+            return CONFIG.DEFAULT_EMPLOYEE_ID;
+        }
         const range = CONFIG.EMPLOYEE_RANGES.find(r => num >= r.min && num <= r.max);
+        if (!range) {
+            Log.warn('PipedriveService', `Nenhum range encontrado para ${num} funcionários. Usando ID padrão.`);
+        }
         return range ? range.id : CONFIG.DEFAULT_EMPLOYEE_ID;
     }
 }
 
 /* ==========================================================================
-   LAYER 5: CONTROLLER (Orchestration)
+   LAYER 6: CONTROLLER (ORQUESTRAÇÃO)
    ========================================================================== */
 
+/**
+ * Entry point acionado pelo trigger de submit do formulário Google Forms.
+ * Usa ScriptLock para garantir execução serial e evitar condição de corrida
+ * quando múltiplos submits chegam em rápida sucessão.
+ */
 function runOnSubmit() {
     const lock = LockService.getScriptLock();
-
     try {
-        // Tenta adquirir o bloqueio por até 100 segundos. 
-        // Se falhar, significa que outro processo está decidindo o lote, então abortamos.
-        lock.waitLock(100000);
+        lock.waitLock(60000);
     } catch (e) {
-        console.warn("[LOCK] Sistema ocupado. Abortando execução paralela para evitar duplicidade.");
+        // Outra execução está em andamento. Descarta silenciosamente — o trigger
+        // será disparado novamente pelo próximo submit.
+        Log.warn('runOnSubmit', 'Não foi possível adquirir o lock em 60s. Execução abortada.');
         return;
     }
+
+    Log.info('runOnSubmit', 'Lock adquirido. Iniciando ciclo de processamento.');
 
     const ss = SpreadsheetApp.getActiveSpreadsheet();
-    const runtime = new RuntimeEnvironment();
+    const scheduler = new JobScheduler();
+    const runtime = { INDICES: { CONTROL: 0, DATA: 2 } };
+    const controlSheet = ss.getSheets()[runtime.INDICES.CONTROL];
 
-    // Step 1: Enforce Environment Integrity
-    runtime.validateConsistency(ss);
-
-    // Step 2: Get Control Sheet (Index 0)
-    const controlSheet = runtime.getSheetByIndex(ss, runtime.INDICES.CONTROL);
-
-    // Step 3: Schedule Batch
-    const scheduler = new JobScheduler(runtime);
     const plan = scheduler.determineTargets(controlSheet);
-
     if (plan.targets.length === 0) {
-        console.log("[SCHEDULER] System idle. No pending rows.");
-        lock.releaseLock(); // Libera o bloqueio se não houver trabalho
+        Log.info('runOnSubmit', 'Nenhuma linha pendente. Avançando ponteiro e encerrando.');
+        scheduler.slideStablePointer(controlSheet);
+        lock.releaseLock();
         return;
     }
 
-    // Atualiza o ponteiro IMEDIATAMENTE para "reservar" as linhas.
-    // Isso impede que uma segunda execução pegue as mesmas linhas enquanto a primeira ainda processa.
-    plan.pointerRange.setValue(plan.nextPointerShouldBe);
-    console.log(`[POINTER] Reserved batch ${plan.targets.join(', ')}. Advanced to ${plan.nextPointerShouldBe}`);
+    Log.info('runOnSubmit', `Processando ${plan.targets.length} linha(s): ${plan.targets.join(', ')}.`);
 
-    // Libera o bloqueio para permitir que outras execuções verifiquem novas linhas (se houver)
-    lock.releaseLock();
-
-    console.log(`[EXEC] Processing batch: ${plan.targets.join(', ')}`);
-
-    const rowsToMarkDone = [];
-
-    // Step 4: Execute Batch
     for (const rowNum of plan.targets) {
+        const rowData = controlSheet.getRange(rowNum, 1, 1, 6).getValues()[0];
+        const hunterId = String(rowData[FORM_INDEX.HUNTER] || '').split('@')[0].trim();
+        const coreTeam = rowData[FORM_INDEX.NUCLEO];
+        const csvUrl = rowData[FORM_INDEX.CSV];
+
+        Log.info('runOnSubmit', `--- Início da linha ${rowNum} | Hunter: ${hunterId} | Núcleo: ${coreTeam} ---`);
+
         try {
-            // Read Control Row: [Empty, CSV_URL, HUNTER, NUCLEO]
-            // Access logic assumes columns B, C, D (Indices 2, 3, 4)
-            const rowDataRange = controlSheet.getRange(rowNum, 2, 1, 3);
-            const [csvUrl, hunterName, coreTeam] = rowDataRange.getValues()[0];
+            const csvMatch = String(csvUrl).match(/[-\w]{25,}/);
+            if (!csvMatch) throw new Error("URL de CSV inválida — não foi possível extrair o ID do Drive.");
+            const csvId = csvMatch[0];
 
-            if (csvUrl && hunterName && coreTeam) {
-                const idMatch = csvUrl.match(/[-\w]{25,}/);
-                const csvId = idMatch ? idMatch[0] : null;
+            let dataMatrix = []; // Toda a manipulação de dados será feita nesta matriz RAM
 
-                if (csvId) {
-                    // Import to Sheet at Index 2
-                    processCsvImport(csvId, ss, runtime);
+            if (scheduler.state.activeCsv !== csvId) {
+                Log.info('runOnSubmit', `Novo CSV detectado (${csvId}). Lendo do Drive para memória.`);
+                const file = DriveApp.getFileById(csvId);
+                dataMatrix = Utilities.parseCsv(file.getBlob().getDataAsString());
 
-                    // Process Sheet at Index 2
-                    const isSuccess = processDealsCreation(hunterName, coreTeam, ss, runtime);
-
-                    if (isSuccess) {
-                        rowsToMarkDone.push(rowNum);
-                    } else {
-                        console.warn(`[BATCH FAIL] Row ${rowNum} had 0 successful deals. Not marking as done.`);
+                // Adiciona coluna Status caso não exista no CSV original
+                if (dataMatrix.length > 0) {
+                    const headers = dataMatrix[0];
+                    if (headers.indexOf('Status') === -1) {
+                        headers.push('Status');
+                        for (let i = 1; i < dataMatrix.length; i++) dataMatrix[i].push('');
                     }
-                } else {
-                    console.warn(`[SKIP] Invalid CSV ID at row ${rowNum}`);
                 }
+
+                scheduler.state.activeCsv = csvId;
+                scheduler._saveState();
             } else {
-                console.warn(`[SKIP] Missing data at row ${rowNum}`);
+                Log.info('runOnSubmit', `Lendo estado anterior do CSV da planilha DATA p/ memória.`);
+                const dataSheet = ss.getSheets()[runtime.INDICES.DATA];
+                dataMatrix = dataSheet.getDataRange().getValues();
             }
-        } catch (e) {
-            console.error(`[ERROR] Row ${rowNum} failed: ${e.message}`);
+
+            // ======= EXECUÇÃO BATCH ENVOLVENDO A MATRIZ =======
+            const report = processDealsGranularBatch(hunterId, coreTeam, dataMatrix);
+
+            // ======= I/O: ESCRITA ÚNICA NA PLANILHA =======
+            writeMatrixToDataSheet(ss.getSheets()[runtime.INDICES.DATA], dataMatrix);
+
+            const ratePercent = (report.successRate * 100).toFixed(1);
+
+            if (report.successRate >= CONFIG_STRICT.SUCCESS_THRESHOLD) {
+                Log.info('runOnSubmit', `Linha ${rowNum} concluída com taxa de sucesso ${ratePercent}%.`);
+                scheduler.markRowDone(rowNum);
+            } else {
+                // Taxa abaixo do threshold indica problemas de dados (e-mails inválidos,
+                // campos obrigatórios ausentes). Não trava a fila — o Hunter recebe o relatório.
+                Log.warn('runOnSubmit', `Taxa de sucesso ${ratePercent}% abaixo do threshold. Enviando relatório ao Hunter.`);
+                const failedItems = extractFailsFromMatrix(dataMatrix);
+                ErrorNotifier.sendHunterItemReport(hunterId, failedItems);
+                scheduler.markRowDone(rowNum);
+            }
+
+        } catch (err) {
+            const attempt = scheduler.incrementRetry(rowNum);
+            Log.error('runOnSubmit', `Linha ${rowNum} falhou na tentativa ${attempt}. Motivo: ${err.message}`);
+
+            if (attempt >= CONFIG_STRICT.MAX_RETRIES) {
+                Log.error('runOnSubmit', `Linha ${rowNum} esgotou ${CONFIG_STRICT.MAX_RETRIES} tentativas. Descartando e notificando diretoria.`);
+                ErrorNotifier.sendFatalAlert(err.message, rowData);
+                scheduler.markRowDone(rowNum);
+            }
+            // Continua o loop — outras linhas do batch não são afetadas por esta falha.
         }
     }
 
-    // Step 5: Update History
-    if (rowsToMarkDone.length > 0) {
-        rowsToMarkDone.forEach(r => scheduler.markAsProcessed(r));
-        // O ponteiro já foi atualizado no início (Reservation Pattern), não atualizamos aqui.
-    }
-
-    runtime.validateConsistency(ss);
+    scheduler.slideStablePointer(controlSheet);
+    Log.info('runOnSubmit', 'Ciclo de processamento encerrado. Lock liberado.');
+    lock.releaseLock();
 }
 
 /**
- * Helper: Imports CSV to Data Sheet (Index 2)
+ * Reescreve completamente a aba DATA com a matriz modificada na RAM num único pulso de I/O.
+ * 
+ * @param {GoogleAppsScript.Spreadsheet.Sheet} sheet Aba a ser sobrescrita 
+ * @param {Array<Array>} matrix Matriz bidimensional com os dados 
  */
-function processCsvImport(fileId, ss, runtime) {
-    const file = DriveApp.getFileById(fileId);
-    const rows = Utilities.parseCsv(file.getBlob().getDataAsString());
+function writeMatrixToDataSheet(sheet, matrix) {
+    if (!matrix || matrix.length === 0) return;
+    sheet.clear(); // Limpa estado antigo
+    sheet.getRange(1, 1, matrix.length, matrix[0].length).setValues(matrix); // Escreve o novo de uma vez
+    SpreadsheetApp.flush();
+    Log.info('writeMatrixToDataSheet', `Matriz de ${matrix.length} linhas escrita na planilha num único I/O de disco.`);
+}
 
-    const sheet = runtime.getSheetByIndex(ss, runtime.INDICES.DATA);
+/**
+ * Extrai relatórios de falha puramente da memória (matriz), sem I/O da planilha.
+ * 
+ * @param {Array<Array>} matrix Matriz bidimensional atualizada 
+ * @returns {Array<{empresa: string, email: string, erro: string}>}
+ */
+function extractFailsFromMatrix(matrix) {
+    if (matrix.length <= 1) return [];
+    const headers = matrix[0];
+    const colMap = {};
+    headers.forEach((h, i) => colMap[String(h).trim()] = i);
+    const statusCol = headers.indexOf('Status');
 
-    if (sheet) {
-        sheet.clear();
-        if (rows.length > 0) {
-            sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
+    const fails = [];
+    for (let i = 1; i < matrix.length; i++) {
+        if (matrix[i][statusCol] !== 'SUCESSO') {
+            fails.push({
+                empresa: matrix[i][colMap['Company Name']] || matrix[i][colMap['Company']] || 'Desconhecida',
+                email: matrix[i][colMap['Email']] || 'N/A',
+                erro: matrix[i][statusCol] || 'Erro desconhecido'
+            });
         }
     }
+    return fails;
 }
 
 /**
- * Helper: Processes Data Sheet (Index 2) -> API -> Batch Status Update
+ * Função de processamento Central reescrita para fazer requests em LOTE (Batch).
+ * Recebe a MATRIZ por referência e a altera diretamente na memória.
+ * 
+ * @param {string} hunterName Nome de usuário do Hunter
+ * @param {string} coreTeam Núcleo
+ * @param {Array<Array>} matrix Dados do CSV parseados 
+ * @returns {{ successRate: number }} Taxa de sucesso 
  */
-function processDealsCreation(hunterName, coreTeam, ss, runtime) {
-    if (!hunterName || !coreTeam) return false;
-
+function processDealsGranularBatch(hunterName, coreTeam, matrix) {
+    Log.info('processDealsGranularBatch', `Iniciando Pipedrive Batch para Hunter="${hunterName}", Núcleo="${coreTeam}".`);
     const service = new PipedriveService();
-    const sheet = runtime.getSheetByIndex(ss, runtime.INDICES.DATA);
 
-    const lastRow = sheet.getLastRow();
-    if (lastRow <= 1) return true; // Empty sheet is technically "done"
+    if (matrix.length <= 1) {
+        Log.warn('processDealsGranularBatch', 'Dataset vazio. Nada a processar.');
+        return { successRate: 1 };
+    }
 
-    const STATUS_COLUMN_INDEX = CONFIG.CSV_COLUMNS.STATUS + 1;
-    sheet.getRange(1, STATUS_COLUMN_INDEX).setValue("Status Processamento");
-
-    const data = sheet.getRange(2, 1, lastRow - 1, STATUS_COLUMN_INDEX).getValues();
+    const headers = matrix[0];
+    const colMap = {};
+    headers.forEach((h, i) => colMap[String(h).trim()] = i);
+    const statusCol = headers.indexOf('Status');
 
     const hunterId = service.getFieldOptionId('Hunter', hunterName);
     const labelId = service.getFieldOptionId('Etiqueta', coreTeam) || service.getFieldOptionId('Label', coreTeam);
-
     if (!hunterId || !labelId) {
-        sheet.getRange(2, STATUS_COLUMN_INDEX).setValue(`[CRITICAL] Metadata missing (Hunter/Label).`);
-        return false;
+        throw new Error(`Hunter="${hunterName}" ou Núcleo="${coreTeam}" não mapeados no Pipedrive.`);
     }
 
-    const statusUpdates = [];
-    let successCount = 0;
+    const rowTargets = [];
+    for (let i = 1; i < matrix.length; i++) {
+        if (matrix[i][statusCol] !== 'SUCESSO') {
+            rowTargets.push(i);
+        }
+    }
 
-    for (let i = 0; i < data.length; i++) {
-        const row = data[i];
+    if (rowTargets.length === 0) return { successRate: 1 };
+    Log.info('BatchProcess', `Alvos pendentes para processamento: ${rowTargets.length}`);
 
-        if (row[CONFIG.CSV_COLUMNS.STATUS] === 'SUCESSO') {
-            statusUpdates.push(['SUCESSO']);
-            successCount++;
+    const getV = (r, n) => matrix[r][colMap[n]] || null;
+
+    // 1. Batch: Múltiplas buscas GET na API para Empresas em paralelo
+    const allCompanies = rowTargets.map(r => getV(r, 'Company Name') || getV(r, 'Company'));
+    service.batchResolveOrganizations(allCompanies);
+
+    // 2. Batch: Múltiplas criações POST na API para Empresas
+    service.batchCreateOrganizations(allCompanies);
+
+    // 3. Batch: Múltiplas buscas GET para Contatos
+    const allEmails = rowTargets.map(r => getV(r, 'Email'));
+    service.batchResolvePersons(allEmails);
+
+    // 4. Batch: Múltiplas criações POST para Contatos
+    const personsToCreate = rowTargets.map(r => {
+        const comp = getV(r, 'Company Name') || getV(r, 'Company');
+        return {
+            email: getV(r, 'Email'),
+            firstName: getV(r, 'First Name'),
+            lastName: getV(r, 'Last Name'),
+            title: getV(r, 'Title'),
+            orgId: service.orgCache.get(comp)
+        }
+    });
+    service.batchCreatePersons(personsToCreate);
+
+    // 5. Batch: Preparar Payload de Deals e enviar em LOTE
+    const dealsPayloads = [];
+    for (const index of rowTargets) {
+        try {
+            const company = getV(index, 'Company Name') || getV(index, 'Company');
+            const email = getV(index, 'Email');
+            if (!company) throw new Error("Campo 'Company' ausente");
+
+            const orgId = service.orgCache.get(company);
+            const personId = service.personCache.get(email);
+
+            if (!orgId) throw new Error("Falha na criação/resolução da Organização no batch");
+
+            dealsPayloads.push({
+                index: index,
+                payload: {
+                    title: `${company} - ${getV(index, 'First Name') || ''}`,
+                    person_id: personId || null,
+                    org_id: orgId,
+                    user_id: CONFIG.USER_ID,
+                    stage_id: CONFIG.STAGE_ID,
+                    [CONFIG.FIELDS.HUNTER]: hunterId,
+                    label: labelId
+                }
+            });
+        } catch (e) {
+            matrix[index][statusCol] = `ERRO LOCAL: ${e.message}`;
+            Log.warn('BatchProcess', `Linha ${index} ignorada no batch final de Deals: ${e.message}`);
+        }
+    }
+
+    // Dispara a criação dos deals em paralelo via fetchAll
+    const dealResults = service.batchCreateDeals(dealsPayloads);
+
+    // Atualiza a matriz RAM com os resultados dos deals
+    let successCount = matrix.length - 1 - rowTargets.length; // Conta os que já eram sucesso
+    let newSuccesses = 0;
+
+    dealResults.forEach(res => {
+        const matrixIndex = parseInt(res.id);
+        if (!res.error && res.data && res.data.id) {
+            matrix[matrixIndex][statusCol] = 'SUCESSO';
+            newSuccesses++;
+        } else {
+            matrix[matrixIndex][statusCol] = `ERRO API: ${res.error || 'Falha desconhecida na criação'}`;
+        }
+    });
+
+    const totalSuccessCount = successCount + newSuccesses;
+    const rate = totalSuccessCount / (matrix.length - 1);
+    Log.info('BatchProcess', `Concluído. Criados: ${newSuccesses}. Taxa global de sucesso: ${(rate * 100).toFixed(1)}%`);
+
+    return { successRate: rate };
+}
+
+/* ==========================================================================
+   LAYER 7: MAINTENANCE (AUTO-LIMPEZA)
+   ========================================================================== */
+
+/**
+ * Realiza a limpeza periódica do ScriptProperties, removendo chaves de linhas
+ * já muito distantes do ponteiro atual. Necessário porque o ScriptProperties
+ * tem limite de 500KB e acumula entradas com o tempo.
+ *
+ * Deve ser agendado via Time-based Trigger (semanal) no Apps Script Editor:
+ *   Triggers > Add Trigger > setupHousekeepingTrigger > Weekly
+ */
+class Maintenance {
+    /**
+     * Remove chaves de ScriptProperties associadas a linhas que estão pelo menos
+     * 500 posições atrás do ponteiro estável atual.
+     */
+    static performHousekeeping() {
+        Log.info('Maintenance', 'Iniciando faxina de ScriptProperties.');
+
+        const props = PropertiesService.getScriptProperties();
+        const allProps = props.getProperties();
+        const currentPointer = parseInt(allProps['LAST_STABLE_POINTER'], 10) || 2;
+
+        // Janela de segurança: mantém as últimas 500 linhas no histórico para
+        // permitir auditoria recente sem risco de impactar execuções ativas.
+        const safetyThreshold = currentPointer - 500;
+
+        let keysDeleted = 0;
+        for (const key in allProps) {
+            if (key.startsWith('ROW_COMPLETED_') || key.startsWith('RETRY_ROW_')) {
+                const rowNum = parseInt(key.split('_').pop(), 10);
+                if (rowNum < safetyThreshold) {
+                    props.deleteProperty(key);
+                    keysDeleted++;
+                }
+            }
+        }
+
+        Log.info('Maintenance', `Faxina concluída. ${keysDeleted} chave(s) removidas. Ponteiro atual: ${currentPointer}. Threshold: ${safetyThreshold}.`);
+    }
+}
+
+/** Wrapper para o trigger de manutenção semanal. */
+function setupHousekeepingTrigger() {
+    Maintenance.performHousekeeping();
+}
+
+/* ==========================================================================
+   LAYER 8: UTILITÁRIOS MANUAIS (TRIGGERS MANUAIS)
+   ========================================================================== */
+
+/**
+ * Marca como concluídas no ScriptProperties todas as linhas de formulário
+ * entre a linha 2 (exclusive do cabeçalho) e o limite efetivo calculado:
+ *   - Se F2 <= última linha preenchida → usa F2 como limite superior.
+ *   - Se F2 >  última linha preenchida → usa a última linha preenchida como limite
+ *     superior, ignorando o valor excedente de F2.
+ *
+ * Útil para sincronizar o cache de estado com lotes já processados manualmente
+ * ou importados por fora da automação, evitando que o scheduler reprocesse
+ * linhas que já foram tratadas.
+ *
+ * Acionamento: Trigger manual no Apps Script Editor (Run > markRowsAsDoneUntilPointer).
+ */
+function markRowsAsDoneUntilPointer() {
+    Log.info('markRowsAsDoneUntilPointer', 'Iniciando marcação manual de linhas como concluídas.');
+
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const scheduler = new JobScheduler();
+    const runtime = new RuntimeEnvironment();
+    const controlSheet = runtime.getSheetByIndex(ss, runtime.INDICES.CONTROL);
+
+    // Lê o ponteiro informado na célula F2 — valor inserido manualmente pelo operador
+    const pointerCellValue = parseInt(controlSheet.getRange(2, FORM_INDEX.POINTER + 1).getValue(), 10);
+    if (isNaN(pointerCellValue) || pointerCellValue < 2) {
+        Log.warn('markRowsAsDoneUntilPointer', `Valor de F2 inválido ou abaixo de 2: "${pointerCellValue}". Operação cancelada.`);
+        return;
+    }
+
+    // Determina a última linha com dado para evitar marcar linhas além do que existe
+    const lastDataRow = scheduler._findLastDataRow(controlSheet);
+    Log.info('markRowsAsDoneUntilPointer', `Ponteiro em F2: ${pointerCellValue}. Última linha com dado: ${lastDataRow}.`);
+
+    // Aplica a regra de limite: nunca ultrapassa a última linha preenchida
+    const effectiveLimit = Math.min(pointerCellValue, lastDataRow);
+    if (effectiveLimit < pointerCellValue) {
+        Log.warn('markRowsAsDoneUntilPointer', `F2 (${pointerCellValue}) excede a última linha (${lastDataRow}). Usando ${effectiveLimit} como limite.`);
+    }
+
+    // Carrega todas as propriedades uma única vez em vez de múltiplas chamadas
+    const allProps = scheduler.props.getProperties();
+    const keyPrefix = scheduler.KEY_ROW_DONE;
+    let markedCount = 0;
+    let skippedCount = 0;
+
+    for (let row = 2; row <= effectiveLimit; row++) {
+        // Verifica em cache em memória em vez de chamadas repetidas ao ScriptProperties
+        if (allProps[keyPrefix + row] === 'true') {
+            skippedCount++;
             continue;
         }
-
-        try {
-            const firstName = row[CONFIG.CSV_COLUMNS.FIRST_NAME];
-            const lastName = row[CONFIG.CSV_COLUMNS.LAST_NAME];
-            const title = row[CONFIG.CSV_COLUMNS.TITLE];
-            const company = row[CONFIG.CSV_COLUMNS.COMPANY];
-            const email = row[CONFIG.CSV_COLUMNS.EMAIL];
-            const employees = row[CONFIG.CSV_COLUMNS.EMPLOYEES];
-            const industry = row[CONFIG.CSV_COLUMNS.INDUSTRY];
-
-            if (!company) throw new Error("Empresa vazia");
-
-            let orgId = service.getOrganizationId(company);
-            if (!orgId) {
-                orgId = service.createOrganization(company);
-                Utilities.sleep(200);
-            }
-
-            let personId = service.getPersonId(email);
-            if (!personId && email) {
-                personId = service.createPerson(firstName, lastName, email, orgId, title);
-                Utilities.sleep(100);
-            }
-
-            const dealPayload = {
-                title: (coreTeam === 'NCiv')
-                    ? `${firstName} ${lastName} - ${company}`
-                    : `${company} - ${firstName} ${lastName}`,
-                person_id: personId,
-                org_id: orgId,
-                user_id: CONFIG.USER_ID,
-                stage_id: CONFIG.STAGE_ID,
-                status: 'open',
-                [CONFIG.FIELDS.EMPLOYEES]: service.getEmployeeRangeId(employees),
-                [CONFIG.FIELDS.INDUSTRY]: industry,
-                [CONFIG.FIELDS.ORIGIN]: 28,
-                label: labelId,
-                [CONFIG.FIELDS.HUNTER]: hunterId
-            };
-
-            service.createDeal(dealPayload);
-            statusUpdates.push(["SUCESSO"]);
-            successCount++;
-
-        } catch (e) {
-            console.error(`Row ${i} Error: ${e.message}`);
-            statusUpdates.push([`ERRO: ${e.message}`]);
-        }
+        scheduler.markRowDone(row);
+        markedCount++;
     }
 
-    if (statusUpdates.length > 0) {
-        sheet.getRange(2, STATUS_COLUMN_INDEX, statusUpdates.length, 1).setValues(statusUpdates);
-    }
+    // Sincroniza o ponteiro estável com o limite efetivo para que o próximo ciclo
+    // de processamento comece a partir da linha correta
+    scheduler.props.setProperty(scheduler.KEY_INTERNAL_POINTER, effectiveLimit.toString());
+    controlSheet.getRange(2, FORM_INDEX.POINTER + 1).setValue(effectiveLimit);
 
-    // Return true if at least one deal succeeded, or if there were no deals to process.
-    // If 100% failed, return false to allow retry.
-    return (data.length === 0) || (successCount > 0);
+    Log.info('markRowsAsDoneUntilPointer', `Concluído. Marcadas: ${markedCount} linha(s). Já concluídas (ignoradas): ${skippedCount}. Novo ponteiro: ${effectiveLimit}.`);
 }
