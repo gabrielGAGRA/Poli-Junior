@@ -68,12 +68,12 @@ AVAILABLE_ASSISTANTS: Dict[str, AssistantConfig] = {
         supports_code_interpreter=True,
     ),
     "pesquisador_insights": AssistantConfig(
-        id="gemini-2.5-pro",
+        id="gemini-2.5-flash",
         name="🔍 Pesquisador de Insights para Proposta",
         description="Inteligência de Mercado com Google Search (Gemini)",
     ),
     "pesquisador_tendencias": AssistantConfig(
-        id="gemini-2.5-pro",
+        id="gemini-2.5-flash",
         name="📈 Pesquisador de Tendências para AT",
         description="Análise de Tendências de Mercado com Google Search (Gemini)",
     ),
@@ -344,7 +344,7 @@ Link: "URL completa e real da fonte, ou null"
         # Gera a resposta com streaming
         full_response = ""
         for chunk in gemini_client.models.generate_content_stream(
-            model="gemini-2.5-pro",
+            model="gemini-2.5-flash",
             contents=contents,
             config=generate_content_config,
         ):
@@ -466,7 +466,7 @@ A sua resposta final deve ser formatada em Markdown, seguindo estritamente o mod
         # Gera a resposta com streaming
         full_response = ""
         for chunk in gemini_client.models.generate_content_stream(
-            model="gemini-2.5-pro",
+            model="gemini-2.5-flash",
             contents=contents,
             config=generate_content_config,
         ):
