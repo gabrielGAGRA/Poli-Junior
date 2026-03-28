@@ -1,7 +1,7 @@
 // Autor: Gabriel Agra de Castro Motta
 // Data de Atualização: 03/03/2025
 // Licença: MIT - Modificada. Os Direitos Patrimoniais de uso, reprodução e modificação são concedidos à Poli Júnior.
-// Termos: Todos os Direitos Morais do Autor são reservados. A remoção, supressão ou alteração da indicação de autoria original em qualquer cópia, total ou parcial, constitui violação legal.
+// Termos: Todos os Direitos Morais do Autor são reservados. A remoção, supressão ou alteração da indicação de autoria original em qualquer cópia, total ou parcial, constitui violação legal. 
 
 /* ==========================================================================
    UTILITÁRIO DE LOG

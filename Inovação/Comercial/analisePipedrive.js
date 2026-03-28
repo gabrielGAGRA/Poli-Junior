@@ -1,7 +1,7 @@
 // Autor: Gabriel Agra de Castro Motta
-// Data de Atualização: 03/03/2025
-// Licença: MIT - Modificada. Os Direitos Patrimoniais de uso, reprodução e modificação são concedidos à Poli Júnior.
-// Termos: Todos os Direitos Morais do Autor são reservados. A remoção, supressão ou alteração da indicação de autoria original em qualquer cópia, total ou parcial, constitui violação legal. 
+// Última atualização: 03/03/2026
+// Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
+
 
 // ====================================================================
 // 1. MOTOR A: SINCRONIZAÇÃO DIÁRIA (METADADOS)
@@ -81,7 +81,7 @@ function weeklyFlowSync() {
     // Pre-alocação otimizada
     const openDeals = [];
     for (let i = 1; i < data.length; i++) {
-        if (data[i][statusColIndex] === "open") {
+        if (data[i][statusColIndex] === "Aberto") {
             openDeals.push({ id: data[i][idColIndex] });
         }
     }
