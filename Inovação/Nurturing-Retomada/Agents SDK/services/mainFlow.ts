@@ -1,6 +1,6 @@
 import { PipedriveRepository } from './pipedriveService';
 import { executeAiWorkflow } from './orchestrator';
-import { WORKFLOW_STAGE_MAPPING, AGENT_CONFIG, CUSTOM_FIELDS, ORIGIN_ID_FIELD, getNucleusInfo } from '../config';
+import { WORKFLOW_STAGE_MAPPING, AGENT_CONFIG, CUSTOM_FIELDS, getNucleusInfo } from '../config';
 
 // DEDUPLICAÇÃO
 async function deduplicateDeals(deals: any[]) {
@@ -71,7 +71,7 @@ export async function syncAndSummarize() {
             let needsSummary = false;
 
             if (deal.notes_count === 0) {
-                const originalDealId = deal[ORIGIN_ID_FIELD];
+                const originalDealId = deal[CUSTOM_FIELDS.ORIGIN_ID_FIELD];
                 if (originalDealId) {
                     notesForSummary = await PipedriveRepository.syncOriginNotes(deal.id, originalDealId);
                     needsSummary = notesForSummary.length > 0;

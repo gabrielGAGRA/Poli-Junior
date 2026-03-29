@@ -73,8 +73,7 @@ function generateStrategicSummary(deal, notes) {
     const summary = OpenAIRepository.callWorkflow(AGENT_CONFIG.WORKFLOW_ANALISTA_ID, payload);
 
     if (summary) {
-        // A Responses API com prompt/workflow retorna o texto direto em result.output_text ou dentro de output[0]
-        const content = `<h1>${AGENT_CONFIG.RESUMO_PREFIX}</h1>\n${summary.output_text || summary}`;
+        const content = `<h1>${AGENT_CONFIG.RESUMO_PREFIX}</h1>\n${summary}`;
         PipedriveRepository.createNote(deal.id, content);
         console.log(`✅ Resumo estratégico gerado para o núcleo: ${nucleus.abreviacao}`);
     }
@@ -134,9 +133,8 @@ function executeEmailCadence() {
             const result = OpenAIRepository.callWorkflow(workflowId, payload);
 
             if (result) {
-                // O texto gerado pelo workflow vem em output_text
-                const emailContent = result.output_text || result;
-                const emailData = typeof emailContent === 'string' ? JSON.parse(emailContent) : emailContent;
+                // Assume que o agente retorna um JSON via Structured Output
+                const emailData = typeof result === 'string' ? JSON.parse(result) : result;
                 PipedriveRepository.saveEmailToDeal(deal.id, emailData.titulo, emailData.corpo_html);
                 console.log(`✅ E-mail do passo ${stepInfo.passo} (${stepInfo.cadencia}) gerado.`);
             }
@@ -248,39 +246,32 @@ var PipedriveRepository = {
 
 var OpenAIRepository = {
     callWorkflow: function (workflowId, data) {
-        // Substitua pelo link do Vercel/Render onde você fez o upload da pasta "Node-Agent-Server"
-        const nodeServerUrl = 'http://localhost:3000/api/run-workflow';
-
+        const url = 'https://api.openai.com/v1/responses';
         const payload = {
+            model: "gpt-5-preview", // Ou modelo 'mini' para o Analista
             workflow_id: workflowId,
-            variables: data
+            input: [{ role: "user", content: JSON.stringify(data) }]
         };
 
         const options = {
             method: 'post',
             headers: {
+                'Authorization': 'Bearer ' + (OPENAI_API_KEY || PropertiesService.getScriptProperties().getProperty('OPENAI_API_KEY')),
                 'Content-Type': 'application/json'
-                // Aqui você pode adicionar um Authorization extra pro seu próprio App Script falar seguro c/ seu Node
             },
             payload: JSON.stringify(payload),
             muteHttpExceptions: true
         };
 
-        try {
-            const resp = UrlFetchApp.fetch(nodeServerUrl, options);
-            const result = JSON.parse(resp.getContentText());
+        const resp = UrlFetchApp.fetch(url, options);
+        const result = JSON.parse(resp.getContentText());
 
-            if (resp.getResponseCode() !== 200 || !result.success) {
-                console.error("Erro na Ponte Node.js:", result.error || result);
-                return null;
-            }
-
-            // O nosso servidor Node formata a resposta no campo output_text
-            return result.output_text;
-        } catch (e) {
-            console.error("Falha ao comunicar com a Ponte Node.js: ", e.message);
+        if (resp.getResponseCode() !== 200) {
+            console.error("Erro OpenAI:", result);
             return null;
         }
+
+        return result.output;
     }
 };
 

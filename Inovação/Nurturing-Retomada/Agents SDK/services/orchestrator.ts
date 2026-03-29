@@ -3,6 +3,7 @@ import { runWorkflow as runNCon } from '../flows/fluxo_ncon';
 import { runWorkflow as runNTec } from '../flows/fluxo_ntec';
 import { runWorkflow as runNCiv } from '../flows/fluxo_nciv';
 import { runWorkflow as runOwnerInativo } from '../flows/fluxo_owner_inativo';
+import { runWorkflow as runAnalista } from '../flows/fluxo_analista';
 
 const agentsWorkflows: Record<string, Function> = {
     'NDados': runNDados,
@@ -10,17 +11,13 @@ const agentsWorkflows: Record<string, Function> = {
     'NTec': runNTec,
     'NCiv': runNCiv,
     'OwnerInativo': runOwnerInativo,
+    'Analista': runAnalista,
 };
 
 export async function executeAiWorkflow(target: string, payload: any) {
     let workflowFn = agentsWorkflows[target];
 
     if (!workflowFn) {
-        if (target === 'Analista') {
-            console.warn(`[Atenção] Fluxo 'Analista' não encontrado. Retornando resumo simulado até que o fluxo seja adicionado.`);
-            return "Resumo Estratégico Pendente (Fluxo do Analista ainda não implementado na pasta flows)";
-        }
-        
         console.warn(`[Atenção] Nenhum fluxo encontrado para: ${target}. Usando NDados como fallback.`);
         workflowFn = agentsWorkflows['NDados'];
     }
