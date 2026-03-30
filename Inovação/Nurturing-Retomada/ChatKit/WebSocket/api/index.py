@@ -15,15 +15,15 @@ class AgentRequest(BaseModel):
 
 @app.post("/run-agent")
 async def run_agent(request: AgentRequest, authorization: Optional[str] = Header(None)):
-    # Validação de segurança simples
+    # Validação de Segurança (Token definido no Vercel Env)
     if authorization != f"Bearer {os.getenv('BRIDGE_AUTH_TOKEN')}":
-        raise HTTPException(status_code=401, detail="Unauthorized")
+        raise HTTPException(status_code=401, detail="Não autorizado")
 
     api_key = os.getenv("OPENAI_API_KEY")
 
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        # 1. Cria a sessão para o workflow_id específico
-        # Endpoint oficial de 2026 para sessões do ChatKit
+    async with httpx.AsyncClient(timeout=120.0) as client:
+        # 1. Inicia a Sessão no ChatKit via API (Proxy para o Agent Builder)
+        # O workflow_id aciona a lógica visual definida na UI da OpenAI
         session_resp = await client.post(
             "https://api.openai.com/v1/chatkit/sessions",
             headers={
@@ -32,21 +32,19 @@ async def run_agent(request: AgentRequest, authorization: Optional[str] = Header
             },
             json={
                 "workflow": {"id": request.workflow_id},
-                "state_variables": request.payload,
+                "state_variables": request.payload,  # Dados do Pipedrive entram aqui
             },
         )
 
         if session_resp.status_code != 200:
             raise HTTPException(
-                status_code=500, detail="Falha ao criar sessão no ChatKit"
+                status_code=session_resp.status_code, detail="Erro ao criar sessão"
             )
 
-        session_data = session_resp.json()
-        session_id = session_data["id"]
+        session_id = session_resp.json()["id"]
 
-        # 2. Executa o workflow e coleta a resposta
-        # Nota: O protocolo do ChatKit pode usar SSE para streaming
-        final_text = ""
+        # 2. Executa o Turno e processa o Stream de eventos
+        final_output = ""
         async with client.stream(
             "POST",
             f"https://api.openai.com/v1/chatkit/sessions/{session_id}/runs",
@@ -55,24 +53,24 @@ async def run_agent(request: AgentRequest, authorization: Optional[str] = Header
                 "OpenAI-Beta": "chatkit_beta=v1",
             },
             json={
-                "input": "Execute o processo de redação/resumo com base nos dados fornecidos."
+                "input": "Processe os dados e gere o conteúdo conforme as instruções do workflow."
             },
         ) as response:
             async for line in response.aiter_lines():
                 if line.startswith("data: "):
-                    data = json.loads(line[6:])
-                    # Procuramos pelo evento de conclusão do turno do agente
-                    if (
-                        data.get("type") == "thread.item.done"
-                        and data["item"].get("type") == "message"
-                    ):
-                        # Captura o conteúdo da mensagem do assistente
-                        content = data["item"]["content"]
-                        for part in content:
-                            if part["type"] == "text":
-                                final_text += part["text"]["value"]
+                    event = json.loads(line[6:])
 
-                    if data.get("type") == "run.done":
+                    # Captura a mensagem final do assistente (Turno Concluído)
+                    if (
+                        event.get("type") == "thread.item.done"
+                        and event["item"].get("role") == "assistant"
+                    ):
+                        content_parts = event["item"].get("content", [])
+                        for part in content_parts:
+                            if part.get("type") == "text":
+                                final_output += part["text"]["value"]
+
+                    if event.get("type") == "run.done":
                         break
 
-        return {"status": "success", "output": final_text}
+        return {"status": "success", "output": final_output}

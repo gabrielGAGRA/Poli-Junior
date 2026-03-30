@@ -249,52 +249,39 @@ var PipedriveRepository = {
  */
 var OpenAIRepository = {
     /**
-     * Chama o servidor Python que gerencia o WebSocket com a OpenAI.
-     * @param {string} workflowId - O ID do workflow no Agent Builder.
-     * @param {object} data - O payload (resumo, histórico, etc).
+     * Aciona o Bridge no Vercel para rodar um fluxo do Agent Builder via HTTPS
      */
-    callWorkflow: function (workflowId, data) {
-        const payload = {
-            workflow_id: workflowId,
-            payload: data
-        };
-
+    callWorkflow: function (workflowId, inputData) {
         const options = {
             method: 'post',
             contentType: 'application/json',
-            headers: {
-                'Authorization': 'Bearer ' + BRIDGE_AUTH_TOKEN
-            },
-            payload: JSON.stringify(payload),
+            headers: { 'Authorization': 'Bearer ' + BRIDGE_AUTH_TOKEN },
+            payload: JSON.stringify({
+                workflow_id: workflowId,
+                payload: inputData
+            }),
             muteHttpExceptions: true
         };
 
         try {
-            console.log(`📡 Solicitando processamento ao Bridge: ${workflowId}`);
-            const resp = UrlFetchApp.fetch(BRIDGE_SERVER_URL, options);
-            const responseCode = resp.getResponseCode();
-            const responseText = resp.getContentText();
-            const result = JSON.parse(responseText);
+            const response = UrlFetchApp.fetch(BRIDGE_SERVER_URL, options);
+            const resData = JSON.parse(response.getContentText());
 
-            if (responseCode !== 200) {
-                console.error(`❌ Erro no Bridge (${responseCode}):`, result.detail || responseText);
+            if (response.getResponseCode() !== 200) {
+                console.error("❌ Erro no Bridge:", resData.detail);
                 return null;
             }
 
-            /**
-             * O servidor Python devolve o campo 'output'.
-             * Se você configurou o Agente para devolver JSON via Structured Output,
-             * fazemos o parse aqui.
-             */
-            try {
-                return typeof result.output === 'string' ? JSON.parse(result.output) : result.output;
-            } catch (e) {
-                console.warn("⚠️ O output do agente não é um JSON válido, retornando como string.");
-                return result.output;
+            let output = resData.output;
+
+            // Se o Agent Builder devolver uma string JSON (Structured Output), fazemos o parse
+            if (typeof output === 'string' && (output.trim().startsWith('{') || output.trim().startsWith('['))) {
+                try { output = JSON.parse(output); } catch (e) { /* Retorna como string se falhar */ }
             }
 
+            return output;
         } catch (e) {
-            console.error("🚨 Erro crítico na conexão com o Bridge Server:", e.toString());
+            console.error("🚨 Erro na conexão com Vercel:", e.toString());
             return null;
         }
     }

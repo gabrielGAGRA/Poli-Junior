@@ -5,27 +5,16 @@
 // =================================================================================
 // BRIDGE SERVER CONFIGURATION (PYTHON)
 // =================================================================================
-const BRIDGE_SERVER_URL = "https://seu-servidor-poli-junior.a.run.app/run-agent";
-const BRIDGE_AUTH_TOKEN = "uma-chave-secreta-gerada-por-voce"; // Deve bater com o .env do Python
+const BRIDGE_SERVER_URL = "https://poli-junior.vercel.app/";
+const BRIDGE_AUTH_TOKEN = "POLIJUNIOR";
 
 
 const PIPEDRIVE_API_TOKEN = '';
+const OPENAI_API_KEY = 'sk-proj-';
+
+
 const PIPEDRIVE_API_BASE_URL = "https://polijunior.pipedrive.com/api/v1";
 
-/**
- * =================================================================================
- * RETOMADA CONFIGURATION
- * =================================================================================
- */
-const OPENAI_API_KEY = '';
-
-const CUSTOM_FIELDS = {
-    EMAIL_TITLE: "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d",
-    EMAIL_BODY: "e616420fb16e671963854114c6bba6bd5c3bcef1",
-    LABEL: "label", // Núcleo
-    COMPANY_SECTOR: "eabf279da192f1d3d2a72a49845154b1e9a848f7",
-    ORIGIN_ID_FIELD: "e465d18813a12b0bbd089af1996b1090751ab057"
-};
 
 /**
  * =================================================================================
@@ -35,11 +24,11 @@ const CUSTOM_FIELDS = {
 
 const AGENT_CONFIG = {
     RESUMO_PREFIX: "[RESUMO ESTRATÉGICO]",
-    WORKFLOW_ANALISTA_ID: "wf-",
+    WORKFLOW_ANALISTA_ID: "wf_69bc77d2297c819087c560a4f45560730cc557b20c370acf",
 
     // Workflows de Redação Ativa (Owner Ativo)
     WORKFLOW_REDACAO_ATIVO: {
-        'NDados': "wf-",
+        'NDados': "wf_69a712cef21c8190bcc1c573a9feaad40c5ca413b5fe04d2",
         'NCon': "wf-",
         'NTec': "wf-",
         'NCiv': "wf-"
@@ -48,6 +37,21 @@ const AGENT_CONFIG = {
     // Workflow de Redação Inativa (Owner Inativo) - Único para todos os núcleos
     WORKFLOW_REDACAO_INATIVO: "wf-"
 };
+
+
+/**
+ * =================================================================================
+ * RETOMADA CONFIGURATION
+ * =================================================================================
+ */
+const CUSTOM_FIELDS = {
+    EMAIL_TITLE: "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d",
+    EMAIL_BODY: "e616420fb16e671963854114c6bba6bd5c3bcef1",
+    LABEL: "label", // Núcleo
+    COMPANY_SECTOR: "eabf279da192f1d3d2a72a49845154b1e9a848f7",
+    ORIGIN_ID_FIELD: "e465d18813a12b0bbd089af1996b1090751ab057"
+};
+
 
 // Mapeamento das etapas do funil para o orquestrador (IA)
 const WORKFLOW_STAGE_MAPPING = {
