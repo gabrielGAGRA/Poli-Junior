@@ -1,14 +1,11 @@
 import os
+import json
+import httpx
 from fastapi import FastAPI, HTTPException, Header
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
-from openai import AsyncOpenAI
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = FastAPI()
-client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
 class AgentRequest(BaseModel):
@@ -16,54 +13,66 @@ class AgentRequest(BaseModel):
     payload: Dict[str, Any]
 
 
-@app.get("/health")
-def health_check():
-    return {"status": "online", "engine": "OpenAI Agent Builder Proxy"}
-
-
 @app.post("/run-agent")
 async def run_agent(request: AgentRequest, authorization: Optional[str] = Header(None)):
-    """
-    Endpoint que converte HTTPS POST em WebSocket Session.
-    """
-    expected_token = f"Bearer {os.getenv('BRIDGE_AUTH_TOKEN')}"
-    if authorization != expected_token:
-        raise HTTPException(status_code=401, detail="Não autorizado")
+    # Validação de segurança simples
+    if authorization != f"Bearer {os.getenv('BRIDGE_AUTH_TOKEN')}":
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
-    try:
-        # Inicia uma sessão de WebSocket com o Agent Builder (ChatKit Protocol)
-        # O SDK gerencia o handshake e a manutenção da conexão em background
-        async with client.agents.responses.subscribe(
-            workflow_id=request.workflow_id
-        ) as session:
+    api_key = os.getenv("OPENAI_API_KEY")
 
-            # Injeta o payload do Pipedrive no fluxo do Agente
-            # O Agente na UI da OpenAI deve estar configurado para receber este JSON
-            await session.send_input(request.payload)
+    async with httpx.AsyncClient(timeout=60.0) as client:
+        # 1. Cria a sessão para o workflow_id específico
+        # Endpoint oficial de 2026 para sessões do ChatKit
+        session_resp = await client.post(
+            "https://api.openai.com/v1/chatkit/sessions",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "OpenAI-Beta": "chatkit_beta=v1",
+            },
+            json={
+                "workflow": {"id": request.workflow_id},
+                "state_variables": request.payload,
+            },
+        )
 
-            # Aguarda a resposta final (Final Turn) do workflow
-            # Isso permite que o Agente execute múltiplos passos internos antes de responder
-            final_output = ""
-            async for event in session:
-                if event.type == "agent.response.done":
-                    # Captura o output estruturado (JSON) definido no Agent Builder
-                    final_output = event.response.output_text
-                    break
-                elif event.type == "error":
-                    raise Exception(f"Erro no Agente: {event.message}")
+        if session_resp.status_code != 200:
+            raise HTTPException(
+                status_code=500, detail="Falha ao criar sessão no ChatKit"
+            )
 
-            if not final_output:
-                raise HTTPException(
-                    status_code=500, detail="O Agente não retornou um output válido."
-                )
+        session_data = session_resp.json()
+        session_id = session_data["id"]
 
-            return {"status": "success", "output": final_output}
+        # 2. Executa o workflow e coleta a resposta
+        # Nota: O protocolo do ChatKit pode usar SSE para streaming
+        final_text = ""
+        async with client.stream(
+            "POST",
+            f"https://api.openai.com/v1/chatkit/sessions/{session_id}/runs",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "OpenAI-Beta": "chatkit_beta=v1",
+            },
+            json={
+                "input": "Execute o processo de redação/resumo com base nos dados fornecidos."
+            },
+        ) as response:
+            async for line in response.aiter_lines():
+                if line.startswith("data: "):
+                    data = json.loads(line[6:])
+                    # Procuramos pelo evento de conclusão do turno do agente
+                    if (
+                        data.get("type") == "thread.item.done"
+                        and data["item"].get("type") == "message"
+                    ):
+                        # Captura o conteúdo da mensagem do assistente
+                        content = data["item"]["content"]
+                        for part in content:
+                            if part["type"] == "text":
+                                final_text += part["text"]["value"]
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+                    if data.get("type") == "run.done":
+                        break
 
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8080)))
+        return {"status": "success", "output": final_text}
