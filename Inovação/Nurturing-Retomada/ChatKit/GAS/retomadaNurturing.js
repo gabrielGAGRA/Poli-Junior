@@ -67,7 +67,8 @@ function generateStrategicSummary(deal, notes) {
     const payload = {
         input_as_text: rawNotesText,        // Input Variable
         nucleo: nucleus.abreviacao,          // State Variable
-        nucleo_nome_completo: nucleus.nome_completo // State Variable
+        nucleo_nome_completo: nucleus.nome_completo, // State Variable
+        owner_id: String(deal.user_id.id) // Usuario eh owner do card
     };
 
     const summary = OpenAIRepository.callWorkflow(AGENT_CONFIG.WORKFLOW_ANALISTA_ID, payload);
@@ -124,7 +125,8 @@ function executeEmailCadence() {
                 input_as_text: combinedInput,
                 cadencia: stepInfo.cadencia,
                 etapa: stepInfo.passo,
-                emails_anteriores: JSON.stringify(emailHistory)
+                emails_anteriores: JSON.stringify(emailHistory),
+                owner_id: String(deal.user_id.id) // Usuario eh owner do card
             };
 
             // Adiciona variáveis específicas do Esquema 2 apenas se proprietário inativo

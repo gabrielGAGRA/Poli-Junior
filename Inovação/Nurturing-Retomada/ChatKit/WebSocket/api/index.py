@@ -26,6 +26,12 @@ async def run_agent(
     # Extraímos 'input_as_text' para ser o gatilho, o resto vira contexto (state)
     payload_copy = request.payload.copy()
     user_input = payload_copy.pop("input_as_text", "Processar dados.")
+
+    # EXTRAÇÃO DO ID DO OWNER
+    # Removemos do payload de estado para não confundir o Agent Builder,
+    # mas usamos para identificar a sessão na OpenAI.
+    pipedrive_owner_id = payload_copy.pop("owner_id", "poli-junior-system")
+
     state_vars = payload_copy
 
     async with httpx.AsyncClient(timeout=280.0) as client:
@@ -39,7 +45,7 @@ async def run_agent(
             json={
                 "workflow": {"id": request.workflow_id},
                 "state_variables": state_vars,
-                "user": "poli-junior-backend-system",  # <--- PARÂMETRO OBRIGATÓRIO ADICIONADO
+                "user": f"pj-consultor-{pipedrive_owner_id}",  # <--- ID Dinâmico
             },
         )
 
