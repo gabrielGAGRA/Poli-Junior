@@ -1,0 +1,49 @@
+1. Fluxos de Núcleo (Nurturing / Retomada)
+Estes fluxos utilizam variáveis de estado para controlar a lógica da cadência e geram um objeto JSON estruturado.
+
+Input Variables:
+input_as_text (string): Conteúdo textual de entrada para processamento.
+State Variables:
+cadencia (string): Identificador do tipo de cadência (ex: "Nurturing" ou "Retomada").
+etapa (number): O step atual dentro da sequência lógica.
+emails_anteriores (string): Histórico de comunicações para contextualização do agente.
+
+Output (JSON - Schema "E-mail"):
+JSON
+{
+  "titulo": "string",
+  "corpo_html": "string"
+}
+
+
+2. Fluxo de Owner Inativo
+Este fluxo foca na reativação de contas onde o responsável não está mais presente, mantendo o padrão de saída dos fluxos de núcleo.
+
+Input Variables:
+input_as_text (string): Dados sobre a conta ou o owner desativado.
+State Variables:
+cadencia (string): Definida para o contexto de reativação.
+etapa (number): Ponto atual da régua de reativação.
+emails_anteriores (string): Contexto de tentativas de contato prévias.
+nucleo_nome_completo (string): Nome do núcleo da Poli Júnior responsável.
+nome_owner_desativado (string): Nome do antigo responsável pela conta.
+
+Output (JSON - Schema "E-mail"):
+JSON
+{
+  "titulo": "string",
+  "corpo_html": "string"
+}
+
+
+3. Fluxo de Resumidor de Atas
+Diferente dos anteriores, este fluxo foca em síntese de dados internos e possui uma saída simplificada (texto puro).
+
+Input Variables:
+input_as_text (string): Transcrição bruta ou notas da ata da reunião.
+State Variables:
+nucleo (string): Identificação do núcleo (ex: "Dados & IA").
+nucleo_nome_completo (string): Nome formal da área para o cabeçalho do resumo.
+
+Output (Plain Text):
+O output é o texto gerado diretamente pelos agentes (Markdown ou texto puro), contendo a síntese da ata, sem necessidade de encapsulamento JSON.

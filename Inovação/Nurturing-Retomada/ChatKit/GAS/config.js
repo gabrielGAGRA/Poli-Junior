@@ -10,7 +10,7 @@ const BRIDGE_AUTH_TOKEN = "POLIJUNIOR";
 
 
 const PIPEDRIVE_API_TOKEN = '';
-const OPENAI_API_KEY = 'sk-proj-';
+const OPENAI_API_KEY = 'sk-proj';
 
 
 const PIPEDRIVE_API_BASE_URL = "https://polijunior.pipedrive.com/api/v1";

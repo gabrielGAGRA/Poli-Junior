@@ -65,9 +65,9 @@ function generateStrategicSummary(deal, notes) {
     const nucleus = getNucleusInfo(deal[CUSTOM_FIELDS.LABEL]);
 
     const payload = {
-        input_as_text: rawNotesText,
-        nucleo: nucleus.abreviacao,
-        nucleo_nome_completo: nucleus.nome_completo
+        input_as_text: rawNotesText,        // Input Variable
+        nucleo: nucleus.abreviacao,          // State Variable
+        nucleo_nome_completo: nucleus.nome_completo // State Variable
     };
 
     const summary = OpenAIRepository.callWorkflow(AGENT_CONFIG.WORKFLOW_ANALISTA_ID, payload);
@@ -124,10 +124,14 @@ function executeEmailCadence() {
                 input_as_text: combinedInput,
                 cadencia: stepInfo.cadencia,
                 etapa: stepInfo.passo,
-                emails_anteriores: JSON.stringify(emailHistory),
-                nucleo_nome_completo: getNucleusInfo(nucleus).nome_completo,
-                nome_owner_desativado: deal.user_id.name
+                emails_anteriores: JSON.stringify(emailHistory)
             };
+
+            // Adiciona variáveis específicas do Esquema 2 apenas se proprietário inativo
+            if (!isOwnerActive) {
+                payload.nucleo_nome_completo = getNucleusInfo(nucleus).nome_completo;
+                payload.nome_owner_desativado = deal.user_id.name;
+            }
 
             // 5. Gera o e-mail via Responses API
             const result = OpenAIRepository.callWorkflow(workflowId, payload);
