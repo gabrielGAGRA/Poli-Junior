@@ -22,20 +22,16 @@ async def run_agent(
 
     api_key = os.getenv("OPENAI_API_KEY")
 
-    # SEPARAÇÃO DE ENGENHARIA: Input vs State
-    # Extraímos 'input_as_text' para ser o gatilho, o resto vira contexto (state)
+    # ENGENHARIA DE PAYLOAD: Separação de Input e Estado
     payload_copy = request.payload.copy()
-    user_input = payload_copy.pop("input_as_text", "Processar dados.")
-
-    # EXTRAÇÃO DO ID DO OWNER
-    # Removemos do payload de estado para não confundir o Agent Builder,
-    # mas usamos para identificar a sessão na OpenAI.
+    user_input = payload_copy.pop("input_as_text", "Processar.")
     pipedrive_owner_id = payload_copy.pop("owner_id", "poli-junior-system")
 
+    # As 'State Variables' (cadencia, etapa, etc.) ficam aqui
     state_vars = payload_copy
 
     async with httpx.AsyncClient(timeout=280.0) as client:
-        # 1. Criação da Sessão com o novo nome de parâmetro: 'variables'
+        # 1. Criação da Sessão - Estrutura oficial 2026
         session_resp = await client.post(
             "https://api.openai.com/v1/chatkit/sessions",
             headers={
@@ -43,9 +39,11 @@ async def run_agent(
                 "OpenAI-Beta": "chatkit_beta=v1",
             },
             json={
-                "workflow": {"id": request.workflow_id},
-                "variables": state_vars,  # 'variables'
-                "user": f"pj-consultor-{pipedrive_owner_id}",  # <--- ID Dinâmico
+                "user": f"pj-consultor-{pipedrive_owner_id}",  # Obrigatório na raiz
+                "workflow": {
+                    "id": request.workflow_id,
+                    "state_variables": state_vars,  # Obrigatório dentro de workflow
+                },
             },
         )
 
@@ -68,13 +66,13 @@ async def run_agent(
                 "Authorization": f"Bearer {api_key}",
                 "OpenAI-Beta": "chatkit_beta=v1",
             },
-            json={"input": user_input},  # O conteúdo bruto entra aqui
+            json={"input": user_input},
         ) as response:
             async for line in response.aiter_lines():
                 if line.startswith("data: "):
                     event = json.loads(line[6:])
 
-                    # Captura a mensagem final do assistente (Turno Concluído)
+                    # Captura a resposta final do assistente
                     if (
                         event.get("type") == "thread.item.done"
                         and event["item"].get("role") == "assistant"
