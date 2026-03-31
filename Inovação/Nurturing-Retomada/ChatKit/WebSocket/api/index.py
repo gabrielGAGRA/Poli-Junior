@@ -28,7 +28,7 @@ async def run_agent(
     user_input = payload_copy.pop("input_as_text", "Processar dados.")
     state_vars = payload_copy
 
-    async with httpx.AsyncClient(timeout=120.0) as client:
+    async with httpx.AsyncClient(timeout=280.0) as client:
         # 1. Criação da Sessão - Agora com state_variables limpas
         session_resp = await client.post(
             "https://api.openai.com/v1/chatkit/sessions",
@@ -38,7 +38,8 @@ async def run_agent(
             },
             json={
                 "workflow": {"id": request.workflow_id},
-                "state_variables": state_vars,  # Apenas as variáveis de estado aqui
+                "state_variables": state_vars,
+                "user": "poli-junior-backend-system",  # <--- PARÂMETRO OBRIGATÓRIO ADICIONADO
             },
         )
 
