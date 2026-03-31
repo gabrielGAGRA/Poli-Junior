@@ -35,7 +35,7 @@ async def run_agent(
     state_vars = payload_copy
 
     async with httpx.AsyncClient(timeout=280.0) as client:
-        # 1. Criação da Sessão - Agora com state_variables limpas
+        # 1. Criação da Sessão com o novo nome de parâmetro: 'variables'
         session_resp = await client.post(
             "https://api.openai.com/v1/chatkit/sessions",
             headers={
@@ -44,7 +44,7 @@ async def run_agent(
             },
             json={
                 "workflow": {"id": request.workflow_id},
-                "state_variables": state_vars,
+                "variables": state_vars,  # 'variables'
                 "user": f"pj-consultor-{pipedrive_owner_id}",  # <--- ID Dinâmico
             },
         )
