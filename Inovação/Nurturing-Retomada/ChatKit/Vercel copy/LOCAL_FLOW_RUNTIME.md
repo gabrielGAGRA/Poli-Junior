@@ -4,6 +4,16 @@ This backend executes only local Python flow runtime behind `/run-agent`.
 
 ## Environment Variables
 
+- `LOCAL_FLOWS_DIR`
+  - Directory for exported flows. Runtime searches NDados only inside this folder.
+  - Example:
+    - `LOCAL_FLOWS_DIR=flows`
+
+- `LOCAL_FLOW_NDADOS_FILE`
+  - Optional file name inside `LOCAL_FLOWS_DIR`.
+  - Example:
+    - `LOCAL_FLOW_NDADOS_FILE=fluxo_Ndados.py`
+
 - Existing variables remain in use:
   - `BRIDGE_AUTH_TOKEN`
   - `OPENAI_API_KEY`
@@ -29,14 +39,12 @@ This backend executes only local Python flow runtime behind `/run-agent`.
   - No environment variable is used to whitelist workflow IDs.
 
 - File location policy:
-  - Runtime loads NDados flow exclusively from `ChatKit/Vercel/flows`.
-  - Accepted file names:
-    1. `ChatKit/Vercel/flows/fluxo-NDados.py`
-    2. `ChatKit/Vercel/flows/fluxo_NDados.py`
+  - Runtime loads NDados flow exclusively from `ChatKit/Vercel/flows` (or `LOCAL_FLOWS_DIR`).
+  - Recommended file path: `ChatKit/Vercel/flows/fluxo_Ndados.py`.
 
-- Runtime search order (fixed convention):
-  1. `flows/fluxo-NDados.py`
-  2. `flows/fluxo_NDados.py`
+- Runtime search order (inside flows dir only):
+  1. `LOCAL_FLOWS_DIR/LOCAL_FLOW_NDADOS_FILE` (if set)
+  2. `LOCAL_FLOWS_DIR/fluxo_Ndados.py`
 
 - If the exported file fails to import or execute, endpoint returns execution error directly.
 

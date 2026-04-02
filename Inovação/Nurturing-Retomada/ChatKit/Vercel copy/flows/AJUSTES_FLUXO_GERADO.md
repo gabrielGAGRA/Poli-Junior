@@ -63,7 +63,7 @@ Use este padrao ao revisar toda nova exportacao:
 
 2. Rodar validacao sintatica do arquivo.
 
-3. Testar um caso real no endpoint `/run-agent`.
+3. Testar um caso real no endpoint `/run-agent` com `FLOW_RUNTIME_MODE=local_only`.
 
 ## Criterio de pronto
 
