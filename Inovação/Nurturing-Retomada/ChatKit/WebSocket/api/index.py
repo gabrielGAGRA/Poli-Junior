@@ -68,6 +68,13 @@ async def run_agent(
             },
             json={"input": user_input},
         ) as response:
+            if response.status_code != 200:
+                await response.aread()
+                raise HTTPException(
+                    status_code=response.status_code,
+                    detail=f"OpenAI Run Error: {response.text}",
+                )
+
             async for line in response.aiter_lines():
                 if line.startswith("data: "):
                     event = json.loads(line[6:])

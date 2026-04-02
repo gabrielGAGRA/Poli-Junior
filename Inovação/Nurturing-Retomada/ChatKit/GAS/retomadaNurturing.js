@@ -32,6 +32,7 @@ function syncAndSummarize() {
 
     // Lista para acumular todas as chamadas do workflow num único batch parallel
     let workflowsToRun = [];
+    let dealsToDelete = [];
 
     // Primeiro coletamos as notas (batch-like operation pode ser feita se quisermos, mas como syncOriginNotes tem loop... vamos otimizar tbm se preciso)
     for (const deal of deals) {
@@ -50,6 +51,13 @@ function syncAndSummarize() {
                 const originalDealId = deal[CUSTOM_FIELDS.ORIGIN_ID_FIELD]; // BUG CORRIGIDO: Referência do config.js ajustada
                 if (originalDealId) {
                     notesForSummary = PipedriveRepository.syncOriginNotes(deal.id, originalDealId);
+
+                    if (!notesForSummary || notesForSummary.length === 0) {
+                        console.log(`❌ Negócio #${deal.id} não possui anotações no negócio original (${originalDealId}). Marcando para apagar...`);
+                        dealsToDelete.push(deal.id);
+                        continue;
+                    }
+
                     needsSummary = notesForSummary.length > 0;
                 }
             } else {
@@ -111,9 +119,12 @@ function syncAndSummarize() {
             UrlFetchApp.fetchAll(saveRequests);
         }
     }
-}
 
-// REMOVIDA A FUNÇÃO generateStrategicSummary isolada pois agora roda em batch dentro do syncAndSummarize
+    if (dealsToDelete.length > 0) {
+        console.log(`🗑️ Removendo ${dealsToDelete.length} negócios que não tinham anotações na origem.`);
+        PipedriveRepository.executeBulkDeletes(dealsToDelete);
+    }
+}
 
 /**
  * =================================================================
@@ -193,30 +204,41 @@ function executeEmailCadence() {
 
     // Processa de uma vez no Vercel (Paralelo)
     if (workflowsToRun.length > 0) {
+        console.log(`📡 [DISPARO] Preparando para enviar payload Vercel de ${workflowsToRun.length} Mails. Payload Amostra[0]: ${JSON.stringify(workflowsToRun[0])}`);
         const results = OpenAIRepository.callWorkflowsInParallel(workflowsToRun);
 
         // Agora salva os emails em lote no pipedrive
         const saveRequests = [];
         results.forEach(res => {
             if (res.result) {
-                const emailData = typeof res.result === 'string' ? JSON.parse(res.result) : res.result;
-                const dealId = res.meta.dealId;
+                try {
+                    const emailData = typeof res.result === 'string' ? JSON.parse(res.result) : res.result;
+                    const dealId = res.meta.dealId;
 
-                const title = emailData.titulo;
-                const body = emailData.corpo_html;
+                    const title = emailData.titulo;
+                    const body = emailData.corpo_html;
 
-                saveRequests.push({
-                    url: `${PIPEDRIVE_API_BASE_URL}/deals/${dealId}?api_token=${PIPEDRIVE_API_TOKEN}`,
-                    method: 'put',
-                    contentType: 'application/json',
-                    payload: JSON.stringify({
-                        [CUSTOM_FIELDS.EMAIL_TITLE]: title,
-                        [CUSTOM_FIELDS.EMAIL_BODY]: body
-                    }),
-                    muteHttpExceptions: true
-                });
+                    if (!title || !body) {
+                        console.error(`⚠️ [ALERTA PAYLOAD VAZIO] O resultado para o Deal #${dealId} foi gerado, mas faltam titulo/corpo_html. Retorno LLM: ${JSON.stringify(emailData)}`);
+                        return; // Pula
+                    }
 
-                console.log(`✅ E-mail do passo ${res.meta.stepInfo.passo} (${res.meta.stepInfo.cadencia}) pronto. (Card #${res.meta.dealId})`);
+                    saveRequests.push({
+                        url: `${PIPEDRIVE_API_BASE_URL}/deals/${dealId}?api_token=${PIPEDRIVE_API_TOKEN}`,
+                        method: 'put',
+                        contentType: 'application/json',
+                        payload: JSON.stringify({
+                            [CUSTOM_FIELDS.EMAIL_TITLE]: title,
+                            [CUSTOM_FIELDS.EMAIL_BODY]: body
+                        }),
+                        muteHttpExceptions: true
+                    });
+                    console.log(`✅ E-mail do passo ${res.meta.stepInfo.passo} (${res.meta.stepInfo.cadencia}) pronto. (Card #${res.meta.dealId})`);
+                } catch (err) {
+                    console.error(`❌ [JSON Pipedrive Error] Erro ao parsear JSON no Deal #${res.meta.dealId}. Retorno: ${res.result} | Erro: ${err.message}`);
+                }
+            } else {
+                console.log(`⚠️ Nulo ou Vazio: O Vercel não retornou dados de Email para o Deal #${res.meta.dealId}.`);
             }
         });
 
@@ -236,6 +258,100 @@ function executeEmailCadence() {
  */
 
 var PipedriveRepository = {
+    fetchDealsByFilter: function (filterId) {
+        let allDeals = [];
+        let start = 0;
+        const limit = 500;
+        let moreItems = true;
+
+        try {
+            const startStrLog = Date.now();
+            while (moreItems) {
+                const url = `${PIPEDRIVE_API_BASE_URL}/deals?filter_id=${filterId}&status=open&start=${start}&limit=${limit}&api_token=${PIPEDRIVE_API_TOKEN}`;
+                const resp = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
+                if (resp.getResponseCode() === 200) {
+                    const data = JSON.parse(resp.getContentText());
+                    if (data.success && data.data) {
+                        allDeals = allDeals.concat(data.data);
+                    }
+                    moreItems = data.additional_data && data.additional_data.pagination && data.additional_data.pagination.more_items_in_collection;
+                    if (moreItems) start = data.additional_data.pagination.next_start;
+                } else {
+                    moreItems = false;
+                }
+            }
+            console.log(`⏱️ [Pipedrive API] fetchDealsByFilter (Filtro ID: ${filterId}) achou ${allDeals.length} negócios e levou ${Date.now() - startStrLog}ms`);
+            return allDeals;
+        } catch (e) {
+            console.error("Erro no fetchDealsByFilter: ", e);
+            return [];
+        }
+    },
+
+    fetchDealsByPipeline: function (pipelineIds) {
+        const requests = pipelineIds.map(id => ({
+            url: `${PIPEDRIVE_API_BASE_URL}/deals?pipeline_id=${id}&status=open&api_token=${PIPEDRIVE_API_TOKEN}`,
+            method: 'get',
+            muteHttpExceptions: true
+        }));
+
+        try {
+            const startStrLog = Date.now();
+            const responses = UrlFetchApp.fetchAll(requests);
+            console.log(`⏱️ [Pipedrive API] fetchDealsByPipeline (${pipelineIds.length} pipelines verificados) levou ${Date.now() - startStrLog}ms`);
+
+            let allDeals = [];
+            responses.forEach(resp => {
+                if (resp.getResponseCode() === 200) {
+                    const data = JSON.parse(resp.getContentText());
+                    if (data.success && data.data) {
+                        allDeals = allDeals.concat(data.data);
+                    }
+                }
+            });
+            return allDeals;
+        } catch (e) {
+            console.error("Erro no fetchDealsByPipeline: ", e);
+            return [];
+        }
+    },
+
+    executeBulkUpdates: function (updates) {
+        if (!updates || updates.length === 0) return;
+        const requests = updates.map(update => ({
+            url: `${PIPEDRIVE_API_BASE_URL}/deals/${update.id}?api_token=${PIPEDRIVE_API_TOKEN}`,
+            method: 'put',
+            contentType: 'application/json',
+            payload: JSON.stringify(update.payload),
+            muteHttpExceptions: true
+        }));
+
+        try {
+            const startLog = Date.now();
+            UrlFetchApp.fetchAll(requests);
+            console.log(`⏱️ [Pipedrive API] Atualização em lote (${requests.length} negócios) levou ${Date.now() - startLog}ms`);
+        } catch (e) {
+            console.error("Erro ao atualizar deals em lote:", e);
+        }
+    },
+
+    executeBulkDeletes: function (dealIds) {
+        if (!dealIds || dealIds.length === 0) return;
+        const requests = dealIds.map(id => ({
+            url: `${PIPEDRIVE_API_BASE_URL}/deals/${id}?api_token=${PIPEDRIVE_API_TOKEN}`,
+            method: 'delete',
+            muteHttpExceptions: true
+        }));
+
+        try {
+            const startLog = Date.now();
+            UrlFetchApp.fetchAll(requests);
+            console.log(`⏱️ [Pipedrive API] Deleção em lote (${requests.length} negócios) levou ${Date.now() - startLog}ms`);
+        } catch (e) {
+            console.error("Erro ao deletar deals em lote:", e);
+        }
+    },
+
     fetchDealsInStages: function (stageIds) {
         const requests = stageIds.map(id => ({
             url: `${PIPEDRIVE_API_BASE_URL}/deals?stage_id=${id}&status=open&api_token=${PIPEDRIVE_API_TOKEN}`,
@@ -405,6 +521,7 @@ var PipedriveRepository = {
     }
 };
 
+// =================================================================
 // REPOSITÓRIO: COMUNICAÇÃO COM O BRIDGE SERVER (PYTHON)
 // =================================================================
 
@@ -413,6 +530,7 @@ var OpenAIRepository = {
      * Aciona o Bridge no Vercel para rodar um fluxo do Agent Builder via HTTPS
      */
     callWorkflow: function (workflowId, inputData) {
+        const url = BRIDGE_SERVER_URL + (BRIDGE_SERVER_URL.endsWith('/') ? 'run-agent' : '/run-agent');
         const options = {
             method: 'post',
             contentType: 'application/json',
@@ -428,7 +546,7 @@ var OpenAIRepository = {
             console.log(`🤖 Iniciando workflow [${workflowId}] na OpenAI via Bridge...`);
             const startLog = Date.now();
 
-            const response = UrlFetchApp.fetch(BRIDGE_SERVER_URL, options);
+            const response = UrlFetchApp.fetch(url, options);
             const resData = JSON.parse(response.getContentText());
 
             const duration = Date.now() - startLog;
@@ -458,8 +576,10 @@ var OpenAIRepository = {
     callWorkflowsInParallel: function (workflowsData) {
         if (!workflowsData || workflowsData.length === 0) return [];
 
+        const url = BRIDGE_SERVER_URL + (BRIDGE_SERVER_URL.endsWith('/') ? 'run-agent' : '/run-agent');
+
         const requests = workflowsData.map(data => ({
-            url: BRIDGE_SERVER_URL,
+            url: url,
             method: 'post',
             contentType: 'application/json',
             headers: { 'Authorization': 'Bearer ' + BRIDGE_AUTH_TOKEN },
@@ -481,18 +601,29 @@ var OpenAIRepository = {
 
             return responses.map((response, index) => {
                 const reqData = workflowsData[index];
+
                 if (response.getResponseCode() !== 200) {
-                    console.error(`❌ Erro no Bridge (Deal #${reqData.meta.dealId}):`, response.getContentText());
+                    console.error(`❌ [ERRO VERCEL] Status ${response.getResponseCode()} para Workflow ${reqData.workflowId} (Deal #${reqData.meta ? reqData.meta.dealId : 'Desconhecido'}):`);
+                    console.error(`Detalhes do erro: ${response.getContentText()}`);
                     return { meta: reqData.meta, result: null };
                 }
 
-                const resData = JSON.parse(response.getContentText());
-                let output = resData.output;
+                try {
+                    const resData = JSON.parse(response.getContentText());
+                    let output = resData.output;
 
-                if (typeof output === 'string' && (output.trim().startsWith('{') || output.trim().startsWith('['))) {
-                    try { output = JSON.parse(output); } catch (e) { }
+                    if (!output || output === "") {
+                        console.warn(`⚠️ [CUIDADO] O Vercel retornou 200 OK, mas o 'output' está vazio para o Deal #${reqData.meta ? reqData.meta.dealId : 'Desconhecido'}. Payload na Vercel: ${JSON.stringify(resData)}`);
+                    }
+
+                    if (typeof output === 'string' && (output.trim().startsWith('{') || output.trim().startsWith('['))) {
+                        try { output = JSON.parse(output); } catch (e) { }
+                    }
+                    return { meta: reqData.meta, result: output };
+                } catch (e) {
+                    console.error(`❌ [ERRO JSON] A resposta da Vercel não é um JSON válido. Código ${response.getResponseCode()}:`, response.getContentText());
+                    return { meta: reqData.meta, result: null };
                 }
-                return { meta: reqData.meta, result: output };
             });
         } catch (e) {
             console.error("🚨 Erro na conexão paralela com Vercel:", e.toString());

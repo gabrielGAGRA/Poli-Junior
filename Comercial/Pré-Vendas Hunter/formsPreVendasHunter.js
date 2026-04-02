@@ -1,7 +1,6 @@
 // Autor: Gabriel Agra de Castro Motta
 // Data de Atualização: 03/03/2025
 // Licença: MIT - Modificada. Os Direitos Patrimoniais de uso, reprodução e modificação são concedidos à Poli Júnior.
-// Termos: Todos os Direitos Morais do Autor são reservados. A remoção, supressão ou alteração da indicação de autoria original em qualquer cópia, total ou parcial, constitui violação legal. 
 
 /* ==========================================================================
    UTILITÁRIO DE LOG
@@ -18,16 +17,6 @@ const Log = {
     error: (ctx, msg) => console.error(`[ERROR] [${ctx}] ${msg}`),
     /** Usado apenas para diagnóstico local; remova em produção se gerar ruído. */
     debug: (ctx, msg) => console.log(`[DEBUG] [${ctx}] ${msg}`),
-};
-
-// Mapeamento das colunas da planilha de controle para índices base-0.
-// Mantido fixo por índice para garantir compatibilidade com os formulários existentes.
-const FORM_INDEX = {
-    CSV: 1, // Coluna B – URL do arquivo Google Drive com os leads
-    HUNTER: 3, // Coluna C – Identificador do Hunter responsável
-    NUCLEO: 2, // Coluna D – Núcleo/equipe do Hunter (usado como Label no Pipedrive)
-    EMAIL: 4, // Coluna E – E-mail de contato informado no formulário
-    POINTER: 5  // Coluna F – Ponteiro estável de progresso (célula F2)
 };
 
 /* ==========================================================================
@@ -95,7 +84,8 @@ class NetworkClient {
      * @returns {Array<{id: string, data?: Object, error?: string}>} Resultados indexados por ID.
      */
     static fetchAllWithRetry(requests, context) {
-        const CHUNK_SIZE = 20; // Batch dinâmico conservador para não acionar rate-limits HTTP maciços
+        const CHUNK_SIZE = 10; // Reduzido o tamanho do lote para manter o tráfego regular na API
+
         const finalResults = [];
 
         if (requests.length > 0) {
@@ -162,6 +152,11 @@ class NetworkClient {
                     }
                 }
             }
+
+            // Aguarda um pequeno intervalo entre chunks para o backoff da API do Pipedrive esvaziar
+            if (i + CHUNK_SIZE < requests.length) {
+                Utilities.sleep(2000);
+            }
         }
         return finalResults;
     }
@@ -177,8 +172,7 @@ class NetworkClient {
  */
 class RuntimeEnvironment {
     constructor() {
-        // CONTROL=0 (fila de formulários), AUX=1 (reservado), DATA=2 (CSV importado)
-        this.INDICES = { CONTROL: 0, AUX: 1, DATA: 2 };
+        this.INDICES = CONFIG_TECNICO.RUNTIME_INDICES;
     }
 
     /**
@@ -208,10 +202,9 @@ class JobScheduler {
     constructor() {
         this.props = PropertiesService.getScriptProperties();
 
-        // Prefixos de chave usados no ScriptProperties para rastrear estado por linha
-        this.KEY_INTERNAL_POINTER = 'LAST_STABLE_POINTER';
-        this.KEY_ACTIVE_CSV = 'LAST_IMPORTED_CSV_ID';
-        this.KEY_BATCH_STATE = 'EXEC_BATCH_STATE'; // Mantém as flags de conclusão na RAM antes de salvar
+        this.KEY_INTERNAL_POINTER = CONFIG_TECNICO.SCRIPT_PROPS.INTERNAL_POINTER;
+        this.KEY_ACTIVE_CSV = CONFIG_TECNICO.SCRIPT_PROPS.ACTIVE_CSV;
+        this.KEY_BATCH_STATE = CONFIG_TECNICO.SCRIPT_PROPS.BATCH_STATE;
 
         this.state = this._loadState();
     }
@@ -234,7 +227,6 @@ class JobScheduler {
      */
     determineTargets(controlSheet) {
         const pointerRange = controlSheet.getRange(2, 6);
-        // Lê o ponteiro persistido ou inicia na linha 2 (a linha 1 é o cabeçalho)
         let currentPointer = parseInt(this.props.getProperty(this.KEY_INTERNAL_POINTER), 10) || 2;
         pointerRange.setValue(currentPointer);
 
@@ -242,7 +234,7 @@ class JobScheduler {
         const targets = [];
         let cursor = currentPointer;
 
-        while (cursor <= lastRow && targets.length < CONFIG_STRICT.MAX_BATCH_CATCHUP) {
+        while (cursor <= lastRow && targets.length < CONFIG_TECNICO.MAX_BATCH_CATCHUP) {
             if (!this.isRowDone(cursor)) {
                 targets.push(cursor);
             }
@@ -284,9 +276,16 @@ class JobScheduler {
     slideStablePointer(controlSheet) {
         let pointer = parseInt(this.props.getProperty(this.KEY_INTERNAL_POINTER), 10) || 2;
         const lastRow = this._findLastDataRow(controlSheet);
+        let updatedState = false;
 
         while (pointer <= lastRow && this.isRowDone(pointer)) {
+            delete this.state[pointer]; // Otimização 3: Auto-limpeza do estado para manter JSON O(1)
             pointer++;
+            updatedState = true;
+        }
+
+        if (updatedState) {
+            this._saveState();
         }
 
         this.props.setProperty(this.KEY_INTERNAL_POINTER, pointer.toString());
@@ -302,11 +301,14 @@ class JobScheduler {
      * @returns {number} Número de linha 1-based.
      */
     _findLastDataRow(sheet) {
-        const data = sheet.getRange("A:A").getValues();
+        const maxRow = sheet.getLastRow();
+        if (maxRow === 0) return 2;
+
+        const data = sheet.getRange(1, 1, maxRow, 1).getValues();
         for (let i = data.length - 1; i >= 0; i--) {
             if (data[i][0] && data[i][0] !== "") return i + 1;
         }
-        return 2; // Retorna 2 quando a planilha está vazia (linha 1 = cabeçalho)
+        return 2;
     }
 
     /** @param {number} rowNum @returns {number} */
@@ -324,7 +326,7 @@ class JobScheduler {
         const count = (this.state[rowNum].retries || 0) + 1;
         this.state[rowNum].retries = count;
         this._saveState();
-        Log.warn('JobScheduler', `Linha ${rowNum}: tentativa ${count}/${CONFIG_STRICT.MAX_RETRIES}.`);
+        Log.warn('JobScheduler', `Linha ${rowNum}: tentativa ${count}/${CONFIG_TECNICO.MAX_RETRIES}.`);
         return count;
     }
 }
@@ -351,15 +353,15 @@ class ErrorNotifier {
 
         const body = `
             ALERTA DE SISTEMA
-            O arquivo da linha ${rowData[0]} foi descartado após ${CONFIG_STRICT.MAX_RETRIES} tentativas falhas.
+            O arquivo da linha ${rowData[0]} foi descartado após ${CONFIG_TECNICO.MAX_RETRIES} tentativas falhas.
 
             MOTIVO TÉCNICO: ${errorMsg}
-            HUNTER: ${rowData[FORM_INDEX.HUNTER]}
-            NÚCLEO: ${rowData[FORM_INDEX.NUCLEO]}
-            URL: ${rowData[FORM_INDEX.CSV]}
+            HUNTER: ${rowData[CONFIG.FORM_INDEX.HUNTER]}
+            NÚCLEO: ${rowData[CONFIG.FORM_INDEX.NUCLEO]}
+            URL: ${rowData[CONFIG.FORM_INDEX.CSV]}
         `;
         MailApp.sendEmail({
-            to: CONFIG_STRICT.NOTIFICATION_EMAIL_CC,
+            to: CONFIG.NOTIFICATION_EMAIL_CC,
             subject: `[SISTEMA] Erro de Automação`,
             body: body
         });
@@ -374,7 +376,7 @@ class ErrorNotifier {
      * @param {Array<{empresa: string, email: string, erro: string}>} failedItems
      */
     static sendHunterItemReport(hunterId, failedItems) {
-        const hunterEmail = `${hunterId}${CONFIG_STRICT.DOMAIN}`;
+        const hunterEmail = `${hunterId}${CONFIG_TECNICO.DOMAIN}`;
         Log.info('ErrorNotifier', `Enviando relatório de ${failedItems.length} lead(s) falho(s) para ${hunterId}.`);
 
         const tableRows = failedItems.map(item =>
@@ -440,7 +442,7 @@ class PipedriveService {
             return this.fieldCache;
         }
 
-        const cachedStr = this.props.getProperty('DEAL_FIELDS_CACHE');
+        const cachedStr = this.props.getProperty(CONFIG_TECNICO.SCRIPT_PROPS.DEAL_FIELDS_CACHE);
         if (!forceRefresh && cachedStr) {
             Log.debug('PipedriveService', 'Cache de dealFields lido do ScriptProperties.');
             this.fieldCache = JSON.parse(cachedStr);
@@ -450,7 +452,7 @@ class PipedriveService {
         Log.info('PipedriveService', 'Cache de dealFields ausente. Buscando na API do Pipedrive.');
         const url = `${CONFIG.BASE_URL}/dealFields?api_token=${CONFIG.API_KEY}`;
         const result = NetworkClient.fetchWithRetry(url, {}, 'Get Deal Fields');
-        this.props.setProperty('DEAL_FIELDS_CACHE', JSON.stringify(result.data));
+        this.props.setProperty(CONFIG_TECNICO.SCRIPT_PROPS.DEAL_FIELDS_CACHE, JSON.stringify(result.data));
         this.fieldCache = result.data;
         return result.data;
     }
@@ -463,19 +465,69 @@ class PipedriveService {
      * @param {string} optionLabel Texto da opção (ex.: "joao.silva").
      * @returns {number|null} ID da opção, ou null se não encontrado.
      */
-    getFieldOptionId(fieldName, optionLabel) {
-        const fields = this.getDealFields();
-        const targetField = fields.find(f => f.name === fieldName);
-        if (!targetField) {
-            Log.warn('PipedriveService', `Campo "${fieldName}" não encontrado nos dealFields.`);
-            return null;
+    normalizeText(value) {
+        return String(value || '')
+            .normalize('NFKC')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .toLowerCase();
+    }
+
+    findFieldOptionIdInFields(fields, fieldName, optionLabel) {
+        const normalizedFieldName = this.normalizeText(fieldName);
+        const normalizedOptionLabel = this.normalizeText(optionLabel);
+
+        let targetField = null;
+        for (const f of fields || []) {
+            if (this.normalizeText(f.name) === normalizedFieldName) {
+                targetField = f;
+                break;
+            }
         }
-        const cleanLabel = String(optionLabel).trim().toLowerCase();
-        const option = targetField.options.find(opt => opt.label.trim().toLowerCase() === cleanLabel);
-        if (!option) {
-            Log.warn('PipedriveService', `Opção "${optionLabel}" não encontrada no campo "${fieldName}".`);
+
+        if (!targetField) return null;
+
+        const options = Array.isArray(targetField.options) ? targetField.options : [];
+        let option = null;
+        for (const opt of options) {
+            if (this.normalizeText(opt.label) === normalizedOptionLabel) {
+                option = opt;
+                break;
+            }
         }
+
         return option ? option.id : null;
+    }
+
+    getFieldOptionId(fieldName, optionLabel) {
+        let fields = this.getDealFields(false);
+        let optionId = this.findFieldOptionIdInFields(fields, fieldName, optionLabel);
+
+        if (optionId) {
+            return optionId;
+        }
+
+        Log.warn(
+            'PipedriveService',
+            `Opção "${optionLabel}" não encontrada no cache para o campo "${fieldName}". Forçando refresh na API.`
+        );
+
+        fields = this.getDealFields(true);
+        optionId = this.findFieldOptionIdInFields(fields, fieldName, optionLabel);
+
+        if (!optionId) {
+            Log.warn(
+                'PipedriveService',
+                `Opção "${optionLabel}" continua ausente no campo "${fieldName}" mesmo após refresh.`
+            );
+        } else {
+            Log.info(
+                'PipedriveService',
+                `Opção "${optionLabel}" encontrada após refresh no campo "${fieldName}".`
+            );
+        }
+
+        return optionId;
     }
 
     /**
@@ -488,19 +540,19 @@ class PipedriveService {
     getOrganizationId(name) {
         if (!name) return null;
         if (this.orgCache.has(name)) {
-            Log.debug('PipedriveService', `Org "${name}" resolvida via cache.`);
+            Log.debug('PipedriveService', `Organização resolvida via cache.`);
             return this.orgCache.get(name);
         }
 
-        Log.warn('PipedriveService', `Fallback sync (evite isso!): Buscando Org ${name} fora do Batch.`);
+        Log.warn('PipedriveService', `Fallback sync (evite isso!): Buscando Organização fora do Batch.`);
         const url = `${CONFIG.BASE_URL}/organizations/search?api_token=${CONFIG.API_KEY}&term=${encodeURIComponent(name)}&fields=name&exact_match=true`;
         const result = NetworkClient.fetchWithRetry(url, {}, 'Search Org');
         const id = (result.data && result.data.items.length > 0) ? result.data.items[0].item.id : null;
         if (id) {
             this.orgCache.set(name, id);
-            Log.info('PipedriveService', `Org "${name}" encontrada via fallback (id=${id}).`);
+            Log.info('PipedriveService', `Organização encontrada via fallback (id=${id}).`);
         } else {
-            Log.info('PipedriveService', `Org "${name}" não encontrada no fallback.`);
+            Log.info('PipedriveService', `Organização não encontrada no fallback.`);
         }
         return id;
     }
@@ -514,19 +566,19 @@ class PipedriveService {
     getPersonId(email) {
         if (!email) return null;
         if (this.personCache.has(email)) {
-            Log.debug('PipedriveService', `Contato "${email}" resolvido via cache.`);
+            Log.debug('PipedriveService', `Contato resolvido via cache.`);
             return this.personCache.get(email);
         }
 
-        Log.warn('PipedriveService', `Fallback sync (evite isso!): Buscando Contato ${email} fora do Batch.`);
+        Log.warn('PipedriveService', `Fallback sync (evite isso!): Buscando Contato fora do Batch.`);
         const url = `${CONFIG.BASE_URL}/persons/search?api_token=${CONFIG.API_KEY}&term=${encodeURIComponent(email)}&fields=email&exact_match=true`;
         const result = NetworkClient.fetchWithRetry(url, {}, 'Search Person');
         const id = (result.data && result.data.items.length > 0) ? result.data.items[0].item.id : null;
         if (id) {
             this.personCache.set(email, id);
-            Log.info('PipedriveService', `Contato "${email}" encontrado via fallback (id=${id}).`);
+            Log.info('PipedriveService', `Contato encontrado via fallback (id=${id}).`);
         } else {
-            Log.info('PipedriveService', `Contato "${email}" não encontrado no fallback.`);
+            Log.info('PipedriveService', `Contato não encontrado no fallback.`);
         }
         return id;
     }
@@ -623,7 +675,7 @@ class PipedriveService {
                     name: `${p.firstName || ''} ${p.lastName || ''}`.trim(),
                     email: p.email,
                     org_id: p.orgId,
-                    [CONFIG.FIELDS.JOB_TITLE]: p.title
+                    [CONFIG_TECNICO.FIELDS.JOB_TITLE]: p.title
                 })
             }
         }));
@@ -656,7 +708,7 @@ class PipedriveService {
 
     /**
      * Converte um número de funcionários no ID da faixa correspondente configurada
-     * em CONFIG.EMPLOYEE_RANGES. Retorna o ID padrão para valores inválidos ou
+     * em CONFIG_TECNICO.EMPLOYEE_RANGES. Retorna o ID padrão para valores inválidos ou
      * fora dos ranges cadastrados.
      *
      * @param {string|number} count Número de funcionários.
@@ -666,13 +718,13 @@ class PipedriveService {
         const num = parseInt(count, 10);
         if (isNaN(num)) {
             Log.warn('PipedriveService', `Valor de funcionários inválido: "${count}". Usando ID padrão.`);
-            return CONFIG.DEFAULT_EMPLOYEE_ID;
+            return CONFIG_TECNICO.DEFAULT_EMPLOYEE_ID;
         }
-        const range = CONFIG.EMPLOYEE_RANGES.find(r => num >= r.min && num <= r.max);
+        const range = CONFIG_TECNICO.EMPLOYEE_RANGES.find(r => num >= r.min && num <= r.max);
         if (!range) {
             Log.warn('PipedriveService', `Nenhum range encontrado para ${num} funcionários. Usando ID padrão.`);
         }
-        return range ? range.id : CONFIG.DEFAULT_EMPLOYEE_ID;
+        return range ? range.id : CONFIG_TECNICO.DEFAULT_EMPLOYEE_ID;
     }
 }
 
@@ -688,11 +740,11 @@ class PipedriveService {
 function runOnSubmit() {
     const lock = LockService.getScriptLock();
     try {
-        lock.waitLock(60000);
+        lock.waitLock(300000); // Aguarda até 5 minutos pelo lock
     } catch (e) {
         // Outra execução está em andamento. Descarta silenciosamente — o trigger
         // será disparado novamente pelo próximo submit.
-        Log.warn('runOnSubmit', 'Não foi possível adquirir o lock em 60s. Execução abortada.');
+        Log.warn('runOnSubmit', 'Não foi possível adquirir o lock em 300s. Execução abortada.');
         return;
     }
 
@@ -700,7 +752,7 @@ function runOnSubmit() {
 
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     const scheduler = new JobScheduler();
-    const runtime = { INDICES: { CONTROL: 0, DATA: 2 } };
+    const runtime = new RuntimeEnvironment();
     const controlSheet = ss.getSheets()[runtime.INDICES.CONTROL];
 
     const plan = scheduler.determineTargets(controlSheet);
@@ -715,9 +767,9 @@ function runOnSubmit() {
 
     for (const rowNum of plan.targets) {
         const rowData = controlSheet.getRange(rowNum, 1, 1, 6).getValues()[0];
-        const hunterId = String(rowData[FORM_INDEX.HUNTER] || '').split('@')[0].trim();
-        const coreTeam = rowData[FORM_INDEX.NUCLEO];
-        const csvUrl = rowData[FORM_INDEX.CSV];
+        const hunterId = String(rowData[CONFIG.FORM_INDEX.HUNTER] || '').split('@')[0].trim();
+        const coreTeam = rowData[CONFIG.FORM_INDEX.NUCLEO];
+        const csvUrl = rowData[CONFIG.FORM_INDEX.CSV];
 
         Log.info('runOnSubmit', `--- Início da linha ${rowNum} | Hunter: ${hunterId} | Núcleo: ${coreTeam} ---`);
 
@@ -736,8 +788,8 @@ function runOnSubmit() {
                 // Adiciona coluna Status caso não exista no CSV original
                 if (dataMatrix.length > 0) {
                     const headers = dataMatrix[0];
-                    if (headers.indexOf('Status') === -1) {
-                        headers.push('Status');
+                    if (headers.indexOf(CONFIG.CSV_HEADERS.STATUS) === -1) {
+                        headers.push(CONFIG.CSV_HEADERS.STATUS);
                         for (let i = 1; i < dataMatrix.length; i++) dataMatrix[i].push('');
                     }
                 }
@@ -758,7 +810,7 @@ function runOnSubmit() {
 
             const ratePercent = (report.successRate * 100).toFixed(1);
 
-            if (report.successRate >= CONFIG_STRICT.SUCCESS_THRESHOLD) {
+            if (report.successRate >= CONFIG.SUCCESS_THRESHOLD) {
                 Log.info('runOnSubmit', `Linha ${rowNum} concluída com taxa de sucesso ${ratePercent}%.`);
                 scheduler.markRowDone(rowNum);
             } else {
@@ -774,8 +826,8 @@ function runOnSubmit() {
             const attempt = scheduler.incrementRetry(rowNum);
             Log.error('runOnSubmit', `Linha ${rowNum} falhou na tentativa ${attempt}. Motivo: ${err.message}`);
 
-            if (attempt >= CONFIG_STRICT.MAX_RETRIES) {
-                Log.error('runOnSubmit', `Linha ${rowNum} esgotou ${CONFIG_STRICT.MAX_RETRIES} tentativas. Descartando e notificando diretoria.`);
+            if (attempt >= CONFIG_TECNICO.MAX_RETRIES) {
+                Log.error('runOnSubmit', `Linha ${rowNum} esgotou ${CONFIG_TECNICO.MAX_RETRIES} tentativas. Descartando e notificando diretoria.`);
                 ErrorNotifier.sendFatalAlert(err.message, rowData);
                 scheduler.markRowDone(rowNum);
             }
@@ -796,8 +848,8 @@ function runOnSubmit() {
  */
 function writeMatrixToDataSheet(sheet, matrix) {
     if (!matrix || matrix.length === 0) return;
-    sheet.clear(); // Limpa estado antigo
-    sheet.getRange(1, 1, matrix.length, matrix[0].length).setValues(matrix); // Escreve o novo de uma vez
+    sheet.clear();
+    sheet.getRange(1, 1, matrix.length, matrix[0].length).setValues(matrix);
     SpreadsheetApp.flush();
     Log.info('writeMatrixToDataSheet', `Matriz de ${matrix.length} linhas escrita na planilha num único I/O de disco.`);
 }
@@ -813,14 +865,14 @@ function extractFailsFromMatrix(matrix) {
     const headers = matrix[0];
     const colMap = {};
     headers.forEach((h, i) => colMap[String(h).trim()] = i);
-    const statusCol = headers.indexOf('Status');
+    const statusCol = headers.indexOf(CONFIG.CSV_HEADERS.STATUS);
 
     const fails = [];
     for (let i = 1; i < matrix.length; i++) {
         if (matrix[i][statusCol] !== 'SUCESSO') {
             fails.push({
-                empresa: matrix[i][colMap['Company Name']] || matrix[i][colMap['Company']] || 'Desconhecida',
-                email: matrix[i][colMap['Email']] || 'N/A',
+                empresa: matrix[i][colMap[CONFIG.CSV_HEADERS.COMPANY_NAME]] || matrix[i][colMap[CONFIG.CSV_HEADERS.COMPANY]] || 'Desconhecida',
+                email: matrix[i][colMap[CONFIG.CSV_HEADERS.EMAIL]] || 'N/A',
                 erro: matrix[i][statusCol] || 'Erro desconhecido'
             });
         }
@@ -849,7 +901,7 @@ function processDealsGranularBatch(hunterName, coreTeam, matrix) {
     const headers = matrix[0];
     const colMap = {};
     headers.forEach((h, i) => colMap[String(h).trim()] = i);
-    const statusCol = headers.indexOf('Status');
+    const statusCol = headers.indexOf(CONFIG.CSV_HEADERS.STATUS);
 
     const hunterId = service.getFieldOptionId('Hunter', hunterName);
     const labelId = service.getFieldOptionId('Etiqueta', coreTeam) || service.getFieldOptionId('Label', coreTeam);
@@ -869,25 +921,21 @@ function processDealsGranularBatch(hunterName, coreTeam, matrix) {
 
     const getV = (r, n) => matrix[r][colMap[n]] || null;
 
-    // 1. Batch: Múltiplas buscas GET na API para Empresas em paralelo
-    const allCompanies = rowTargets.map(r => getV(r, 'Company Name') || getV(r, 'Company'));
+    const allCompanies = rowTargets.map(r => getV(r, CONFIG.CSV_HEADERS.COMPANY_NAME) || getV(r, CONFIG.CSV_HEADERS.COMPANY));
     service.batchResolveOrganizations(allCompanies);
 
-    // 2. Batch: Múltiplas criações POST na API para Empresas
     service.batchCreateOrganizations(allCompanies);
 
-    // 3. Batch: Múltiplas buscas GET para Contatos
-    const allEmails = rowTargets.map(r => getV(r, 'Email'));
+    const allEmails = rowTargets.map(r => getV(r, CONFIG.CSV_HEADERS.EMAIL));
     service.batchResolvePersons(allEmails);
 
-    // 4. Batch: Múltiplas criações POST para Contatos
     const personsToCreate = rowTargets.map(r => {
-        const comp = getV(r, 'Company Name') || getV(r, 'Company');
+        const comp = getV(r, CONFIG.CSV_HEADERS.COMPANY_NAME) || getV(r, CONFIG.CSV_HEADERS.COMPANY);
         return {
-            email: getV(r, 'Email'),
-            firstName: getV(r, 'First Name'),
-            lastName: getV(r, 'Last Name'),
-            title: getV(r, 'Title'),
+            email: getV(r, CONFIG.CSV_HEADERS.EMAIL),
+            firstName: getV(r, CONFIG.CSV_HEADERS.FIRST_NAME),
+            lastName: getV(r, CONFIG.CSV_HEADERS.LAST_NAME),
+            title: getV(r, CONFIG.CSV_HEADERS.TITLE),
             orgId: service.orgCache.get(comp)
         }
     });
@@ -897,9 +945,9 @@ function processDealsGranularBatch(hunterName, coreTeam, matrix) {
     const dealsPayloads = [];
     for (const index of rowTargets) {
         try {
-            const company = getV(index, 'Company Name') || getV(index, 'Company');
-            const email = getV(index, 'Email');
-            if (!company) throw new Error("Campo 'Company' ausente");
+            const company = getV(index, CONFIG.CSV_HEADERS.COMPANY_NAME) || getV(index, CONFIG.CSV_HEADERS.COMPANY);
+            const email = getV(index, CONFIG.CSV_HEADERS.EMAIL);
+            if (!company) throw new Error("Campo CONFIG.CSV_HEADERS.COMPANY ausente");
 
             const orgId = service.orgCache.get(company);
             const personId = service.personCache.get(email);
@@ -909,12 +957,12 @@ function processDealsGranularBatch(hunterName, coreTeam, matrix) {
             dealsPayloads.push({
                 index: index,
                 payload: {
-                    title: `${company} - ${getV(index, 'First Name') || ''}`,
+                    title: `${company} - ${getV(index, CONFIG.CSV_HEADERS.FIRST_NAME) || ''}`,
                     person_id: personId || null,
                     org_id: orgId,
-                    user_id: CONFIG.USER_ID,
-                    stage_id: CONFIG.STAGE_ID,
-                    [CONFIG.FIELDS.HUNTER]: hunterId,
+                    user_id: CONFIG.DIRETORIA_PIPEDRIVE_USUARIO_ID,
+                    stage_id: CONFIG.PRIMEIRO_ESTAGIO_FUNIL_PRE_VENDAS_HUNTER,
+                    [CONFIG_TECNICO.FIELDS.HUNTER]: hunterId,
                     label: labelId
                 }
             });
@@ -970,24 +1018,41 @@ class Maintenance {
 
         const props = PropertiesService.getScriptProperties();
         const allProps = props.getProperties();
-        const currentPointer = parseInt(allProps['LAST_STABLE_POINTER'], 10) || 2;
+        const currentPointer = parseInt(allProps[CONFIG_TECNICO.SCRIPT_PROPS.INTERNAL_POINTER], 10) || 2;
 
         // Janela de segurança: mantém as últimas 500 linhas no histórico para
         // permitir auditoria recente sem risco de impactar execuções ativas.
         const safetyThreshold = currentPointer - 500;
 
         let keysDeleted = 0;
+        // Limpa possíveis chaves de versões antigas do código
         for (const key in allProps) {
             if (key.startsWith('ROW_COMPLETED_') || key.startsWith('RETRY_ROW_')) {
-                const rowNum = parseInt(key.split('_').pop(), 10);
-                if (rowNum < safetyThreshold) {
-                    props.deleteProperty(key);
-                    keysDeleted++;
-                }
+                props.deleteProperty(key);
+                keysDeleted++;
             }
         }
 
-        Log.info('Maintenance', `Faxina concluída. ${keysDeleted} chave(s) removidas. Ponteiro atual: ${currentPointer}. Threshold: ${safetyThreshold}.`);
+        // Limpa objeto de batch central (caso a auto-limpeza em tempo real falhe)
+        const stateStr = props.getProperty(CONFIG_TECNICO.SCRIPT_PROPS.BATCH_STATE);
+        if (stateStr) {
+            const stateObj = JSON.parse(stateStr);
+            let stateCleaned = false;
+
+            for (const row in stateObj) {
+                if (parseInt(row, 10) < safetyThreshold) {
+                    delete stateObj[row];
+                    stateCleaned = true;
+                    keysDeleted++;
+                }
+            }
+
+            if (stateCleaned) {
+                props.setProperty(CONFIG_TECNICO.SCRIPT_PROPS.BATCH_STATE, JSON.stringify(stateObj));
+            }
+        }
+
+        Log.info('Maintenance', `Faxina concluída. ${keysDeleted} item(ns) removido(s). Ponteiro atual: ${currentPointer}. Threshold: ${safetyThreshold}.`);
     }
 }
 
@@ -1022,7 +1087,7 @@ function markRowsAsDoneUntilPointer() {
     const controlSheet = runtime.getSheetByIndex(ss, runtime.INDICES.CONTROL);
 
     // Lê o ponteiro informado na célula F2 — valor inserido manualmente pelo operador
-    const pointerCellValue = parseInt(controlSheet.getRange(2, FORM_INDEX.POINTER + 1).getValue(), 10);
+    const pointerCellValue = parseInt(controlSheet.getRange(2, CONFIG.FORM_INDEX.POINTER + 1).getValue(), 10);
     if (isNaN(pointerCellValue) || pointerCellValue < 2) {
         Log.warn('markRowsAsDoneUntilPointer', `Valor de F2 inválido ou abaixo de 2: "${pointerCellValue}". Operação cancelada.`);
         return;
@@ -1038,26 +1103,28 @@ function markRowsAsDoneUntilPointer() {
         Log.warn('markRowsAsDoneUntilPointer', `F2 (${pointerCellValue}) excede a última linha (${lastDataRow}). Usando ${effectiveLimit} como limite.`);
     }
 
-    // Carrega todas as propriedades uma única vez em vez de múltiplas chamadas
-    const allProps = scheduler.props.getProperties();
-    const keyPrefix = scheduler.KEY_ROW_DONE;
+    // Loop pelo lote
     let markedCount = 0;
     let skippedCount = 0;
 
     for (let row = 2; row <= effectiveLimit; row++) {
-        // Verifica em cache em memória em vez de chamadas repetidas ao ScriptProperties
-        if (allProps[keyPrefix + row] === 'true') {
+        if (scheduler.isRowDone(row)) {
             skippedCount++;
             continue;
         }
-        scheduler.markRowDone(row);
+        // Marca e salva o lote
+        if (!scheduler.state[row]) scheduler.state[row] = {};
+        scheduler.state[row].done = true;
+        delete scheduler.state[row].retries;
         markedCount++;
     }
+
+    if (markedCount > 0) scheduler._saveState();
 
     // Sincroniza o ponteiro estável com o limite efetivo para que o próximo ciclo
     // de processamento comece a partir da linha correta
     scheduler.props.setProperty(scheduler.KEY_INTERNAL_POINTER, effectiveLimit.toString());
-    controlSheet.getRange(2, FORM_INDEX.POINTER + 1).setValue(effectiveLimit);
+    controlSheet.getRange(2, CONFIG.FORM_INDEX.POINTER + 1).setValue(effectiveLimit);
 
     Log.info('markRowsAsDoneUntilPointer', `Concluído. Marcadas: ${markedCount} linha(s). Já concluídas (ignoradas): ${skippedCount}. Novo ponteiro: ${effectiveLimit}.`);
 }
