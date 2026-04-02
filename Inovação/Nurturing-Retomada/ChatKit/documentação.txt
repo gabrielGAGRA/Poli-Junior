@@ -1,0 +1,48 @@
+### 🏗️ Arquitetura do Sistema
+
+O sistema é dividido em três camadas principais:
+
+1.  **Google Apps Script (GAS) - Orquestrador de Dados:**
+    *   **Função:** Atua como o "front-end" lógico que monitora o Pipedrive.
+    *   **Componentes:**
+        *   retomadaNurturing.js: Gerencia o ciclo de vida (Sincronização -> Análise -> Redação).
+        *   config.js: Configurações de IDs de pipelines, etapas e workflows da OpenAI.
+        *   config_tecnico.js: Configurações de infraestrutura (URL do Bridge, Tokens, Batch Size).
+
+2.  **Bridge Server (Python/FastAPI) - Camada de Mediação:**
+    *   **Função:** Recebe requisições do GAS, gerencia sessões na OpenAI e executa runs, retornando o output processado.
+    *   **Arquivos:** index.py (ponto de entrada Vercel) e Dockerfile.
+    *   **Segurança:** Utiliza `BRIDGE_AUTH_TOKEN` (Bearer) para validar chamadas do GAS.
+
+3.  **OpenAI ChatKit - Camada de Inteligência:**
+    *   **Função:** Processa os dados contextuais (notas e e-mails históricos) para gerar resumos estratégicos e redações de e-mails personalizadas.
+
+---
+
+### 🔄 Fluxo de Operação (Workflows)
+
+#### 1. Sincronização e Resumo (`syncAndSummarize`)
+*   Coleta "Deals" (Negócios) no Pipedrive em etapas específicas.
+*   Sincroniza notas de negócios de origem (se houver).
+*   Se não houver um resumo, envia as notas brutas para o **Workflow de Analista**.
+*   Salva o resumo estratégico gerado de volta no card do Pipedrive.
+
+#### 2. Geração de E-mail (`executeEmailCadence`)
+*   Identifica a etapa da cadência (E-mail 1, 2, 3 ou Breakup).
+*   Verifica se o consultor (Owner) está ativo. Caso contrário, usa um workflow de redação "inativo".
+*   Envia o resumo estratégico e histórico de e-mails para o **Workflow de Redação** (específico por núcleo: NDados, NCon, NTec, NCiv).
+*   O output (Título e Corpo HTML) é salvo no campo customizado do Pipedrive para envio final.
+
+---
+
+### 🛠️ Configurações Críticas
+
+*   **Pipedrive:** Pipelines ID 15 (Retomada) e 16 (Nurturing).
+*   **OpenAI:** Utiliza o protocolo `OpenAI-Beta: chatkit_beta=v1`.
+*   **Performance:** O GAS utiliza `UrlFetchApp.fetchAll` para processar lotes em paralelo no Bridge Server, otimizando o tempo de execução (limite de 240s de segurança).
+*   **Rate Limits:** Implementado delay de 62s entre lotes (Batch Size 40) para respeitar o limite de 60 req/min da OpenAI.
+
+### 📋 Dependências
+
+*   **Python:** `fastapi`, `httpx` (para streaming/async), `pydantic`.
+*   **Infra:** Vercel (Hospedagem Bridge) e Google Apps Script.

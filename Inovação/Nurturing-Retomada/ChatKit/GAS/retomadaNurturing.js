@@ -571,62 +571,99 @@ var OpenAIRepository = {
     },
 
     /**
-     * Aciona múltiplos workflows no Vercel em paralelo, ótimo para bater limites de tempo do GAS
+     * Aciona múltiplos workflows no Vercel em paralelo, respeitando o Rate Limit do OpenAI Chatkit (60 requests/min/user).
      */
     callWorkflowsInParallel: function (workflowsData) {
         if (!workflowsData || workflowsData.length === 0) return [];
 
         const url = BRIDGE_SERVER_URL + (BRIDGE_SERVER_URL.endsWith('/') ? 'run-agent' : '/run-agent');
+        const BATCH_SIZE = 40; // Limite conservador para não estourar 60/min
+        const BATCH_DELAY_MS = 62000; // Aguarda 62s a partir do 2º batch
 
-        const requests = workflowsData.map(data => ({
-            url: url,
-            method: 'post',
-            contentType: 'application/json',
-            headers: { 'Authorization': 'Bearer ' + BRIDGE_AUTH_TOKEN },
-            payload: JSON.stringify({
-                workflow_id: data.workflowId,
-                payload: data.payload
-            }),
-            muteHttpExceptions: true
-        }));
+        let allResponses = [];
+        let shouldAbortRemainingBatches = false;
+
+        console.log(`🤖 Gerando ${workflowsData.length} workflows na OpenAI em Lotes Paralelos (Max ${BATCH_SIZE} p/ evitar Rate Limits).`);
 
         try {
-            console.log(`🤖 Iniciando ${requests.length} workflows na OpenAI via Bridge em PARALELO...`);
-            const startLog = Date.now();
-
-            const responses = UrlFetchApp.fetchAll(requests);
-
-            const duration = Date.now() - startLog;
-            console.log(`⏱️ [OpenAI/Vercel] Batch de ${requests.length} workflows finalizado em ${duration}ms (${(duration / 1000).toFixed(1)}s).`);
-
-            return responses.map((response, index) => {
-                const reqData = workflowsData[index];
-
-                if (response.getResponseCode() !== 200) {
-                    console.error(`❌ [ERRO VERCEL] Status ${response.getResponseCode()} para Workflow ${reqData.workflowId} (Deal #${reqData.meta ? reqData.meta.dealId : 'Desconhecido'}):`);
-                    console.error(`Detalhes do erro: ${response.getContentText()}`);
-                    return { meta: reqData.meta, result: null };
+            for (let i = 0; i < workflowsData.length; i += BATCH_SIZE) {
+                if (shouldAbortRemainingBatches) {
+                    break;
                 }
 
-                try {
-                    const resData = JSON.parse(response.getContentText());
-                    let output = resData.output;
-
-                    if (!output || output === "") {
-                        console.warn(`⚠️ [CUIDADO] O Vercel retornou 200 OK, mas o 'output' está vazio para o Deal #${reqData.meta ? reqData.meta.dealId : 'Desconhecido'}. Payload na Vercel: ${JSON.stringify(resData)}`);
-                    }
-
-                    if (typeof output === 'string' && (output.trim().startsWith('{') || output.trim().startsWith('['))) {
-                        try { output = JSON.parse(output); } catch (e) { }
-                    }
-                    return { meta: reqData.meta, result: output };
-                } catch (e) {
-                    console.error(`❌ [ERRO JSON] A resposta da Vercel não é um JSON válido. Código ${response.getResponseCode()}:`, response.getContentText());
-                    return { meta: reqData.meta, result: null };
+                if (i > 0) {
+                    console.log(`⏳ Aguardando ${BATCH_DELAY_MS / 1000}s para o próximo lote (Respeitar o Rate Limit de 60req/min da OpenAI)...`);
+                    Utilities.sleep(BATCH_DELAY_MS);
                 }
-            });
+
+                const chunkData = workflowsData.slice(i, i + BATCH_SIZE);
+                const requests = chunkData.map(data => ({
+                    url: url,
+                    method: 'post',
+                    contentType: 'application/json',
+                    headers: { 'Authorization': 'Bearer ' + BRIDGE_AUTH_TOKEN },
+                    payload: JSON.stringify({
+                        workflow_id: data.workflowId,
+                        payload: data.payload
+                    }),
+                    muteHttpExceptions: true
+                }));
+
+                console.log(`🚀 Disparando Lote da vez: ${requests.length} requisições.`);
+                const startLog = Date.now();
+                const responses = UrlFetchApp.fetchAll(requests);
+                const duration = Date.now() - startLog;
+                console.log(`⏱️ [OpenAI/Vercel] O Lote de ${requests.length} workflows terminou em ${duration}ms (${(duration / 1000).toFixed(1)}s).`);
+
+                const processedChunk = responses.map((response, index) => {
+                    const reqData = chunkData[index];
+
+                    if (response.getResponseCode() !== 200) {
+                        const errorBody = response.getContentText();
+                        const lowerError = (errorBody || '').toLowerCase();
+                        const isChatkitEndpointUnavailable =
+                            lowerError.includes('chatkit run endpoint unavailable') ||
+                            lowerError.includes('invalid url (post /v1/chatkit/sessions/');
+
+                        console.error(`❌ [ERRO VERCEL] Status ${response.getResponseCode()} para Workflow ${reqData.workflowId} (Deal #${reqData.meta ? reqData.meta.dealId : 'Desconhecido'}):`);
+                        console.error(`Detalhes do erro: ${errorBody}`);
+                        return {
+                            meta: reqData.meta,
+                            result: null,
+                            errorType: isChatkitEndpointUnavailable ? 'CHATKIT_RUN_ENDPOINT_UNAVAILABLE' : null
+                        };
+                    }
+
+                    try {
+                        const resData = JSON.parse(response.getContentText());
+                        let output = resData.output;
+
+                        if (!output || output === "") {
+                            console.warn(`⚠️ [CUIDADO] O Vercel retornou 200 OK, mas o 'output' está vazio para o Deal #${reqData.meta ? reqData.meta.dealId : 'Desconhecido'}. Payload na Vercel: ${JSON.stringify(resData)}`);
+                        }
+
+                        if (typeof output === 'string' && (output.trim().startsWith('{') || output.trim().startsWith('['))) {
+                            try { output = JSON.parse(output); } catch (e) { }
+                        }
+                        return { meta: reqData.meta, result: output, errorType: null };
+                    } catch (e) {
+                        console.error(`❌ [ERRO JSON] A resposta da Vercel não é um JSON válido. Código ${response.getResponseCode()}:`, response.getContentText());
+                        return { meta: reqData.meta, result: null, errorType: null };
+                    }
+                });
+
+                allResponses = allResponses.concat(processedChunk);
+
+                const hasFatalEndpointError = processedChunk.some(res => res.errorType === 'CHATKIT_RUN_ENDPOINT_UNAVAILABLE');
+                if (hasFatalEndpointError) {
+                    shouldAbortRemainingBatches = true;
+                    console.error('🛑 [FAIL-FAST] Endpoint de execução ChatKit indisponível/obsoleto detectado neste lote. Abortando lotes restantes para evitar espera desnecessária.');
+                }
+            }
+
+            return allResponses;
         } catch (e) {
-            console.error("🚨 Erro na conexão paralela com Vercel:", e.toString());
+            console.error("🚨 Erro na conexão paralela com Vercel (Durante FetchAll):", e.toString());
             return workflowsData.map(data => ({ meta: data.meta, result: null }));
         }
     }
