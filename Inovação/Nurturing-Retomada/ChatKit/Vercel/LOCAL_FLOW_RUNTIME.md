@@ -1,22 +1,8 @@
 # Local Flow Runtime (Agent Builder Export)
 
-This backend now supports two execution engines behind the same `/run-agent` endpoint:
-
-- `chatkit_only` (default): legacy ChatKit session execution.
-- `local_first`: tries local Python flow runtime first, falls back to ChatKit.
-- `local_only`: executes only local Python flow runtime.
+This backend executes only local Python flow runtime behind `/run-agent`.
 
 ## Environment Variables
-
-- `FLOW_RUNTIME_MODE`
-  - Values: `chatkit_only`, `local_first`, `local_only`
-  - Default: `chatkit_only`
-
-- `LOCAL_FLOW_NDADOS_IDS`
-  - Comma-separated workflow IDs routed to exported NDados flow adapter.
-  - Default includes: `wf_69a712cef21c8190bcc1c573a9feaad40c5ca413b5fe04d2`
-  - Example:
-    - `LOCAL_FLOW_NDADOS_IDS=wf_abc,wf_def`
 
 - `LOCAL_FLOWS_DIR`
   - Directory for exported flows. Runtime searches NDados only inside this folder.
@@ -31,7 +17,15 @@ This backend now supports two execution engines behind the same `/run-agent` end
 - Existing variables remain in use:
   - `BRIDGE_AUTH_TOKEN`
   - `OPENAI_API_KEY`
-  - `CHATKIT_RUN_PATHS`
+
+## Important: Where to Configure API Keys
+
+- `OPENAI_API_KEY` must be configured in Vercel Environment Variables for this backend.
+- Putting OpenAI key only in GAS `config.js` is not enough, because `/run-agent` calls OpenAI from Vercel server-side.
+- Add `OPENAI_API_KEY` in Vercel for all environments you use:
+  - Production
+  - Preview
+  - Development
 
 ## Current Behavior
 
@@ -39,6 +33,10 @@ This backend now supports two execution engines behind the same `/run-agent` end
   - `POST /run-agent`
   - body: `{ "workflow_id": "...", "payload": { ... } }`
   - response success: `{ "status": "success", "output": ... }`
+
+- Workflow routing:
+  - Runtime reads `workflow_id` directly from GAS request body.
+  - No environment variable is used to whitelist workflow IDs.
 
 - File location policy:
   - Runtime loads NDados flow exclusively from `ChatKit/Vercel/flows` (or `LOCAL_FLOWS_DIR`).
@@ -48,11 +46,8 @@ This backend now supports two execution engines behind the same `/run-agent` end
   1. `LOCAL_FLOWS_DIR/LOCAL_FLOW_NDADOS_FILE` (if set)
   2. `LOCAL_FLOWS_DIR/fluxo_Ndados.py`
 
-- If the exported file fails to import or execute, behavior depends on mode:
-  - `local_first`: fallback to ChatKit execution.
-  - `local_only`: returns execution error.
+- If the exported file fails to import or execute, endpoint returns execution error directly.
 
 ## Notes
 
 - Exported Agent Builder code may still require manual fixes before it is runtime-safe.
-- Keep this runtime opt-in until each exported flow is validated.
