@@ -5,6 +5,13 @@ from fastapi import FastAPI, HTTPException, Header
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 
+from runtime import (
+    FlowExecutionError,
+    FlowNotImplementedError,
+    UnknownWorkflowError,
+    execute_local_flow,
+)
+
 app = FastAPI()
 
 
@@ -23,6 +30,19 @@ def _parse_run_paths() -> list[str]:
     return paths or ["runs"]
 
 
+def _runtime_mode() -> str:
+    """
+    chatkit_only: always use legacy ChatKit session execution.
+    local_first: try local flow runtime, fallback to ChatKit on failure.
+    local_only: execute only local flow runtime.
+    """
+
+    mode = (os.getenv("FLOW_RUNTIME_MODE") or "chatkit_only").strip().lower()
+    if mode not in {"chatkit_only", "local_first", "local_only"}:
+        return "chatkit_only"
+    return mode
+
+
 @app.post("/run-agent")
 async def run_agent(
     request: AgentRequest, authorization: Optional[str] = Header(None)
@@ -30,6 +50,42 @@ async def run_agent(
     if authorization != f"Bearer {os.getenv('BRIDGE_AUTH_TOKEN')}":
         raise HTTPException(status_code=401, detail="Não autorizado")
 
+    mode = _runtime_mode()
+    local_error: str | None = None
+
+    if mode in {"local_first", "local_only"}:
+        try:
+            local_output = await execute_local_flow(
+                request.workflow_id, request.payload
+            )
+            return {"status": "success", "output": local_output}
+        except UnknownWorkflowError as exc:
+            local_error = str(exc)
+            if mode == "local_only":
+                raise HTTPException(status_code=400, detail=local_error)
+        except FlowNotImplementedError as exc:
+            local_error = str(exc)
+            if mode == "local_only":
+                raise HTTPException(status_code=501, detail=local_error)
+        except FlowExecutionError as exc:
+            local_error = str(exc)
+            if mode == "local_only":
+                raise HTTPException(status_code=500, detail=local_error)
+        except Exception as exc:
+            local_error = f"Erro inesperado no runtime local: {exc}"
+            if mode == "local_only":
+                raise HTTPException(status_code=500, detail=local_error)
+
+    if mode == "chatkit_only" or mode == "local_first":
+        result = await _run_via_chatkit(request)
+        if local_error:
+            print(f"[runtime local] fallback para ChatKit. Motivo: {local_error}")
+        return result
+
+    raise HTTPException(status_code=500, detail="Modo de runtime inválido")
+
+
+async def _run_via_chatkit(request: AgentRequest) -> dict:
     api_key = os.getenv("OPENAI_API_KEY")
 
     # ENGENHARIA DE PAYLOAD: Separação de Input e Estado
