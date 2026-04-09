@@ -375,7 +375,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         if (tools && tools.length > 0) apiOptions.tools = tools;
         if (toolResources) apiOptions.tool_resources = toolResources;
 
-        const response = OpenAI_ResponsesAPI.create(apiOptions);
+        const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
 
         try {
@@ -385,7 +385,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         }
     },
 
-    runWorkflow: function (workflow) {
+    runWorkflow: function* (workflow) {
         const state = workflow.state || {};
         const cadencia = state.cadencia;
         const etapa = Number(state.etapa);
@@ -405,7 +405,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                     tools: [this.Tools.webSearchPreview]
                 };
                 console.log(`[NTec] Rodando Pesquisador (Nurturing) para Etapa ${etapa}`);
-                const pesquisaResponse = OpenAI_ResponsesAPI.create(pesquisaOptions);
+                const pesquisaResponse = yield pesquisaOptions;
                 const pesquisaText = this._extractTextFromOutput(pesquisaResponse);
 
                 // 2. Roda RedatorDeNurturingPesquisa
@@ -438,7 +438,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                     tools: [this.Tools.webSearchPreview]
                 };
                 console.log(`[NTec] Rodando Pesquisador (Retomada) para Etapa 1`);
-                const pesquisaResponse = OpenAI_ResponsesAPI.create(pesquisaOptions);
+                const pesquisaResponse = yield pesquisaOptions;
                 const pesquisaText = this._extractTextFromOutput(pesquisaResponse);
 
                 // 2. Roda RedatorDeRetomadaCasePesquisa com FileSearch embutido 

@@ -564,6 +564,40 @@ const OpenAI_ResponsesAPI = {
         return OPENAI_API_KEY; // Importado via config.js
     },
 
+    buildFetchRequest: function (options) {
+        const apiKey = this.getApiKey();
+        if (!apiKey) {
+            throw new Error("OpenAI API Key não configurada em config.js.");
+        }
+
+        const payload = {
+            model: options.model || "gpt-4o-mini",
+            input: options.input,
+            store: options.store !== undefined ? options.store : true
+        };
+
+        if (options.instructions) payload.instructions = options.instructions;
+        if (options.tools) payload.tools = options.tools;
+        if (options.tool_resources) payload.tool_resources = options.tool_resources;
+        if (options.previous_response_id) payload.previous_response_id = options.previous_response_id;
+        if (options.textFormat) payload["text.format"] = options.textFormat;
+        if (options.reasoning_effort) payload.reasoning = { effort: options.reasoning_effort };
+        if (options.temperature !== undefined) payload.temperature = options.temperature;
+        if (options.top_p !== undefined) payload.top_p = options.top_p;
+        if (options.max_completion_tokens !== undefined) payload.max_completion_tokens = options.max_completion_tokens;
+
+        return {
+            url: OPENAI_RESPONSES_URL,
+            method: "post",
+            headers: {
+                "Authorization": "Bearer " + apiKey,
+                "Content-Type": "application/json"
+            },
+            payload: JSON.stringify(payload),
+            muteHttpExceptions: true
+        };
+    },
+
     create: function (options, maxRetries = 3) {
         const apiKey = this.getApiKey();
         if (!apiKey) {
@@ -651,8 +685,11 @@ var OpenAIRepository = {
         if (!workflowsData || workflowsData.length === 0) return [];
         let allResponses = [];
 
-        console.info(`[INFO] Initiating local GAS execution for ${workflowsData.length} OpenAI Responses API tasks.`);
+        console.info(`[INFO] Initiating local batch GAS execution for ${workflowsData.length} OpenAI Responses API tasks.`);
 
+        let activeGenerators = [];
+
+        // Initialize all generators
         for (let i = 0; i < workflowsData.length; i++) {
             const data = workflowsData[i];
             const workflowId = data.workflowId;
@@ -664,36 +701,143 @@ var OpenAIRepository = {
                 } else {
                     flowModule = eval(workflowId);
                 }
+                
+                const generator = flowModule.runWorkflow(data.payload);
+                activeGenerators.push({
+                    id: i,
+                    workflowId: workflowId,
+                    data: data,
+                    generator: generator,
+                    currentYield: generator.next(),
+                    startTime: Date.now(),
+                    retries: 0,
+                    error: null,
+                    done: false
+                });
             } catch (e) {
-                console.error(`[ERROR] Workflow module not found in project scope. Module ID: ${workflowId}`);
-                allResponses.push({ meta: data.meta, result: null, errorType: 'MODULE_NOT_FOUND' });
-                continue;
+                console.error(`[ERROR] Module init failed: ${workflowId}. Error: ${e.message}`);
+                allResponses.push({ meta: data.meta, result: null, errorType: 'MODULE_INIT_FAIL' });
             }
+        }
 
-            try {
-                const startLog = Date.now();
-                const output = flowModule.runWorkflow(data.payload);
-                const duration = Date.now() - startLog;
-                console.info(`[INFO] Workflow execution completed successfully. Module ID: ${workflowId}, Deal ID: ${data.meta.dealId || 'Unknown'}, Duration: ${duration}ms`);
+        // Process loop
+        while (activeGenerators.length > 0) {
+            const fetchRequests = [];
+            const indicesMap = [];
 
-                // Grava no Google Sheets
-                LoggerService.logToGoogleSheets(data.meta.dealId, workflowId, data.payload, output, duration, "");
-
-                if (output && output.bypass) {
-                    allResponses.push({ meta: data.meta, result: null, errorType: null });
-                } else if (typeof output === 'object') {
-                    allResponses.push({ meta: data.meta, result: output, errorType: null });
-                } else if (typeof output === 'string') {
-                    allResponses.push({ meta: data.meta, result: output, errorType: null });
-                } else {
-                    allResponses.push({ meta: data.meta, result: null, errorType: null });
+            // Build Batch Requests
+            for (let i = 0; i < activeGenerators.length; i++) {
+                const state = activeGenerators[i];
+                if (!state.currentYield.done && !state.done) {
+                    try {
+                        const apiOptions = state.currentYield.value;
+                        const fetchReq = OpenAI_ResponsesAPI.buildFetchRequest(apiOptions);
+                        fetchRequests.push(fetchReq);
+                        indicesMap.push(i);
+                    } catch(e) {
+                         console.error(`[ERROR] Failed to build request for ${state.workflowId}: ${e.message}`);
+                         state.error = e;
+                         state.done = true;
+                    }
                 }
-            } catch (err) {
-                console.error(`[ERROR] Workflow execution failed. Module ID: ${workflowId}, Error: ${err.message}`);
-                // Gravar erro no Google Sheets
-                LoggerService.logToGoogleSheets(data.meta.dealId, workflowId, data.payload, "FALHA DE EXECUÇÃO", 0, err.message);
-                allResponses.push({ meta: data.meta, result: null, errorType: 'EXECUTION_FAIL' });
             }
+
+            // Execute Batch Fetch All
+            let rawResponses = [];
+            if (fetchRequests.length > 0) {
+                console.info(`[INFO] Executing UrlFetchApp.fetchAll with ${fetchRequests.length} parallel requests.`);
+                try {
+                    rawResponses = UrlFetchApp.fetchAll(fetchRequests);
+                } catch (err) {
+                    console.error(`[FATAL] fetchAll failed entirely: ${err.message}.`);
+                    indicesMap.forEach(idx => { 
+                       activeGenerators[idx].error = err; 
+                       activeGenerators[idx].done = true; 
+                    });
+                }
+            }
+
+            // Parse Responses and Advance Generators
+            let stillActive = [];
+            let needsSleep = 0;
+
+            for (let i = 0; i < activeGenerators.length; i++) {
+                const state = activeGenerators[i];
+                if (state.done) continue; // skip already failed or done
+
+                if (!state.currentYield.done) {
+                    const reqIndex = indicesMap.indexOf(i);
+                    if (reqIndex !== -1 && rawResponses[reqIndex]) {
+                        const httpResponse = rawResponses[reqIndex];
+                        const responseCode = httpResponse.getResponseCode();
+                        const responseText = httpResponse.getContentText();
+
+                        if (responseCode >= 200 && responseCode < 300) {
+                            try {
+                                const parsedRes = JSON.parse(responseText);
+                                state.retries = 0;
+                                state.currentYield = state.generator.next(parsedRes);
+                            } catch (err) {
+                                state.error = new Error(`JSON Parse Error: ${err.message}`);
+                                state.done = true;
+                            }
+                        } else if (responseCode === 429 || responseCode >= 500) {
+                            state.retries++;
+                            if (state.retries > 3) {
+                                state.error = new Error(`OpenAI Limit Reached/Server Error (${responseCode}): ${responseText}`);
+                                state.done = true;
+                            } else {
+                                const sleepTime = Math.pow(2, state.retries) * 1000;
+                                needsSleep = Math.max(needsSleep, sleepTime);
+                                console.warn(`[WARN] OpenAI Response ${responseCode} for ${state.workflowId}. Planned sleep for ${sleepTime}ms.`);
+                            }
+                        } else {
+                            state.error = new Error(`OpenAI API ${responseCode}: ${responseText}`);
+                            state.done = true;
+                        }
+                    } else if (reqIndex !== -1 && !rawResponses[reqIndex]) {
+                        state.error = new Error("No HTTP Response returned.");
+                        state.done = true;
+                    }
+                }
+                
+                // Has execution finished?
+                if (state.currentYield && state.currentYield.done) {
+                    state.done = true;
+                }
+
+                if (!state.done) {
+                    stillActive.push(state);
+                } else {
+                    const duration = Date.now() - state.startTime;
+                    if (state.error) {
+                        console.error(`[ERROR] Workflow failed. Module ID: ${state.workflowId}, Error: ${state.error.message}`);
+                        LoggerService.logToGoogleSheets(state.data.meta.dealId, state.workflowId, state.data.payload, "FALHA DE EXECUÇÃO", duration, state.error.message);
+                        allResponses.push({ meta: state.data.meta, result: null, errorType: 'EXECUTION_FAIL' });
+                    } else {
+                         const output = state.currentYield.value;
+                         console.info(`[INFO] Workflow completed. Module: ${state.workflowId}, Deal ID: ${state.data.meta.dealId}, Duration: ${duration}ms`);
+                         LoggerService.logToGoogleSheets(state.data.meta.dealId, state.workflowId, state.data.payload, output, duration, "");
+                         
+                         if (output && output.bypass) {
+                              allResponses.push({ meta: state.data.meta, result: null, errorType: null });
+                         } else if (typeof output === 'object') {
+                              allResponses.push({ meta: state.data.meta, result: output, errorType: null });
+                         } else if (typeof output === 'string') {
+                              allResponses.push({ meta: state.data.meta, result: output, errorType: null });
+                         } else {
+                              allResponses.push({ meta: state.data.meta, result: null, errorType: null });
+                         }
+                    }
+                }
+            }
+
+            if (needsSleep > 0 && stillActive.length > 0) {
+                 console.warn(`[WARN] Sleeping globally for ${needsSleep}ms due to 429/5xx responses in batch.`);
+                 Utilities.sleep(needsSleep);
+            }
+
+            activeGenerators = stillActive;
         }
 
         return allResponses;

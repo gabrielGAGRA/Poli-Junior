@@ -154,7 +154,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
             reasoning_effort: redatorConfig.settings.reasoning_effort
         };
 
-        const response = OpenAI_ResponsesAPI.create(apiOptions);
+        const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
 
         try {
@@ -165,7 +165,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
     },
 
 
-    runWorkflow: function (workflow) {
+    runWorkflow: function* (workflow) {
         const state = workflow.state || {};
         const cadencia = state.cadencia;
         const etapa = Number(state.etapa);

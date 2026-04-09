@@ -154,7 +154,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         if (tools && tools.length > 0) apiOptions.tools = tools;
         if (toolResources) apiOptions.tool_resources = toolResources;
 
-        const response = OpenAI_ResponsesAPI.create(apiOptions);
+        const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
 
         try {
@@ -164,7 +164,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         }
     },
 
-    runWorkflow: function (workflow) {
+    runWorkflow: function* (workflow) {
         const state = workflow.state || {};
         const cadencia = state.cadencia;
         const etapa = Number(state.etapa);
