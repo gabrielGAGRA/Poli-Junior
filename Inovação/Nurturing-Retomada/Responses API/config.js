@@ -11,7 +11,8 @@ const REGRAS_CONFIG = {
     STAGE_INDO_PARA_EMAIL_1: 85,
     STAGE_ESPERA: 80,
     DIRETOR_ID: 15199383, // ID DE USUARIO DA DIRETORIA
-    MAX_CARDS_PROCESS_LIMIT: 10 // Limita o número de cards processados em uma execução
+    MAX_CARDS_PROCESS_LIMIT: 10, // Limita o número de cards processados em uma execução
+    PLANILHA_LOGS_IA_ID: "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
 };
 
 const AGENT_CONFIG = {

@@ -8,6 +8,7 @@ function syncAndSummarize() {
     let deals = PipedriveRepository.fetchDealsInStages(stagesToSync);
 
     deals = deduplicateDeals(deals);
+    const labelIdMap = PipedriveRepository.getLabelMapping();
 
     let workflowsToRun = [];
     let dealsToDelete = [];
@@ -45,17 +46,36 @@ function syncAndSummarize() {
                     .join('\n---\n');
 
                 if (rawNotesText.trim()) {
-                    const nucleus = getNucleusInfo(deal[CUSTOM_FIELDS.LABEL]);
+                    let rawLabelValue = deal[CUSTOM_FIELDS.LABEL];
+                    if (Array.isArray(rawLabelValue) && rawLabelValue.length > 0) {
+                        rawLabelValue = rawLabelValue[0];
+                    }
+                    if (typeof rawLabelValue === 'string') {
+                        rawLabelValue = rawLabelValue.trim();
+                    }
+
+                    // Identifica se é ID numérico do Pipedrive via mapping dinâmico
+                    const mappedLabel = labelIdMap[String(rawLabelValue)] || rawLabelValue;
+
+                    const validNuclei = ['NDados', 'NCon', 'NTec', 'NCiv'];
+                    let nucleusAbrev = validNuclei.includes(mappedLabel) ? mappedLabel : 'Geral';
+                    const nucleus = getNucleusInfo(nucleusAbrev);
+
+                    const payload = {
+                        input_as_text: rawNotesText,
+                        state: {
+                            nucleo: nucleus.abreviacao,
+                            nucleo_nome_completo: nucleus.nome_completo,
+                            owner_id: String(deal.user_id.id)
+                        }
+                    };
+
+                    console.log(`[DEBUG] Preparando envio de sumário para Deal ID: ${deal.id} - Label original (RAW): "${rawLabelValue}" -> Núcleo processado: "${nucleus.abreviacao}"`);
+                    console.log(`[DEBUG] Payload Sumário: \n${JSON.stringify(payload, null, 2)}`);
+
                     workflowsToRun.push({
                         workflowId: AGENT_CONFIG.WORKFLOW_ANALISTA_ID,
-                        payload: {
-                            input_as_text: rawNotesText,
-                            state: {
-                                nucleo: nucleus.abreviacao,
-                                nucleo_nome_completo: nucleus.nome_completo,
-                                owner_id: String(deal.user_id.id)
-                            }
-                        },
+                        payload: payload,
                         meta: { dealId: deal.id, nucleus: nucleus.abreviacao }
                     });
 
@@ -111,19 +131,35 @@ function executeEmailCadence() {
     let deals = PipedriveRepository.fetchDealsInStages(stagesToProcess);
 
     deals = deduplicateDeals(deals);
+    const labelIdMap = PipedriveRepository.getLabelMapping();
 
     let workflowsToRun = [];
 
     for (const deal of deals) {
         try {
             const stepInfo = WORKFLOW_STAGE_MAPPING[deal.stage_id];
-            const nucleus = (deal[CUSTOM_FIELDS.LABEL] || 'NDados');
+
+            // O valor real recebido do Pipedrive via CUSTOM_FIELDS.LABEL
+            let rawLabelValue = deal[CUSTOM_FIELDS.LABEL];
+            if (Array.isArray(rawLabelValue) && rawLabelValue.length > 0) {
+                rawLabelValue = rawLabelValue[0]; // Extrai o primeiro se for array
+            }
+            if (typeof rawLabelValue === 'string') {
+                rawLabelValue = rawLabelValue.trim();
+            }
+
+            // Identifica se é ID numérico do Pipedrive via mapping dinâmico
+            const mappedLabel = labelIdMap[String(rawLabelValue)] || rawLabelValue;
+
+            // Fallback se não for uma das 4 opções conhecidas
+            const validNuclei = ['NDados', 'NCon', 'NTec', 'NCiv'];
+            let nucleus = validNuclei.includes(mappedLabel) ? mappedLabel : 'Geral';
             const isOwnerActive = activeUsers.includes(deal.user_id.id);
 
             let workflowId;
             if (isOwnerActive) {
                 const workflowMap = AGENT_CONFIG.WORKFLOW_REDACAO_ATIVO;
-                workflowId = workflowMap[nucleus] || workflowMap['NDados'];
+                workflowId = workflowMap[nucleus] || workflowMap['Geral'] || workflowMap['NDados'];
             } else {
                 workflowId = AGENT_CONFIG.WORKFLOW_REDACAO_INATIVO;
             }
@@ -157,6 +193,8 @@ function executeEmailCadence() {
                 // Variável exclusiva exigida apenas pelo Flow_FluxoOwnerInativo
                 payload.state.nome_owner_desativado = deal.user_id.name || "nosso antigo coordenador";
             }
+
+            console.log(`[DEBUG] Preparando envio para fluxo ${workflowId} no Deal ID: ${deal.id} com Payload: \n${JSON.stringify(payload, null, 2)}`);
 
             workflowsToRun.push({
                 workflowId: workflowId,
@@ -412,6 +450,30 @@ var PipedriveRepository = {
         return activeIds;
     },
 
+    getLabelMapping: function () {
+        const cache = CacheService.getScriptCache();
+        const cached = cache.get('deal_label_mapping');
+        if (cached) return JSON.parse(cached);
+
+        const startLog = Date.now();
+        const url = `${PIPEDRIVE_API_BASE_URL}/dealFields?api_token=${PIPEDRIVE_API_TOKEN}`;
+        const resp = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
+        console.log(`[DEBUG] Pipedrive API getLabelMapping completed. Duration: ${Date.now() - startLog}ms`);
+
+        let mapping = {};
+        if (resp.getResponseCode() === 200) {
+            const data = JSON.parse(resp.getContentText()).data || [];
+            const labelField = data.find(f => f.key === CUSTOM_FIELDS.LABEL);
+            if (labelField && labelField.options) {
+                labelField.options.forEach(opt => {
+                    mapping[String(opt.id)] = opt.label;
+                });
+            }
+            cache.put('deal_label_mapping', JSON.stringify(mapping), 21600); // Cache por 6 horas
+        }
+        return mapping;
+    },
+
     createNote: function (dealId, content) {
         const url = `${PIPEDRIVE_API_BASE_URL}/notes?api_token=${PIPEDRIVE_API_TOKEN}`;
         const payload = { deal_id: dealId, content: content };
@@ -520,7 +582,7 @@ const OpenAI_ResponsesAPI = {
         if (options.tool_resources) payload.tool_resources = options.tool_resources;
         if (options.previous_response_id) payload.previous_response_id = options.previous_response_id;
         if (options.textFormat) payload["text.format"] = options.textFormat;
-        if (options.reasoning_effort) payload.reasoning_effort = options.reasoning_effort;
+        if (options.reasoning_effort) payload.reasoning = { effort: options.reasoning_effort };
         if (options.temperature !== undefined) payload.temperature = options.temperature;
         if (options.top_p !== undefined) payload.top_p = options.top_p;
         if (options.max_completion_tokens !== undefined) payload.max_completion_tokens = options.max_completion_tokens;
@@ -615,6 +677,9 @@ var OpenAIRepository = {
                 const duration = Date.now() - startLog;
                 console.info(`[INFO] Workflow execution completed successfully. Module ID: ${workflowId}, Deal ID: ${data.meta.dealId || 'Unknown'}, Duration: ${duration}ms`);
 
+                // Grava no Google Sheets (se configurado)
+                LoggerService.logToGoogleSheets(data.meta.dealId, workflowId, data.payload, output, duration, "");
+
                 if (output && output.bypass) {
                     allResponses.push({ meta: data.meta, result: null, errorType: null });
                 } else if (typeof output === 'object') {
@@ -626,6 +691,8 @@ var OpenAIRepository = {
                 }
             } catch (err) {
                 console.error(`[ERROR] Workflow execution failed. Module ID: ${workflowId}, Error: ${err.message}`);
+                // Gravar erro no Google Sheets
+                LoggerService.logToGoogleSheets(data.meta.dealId, workflowId, data.payload, "FALHA DE EXECUÇÃO", 0, err.message);
                 allResponses.push({ meta: data.meta, result: null, errorType: 'EXECUTION_FAIL' });
             }
         }
@@ -639,11 +706,41 @@ function getNucleusInfo(labelId) {
         'NDados': { abreviacao: 'NDados', nome_completo: 'Núcleo de Análise de Dados e Inteligência Artificial' },
         'NCon': { abreviacao: 'NCon', nome_completo: 'Núcleo de Gestão Empresarial e Consultoria' },
         'NTec': { abreviacao: 'NTec', nome_completo: 'Núcleo de Tecnologia e Desenvolvimento de Software' },
-        'NCiv': { abreviacao: 'NCiv', nome_completo: 'Núcleo de Engenharia Civil e Arquitetura' },
-        'PJ': { abreviacao: 'PJ', nome_completo: 'Poli Júnior' }, // Só adicionado como fallback
+        'NCiv': { abreviacao: 'NCiv', nome_completo: 'Núcleo de Engenharia Civil e Arquitetura' }
     };
-    return nuclei[labelId] || nuclei['PJ']; // Fallback para PJ
+    return nuclei[labelId] || { abreviacao: 'Geral', nome_completo: 'Poli Júnior' };
 }
+
+/**
+ * =================================================================
+ * SERVIÇO DE LOGS DA IA (PLANILHA)
+ * =================================================================
+ */
+const LoggerService = {
+    logToGoogleSheets: function (dealId, workflowId, inputPayload, outputResult, durationMs, errorMsg = "") {
+        if (!REGRAS_CONFIG.PLANILHA_LOGS_IA_ID) return;
+
+        try {
+            const ss = SpreadsheetApp.openById(REGRAS_CONFIG.PLANILHA_LOGS_IA_ID);
+            let sheet = ss.getSheetByName("Logs IA");
+            if (!sheet) {
+                // Cria a aba se não existir e coloca cabeçalhos
+                sheet = ss.insertSheet("Logs IA");
+                sheet.appendRow(["Data/Hora", "Deal ID", "Workflow", "Input (Payload)", "Output (Resposta)", "Duração (ms)", "Erro"]);
+                sheet.getRange("A1:G1").setFontWeight("bold");
+            }
+
+            const timestamp = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm:ss");
+            const strInput = typeof inputPayload === 'object' ? JSON.stringify(inputPayload, null, 2) : String(inputPayload);
+            const strOutput = typeof outputResult === 'object' ? JSON.stringify(outputResult, null, 2) : String(outputResult);
+
+            sheet.appendRow([timestamp, dealId || "N/A", workflowId, strInput, strOutput, durationMs || 0, errorMsg]);
+
+        } catch (e) {
+            console.error(`[ERROR] Falha ao gravar log da IA na planilha. Motivo: ${e.message}`);
+        }
+    }
+};
 
 /**
  * =================================================================
@@ -711,6 +808,9 @@ function deduplicateDeals(deals) {
 
     if (totalRemoved > 0) {
         console.info(`[INFO] Deduplication process finished. Total duplicates removed: ${totalRemoved}`);
+    }
+    else {
+        console.info(`[INFO] Deduplication process finished. 0 duplicates found`);
     }
 
     return uniqueDeals;
