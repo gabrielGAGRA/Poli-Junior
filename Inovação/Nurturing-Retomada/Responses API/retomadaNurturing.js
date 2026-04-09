@@ -70,8 +70,7 @@ function syncAndSummarize() {
                         }
                     };
 
-                    console.log(`[DEBUG] Preparando envio de sumário para Deal ID: ${deal.id} - Label original (RAW): "${rawLabelValue}" -> Núcleo processado: "${nucleus.abreviacao}"`);
-                    console.log(`[DEBUG] Payload Sumário: \n${JSON.stringify(payload, null, 2)}`);
+                    console.log(`[DEBUG] Preparando envio de sumário para Deal ID: ${deal.id} - Label ${rawLabelValue} -> ${nucleus.abreviacao}`);
 
                     workflowsToRun.push({
                         workflowId: AGENT_CONFIG.WORKFLOW_ANALISTA_ID,
@@ -677,7 +676,7 @@ var OpenAIRepository = {
                 const duration = Date.now() - startLog;
                 console.info(`[INFO] Workflow execution completed successfully. Module ID: ${workflowId}, Deal ID: ${data.meta.dealId || 'Unknown'}, Duration: ${duration}ms`);
 
-                // Grava no Google Sheets (se configurado)
+                // Grava no Google Sheets
                 LoggerService.logToGoogleSheets(data.meta.dealId, workflowId, data.payload, output, duration, "");
 
                 if (output && output.bypass) {
@@ -718,12 +717,16 @@ function getNucleusInfo(labelId) {
  */
 const LoggerService = {
     logToGoogleSheets: function (dealId, workflowId, inputPayload, outputResult, durationMs, errorMsg = "") {
-        if (!REGRAS_CONFIG.PLANILHA_LOGS_IA_ID) return;
+        if (!REGRAS_CONFIG.PLANILHA_LOGS_IA_ID) {
+            console.warn("[WARN] REGRAS_CONFIG.PLANILHA_LOGS_IA_ID não está configurado. Pulando gravação no Sheets.");
+            return;
+        }
 
         try {
             const ss = SpreadsheetApp.openById(REGRAS_CONFIG.PLANILHA_LOGS_IA_ID);
             let sheet = ss.getSheetByName("Logs IA");
             if (!sheet) {
+                console.log("[DEBUG] Aba 'Logs IA' não encontrada. Criando nova aba.");
                 // Cria a aba se não existir e coloca cabeçalhos
                 sheet = ss.insertSheet("Logs IA");
                 sheet.appendRow(["Data/Hora", "Deal ID", "Workflow", "Input (Payload)", "Output (Resposta)", "Duração (ms)", "Erro"]);
@@ -735,6 +738,7 @@ const LoggerService = {
             const strOutput = typeof outputResult === 'object' ? JSON.stringify(outputResult, null, 2) : String(outputResult);
 
             sheet.appendRow([timestamp, dealId || "N/A", workflowId, strInput, strOutput, durationMs || 0, errorMsg]);
+            console.info(`[INFO] Linha gravada com sucesso no Sheets (Deal ID: ${dealId}).`);
 
         } catch (e) {
             console.error(`[ERROR] Falha ao gravar log da IA na planilha. Motivo: ${e.message}`);
