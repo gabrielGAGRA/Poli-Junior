@@ -370,7 +370,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
     /**
      * Método auxiliar genérico para rodar os Redatores que produzem JSON.
      */
-    _runRedator: function (redatorConfig, inputPrompt, tools = [], toolResources = null) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = [], toolResources = null) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -386,7 +386,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         if (tools && tools.length > 0) apiOptions.tools = tools;
         if (toolResources) apiOptions.tool_resources = toolResources;
 
-        const response = OpenAI_ResponsesAPI.create(apiOptions);
+        const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
 
         try {
@@ -400,7 +400,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
      * Ponto de Entrada da Orquestração. 
      * Roteia Pesquisa -> Redação baseado em Cadência e Etapa.
      */
-    runWorkflow: function (workflow) {
+    runWorkflow: function* (workflow) {
         const state = workflow.state || {};
         const cadencia = state.cadencia;
         const etapa = Number(state.etapa);
@@ -420,19 +420,19 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                     tools: [this.Tools.webSearchPreview]
                 };
                 console.log(`[NDados] Rodando Pesquisador (Nurturing) para Etapa ${etapa}`);
-                const pesquisaResponse = OpenAI_ResponsesAPI.create(pesquisaOptions);
+                const pesquisaResponse = yield pesquisaOptions;
                 const pesquisaText = this._extractTextFromOutput(pesquisaResponse);
 
                 // 2. Roda RedatorDeNurturingPesquisa
                 const redatorPrompt = `PASSO: ${etapa}\n\nPESQUISA: ${pesquisaText}\nCONTEXTO DO NEGÓCIO: ${input_as_text}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NDados] Rodando RedatorDeNurturingPesquisa`);
-                return this._runRedator(this.RedatorDeNurturingPesquisa, redatorPrompt);
+                return yield* this._runRedator(this.RedatorDeNurturingPesquisa, redatorPrompt);
             }
             else if (etapa === 2 || etapa === 4) {
                 // Roda direto o RedatorDeNurturingCase com FileSearch
                 const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NDados] Rodando RedatorDeNurturingCase para Etapa ${etapa}`);
-                return this._runRedator(
+                return yield* this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorPrompt,
                     [this.Tools.fileSearch],
@@ -453,13 +453,13 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                     tools: [this.Tools.webSearchPreview]
                 };
                 console.log(`[NDados] Rodando Pesquisador (Retomada) para Etapa 1`);
-                const pesquisaResponse = OpenAI_ResponsesAPI.create(pesquisaOptions);
+                const pesquisaResponse = yield pesquisaOptions;
                 const pesquisaText = this._extractTextFromOutput(pesquisaResponse);
 
                 // 2. Roda RedatorDeRetomadaCasePesquisa com FileSearch embutido 
                 const redatorPrompt = `CONTEXTO DO NEGÓCIO: ${input_as_text}\nPESQUISA: ${pesquisaText}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NDados] Rodando RedatorDeRetomadaCasePesquisa`);
-                return this._runRedator(
+                return yield* this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorPrompt,
                     [this.Tools.fileSearch],
@@ -469,14 +469,14 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
                 const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NDados] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
+                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
             }
 
         } else if (cadencia === 'Re-engajement do Nurturing') {
 
             const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
             console.log(`[NDados] Rodando RedatorDeReEngajementPSNurturingFup para Etapa ${etapa}`);
-            return this._runRedator(this.RedatorDeReEngajementPSNurturingFup, redatorPrompt);
+            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, redatorPrompt);
 
         }
 

@@ -110,7 +110,7 @@ Organize sua resposta em seções claras:
      * @param {string} workflow.state.nucleo_nome_completo Nome completo (ex: 'Núcleo de Consultoria')
      * @returns {Object} `{ output_text: "..." }`
      */
-    runWorkflow: function (workflow) {
+    runWorkflow: function* (workflow) {
         // Inicialização defensiva do state
         const state = workflow.state || { nucleo: "", nucleo_nome_completo: "" };
         const inputText = workflow.input_as_text || "";
@@ -149,8 +149,8 @@ Organize sua resposta em seções claras:
         };
 
         // Chama o Wrapper do GAS para encapsular o API Request HTTP real
-        // Fica de propósito sincrono pois GAS é sincrono e resolve bloqueamento transparente
-        const response = OpenAI_ResponsesAPI.create(apiOptions);
+        // Agora via Generators (yield) delegando a chamada paralela pro Orchestrator
+        const response = yield apiOptions;
 
         let finalOutput = "";
 
