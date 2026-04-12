@@ -1,0 +1,12 @@
+[submodule "Produtos/Modelo-PCP"]
+	path = Produtos/Modelo-PCP
+	url = https://github.com/Projetos-PJ/Modelo-PCP
+[submodule "Projetos/Nutax"]
+	path = Projetos/Nutax
+	url = https://github.com/joaomelo14/Nutax
+[submodule "Projetos/Treinamentos/CELOJA"]
+	path = Projetos/Treinamentos/Treinamento-Celoja.1
+	url = https://github.com/joaomelo14/Treinamento-Celoja.1
+[submodule "Projetos/Treinamentos/Validação_T3"]
+	path = Projetos/Treinamentos/Loiola_Prime
+	url = https://github.com/Fernando-Tamashiro/Loiola_Prime
