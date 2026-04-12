@@ -8,6 +8,7 @@
 // ====================================================================
 
 function dailyMetadataSync() {
+    refreshMetadataCache()
     const startTime = Date.now();
     const props = PropertiesService.getScriptProperties();
 
@@ -67,6 +68,8 @@ function dailyMetadataSync() {
 
 function weeklyFlowSync() {
     console.log("--- INICIANDO MOTOR B: FLUXOS ---");
+
+    refreshMetadataCache();
 
     const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(MAIN_SHEET_NAME);
     if (!sheet) return console.error("Planilha base não encontrada.");
@@ -262,37 +265,127 @@ function updateStageTimesInSheetInBatches(sheet, data, headers, stageTimesMap, i
 }
 
 /**
+ * Gerencia o cache de mapeamentos em uma aba de forma visual e técnica.
+ * Atualiza a cada 7 dias ou quando forçado.
+ */
+function refreshMetadataCache(forceRefresh = false) {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let metaSheet = ss.getSheetByName("Estágios") || ss.insertSheet("Estágios");
+
+    // data na célula A2
+    const lastUpdateValue = metaSheet.getRange("A2").getValue();
+    const now = new Date();
+    const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
+
+    if (forceRefresh || !lastUpdateValue || (now - new Date(lastUpdateValue)) > sevenDaysInMs) {
+        console.log("--- ATUALIZANDO INTERFACE DE METADADOS ---");
+
+        const fieldData = fetchFieldMappingFromAPI();
+        const stageMapping = fetchStagesMappingFromAPI();
+
+        // Limpa apenas os dados no intervalo A2:I100, preservando formatação
+        metaSheet.getRange("A2:I100").clearContent();
+
+        // --- 1. CABEÇALHOS (Linha 1) ---
+        // Nome antes do ID/Key
+        metaSheet.getRange("A1:I1").setValues([[
+            "ÚLTIMA ATUALIZAÇÃO", "STATUS", "", "Pipeline", "Estágio (Ordenado)", "ID Estágio", "", "Nome do Campo", "Chave API (Key)"
+        ]]);
+
+        // Estilização dos Cabeçalhos
+        const headerRange = metaSheet.getRange("A1:I1");
+        headerRange.setFontWeight("bold").setFontColor("white").setVerticalAlignment("middle").setHorizontalAlignment("center");
+
+        metaSheet.getRange("A1:B1").setBackground("#444444"); // Cinza (Info)
+        metaSheet.getRange("D1:F1").setBackground("#1155cc"); // Azul (Estágios)
+        metaSheet.getRange("H1:I1").setBackground("#38761d"); // Verde (Campos)
+
+        // --- 2. DADOS DE CONTROLE (Linha 2) ---
+        // Agora a data fica exatamente embaixo do título "ÚLTIMA ATUALIZAÇÃO"
+        metaSheet.getRange("A2").setValue(now).setNumberFormat("dd/mm/yyyy HH:mm");
+        metaSheet.getRange("B2").setValue("Sincronizado");
+
+        // --- 3. ÁREA TÉCNICA (Linhas 98, 99 e 100 - Ocultas) ---
+        // O script lerá os JSONs destas células para manter a performance
+        const pipelinesEStages = fetchPipelinesAndStagesDetailed();
+        metaSheet.getRange("A98:B98").setValues([["JSON_FIELDS", JSON.stringify(fieldData)]]);
+        metaSheet.getRange("A99:B99").setValues([["JSON_STAGES", JSON.stringify(stageMapping)]]);
+        metaSheet.getRange("A100:B100").setValues([["JSON_PIPELINES_STAGES", JSON.stringify(pipelinesEStages)]]);
+
+        // Garante que as linhas existem antes de ocultar
+        const maxRows = metaSheet.getMaxRows();
+        if (maxRows < 100) {
+            metaSheet.insertRowsAfter(maxRows, 100 - maxRows);
+        }
+        metaSheet.hideRows(98, 3); // Oculta 3 linhas a partir da 98 (98, 99, 100)
+
+        // --- 4. TABELA VISUAL: PIPELINES E ESTÁGIOS (Colunas D, E e F) ---
+        // Ordem: Pipeline (D), Nome do Estágio (E), ID Estágio (F)
+        let linhaAtual = 2;
+        const stageVisualRows = [];
+
+        // Iterar de forma ordenada pelos pipelines e dentro deles pelos estágios
+        Object.keys(pipelinesEStages).sort().forEach(pipelineName => {
+            const pipe = pipelinesEStages[pipelineName];
+            if (pipe && pipe.stages) {
+                pipe.stages.forEach(stg => {
+                    stageVisualRows.push([pipelineName, stg.name, stg.id]);
+                });
+            }
+        });
+
+        if (stageVisualRows.length > 0) {
+            metaSheet.getRange(2, 4, Math.min(stageVisualRows.length, 90), 3).setValues(stageVisualRows.slice(0, 90));
+        }
+
+        // --- 5. TABELA VISUAL: CAMPOS (Colunas H e I) ---
+        // Ordem: Nome do Campo (H), Key (I). Coluna G mantida em branco.
+        const fieldRows = Object.entries(fieldData.fieldMapping).map(([key, name]) => [name, key]);
+        if (fieldRows.length > 0) {
+            metaSheet.getRange(2, 8, Math.min(fieldRows.length, 90), 2).setValues(fieldRows.slice(0, 90));
+        }
+
+        // --- 6. AJUSTES FINAIS DE LAYOUT ---
+        metaSheet.setColumnWidth(1, 180); // Última atualização
+        metaSheet.setColumnWidth(2, 100); // Status
+        metaSheet.setColumnWidth(3, 30);  // Espaçador
+        metaSheet.setColumnWidth(4, 250); // Pipeline
+        metaSheet.setColumnWidth(5, 250); // Estágio
+        metaSheet.setColumnWidth(6, 100); // ID Estágio
+        metaSheet.setColumnWidth(7, 30);  // Espaçador
+        metaSheet.setColumnWidth(8, 250); // Nome do Campo
+        metaSheet.setColumnWidth(9, 250); // Chave API
+
+        metaSheet.setFrozenRows(1);
+        metaSheet.getRange("A:I").setVerticalAlignment("middle");
+
+        console.log("Interface atualizada com sucesso.");
+    }
+}
+
+/**
  * Cache dos mapeamentos da API do Pipedrive (válido por 6 horas)
  */
 function getDynamicFieldMappingCached() {
     const cache = CacheService.getScriptCache();
     const cached = cache.get('PIPEDRIVE_FIELD_MAP');
-
     if (cached) return JSON.parse(cached);
 
-    const url = `${PIPEDRIVE_API_BASE_URL}/dealFields?api_token=${PIPEDRIVE_API_TOKEN}`;
-    const response = UrlFetchApp.fetch(url);
-    const json = JSON.parse(response.getContentText());
+    // Se não está no CacheService, lê da aba de metadados
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const metaSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Estágios");
 
-    const fieldMapping = {};
-    const optionMapping = {};
-
-    if (json.data) {
-        json.data.forEach(field => {
-            fieldMapping[field.key] = field.name;
-            if (field.options) {
-                optionMapping[field.key] = {};
-                field.options.forEach(opt => {
-                    optionMapping[field.key][String(opt.id)] = opt.label;
-                });
-            }
-        });
+    if (metaSheet) {
+        const data = metaSheet.getRange("B98").getValue(); // JSON dos campos está em B98
+        if (data) {
+            cache.put('PIPEDRIVE_FIELD_MAP', data, 21600);
+            return JSON.parse(data);
+        }
     }
 
-    const result = { fieldMapping, optionMapping };
-    // Salva no cache por 6 horas (21600 segundos) para poupar cota da API
-    cache.put('PIPEDRIVE_FIELD_MAP', JSON.stringify(result), 21600);
-    return result;
+    // Fallback de emergência caso a aba esteja vazia
+    refreshMetadataCache(true);
+    return getDynamicFieldMappingCached();
 }
 
 /**
@@ -309,15 +402,80 @@ function getStagesMappingCached() {
     const cached = cache.get('PIPEDRIVE_STAGES_MAP');
     if (cached) return JSON.parse(cached);
 
-    // Simplificação: Dificilmente alguém tem > 500 estágios. Um chunk basta.
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const metaSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Estágios");
+
+    if (metaSheet) {
+        const data = metaSheet.getRange("B99").getValue(); // JSON dos estágios está em B99
+        if (data) {
+            cache.put('PIPEDRIVE_STAGES_MAP', data, 21600);
+            return JSON.parse(data);
+        }
+    }
+
+    refreshMetadataCache(true);
+    return getStagesMappingCached();
+}
+
+function fetchFieldMappingFromAPI() {
+    const url = `${PIPEDRIVE_API_BASE_URL}/dealFields?api_token=${PIPEDRIVE_API_TOKEN}`;
+    const response = UrlFetchApp.fetch(url);
+    const json = JSON.parse(response.getContentText());
+    const fieldMapping = {};
+    const optionMapping = {};
+
+    if (json.data) {
+        json.data.forEach(field => {
+            fieldMapping[field.key] = field.name;
+            if (field.options) {
+                optionMapping[field.key] = {};
+                field.options.forEach(opt => {
+                    optionMapping[field.key][String(opt.id)] = opt.label;
+                });
+            }
+        });
+    }
+    return { fieldMapping, optionMapping };
+}
+
+function fetchStagesMappingFromAPI() {
     const response = fetchPipedriveChunk('stages', { limit: 500 });
-    const mapping = response.data.reduce((acc, s) => {
+    return response.data.reduce((acc, s) => {
         acc[String(s.id)] = s.name;
         return acc;
     }, {});
+}
 
-    cache.put('PIPEDRIVE_STAGES_MAP', JSON.stringify(mapping), 21600);
-    return mapping;
+function fetchPipelinesAndStagesDetailed() {
+    const pipelinesRes = fetchPipedriveChunk('pipelines', { limit: 500 });
+    const stagesRes = fetchPipedriveChunk('stages', { limit: 500 });
+
+    const pipelinesData = pipelinesRes.data || [];
+    const stagesData = stagesRes.data || [];
+
+    pipelinesData.sort((a, b) => a.order_nr - b.order_nr);
+    stagesData.sort((a, b) => a.order_nr - b.order_nr);
+
+    const pipelineMap = {}; // id -> name
+    const groupedStages = {};
+
+    pipelinesData.forEach(p => {
+        pipelineMap[p.id] = p.name;
+        groupedStages[p.name] = { id: p.id, order_nr: p.order_nr, stages: [] };
+    });
+
+    stagesData.forEach(s => {
+        const pName = pipelineMap[s.pipeline_id];
+        if (pName && groupedStages[pName]) {
+            groupedStages[pName].stages.push({
+                id: s.id,
+                name: s.name,
+                order_nr: s.order_nr
+            });
+        }
+    });
+
+    return groupedStages;
 }
 
 /**
@@ -374,7 +532,6 @@ function fetchFlowsInBatches(deals) {
 }
 
 /**
- * Otimização: Redução de complexidade de O(n^2) para O(n).
  * Cálculo de tempo usando álgebra de timestamps direta.
  */
 function calculateDeltaTimesMap(openFlows, deals, stageMapping) {

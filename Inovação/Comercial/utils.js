@@ -116,5 +116,3 @@ function _makeRequest(url, options = { muteHttpExceptions: true }) {
         }
     }
 }
-
-
