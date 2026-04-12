@@ -578,7 +578,6 @@ const OpenAI_ResponsesAPI = {
 
         if (options.instructions) payload.instructions = options.instructions;
         if (options.tools) payload.tools = options.tools;
-        if (options.tool_resources) payload.tool_resources = options.tool_resources;
         if (options.previous_response_id) payload.previous_response_id = options.previous_response_id;
         if (options.textFormat) payload["text.format"] = options.textFormat;
         if (options.reasoning_effort) payload.reasoning = { effort: options.reasoning_effort };
@@ -612,7 +611,6 @@ const OpenAI_ResponsesAPI = {
 
         if (options.instructions) payload.instructions = options.instructions;
         if (options.tools) payload.tools = options.tools;
-        if (options.tool_resources) payload.tool_resources = options.tool_resources;
         if (options.previous_response_id) payload.previous_response_id = options.previous_response_id;
         if (options.textFormat) payload["text.format"] = options.textFormat;
         if (options.reasoning_effort) payload.reasoning = { effort: options.reasoning_effort };

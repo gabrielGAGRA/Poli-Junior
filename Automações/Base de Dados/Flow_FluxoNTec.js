@@ -19,15 +19,7 @@ const Flow_FluxoNTec = {
         },
         fileSearch: {
             type: "file_search"
-        }
-    },
-
-    ToolResources: {
-        fileSearchVectorStore: {
-            file_search: {
-                vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] // Diferente do NDados
-            }
-        }
+        , vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] }
     },
 
     Schemas: {
@@ -359,7 +351,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         return finalOutput;
     },
 
-    _runRedator: function* (redatorConfig, inputPrompt, tools = [], toolResources = null) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -373,7 +365,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
-        if (toolResources) apiOptions.tool_resources = toolResources;
+        
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -420,8 +412,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return yield* this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
 
@@ -447,8 +438,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return yield* this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {

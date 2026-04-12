@@ -21,15 +21,8 @@ const Flow_FluxoNDados = {
             // enviar propriedades customizadas associadas se aceitas
         },
         fileSearch: {
-            type: "file_search"
-        }
-    },
-
-    ToolResources: {
-        fileSearchVectorStore: {
-            file_search: {
-                vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
-            }
+            type: "file_search",
+            vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
         }
     },
 
@@ -370,7 +363,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
     /**
      * Método auxiliar genérico para rodar os Redatores que produzem JSON.
      */
-    _runRedator: function* (redatorConfig, inputPrompt, tools = [], toolResources = null) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -384,7 +377,6 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
-        if (toolResources) apiOptions.tool_resources = toolResources;
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -435,8 +427,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return yield* this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
 
@@ -462,8 +453,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return yield* this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {

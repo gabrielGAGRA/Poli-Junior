@@ -1,21 +1,9 @@
 1. Aplicar redundância de checks (apos cada atraso)
 Verificar em cada automação
 
-
-2. Implementar 'remover' email pula para a próxima etapa
-Mudar e-mail com instruções para dizer isso
-Implementar if em cada automação
-
-
-3. Remover campo de etapa de nurturing
-
-
-4. Lidar com casos que a pessoa sai
+2. Lidar com casos que a pessoa sai
 Realocar card para gerente?
 Se sair no meio da cadência de nurturing, parar a automação
 Lista ativa de gerentes
 
-5. Lidar com cards antigos do funil
-Mandar tudo pra retomada na data
-Ter script que pega os antigos com data
-Decidir quem vai retomar
+3. Base de dados de cases de outros nucleos

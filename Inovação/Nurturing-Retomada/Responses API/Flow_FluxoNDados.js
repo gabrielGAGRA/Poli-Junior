@@ -370,7 +370,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
     /**
      * Método auxiliar genérico para rodar os Redatores que produzem JSON.
      */
-    _runRedator: function* (redatorConfig, inputPrompt, tools = [], toolResources = null) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -384,7 +384,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
-        if (toolResources) apiOptions.tool_resources = toolResources;
+        
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -487,3 +487,4 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Flow_FluxoNDados;
 }
+

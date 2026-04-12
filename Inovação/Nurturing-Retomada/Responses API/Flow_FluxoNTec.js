@@ -18,19 +18,12 @@ const Flow_FluxoNTec = {
             type: "web_search"
         },
         fileSearch: {
-            type: "file_search"
+            type: "file_search",
+            vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"]
         }
     },
 
-    ToolResources: {
-        fileSearchVectorStore: {
-            file_search: {
-                vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] // Diferente do NDados
-            }
-        }
-    },
-
-    Schemas: {
+        Schemas: {
         RedatorOutputSchema: {
             type: "json_schema",
             json_schema: {
@@ -359,7 +352,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         return finalOutput;
     },
 
-    _runRedator: function (redatorConfig, inputPrompt, tools = [], toolResources = null) {
+    _runRedator: function (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -373,7 +366,6 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
-        if (toolResources) apiOptions.tool_resources = toolResources;
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -420,9 +412,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
-                );
+                    [this.Tools.fileSearch]);
             }
 
         } else if (cadencia === 'Retomada') {
@@ -447,9 +437,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
-                );
+                    [this.Tools.fileSearch]);
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
                 const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
@@ -472,3 +460,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Flow_FluxoNTec;
 }
+
+
+
+

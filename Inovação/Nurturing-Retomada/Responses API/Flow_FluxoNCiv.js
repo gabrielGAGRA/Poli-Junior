@@ -12,14 +12,6 @@ const Flow_FluxoNCiv = {
         }
     },
 
-    ToolResources: {
-        fileSearchVectorStore: {
-            file_search: {
-                vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] // Mesmo vector store configurado no TS para NCiv
-            }
-        }
-    },
-
     Schemas: {
         RedatorOutputSchema: {
             type: "json_schema",
@@ -138,7 +130,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         return finalOutput;
     },
 
-    _runRedator: function (redatorConfig, inputPrompt, tools = [], toolResources = null) {
+    _runRedator: function (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -152,7 +144,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
-        if (toolResources) apiOptions.tool_resources = toolResources;
+        
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -205,3 +197,4 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Flow_FluxoNCiv;
 }
+
