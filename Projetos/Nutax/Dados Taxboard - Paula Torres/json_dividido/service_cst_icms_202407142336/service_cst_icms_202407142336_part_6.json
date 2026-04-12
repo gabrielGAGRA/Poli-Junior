@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6301",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6301200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6402",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6402200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6551",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6551200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6659",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6659200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6909",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6909200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6925",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6925200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "7210",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "7210200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "1113",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1113201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1202",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1202201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1302",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1302201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1408",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1408201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1124",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1124100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1209",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1209100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1353",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1353100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1452",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1452100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1604",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1604100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1906",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1906100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1922",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1922100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1554",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1554201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1663",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1663201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1915",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1915201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2101",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2101201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2154",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2154201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2257",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2257201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2407",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2407201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2555",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2555201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2903",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2903201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "2919",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2919201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "3202",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "3202201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "3556",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "3556201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5113",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5113201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5156",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5156201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5258",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5258201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5360",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5360201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5503",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5503201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5652",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5652201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5902",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5902201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "5918",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5918201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6101",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6101201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6117",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6117201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6206",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6206201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6304",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6304201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6408",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6408201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6554",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6554201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6662",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6662201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6912",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6912201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "6932",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6932201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "7301",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "7301201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1118",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1118202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1205",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1205202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1305",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1305202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1411",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1411202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1557",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1557202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1902",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1902202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1918",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1918202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2113",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2113202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2203",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2203202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2303",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2303202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2410",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2410202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2603",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2603202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2906",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2906202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2922",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2922202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "3207",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "3207202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "3653",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "3653202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5116",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5116202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5205",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5205202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5303",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5303202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5403",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5403202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5551",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5551202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5655",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5655202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5905",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5905202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5921",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5921202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6104",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6104202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6120",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6120202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6209",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6209202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6307",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6307202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6411",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6411202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6557",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6557202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6665",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6665202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "6915",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "6915202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "7101",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "7101202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "7551",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "7551202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1124",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1124202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1209",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1209202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1353",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1353202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1452",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1452202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1604",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1604202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1906",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1906202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "1922",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1922202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2113",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2113202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2203",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2203202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2303",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2303202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2410",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2410202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2603",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2603202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2906",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2906202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "2922",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "2922202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "3207",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "3207202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "3653",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "3653202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5116",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5116202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    },
+    {
+        "cfop": "5205",
+        "cst": "202",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "5205202",
+        "icms": "Não",
+        "cst_descr": "202|Simples Nacional",
+        "numeracao": "5"
+    }
+]

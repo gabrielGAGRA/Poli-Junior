@@ -1,0 +1,802 @@
+[
+    {
+        "id": "1090",
+        "cod_ibge": "2401453",
+        "nome": "Baraúna",
+        "nome_uf": "Rio Grande do Norte",
+        "sigla_uf": "RN",
+        "uf": "24"
+    },
+    {
+        "id": "3052",
+        "cod_ibge": "3168804",
+        "nome": "Tiradentes",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4685",
+        "cod_ibge": "4304507",
+        "nome": "Canguçu",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "1554",
+        "cod_ibge": "2607950",
+        "nome": "Jaqueira",
+        "nome_uf": "Pernambuco",
+        "sigla_uf": "PE",
+        "uf": "26"
+    },
+    {
+        "id": "3483",
+        "cod_ibge": "3518859",
+        "nome": "Guatapará",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "5504",
+        "cod_ibge": "5216809",
+        "nome": "Petrolina de Goiás",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "1079",
+        "cod_ibge": "2400406",
+        "nome": "Água Nova",
+        "nome_uf": "Rio Grande do Norte",
+        "sigla_uf": "RN",
+        "uf": "24"
+    },
+    {
+        "id": "2860",
+        "cod_ibge": "3152600",
+        "nome": "Pouso Alto",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4709",
+        "cod_ibge": "4305306",
+        "nome": "Chapada",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "1780",
+        "cod_ibge": "2803005",
+        "nome": "Itabaianinha",
+        "nome_uf": "Sergipe",
+        "sigla_uf": "SE",
+        "uf": "28"
+    },
+    {
+        "id": "4708",
+        "cod_ibge": "4305207",
+        "nome": "Cerro Largo",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "4121",
+        "cod_ibge": "4115002",
+        "nome": "Marilena",
+        "nome_uf": "Paraná",
+        "sigla_uf": "PR",
+        "uf": "41"
+    },
+    {
+        "id": "792",
+        "cod_ibge": "2206050",
+        "nome": "Massapê do Piauí",
+        "nome_uf": "Piauí",
+        "sigla_uf": "PI",
+        "uf": "22"
+    },
+    {
+        "id": "1013",
+        "cod_ibge": "2309201",
+        "nome": "Nova Olinda",
+        "nome_uf": "Ceará",
+        "sigla_uf": "CE",
+        "uf": "23"
+    },
+    {
+        "id": "3428",
+        "cod_ibge": "3514403",
+        "nome": "Dracena",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "2564",
+        "cod_ibge": "3128204",
+        "nome": "Guaraciaba",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "3763",
+        "cod_ibge": "3544103",
+        "nome": "Rio Grande da Serra",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "925",
+        "cod_ibge": "2302800",
+        "nome": "Canindé",
+        "nome_uf": "Ceará",
+        "sigla_uf": "CE",
+        "uf": "23"
+    },
+    {
+        "id": "2769",
+        "cod_ibge": "3145208",
+        "nome": "Nova Serrana",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4663",
+        "cod_ibge": "4302659",
+        "nome": "Brochier",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "582",
+        "cod_ibge": "2107704",
+        "nome": "Paraibano",
+        "nome_uf": "Maranhão",
+        "sigla_uf": "MA",
+        "uf": "21"
+    },
+    {
+        "id": "2547",
+        "cod_ibge": "3127057",
+        "nome": "Fronteira dos Vales",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4982",
+        "cod_ibge": "4317707",
+        "nome": "Santo Antônio das Missões",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "1042",
+        "cod_ibge": "2311405",
+        "nome": "Quixeramobim",
+        "nome_uf": "Ceará",
+        "sigla_uf": "CE",
+        "uf": "23"
+    },
+    {
+        "id": "4030",
+        "cod_ibge": "4108007",
+        "nome": "Florestópolis",
+        "nome_uf": "Paraná",
+        "sigla_uf": "PR",
+        "uf": "41"
+    },
+    {
+        "id": "1693",
+        "cod_ibge": "2703908",
+        "nome": "Jundiá",
+        "nome_uf": "Alagoas",
+        "sigla_uf": "AL",
+        "uf": "27"
+    },
+    {
+        "id": "3193",
+        "cod_ibge": "3301157",
+        "nome": "Cardoso Moreira",
+        "nome_uf": "Rio de Janeiro",
+        "sigla_uf": "RJ",
+        "uf": "33"
+    },
+    {
+        "id": "4520",
+        "cod_ibge": "4213906",
+        "nome": "Presidente Castello Branco",
+        "nome_uf": "Santa Catarina",
+        "sigla_uf": "SC",
+        "uf": "42"
+    },
+    {
+        "id": "132",
+        "cod_ibge": "1304203",
+        "nome": "Tefé",
+        "nome_uf": "Amazonas",
+        "sigla_uf": "",
+        "uf": "13"
+    },
+    {
+        "id": "1930",
+        "cod_ibge": "2908507",
+        "nome": "Conceição do Jacuípe",
+        "nome_uf": "Bahia",
+        "sigla_uf": "BA",
+        "uf": "29"
+    },
+    {
+        "id": "4264",
+        "cod_ibge": "4125506",
+        "nome": "São José dos Pinhais",
+        "nome_uf": "Paraná",
+        "sigla_uf": "PR",
+        "uf": "41"
+    },
+    {
+        "id": "5350",
+        "cod_ibge": "5202502",
+        "nome": "Aruanã",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "1040",
+        "cod_ibge": "2311306",
+        "nome": "Quixadá",
+        "nome_uf": "Ceará",
+        "sigla_uf": "CE",
+        "uf": "23"
+    },
+    {
+        "id": "3401",
+        "cod_ibge": "3557204",
+        "nome": "Chavantes",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "4720",
+        "cod_ibge": "4305801",
+        "nome": "Constantina",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "948",
+        "cod_ibge": "2304301",
+        "nome": "Farias Brito",
+        "nome_uf": "Ceará",
+        "sigla_uf": "CE",
+        "uf": "23"
+    },
+    {
+        "id": "2838",
+        "cod_ibge": "3150604",
+        "nome": "Piracema",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "5397",
+        "cod_ibge": "5206503",
+        "nome": "Cromínia",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "1437",
+        "cod_ibge": "2515005",
+        "nome": "São Miguel de Taipu",
+        "nome_uf": "Paraíba",
+        "sigla_uf": "PB",
+        "uf": "25"
+    },
+    {
+        "id": "2529",
+        "cod_ibge": "3125606",
+        "nome": "Felisburgo",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4930",
+        "cod_ibge": "4314787",
+        "nome": "Ponte Preta",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "465",
+        "cod_ibge": "2100873",
+        "nome": "Araguanã",
+        "nome_uf": "Maranhão",
+        "sigla_uf": "MA",
+        "uf": "21"
+    },
+    {
+        "id": "2257",
+        "cod_ibge": "3101300",
+        "nome": "Alagoa",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4486",
+        "cod_ibge": "4211603",
+        "nome": "Nova Veneza",
+        "nome_uf": "Santa Catarina",
+        "sigla_uf": "SC",
+        "uf": "42"
+    },
+    {
+        "id": "2195",
+        "cod_ibge": "2929909",
+        "nome": "Seabra",
+        "nome_uf": "Bahia",
+        "sigla_uf": "BA",
+        "uf": "29"
+    },
+    {
+        "id": "3240",
+        "cod_ibge": "3304409",
+        "nome": "Rio Claro",
+        "nome_uf": "Rio de Janeiro",
+        "sigla_uf": "RJ",
+        "uf": "33"
+    },
+    {
+        "id": "625",
+        "cod_ibge": "2110708",
+        "nome": "São Domingos do Maranhão",
+        "nome_uf": "Maranhão",
+        "sigla_uf": "MA",
+        "uf": "21"
+    },
+    {
+        "id": "2373",
+        "cod_ibge": "3111705",
+        "nome": "Canaã",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "393",
+        "cod_ibge": "1714302",
+        "nome": "Nazaré",
+        "nome_uf": "Tocantins",
+        "sigla_uf": "TO",
+        "uf": "17"
+    },
+    {
+        "id": "1297",
+        "cod_ibge": "2504207",
+        "nome": "Catingueira",
+        "nome_uf": "Paraíba",
+        "sigla_uf": "PB",
+        "uf": "25"
+    },
+    {
+        "id": "3173",
+        "cod_ibge": "3205176",
+        "nome": "Vila Valério",
+        "nome_uf": "Espírito Santo",
+        "sigla_uf": "ES",
+        "uf": "32"
+    },
+    {
+        "id": "1973",
+        "cod_ibge": "2911907",
+        "nome": "Iaçu",
+        "nome_uf": "Bahia",
+        "sigla_uf": "BA",
+        "uf": "29"
+    },
+    {
+        "id": "3352",
+        "cod_ibge": "3507456",
+        "nome": "Borebi",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "5555",
+        "cod_ibge": "5221304",
+        "nome": "Três Ranchos",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "200",
+        "cod_ibge": "1503044",
+        "nome": "Floresta do Araguaia",
+        "nome_uf": "Pará",
+        "sigla_uf": "PA",
+        "uf": "15"
+    },
+    {
+        "id": "1309",
+        "cod_ibge": "2505238",
+        "nome": "Cuité de Mamanguape",
+        "nome_uf": "Paraíba",
+        "sigla_uf": "PB",
+        "uf": "25"
+    },
+    {
+        "id": "3281",
+        "cod_ibge": "3501152",
+        "nome": "Alumínio",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "674",
+        "cod_ibge": "2200400",
+        "nome": "Altos",
+        "nome_uf": "Piauí",
+        "sigla_uf": "PI",
+        "uf": "22"
+    },
+    {
+        "id": "3677",
+        "cod_ibge": "3536257",
+        "nome": "Parisi",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "1791",
+        "cod_ibge": "2804102",
+        "nome": "Moita Bonita",
+        "nome_uf": "Sergipe",
+        "sigla_uf": "SE",
+        "uf": "28"
+    },
+    {
+        "id": "3443",
+        "cod_ibge": "3515301",
+        "nome": "Estrela do Norte",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "191",
+        "cod_ibge": "1502756",
+        "nome": "Concórdia do Pará",
+        "nome_uf": "Pará",
+        "sigla_uf": "PA",
+        "uf": "15"
+    },
+    {
+        "id": "2830",
+        "cod_ibge": "3150109",
+        "nome": "Piau",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "5221",
+        "cod_ibge": "5103437",
+        "nome": "Curvelândia",
+        "nome_uf": "Mato Grosso",
+        "sigla_uf": "MT",
+        "uf": "51"
+    },
+    {
+        "id": "630",
+        "cod_ibge": "2111029",
+        "nome": "São João do Carú",
+        "nome_uf": "Maranhão",
+        "sigla_uf": "MA",
+        "uf": "21"
+    },
+    {
+        "id": "2533",
+        "cod_ibge": "3125952",
+        "nome": "Fervedouro",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "5346",
+        "cod_ibge": "5201702",
+        "nome": "Aragarças",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "1287",
+        "cod_ibge": "2503605",
+        "nome": "Caiçara",
+        "nome_uf": "Paraíba",
+        "sigla_uf": "PB",
+        "uf": "25"
+    },
+    {
+        "id": "3143",
+        "cod_ibge": "3203346",
+        "nome": "Marechal Floriano",
+        "nome_uf": "Espírito Santo",
+        "sigla_uf": "ES",
+        "uf": "32"
+    },
+    {
+        "id": "4919",
+        "cod_ibge": "4314456",
+        "nome": "Pinhal",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "2288",
+        "cod_ibge": "3104007",
+        "nome": "Araxá",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "3408",
+        "cod_ibge": "3512506",
+        "nome": "Coroados",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "5477",
+        "cod_ibge": "5214051",
+        "nome": "Mundo Novo",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "532",
+        "cod_ibge": "2104677",
+        "nome": "Governador Nunes Freire",
+        "nome_uf": "Maranhão",
+        "sigla_uf": "MA",
+        "uf": "21"
+    },
+    {
+        "id": "2618",
+        "cod_ibge": "3133006",
+        "nome": "Itamonte",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4966",
+        "cod_ibge": "4316600",
+        "nome": "Sananduva",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "1204",
+        "cod_ibge": "2412005",
+        "nome": "São Gonçalo do Amarante",
+        "nome_uf": "Rio Grande do Norte",
+        "sigla_uf": "RN",
+        "uf": "24"
+    },
+    {
+        "id": "3549",
+        "cod_ibge": "3524600",
+        "nome": "Jacupiranga",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "4944",
+        "cod_ibge": "4315321",
+        "nome": "Quevedos",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "2420",
+        "cod_ibge": "3116001",
+        "nome": "Chalé",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "4192",
+        "cod_ibge": "4120101",
+        "nome": "Porto Amazonas",
+        "nome_uf": "Paraná",
+        "sigla_uf": "PR",
+        "uf": "41"
+    },
+    {
+        "id": "1065",
+        "cod_ibge": "2313401",
+        "nome": "Tianguá",
+        "nome_uf": "Ceará",
+        "sigla_uf": "CE",
+        "uf": "23"
+    },
+    {
+        "id": "3362",
+        "cod_ibge": "3508306",
+        "nome": "Cabrália Paulista",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "3928",
+        "cod_ibge": "4101200",
+        "nome": "Antonina",
+        "nome_uf": "Paraná",
+        "sigla_uf": "PR",
+        "uf": "41"
+    },
+    {
+        "id": "5475",
+        "cod_ibge": "5213905",
+        "nome": "Mossâmedes",
+        "nome_uf": "Goiás",
+        "sigla_uf": "GO",
+        "uf": "52"
+    },
+    {
+        "id": "611",
+        "cod_ibge": "2109759",
+        "nome": "Santa Filomena do Maranhão",
+        "nome_uf": "Maranhão",
+        "sigla_uf": "MA",
+        "uf": "21"
+    },
+    {
+        "id": "2280",
+        "cod_ibge": "3103306",
+        "nome": "Aracitaba",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "5058",
+        "cod_ibge": "4321501",
+        "nome": "Torres",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "1165",
+        "cod_ibge": "2408300",
+        "nome": "Nova Cruz",
+        "nome_uf": "Rio Grande do Norte",
+        "sigla_uf": "RN",
+        "uf": "24"
+    },
+    {
+        "id": "4967",
+        "cod_ibge": "4316709",
+        "nome": "Santa Bárbara do Sul",
+        "nome_uf": "Rio Grande do Sul",
+        "sigla_uf": "RS",
+        "uf": "43"
+    },
+    {
+        "id": "1631",
+        "cod_ibge": "2614709",
+        "nome": "Tacaimbó",
+        "nome_uf": "Pernambuco",
+        "sigla_uf": "PE",
+        "uf": "26"
+    },
+    {
+        "id": "3245",
+        "cod_ibge": "3304706",
+        "nome": "Santo Antônio de Pádua",
+        "nome_uf": "Rio de Janeiro",
+        "sigla_uf": "RJ",
+        "uf": "33"
+    },
+    {
+        "id": "5119",
+        "cod_ibge": "5002209",
+        "nome": "Bonito",
+        "nome_uf": "Mato Grosso do Sul",
+        "sigla_uf": "MS",
+        "uf": "50"
+    },
+    {
+        "id": "1807",
+        "cod_ibge": "2805604",
+        "nome": "Porto da Folha",
+        "nome_uf": "Sergipe",
+        "sigla_uf": "SE",
+        "uf": "28"
+    },
+    {
+        "id": "4225",
+        "cod_ibge": "4122404",
+        "nome": "Rolândia",
+        "nome_uf": "Paraná",
+        "sigla_uf": "PR",
+        "uf": "41"
+    },
+    {
+        "id": "3009",
+        "cod_ibge": "3165008",
+        "nome": "São Tiago",
+        "nome_uf": "Minas Gerais",
+        "sigla_uf": "MG",
+        "uf": "31"
+    },
+    {
+        "id": "5110",
+        "cod_ibge": "5000906",
+        "nome": "Antônio João",
+        "nome_uf": "Mato Grosso do Sul",
+        "sigla_uf": "MS",
+        "uf": "50"
+    },
+    {
+        "id": "2087",
+        "cod_ibge": "2921500",
+        "nome": "Monte Santo",
+        "nome_uf": "Bahia",
+        "sigla_uf": "BA",
+        "uf": "29"
+    },
+    {
+        "id": "3476",
+        "cod_ibge": "3518206",
+        "nome": "Guararapes",
+        "nome_uf": "São Paulo",
+        "sigla_uf": "SP",
+        "uf": "35"
+    },
+    {
+        "id": "167",
+        "cod_ibge": "1501204",
+        "nome": "Baião",
+        "nome_uf": "Pará",
+        "sigla_uf": "PA",
+        "uf": "15"
+    }
+]

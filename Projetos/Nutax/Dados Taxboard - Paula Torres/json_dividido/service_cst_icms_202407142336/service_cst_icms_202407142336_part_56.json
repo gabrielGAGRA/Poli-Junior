@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "1931",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1931400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2126",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2126400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2253",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2253400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2356",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2356400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2551",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2551400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2663",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2663400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2915",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2915400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3102",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3102400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3356",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3356400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5109",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5109400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5151",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5151400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5254",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5254400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5355",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5355400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5415",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5415400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5603",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5603400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5664",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5664400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5914",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5914400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5931",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5931400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6113",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6113400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6156",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6156400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6258",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6258400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6401",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6401400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6505",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6505400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6658",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6658400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6908",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6908400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6924",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6924400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "7207",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "7207400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1113",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1113400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1202",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1202400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1302",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1302400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1408",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1408400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1554",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1554400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1663",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1663400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1915",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1915400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2101",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2101400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2154",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2154400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2257",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2257400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2407",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2407400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2555",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2555400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2903",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2903400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2919",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2919400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3202",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3202400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3556",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3556400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5113",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5113400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5156",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5156400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5258",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5258400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5360",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5360400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5503",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5503400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5652",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5652400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5902",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5902400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5918",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5918400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6101",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6101400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6117",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6117400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6206",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6206400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6304",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6304400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6408",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6408400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6554",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6554400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6662",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6662400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6912",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6912400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6932",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6932400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "7301",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "7301400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1120",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1120400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1206",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1206400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1306",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1306400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1414",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1414400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1601",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1601400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1903",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1903400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1919",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1919400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2116",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2116400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2204",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2204400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2304",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2304400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2411",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2411400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2651",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2651400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2907",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2907400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2923",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2923400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3211",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3211400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3930",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3930400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5117",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5117400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5206",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5206400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5304",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5304400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5405",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5405400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5552",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5552400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5656",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5656400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5906",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5906400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5922",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5922400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6105",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6105400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6122",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6122400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6210",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6210400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6351",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6351400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6412",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6412400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6603",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6603400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6666",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6666400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6916",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6916400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "7102",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "7102400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "7553",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "7553400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1124",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1124410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "1209",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1209410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "1353",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1353410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "1452",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1452410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "1604",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1604410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    }
+]

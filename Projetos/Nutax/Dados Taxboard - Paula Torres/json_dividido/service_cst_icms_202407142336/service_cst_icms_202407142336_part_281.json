@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "3930",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "3930000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5117",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5117000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5206",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5206000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5304",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5304000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5405",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5405000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5552",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5552000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5656",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5656000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5906",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5906000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "5922",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "5922000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6105",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6105000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6122",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6122000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6210",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6210000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6351",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6351000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6412",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6412000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6603",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6603000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6666",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6666000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "6916",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "6916000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "7102",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "7102000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "7553",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "7553000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1124",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1124010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1209",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1209010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1353",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1353010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1452",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1452010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1604",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1604010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1906",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1906010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1922",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1922010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2120",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2120010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2207",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2207010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2351",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2351010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2501",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2501010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2658",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2658010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2910",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2910010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "2931",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2931010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "3351",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3351010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5102",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5102010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5120",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5120010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5209",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5209010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5307",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5307010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5410",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5410010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5555",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5555010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5659",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5659010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5909",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5909010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "5925",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5925010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6108",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6108010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6125",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6125010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6253",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6253010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6354",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6354010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6415",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6415010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6653",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6653010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6903",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6903010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "6919",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6919010",
+        "icms": "Sim",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "7127",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7127010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "7654",
+        "cst": "010",
+        "descr_resumida": "Tributado com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7654010",
+        "icms": "Não",
+        "cst_descr": "010|Tributado com ST - Nacional",
+        "numeracao": "9"
+    },
+    {
+        "cfop": "1128",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1128020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1253",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1253020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1356",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1356020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1504",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1504020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1653",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1653020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1909",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1909020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1925",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "1925020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2124",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2124020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2251",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2251020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2354",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2354020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2505",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2505020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2661",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2661020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2913",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2913020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "2949",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "2949020",
+        "icms": "Checar",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "3354",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "3354020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5105",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5105020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5124",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5124020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5252",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5252020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5353",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5353020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5413",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5413020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5601",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5601020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5662",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5662020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5912",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5912020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "5928",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "5928020",
+        "icms": "Checar",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6111",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6111020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6153",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6153020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6256",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6256020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6357",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6357020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6503",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6503020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6656",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6656020",
+        "icms": "Sim",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6906",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6906020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "6922",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "6922020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "7205",
+        "cst": "020",
+        "descr_resumida": "Redução BC - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo",
+        "chave": "7205020",
+        "icms": "Não",
+        "cst_descr": "020|Redução BC - Nacional",
+        "numeracao": "10"
+    },
+    {
+        "cfop": "1101",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1101030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1153",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1153030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1256",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1256030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1403",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1403030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1551",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1551030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1660",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1660030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1912",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1912030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "1932",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1932030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "2151",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2151030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "2254",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2254030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "2401",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2401030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "2552",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2552030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "2664",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2664030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    },
+    {
+        "cfop": "2916",
+        "cst": "030",
+        "descr_resumida": "Isento ou NT com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2916030",
+        "icms": "Não",
+        "cst_descr": "030|Isento ou NT com ST - Nacional",
+        "numeracao": "11"
+    }
+]

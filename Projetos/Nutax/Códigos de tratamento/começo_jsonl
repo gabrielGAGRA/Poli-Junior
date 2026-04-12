@@ -1,0 +1,25 @@
+import json
+
+# Dados a serem escritos no arquivo
+data = [
+    {"pergunta": "Qual foi o ICMS próprio total apurado no período para a empresa Torres carregada no modelo?", "resposta": "R$1,76 milhões"},
+    {"pergunta": "Qual o valor total de saídas carregado no modelo?", "resposta": "Valor Total de Saídas: "},
+    {"pergunta": "Qual o valor do débito de ICMS?", "resposta": "Débito de ICMS: [valor]"},
+    {"pergunta": "Quando das saídas foi para dentro do estado?", "resposta": "Saídas para Dentro do Estado: [valor]"},
+    {"pergunta": "Quanto das saídas foi para fora do estado?", "resposta": "Saídas para Fora do Estado: [valor]"},
+    {"pergunta": "Qual foi o valor das exportações?", "resposta": "Valor das Exportações: [valor]"},
+    {"pergunta": "Qual o valor das ENTRADAS ocorridas sob a CST 000?", "resposta": "Entradas sob CST 000: [valor]"},
+    {"pergunta": "Qual o valor das entradas de operações e de ICMS ocorridas na filial final 0006-09?", "resposta": "Entradas na Filial 0006-09: [valor]"},
+    {"pergunta": "Qual o valor de vendas por empresa?", "resposta": "Valor de Vendas por Empresa: [valor]"},
+    {"pergunta": "Qual o valor total recolhido por empresa no período?", "resposta": "Valor Total Recolhido por Empresa: [valor]"}
+]
+
+# Nome do arquivo JSONL
+file_name = 'respostas.jsonl'
+
+# Abrir o arquivo em modo de escrita
+with open(file_name, 'w') as file:
+    # Iterar sobre os dados e escrever cada objeto JSON em uma linha
+    for entry in data:
+        json.dump(entry, file)
+        file.write('\n')

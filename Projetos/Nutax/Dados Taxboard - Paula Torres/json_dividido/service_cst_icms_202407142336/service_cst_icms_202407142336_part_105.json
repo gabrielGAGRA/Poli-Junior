@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5656",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "5656820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "5906",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "5906820",
+        "icms": "Não",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "5922",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "5922820",
+        "icms": "Não",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6105",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6105820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6122",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6122820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6210",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6210820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6351",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6351820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6412",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6412820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6603",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6603820",
+        "icms": "Sim",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6666",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6666820",
+        "icms": "Não",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "6916",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "6916820",
+        "icms": "Não",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "7102",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "7102820",
+        "icms": "Não",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "7553",
+        "cst": "820",
+        "descr_resumida": "Redução BC - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo",
+        "chave": "7553820",
+        "icms": "Não",
+        "cst_descr": "820|Redução BC - Nacional > 70",
+        "numeracao": "98"
+    },
+    {
+        "cfop": "1124",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1124830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1209",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1209830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1353",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1353830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1452",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1452830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1604",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1604830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1906",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1906830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1922",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1922830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2120",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2120830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2207",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2207830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2351",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2351830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2501",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2501830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2658",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2658830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2910",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2910830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "2931",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2931830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "3351",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3351830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5102",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5102830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5120",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5120830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5209",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5209830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5307",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5307830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5410",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5410830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5555",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5555830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5659",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5659830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5909",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5909830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "5925",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5925830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6108",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6108830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6125",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6125830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6253",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6253830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6354",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6354830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6415",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6415830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6653",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6653830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6903",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6903830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "6919",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6919830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "7127",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7127830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "7654",
+        "cst": "830",
+        "descr_resumida": "Isento ou NT com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7654830",
+        "icms": "Não",
+        "cst_descr": "830|Isento ou NT com ST - Nacional > 70",
+        "numeracao": "99"
+    },
+    {
+        "cfop": "1128",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1128840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1253",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1253840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1356",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1356840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1504",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1504840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1653",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1653840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1909",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1909840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1925",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "1925840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2124",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2124840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2251",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2251840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2354",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2354840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2505",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2505840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2661",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2661840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2913",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2913840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "2949",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "2949840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "3354",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "3354840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5105",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5105840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5124",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5124840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5252",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5252840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5353",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5353840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5413",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5413840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5601",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5601840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5662",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5662840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5912",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5912840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "5928",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "5928840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6111",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6111840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6153",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6153840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6256",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6256840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6357",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6357840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6503",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6503840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6656",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6656840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6906",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6906840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "6922",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "6922840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "7205",
+        "cst": "840",
+        "descr_resumida": "Isento  - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Isenta",
+        "chave": "7205840",
+        "icms": "Não",
+        "cst_descr": "840|Isento  - Nacional > 70",
+        "numeracao": "100"
+    },
+    {
+        "cfop": "1101",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1101841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1153",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1153841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1256",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1256841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1403",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1403841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1551",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1551841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1660",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1660841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1912",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1912841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "1932",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "1932841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "2151",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "2151841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "2254",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "2254841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "2401",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "2401841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "2552",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "2552841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "2664",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "2664841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "2916",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "2916841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "3126",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "3126841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "3503",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "3503841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "5110",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "5110841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "5152",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "5152841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "5255",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "5255841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    },
+    {
+        "cfop": "5356",
+        "cst": "841",
+        "descr_resumida": "Não Tributada - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Não tributada",
+        "chave": "5356841",
+        "icms": "Não",
+        "cst_descr": "841|Não Tributada - Nacional > 70",
+        "numeracao": "101"
+    }
+]

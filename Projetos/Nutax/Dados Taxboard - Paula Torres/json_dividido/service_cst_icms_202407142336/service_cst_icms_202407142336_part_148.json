@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6206",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6206070",
+        "icms": "Sim",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "6304",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6304070",
+        "icms": "Sim",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "6408",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6408070",
+        "icms": "Sim",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "6554",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6554070",
+        "icms": "Não",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "6662",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6662070",
+        "icms": "Sim",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "6912",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6912070",
+        "icms": "Não",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "6932",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6932070",
+        "icms": "Sim",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "7301",
+        "cst": "070",
+        "descr_resumida": "Redução BC com ST - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7301070",
+        "icms": "Não",
+        "cst_descr": "070|Redução BC com ST - Nacional",
+        "numeracao": "17"
+    },
+    {
+        "cfop": "1118",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1118090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1205",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1205090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1305",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1305090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1411",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1411090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1557",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1557090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1902",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1902090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1918",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "1918090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2113",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2113090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2203",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2203090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2303",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2303090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2410",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2410090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2603",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2603090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2906",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2906090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "2922",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "2922090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "3207",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "3207090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "3653",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "3653090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5116",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5116090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5205",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5205090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5303",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5303090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5403",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5403090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5551",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5551090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5655",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5655090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5905",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5905090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "5921",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "5921090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6104",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6104090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6120",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6120090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6209",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6209090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6307",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6307090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6411",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6411090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6557",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6557090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6665",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6665090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "6915",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "6915090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "7101",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "7101090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "7551",
+        "cst": "090",
+        "descr_resumida": "Outras - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Outras",
+        "chave": "7551090",
+        "icms": "Não",
+        "cst_descr": "090|Outras - Nacional",
+        "numeracao": "18"
+    },
+    {
+        "cfop": "1121",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1121100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1207",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1207100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1351",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1351100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1415",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1415100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1602",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1602100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1904",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1904100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1920",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "1920100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2117",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2117100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2205",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2205100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2305",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2305100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2414",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2414100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2652",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2652100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2908",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2908100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "2924",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "2924100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "3251",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "3251100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "3949",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "3949100",
+        "icms": "Checar",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5118",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5118100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5207",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5207100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5305",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5305100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5408",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5408100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5553",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5553100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5657",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5657100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5907",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5907100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "5923",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "5923100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6106",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6106100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6123",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6123100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6251",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6251100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6352",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6352100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6413",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6413100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6651",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6651100",
+        "icms": "Sim",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6901",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6901100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "6917",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "6917100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "7105",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "7105100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "7556",
+        "cst": "100",
+        "descr_resumida": "Tributada integralmente - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada integralmente",
+        "chave": "7556100",
+        "icms": "Não",
+        "cst_descr": "100|Tributada integralmente - Importado",
+        "numeracao": "19"
+    },
+    {
+        "cfop": "1125",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1125101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1251",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1251101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1354",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1354101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1501",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1501101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1605",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1605101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1907",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1907101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1923",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "1923101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2121",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2121101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2208",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2208101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2352",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2352101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2503",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2503101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2659",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2659101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2911",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2911101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2932",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2932101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "3352",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "3352101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5103",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5103101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5122",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5122101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5210",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5210101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5351",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5351101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5411",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5411101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5556",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5556101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5660",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5660101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5910",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5910101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5926",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5926101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    }
+]

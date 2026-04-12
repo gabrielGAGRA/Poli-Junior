@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5117",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5117200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5206",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5206200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5304",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5304200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5405",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5405200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5552",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5552200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5656",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5656200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5906",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5906200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "5922",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "5922200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6105",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6105200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6122",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6122200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6210",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6210200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6351",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6351200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6412",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6412200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6603",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6603200",
+        "icms": "Sim",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6666",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6666200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "6916",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "6916200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "7102",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "7102200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "7553",
+        "cst": "200",
+        "descr_resumida": "Tributada integralmente - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada integralmente",
+        "chave": "7553200",
+        "icms": "Não",
+        "cst_descr": "200|Tributada integralmente - Extrangeira",
+        "numeracao": "30"
+    },
+    {
+        "cfop": "1124",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1124201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1209",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1209201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1353",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1353201",
+        "icms": "Sim",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1452",
+        "cst": "201",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por substituição tributária",
+        "chave": "1452201",
+        "icms": "Não",
+        "cst_descr": "201|Simples Nacional",
+        "numeracao": "4"
+    },
+    {
+        "cfop": "1906",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "1906441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "1922",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "1922441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2120",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2120441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2207",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2207441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2351",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2351441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2501",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2501441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2658",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2658441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2910",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2910441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "2931",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "2931441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "3351",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "3351441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5102",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5102441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5120",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5120441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5209",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5209441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5307",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5307441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5410",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5410441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5555",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5555441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5659",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5659441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5909",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5909441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "5925",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "5925441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6108",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6108441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6125",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6125441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6253",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6253441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6354",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6354441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6415",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6415441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "1604",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "1604540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "1906",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "1906540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "1922",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "1922540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2120",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2120540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2207",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2207540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2351",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2351540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2501",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2501540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2658",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2658540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2910",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2910540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "2931",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "2931540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "3351",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "3351540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5102",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5102540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5120",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5120540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5209",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5209540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5307",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5307540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5410",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5410540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5555",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5555540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5659",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5659540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5909",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5909540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "5925",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "5925540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6108",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6108540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6125",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6125540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6253",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6253540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6354",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6354540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6415",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6415540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6653",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6653540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6903",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6903540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "6919",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "6919540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "7127",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "7127540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "7654",
+        "cst": "540",
+        "descr_resumida": "Isento  - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Isenta",
+        "chave": "7654540",
+        "icms": "Não",
+        "cst_descr": "540|Isento  - Nacional < 40",
+        "numeracao": "67"
+    },
+    {
+        "cfop": "1128",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1128541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1253",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1253541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1356",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1356541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1504",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1504541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1653",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1653541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1909",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1909541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1925",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "1925541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2124",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2124541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2251",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2251541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2354",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2354541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2505",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2505541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2661",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2661541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2913",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2913541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "2949",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "2949541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "3354",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "3354541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5105",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5105541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5124",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5124541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5252",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5252541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5353",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5353541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5413",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5413541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5601",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5601541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5662",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5662541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5912",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5912541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "5928",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "5928541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    }
+]

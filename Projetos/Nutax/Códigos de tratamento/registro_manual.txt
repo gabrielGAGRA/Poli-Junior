@@ -1,0 +1,230 @@
+REGISTRO C190: REGISTRO ANALÍTICO DO DOCUMENTO (CÓDIGO 01, 1B, 04, 55 e 65) 
+ 
+Este registro tem por objetivo representar a escrituração dos documentos fiscais totalizados por CST, CFOP e 
+Alíquota de ICMS.  
+ 
+ 
+Validação do Registro: não podem ser informados dois ou mais registros com a mesma combinação de valores dos 
+campos: CST_ICMS, CFOP e ALIQ_ICMS. A combinação dos valores dos campos CST_ICMS, CFOP e ALIQ_ICMS deve 
+existir nos respectivos registros de itens do C170, quando este registro for exigido. 
+ 
+Nº Campo 
+Descrição 
+Tipo 
+Tam 
+Dec 
+Entr 
+Saída 
+01 
+REG 
+Texto fixo contendo "C190" 
+C 
+004 
+- 
+O 
+O 
+02 
+CST_ICMS 
+Código da Situação Tributária, conforme a 
+N 
+003* 
+- 
+O 
+O 
+Guia Prático EFD-ICMS/IPI – Versão 3.1.6  
+Atualização: 09 de novembro de 2023 
+ 
+ 
+Página 106 de 362 
+ 
+Tabela indicada no item 4.3.1 
+03 
+CFOP 
+Código Fiscal de Operação e Prestação do 
+agrupamento de itens 
+N 
+004* 
+- 
+O 
+O 
+04 
+ALIQ_ICMS 
+Alíquota do ICMS 
+N 
+006 
+02 
+OC 
+OC 
+05 
+VL_OPR 
+Valor 
+da 
+operação 
+na 
+combinação 
+de 
+CST_ICMS, CFOP e alíquota do ICMS, 
+correspondente ao somatório do valor das 
+mercadorias, despesas acessórias (frete, seguros 
+e 
+outras 
+despesas 
+acessórias), 
+ICMS_ST, 
+FCP_ST e IPI. 
+N 
+- 
+02 
+O 
+O 
+06 
+VL_BC_ICMS 
+Parcela correspondente ao "Valor da base de 
+cálculo do ICMS" referente à combinação de 
+CST_ICMS, CFOP e alíquota do ICMS. 
+N 
+- 
+02 
+O 
+O 
+07 
+VL_ICMS 
+Parcela correspondente ao "Valor do ICMS", 
+incluindo o FCP, quando aplicável, referente à 
+combinação de CST_ICMS, CFOP e alíquota do 
+ICMS. 
+N 
+- 
+02 
+O 
+O 
+08 
+VL_BC_ICMS_
+ST 
+Parcela correspondente ao "Valor da base de 
+cálculo do ICMS" da substituição tributária 
+referente à combinação de CST_ICMS, CFOP e 
+alíquota do ICMS. 
+N 
+- 
+02 
+O 
+O 
+09 
+VL_ICMS_ST 
+Parcela 
+correspondente 
+ao 
+valor 
+creditado/debitado do ICMS da substituição 
+tributária, incluindo o FCP_ ST, quando 
+aplicável, 
+referente 
+à 
+combinação 
+de 
+CST_ICMS, CFOP, e alíquota do ICMS. 
+N 
+- 
+02 
+O 
+O 
+10 
+VL_RED_BC 
+Valor não tributado em função da redução da 
+base 
+de 
+cálculo 
+do 
+ICMS, 
+referente 
+à 
+combinação de CST_ICMS, CFOP e alíquota do 
+ICMS. 
+N 
+- 
+02 
+O 
+O 
+11 
+VL_IPI 
+Parcela correspondente ao "Valor do IPI" 
+referente à combinação CST_ICMS, CFOP e 
+alíquota do ICMS. 
+N 
+- 
+02 
+O 
+O 
+12 
+COD_OBS 
+Código da observação do lançamento fiscal 
+(campo 02 do Registro 0460) 
+C 
+006 
+- 
+OC 
+OC 
+Observações:  
+ 
+Nível hierárquico - 3 
+Ocorrência - 1:N 
+ 
+Campo 01 (REG) - Valor Válido: [C190] 
+ 
+Campo 02 (CST_ICMS) - Validação: o valor informado no campo deve existir na Tabela da Situação Tributária referente ao 
+ICMS, constante do Artigo 5º do Convênio SN/70. 
+ 
+Campo 03 (CFOP) - Preenchimento: nas operações de entradas, devem ser registrados os códigos de operação que 
+correspondem ao tratamento tributário relativo à destinação do item. 
+Validação: o valor informado no campo deve existir na Tabela de Código Fiscal de Operação e Prestação, conforme Ajuste 
+SINIEF 07/01. Para Notas Fiscais Eletrônicas ao Consumidor Final (NFC-e) só poderão ser informados CFOP iniciados com 
+5. 
+Se o campo IND_OPER do registro C100 for igual a “0” (zero), então o primeiro caractere do CFOP deve ser igual a 1, 2 ou 
+3. Se campo IND_OPER do registro C100 for igual a “1” (um), então o primeiro caractere do CFOP deve ser igual a 5, 6 ou 7.  
+ 
+Campo 05 (VL_OPR) - Preenchimento: Na combinação de CST_ICMS, CFOP e ALIQ_ICMS, informar neste campo o 
+valor das mercadorias somadas aos valores de fretes, seguros e outras despesas acessórias e os valores de ICMS_ST, FCP_ST 
+e IPI (somente quando o IPI está destacado na NF), subtraídos o desconto incondicional e o abatimento não tributado e não 
+comercial.  
+Guia Prático EFD-ICMS/IPI – Versão 3.1.6  
+Atualização: 09 de novembro de 2023 
+ 
+ 
+Página 107 de 362 
+ 
+Validação: O somatório dos valores deste campo deve, em princípio, corresponder ao valor total do documento informado no 
+registro C100. Na ocorrência de divergência entre os valores será emitida uma “Advertência” pelo PVA-EFD-ICMS/IPI, o 
+que não impedirá a assinatura e transmissão do arquivo. 
+ 
+Campo 06 (VL_BC_ICMS) - Preenchimento: informar a base de cálculo do ICMS, referente à combinação dos campos 
+CST_ICMS, CFOP e ALIQ_ICMS deste registro. 
+Validação: o valor constante neste campo deve corresponder à soma dos valores do Campo VL_BC_ICMS dos registros 
+C170 (itens), se existirem, que possuam a mesma combinação de CST, CFOP e Alíquota deste registro. 
+ 
+Campo 07 (VL_ICMS) - Preenchimento: informar o valor do ICMS referente à combinação dos campos CST_ICMS, 
+CFOP e ALIQ_ICMS deste registro. 
+Validação: o valor constante neste campo deve corresponder à soma dos valores do campo VL_ICMS do registro C170 
+(itens), se existirem, que possuam a mesma combinação de CST, CFOP e Alíquota deste registro. 
+ 
+Campo 08 (VL_BC_ICMS_ST) - Preenchimento: informar a base de cálculo do ICMS ST referente à combinação dos 
+campos CST_ICMS, CFOP e ALIQ_ICMS deste registro. 
+Validação: o valor constante neste campo deve corresponder à soma dos valores do campo VL_BC_ICMS ST do registro 
+C170 (itens), se existirem, que possuam a mesma combinação de CST, CFOP e Alíquota deste registro. 
+ 
+Campo 09 (VL_ICMS_ST) - Preenchimento: informar o valor creditado/debitado do ICMS da substituição tributária, 
+referente à combinação dos campos CST_ICMS, CFOP, e ALIQ_ICMS deste registro. 
+Validação: o valor constante neste campo deve corresponder à soma dos valores do campo VL_ICMS ST do registro C170 
+(itens), se existirem, que possuam a mesma combinação de CST, CFOP e Alíquota deste registro. 
+ 
+Campo 10 (VL_RED_BC) - Preenchimento: informar o valor não tributado em função da redução da base de cálculo do 
+ICMS, referente à combinação dos campos CST_ICMS, CFOP e ALIQ_ICMS deste registro. 
+Validação: Quando o campo COD_SIT do registro mestre for igual a “00” ou “01” então o campo VL_RED_BC deve ser 
+maior que zero se o 2º e 3º caracteres do CST_ICMS forem iguais a 20 ou 70. 
+ 
+Campo 11 (VL_IPI) - Preenchimento: informar o valor do IPI referente à combinação dos campos CST_ICMS, CFOP e 
+ALIQ_ICMS deste registro. 
+ 
+Campo 12 (COD_OBS) - Preenchimento: este campo só deve ser informado pelos contribuintes localizados em UF que 
+determine em sua legislação o seu preenchimento. 
+Validação: o código informado deve constar do registro 0460.  

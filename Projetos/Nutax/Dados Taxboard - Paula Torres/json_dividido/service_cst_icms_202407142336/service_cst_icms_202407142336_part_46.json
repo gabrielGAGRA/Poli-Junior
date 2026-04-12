@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6355",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "6355040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "6501",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "6501040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "6654",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "6654040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "6904",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "6904040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "6920",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "6920040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "7201",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "7201040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "7930",
+        "cst": "040",
+        "descr_resumida": "Isento  - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Isenta",
+        "chave": "7930040",
+        "icms": "Não",
+        "cst_descr": "040|Isento  - Nacional",
+        "numeracao": "12"
+    },
+    {
+        "cfop": "1151",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1151041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1254",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1254041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1360",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1360041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1505",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1505041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1658",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1658041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1910",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1910041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1926",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "1926041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "2125",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "2125041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "2252",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "2252041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "2355",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "2355041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "2506",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "2506041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "2662",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "2662041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "2914",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "2914041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "3101",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "3101041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "3355",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "3355041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5106",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5106041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5125",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5125041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5253",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5253041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5354",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5354041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5414",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5414041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5602",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5602041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5663",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5663041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5913",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5913041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "5929",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "5929041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6112",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6112041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6155",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6155041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6257",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6257041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6359",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6359041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6504",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6504041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6657",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6657041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6907",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6907041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "6923",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "6923041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "7206",
+        "cst": "041",
+        "descr_resumida": "Não Tributada - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Não tributada",
+        "chave": "7206041",
+        "icms": "Não",
+        "cst_descr": "041|Não Tributada - Nacional",
+        "numeracao": "13"
+    },
+    {
+        "cfop": "1102",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1102050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1154",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1154050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1257",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1257050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1406",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1406050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1552",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1552050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1661",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1661050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1913",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1913050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1933",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "1933050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "2152",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "2152050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "2255",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "2255050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "2403",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "2403050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "2553",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "2553050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "2901",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "2901050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "2917",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "2917050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "3127",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "3127050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "3551",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "3551050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5111",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5111050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5153",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5153050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5256",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5256050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5357",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5357050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5501",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5501050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5606",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5606050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5666",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5666050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5916",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5916050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "5933",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "5933050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6115",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6115050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6202",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6202050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6302",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6302050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6403",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6403050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6552",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6552050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6660",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6660050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6910",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6910050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "6929",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "6929050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "7211",
+        "cst": "050",
+        "descr_resumida": "Suspensão - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Suspensão",
+        "chave": "7211050",
+        "icms": "Não",
+        "cst_descr": "050|Suspensão - Nacional",
+        "numeracao": "14"
+    },
+    {
+        "cfop": "1116",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1116051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "1203",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1203051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "1303",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1303051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "1409",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1409051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "1555",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1555051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "1664",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1664051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "1916",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "1916051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2102",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2102051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2201",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2201051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2301",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2301051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2408",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2408051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2556",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2556051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2904",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2904051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "2920",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "2920051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "3205",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "3205051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "3651",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "3651051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5114",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5114051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5201",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5201051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5301",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5301051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5401",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5401051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5504",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5504051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5653",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5653051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5903",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5903051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "5919",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "5919051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "6102",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "6102051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    },
+    {
+        "cfop": "6118",
+        "cst": "051",
+        "descr_resumida": "Diferimento - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Diferimento",
+        "chave": "6118051",
+        "icms": "Não",
+        "cst_descr": "051|Diferimento - Nacional",
+        "numeracao": "15"
+    }
+]

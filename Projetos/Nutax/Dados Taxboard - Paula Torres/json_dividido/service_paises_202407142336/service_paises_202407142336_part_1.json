@@ -1,0 +1,802 @@
+[
+    {
+        "id": "214",
+        "bacen": "7447",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SIRIA",
+        "situacao": " REPUBLICA ARABE DA"
+    },
+    {
+        "id": "245",
+        "bacen": "8451",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "URUGUAI",
+        "situacao": "NULL"
+    },
+    {
+        "id": "90",
+        "bacen": "3018",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "GRECIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "70",
+        "bacen": "2437",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ERITREIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "29",
+        "bacen": "981",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BOSNIA-HERZEGOVINA (REPUBLICA DA)",
+        "situacao": "NULL"
+    },
+    {
+        "id": "179",
+        "bacen": "5932",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "PITCAIRN",
+        "situacao": "ILHA"
+    },
+    {
+        "id": "52",
+        "bacen": "1694",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "COLOMBIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "16",
+        "bacen": "698",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "AUSTRALIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "107",
+        "bacen": "3595",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MAN",
+        "situacao": " ILHA DE"
+    },
+    {
+        "id": "165",
+        "bacen": "5380",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "NORUEGA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "138",
+        "bacen": "4642",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MALI",
+        "situacao": "NULL"
+    },
+    {
+        "id": "58",
+        "bacen": "1937",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "COSTA DO MARFIM",
+        "situacao": "NULL"
+    },
+    {
+        "id": "170",
+        "bacen": "5568",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "OMA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "252",
+        "bacen": "8702",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "FIJI",
+        "situacao": "NULL"
+    },
+    {
+        "id": "ID",
+        "bacen": "bacen",
+        "dt_fim": "DT_FIM",
+        "dt_ini": "DT_INICIO",
+        "nome": "NOME",
+        "situacao": "SITUACAO"
+    },
+    {
+        "id": "33",
+        "bacen": "1058",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BRASIL",
+        "situacao": "NULL"
+    },
+    {
+        "id": "183",
+        "bacen": "6114",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "PORTO RICO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "230",
+        "bacen": "7838",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "DJIBUTI",
+        "situacao": "NULL"
+    },
+    {
+        "id": "17",
+        "bacen": "728",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "AUSTRIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "150",
+        "bacen": "4952",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MONACO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "18",
+        "bacen": "736",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "AZERBAIJAO",
+        "situacao": " REPUBLICA DO"
+    },
+    {
+        "id": "250",
+        "bacen": "8630",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "VIRGENS",
+        "situacao": "ILHAS (BRITANICAS)"
+    },
+    {
+        "id": "121",
+        "bacen": "4111",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "KIRIBATI",
+        "situacao": "NULL"
+    },
+    {
+        "id": "5",
+        "bacen": "310",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BURKINA FASO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "218",
+        "bacen": "7552",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SVALBARD E JAN MAYERN",
+        "situacao": "INCLUÍDO"
+    },
+    {
+        "id": "9",
+        "bacen": "420",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ANTARTICA",
+        "situacao": "INCLUÍDO"
+    },
+    {
+        "id": "161",
+        "bacen": "5258",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "NIGER",
+        "situacao": "NULL"
+    },
+    {
+        "id": "242",
+        "bacen": "8281",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "TUVALU",
+        "situacao": "NULL"
+    },
+    {
+        "id": "30",
+        "bacen": "990",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BONAIRE",
+        "situacao": "INCLUÍDO"
+    },
+    {
+        "id": "191",
+        "bacen": "6700",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ROMENIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "112",
+        "bacen": "3727",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "IRA",
+        "situacao": " REPUBLICA ISLAMICA DO"
+    },
+    {
+        "id": "200",
+        "bacen": "6939",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SAO BARTOLOMEU",
+        "situacao": "INCLUÍDO"
+    },
+    {
+        "id": "26",
+        "bacen": "906",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BERMUDAS",
+        "situacao": "NULL"
+    },
+    {
+        "id": "86",
+        "bacen": "2917",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "GEORGIA",
+        "situacao": " REPUBLICA DA"
+    },
+    {
+        "id": "53",
+        "bacen": "1732",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "COMORES",
+        "situacao": " ILHAS"
+    },
+    {
+        "id": "131",
+        "bacen": "4456",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "LUXEMBURGO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "41",
+        "bacen": "1457",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "CAMAROES",
+        "situacao": "NULL"
+    },
+    {
+        "id": "92",
+        "bacen": "3093",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "GUADALUPE",
+        "situacao": "NULL"
+    },
+    {
+        "id": "162",
+        "bacen": "5282",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "NIGERIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "246",
+        "bacen": "8478",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "UZBEQUISTAO",
+        "situacao": " REPUBLICA DO"
+    },
+    {
+        "id": "248",
+        "bacen": "8508",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "VENEZUELA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "137",
+        "bacen": "4618",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MALDIVAS",
+        "situacao": "NULL"
+    },
+    {
+        "id": "10",
+        "bacen": "434",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ANTIGUA E BARBUDA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "102",
+        "bacen": "3433",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ILHA HEARD E ILHAS MCDONALD",
+        "situacao": "INCLUÍDO"
+    },
+    {
+        "id": "128",
+        "bacen": "4383",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "LIBIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "3",
+        "bacen": "175",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ALBANIA",
+        "situacao": " REPUBLICA  DA"
+    },
+    {
+        "id": "4",
+        "bacen": "230",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ALEMANHA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "134",
+        "bacen": "4502",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MADAGASCAR",
+        "situacao": "NULL"
+    },
+    {
+        "id": "209",
+        "bacen": "7285",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SENEGAL",
+        "situacao": "NULL"
+    },
+    {
+        "id": "180",
+        "bacen": "5991",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "POLINESIA FRANCESA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "24",
+        "bacen": "876",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BELGICA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "188",
+        "bacen": "6475",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "REPUBLICA DOMINICANA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "89",
+        "bacen": "2976",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "GRANADA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "110",
+        "bacen": "3654",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "INDONESIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "78",
+        "bacen": "2550",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "FALKLAND (ILHAS MALVINAS)",
+        "situacao": "NULL"
+    },
+    {
+        "id": "43",
+        "bacen": "1504",
+        "dt_fim": "2018-05-31 00:00:00.0000000",
+        "dt_ini": "2006-01-01 00:00:00.0000000",
+        "nome": "GUERNSEY",
+        "situacao": " ILHA DO CANAL (INCLUI ALDERNEY E SARK)"
+    },
+    {
+        "id": "219",
+        "bacen": "7560",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "AFRICA DO SUL",
+        "situacao": "NULL"
+    },
+    {
+        "id": "129",
+        "bacen": "4405",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "LIECHTENSTEIN",
+        "situacao": "NULL"
+    },
+    {
+        "id": "207",
+        "bacen": "7153",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SANTA LUCIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "174",
+        "bacen": "5762",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "PAQUISTAO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "237",
+        "bacen": "8150",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "TRINIDAD E TOBAGO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "68",
+        "bacen": "2399",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "EQUADOR",
+        "situacao": "NULL"
+    },
+    {
+        "id": "74",
+        "bacen": "2470",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ESLOVACA",
+        "situacao": " REPUBLICA"
+    },
+    {
+        "id": "39",
+        "bacen": "1376",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "CAYMAN",
+        "situacao": " ILHAS"
+    },
+    {
+        "id": "210",
+        "bacen": "7315",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SEYCHELLES",
+        "situacao": "NULL"
+    },
+    {
+        "id": "234",
+        "bacen": "8001",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "TOGO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "196",
+        "bacen": "6874",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "EL SALVADOR",
+        "situacao": "NULL"
+    },
+    {
+        "id": "178",
+        "bacen": "5894",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "PERU",
+        "situacao": "NULL"
+    },
+    {
+        "id": "19",
+        "bacen": "779",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BAHAMAS",
+        "situacao": " ILHAS"
+    },
+    {
+        "id": "48",
+        "bacen": "1600",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "CHINA",
+        "situacao": " REPUBLICA POPULAR"
+    },
+    {
+        "id": "253",
+        "bacen": "8753",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "WALLIS E FUTUNA",
+        "situacao": " ILHAS"
+    },
+    {
+        "id": "56",
+        "bacen": "1872",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "COREIA (DO NORTE)",
+        "situacao": " REP.POP.DEMOCRATICA"
+    },
+    {
+        "id": "222",
+        "bacen": "7641",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SUECIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "66",
+        "bacen": "2321",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "DINAMARCA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "31",
+        "bacen": "1015",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BOTSUANA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "177",
+        "bacen": "5860",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "PARAGUAI",
+        "situacao": "NULL"
+    },
+    {
+        "id": "15",
+        "bacen": "655",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ARUBA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "37",
+        "bacen": "1198",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "BUTAO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "7",
+        "bacen": "400",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ANGOLA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "63",
+        "bacen": "1996",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "CUBA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "69",
+        "bacen": "2402",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "EGITO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "232",
+        "bacen": "7919",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "TCHECA",
+        "situacao": " REPUBLICA"
+    },
+    {
+        "id": "50",
+        "bacen": "1635",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "CHIPRE",
+        "situacao": "NULL"
+    },
+    {
+        "id": "240",
+        "bacen": "8249",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "TURCOMENISTAO",
+        "situacao": " REPUBLICA DO"
+    },
+    {
+        "id": "109",
+        "bacen": "3611",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "INDIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "249",
+        "bacen": "8583",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "VIETNA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "96",
+        "bacen": "3255",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "GUIANA FRANCESA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "186",
+        "bacen": "6289",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "REINO UNIDO",
+        "situacao": "NULL"
+    },
+    {
+        "id": "206",
+        "bacen": "7102",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SANTA HELENA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "111",
+        "bacen": "3697",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "IRAQUE",
+        "situacao": "NULL"
+    },
+    {
+        "id": "167",
+        "bacen": "5452",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "PAPUA NOVA GUINE",
+        "situacao": "NULL"
+    },
+    {
+        "id": "120",
+        "bacen": "4030",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "JORDANIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "238",
+        "bacen": "8206",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "TUNISIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "184",
+        "bacen": "6238",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "QUENIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "75",
+        "bacen": "2496",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "ESTADOS UNIDOS",
+        "situacao": "NULL"
+    },
+    {
+        "id": "197",
+        "bacen": "6904",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SAMOA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "42",
+        "bacen": "1490",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "CANADA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "153",
+        "bacen": "4995",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MICRONESIA",
+        "situacao": "NULL"
+    },
+    {
+        "id": "194",
+        "bacen": "6777",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "SALOMAO",
+        "situacao": " ILHAS"
+    },
+    {
+        "id": "145",
+        "bacen": "4880",
+        "dt_fim": "NULL",
+        "dt_ini": "NULL",
+        "nome": "MAURITANIA",
+        "situacao": "NULL"
+    }
+]

@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6925",
+        "cst": "851",
+        "descr_resumida": "Diferimento - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Diferimento",
+        "chave": "6925851",
+        "icms": "Não",
+        "cst_descr": "851|Diferimento - Nacional > 70",
+        "numeracao": "103"
+    },
+    {
+        "cfop": "7210",
+        "cst": "851",
+        "descr_resumida": "Diferimento - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Diferimento",
+        "chave": "7210851",
+        "icms": "Não",
+        "cst_descr": "851|Diferimento - Nacional > 70",
+        "numeracao": "103"
+    },
+    {
+        "cfop": "1113",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1113860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1202",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1202860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1302",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1302860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1408",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1408860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1554",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1554860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1663",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1663860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1915",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1915860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2101",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2101860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2154",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2154860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2257",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2257860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2407",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2407860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2555",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2555860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2903",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2903860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "2919",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2919860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "3202",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "3202860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "3556",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "3556860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5113",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5113860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5156",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5156860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5258",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5258860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5360",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5360860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5503",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5503860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5652",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5652860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5902",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5902860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "5918",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5918860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6101",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6101860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6117",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6117860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6206",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6206860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6304",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6304860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6408",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6408860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6554",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6554860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6662",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6662860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6912",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6912860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "6932",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6932860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "7301",
+        "cst": "860",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "7301860",
+        "icms": "Não",
+        "cst_descr": "860|ST Retido anteriomente - Nacional > 70",
+        "numeracao": "104"
+    },
+    {
+        "cfop": "1118",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1118870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1205",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1205870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1305",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1305870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1411",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1411870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1557",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1557870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1902",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1902870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1918",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1918870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2113",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2113870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2203",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2203870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2303",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2303870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2410",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2410870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2603",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2603870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2906",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2906870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "2922",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2922870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "3207",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "3207870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "3653",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "3653870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5116",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5116870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5205",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5205870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5303",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5303870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5403",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5403870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5551",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5551870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5655",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5655870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5905",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5905870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5921",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5921870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6104",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6104870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6120",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6120870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6209",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6209870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6307",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6307870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6411",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6411870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6557",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6557870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6665",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6665870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6915",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6915870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "7101",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7101870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "7551",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7551870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1122",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1122890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1208",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1208890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1352",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1352890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1451",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1451890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1603",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1603890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1905",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1905890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1921",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1921890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2118",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2118890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2206",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2206890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2306",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2306890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2415",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2415890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2653",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2653890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2909",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2909890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2925",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2925890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "3301",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "3301890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5101",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5101890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5119",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5119890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5208",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5208890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5306",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5306890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5409",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5409890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5554",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5554890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5658",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5658890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5908",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5908890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5924",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5924890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6107",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6107890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6124",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6124890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6252",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6252890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6353",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6353890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6414",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6414890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6652",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6652890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    }
+]

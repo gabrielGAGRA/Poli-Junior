@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5105",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5105210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5124",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5124210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5252",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5252210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5353",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5353210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5413",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5413210",
+        "icms": "Não",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5601",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5601210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5662",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5662210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5912",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5912210",
+        "icms": "Não",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "5928",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5928210",
+        "icms": "Checar",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6111",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6111210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6153",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6153210",
+        "icms": "Não",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6256",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6256210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6357",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6357210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6503",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6503210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6656",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6656210",
+        "icms": "Sim",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6906",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6906210",
+        "icms": "Não",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "6922",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6922210",
+        "icms": "Não",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "7205",
+        "cst": "210",
+        "descr_resumida": "Tributado com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7205210",
+        "icms": "Não",
+        "cst_descr": "210|Tributado com ST - Extrangeira",
+        "numeracao": "31"
+    },
+    {
+        "cfop": "1101",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1101220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1153",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1153220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1256",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1256220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1403",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1403220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1551",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1551220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1660",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1660220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1912",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1912220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1932",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "1932220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "2151",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "2151220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "2254",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "2254220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "2401",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "2401220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "2552",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "2552220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "2664",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "2664220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "2916",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "2916220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "3126",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "3126220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "3503",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "3503220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5110",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5110220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5152",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5152220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5255",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5255220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5356",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5356220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5451",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5451220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5605",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5605220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5665",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5665220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5915",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5915220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "5932",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "5932220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6114",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6114220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6201",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6201220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6301",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6301220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6402",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6402220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6551",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6551220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6659",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6659220",
+        "icms": "Sim",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6909",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6909220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "6925",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "6925220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "7210",
+        "cst": "220",
+        "descr_resumida": "Redução BC - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Com redução de base de cálculo",
+        "chave": "7210220",
+        "icms": "Não",
+        "cst_descr": "220|Redução BC - Extrangeira",
+        "numeracao": "32"
+    },
+    {
+        "cfop": "1113",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1113230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1202",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1202230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1302",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1302230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1408",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1408230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1554",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1554230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1663",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1663230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1915",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1915230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2101",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2101230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2154",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2154230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2257",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2257230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2407",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2407230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2555",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2555230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2903",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2903230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "2919",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2919230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "3202",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3202230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "3556",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3556230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5113",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5113230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5156",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5156230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5258",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5258230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5360",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5360230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5503",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5503230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5652",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5652230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5902",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5902230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "5918",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5918230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6101",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6101230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6117",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6117230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6206",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6206230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6304",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6304230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6408",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6408230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6554",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6554230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6662",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6662230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6912",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6912230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "6932",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6932230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "7301",
+        "cst": "230",
+        "descr_resumida": "Isento ou NT com ST - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7301230",
+        "icms": "Não",
+        "cst_descr": "230|Isento ou NT com ST - Extrangeira",
+        "numeracao": "33"
+    },
+    {
+        "cfop": "1118",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1118240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1205",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1205240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1305",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1305240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1411",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1411240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1557",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1557240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1902",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1902240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1918",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "1918240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2113",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2113240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2203",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2203240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2303",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2303240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2410",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2410240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2603",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2603240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2906",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2906240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "2922",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "2922240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    }
+]

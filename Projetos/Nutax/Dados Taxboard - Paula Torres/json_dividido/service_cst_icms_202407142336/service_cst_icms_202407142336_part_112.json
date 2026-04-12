@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "2125",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2125101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2252",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2252101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2355",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2355101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2506",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2506101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2662",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2662101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "2914",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "2914101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "3101",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "3101101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "3355",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "3355101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5106",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5106101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5125",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5125101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5253",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5253101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5354",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5354101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5414",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5414101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5602",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5602101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5663",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5663101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5913",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5913101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "5929",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "5929101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6112",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6112101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6155",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6155101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6257",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6257101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6359",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6359101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6504",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6504101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6657",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6657101",
+        "icms": "Sim",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6907",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6907101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "6923",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "6923101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "7206",
+        "cst": "101",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional com permissão de crédito",
+        "chave": "7206101",
+        "icms": "Não",
+        "cst_descr": "101|Simples Nacional",
+        "numeracao": "1"
+    },
+    {
+        "cfop": "1102",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1102102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1154",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1154102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1257",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1257102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1406",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1406102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1552",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1552102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1661",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1661102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1913",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1913102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1933",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "1933102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "2152",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "2152102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "2255",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "2255102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "2403",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "2403102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "2553",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "2553102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "2901",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "2901102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "2917",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "2917102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "3127",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "3127102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "3551",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "3551102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5111",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5111102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5153",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5153102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5256",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5256102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5357",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5357102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5501",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5501102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5606",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5606102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5666",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5666102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5916",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5916102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "5933",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "5933102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6115",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6115102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6202",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6202102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6302",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6302102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6403",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6403102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6552",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6552102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6660",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6660102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6910",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6910102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "6929",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "6929102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "7211",
+        "cst": "102",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Tributada pelo Simples Nacional sem permissão de crédito",
+        "chave": "7211102",
+        "icms": "Não",
+        "cst_descr": "102|Simples Nacional",
+        "numeracao": "2"
+    },
+    {
+        "cfop": "1116",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1116103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1203",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1203103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1303",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1303103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1409",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1409103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1555",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1555103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1664",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1664103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1916",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "1916103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2102",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2102103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2201",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2201103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2301",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2301103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2408",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2408103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2556",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2556103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2904",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2904103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "2920",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "2920103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "3205",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "3205103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "3651",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "3651103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5114",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5114103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5201",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5201103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5301",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5301103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5401",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5401103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5504",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5504103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5653",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5653103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5903",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5903103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5919",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "5919103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6102",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6102103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6118",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6118103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6207",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6207103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6305",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6305103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6409",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6409103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6555",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6555103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6663",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6663103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6913",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6913103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "6933",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6933103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "7358",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "7358103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "1120",
+        "cst": "110",
+        "descr_resumida": "Tributado com ST - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1120110",
+        "icms": "Não",
+        "cst_descr": "110|Tributado com ST - Importado",
+        "numeracao": "20"
+    },
+    {
+        "cfop": "1206",
+        "cst": "110",
+        "descr_resumida": "Tributado com ST - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1206110",
+        "icms": "Não",
+        "cst_descr": "110|Tributado com ST - Importado",
+        "numeracao": "20"
+    },
+    {
+        "cfop": "1306",
+        "cst": "110",
+        "descr_resumida": "Tributado com ST - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1306110",
+        "icms": "Não",
+        "cst_descr": "110|Tributado com ST - Importado",
+        "numeracao": "20"
+    },
+    {
+        "cfop": "1414",
+        "cst": "110",
+        "descr_resumida": "Tributado com ST - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1414110",
+        "icms": "Não",
+        "cst_descr": "110|Tributado com ST - Importado",
+        "numeracao": "20"
+    },
+    {
+        "cfop": "1601",
+        "cst": "110",
+        "descr_resumida": "Tributado com ST - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1601110",
+        "icms": "Não",
+        "cst_descr": "110|Tributado com ST - Importado",
+        "numeracao": "20"
+    },
+    {
+        "cfop": "1903",
+        "cst": "110",
+        "descr_resumida": "Tributado com ST - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1903110",
+        "icms": "Não",
+        "cst_descr": "110|Tributado com ST - Importado",
+        "numeracao": "20"
+    }
+]

@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6125",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6125541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "6253",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6253541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "6354",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6354541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "6415",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6415541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "6653",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6653541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "6903",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6903541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "6919",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "6919541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "7127",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "7127541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "7654",
+        "cst": "541",
+        "descr_resumida": "Não Tributada - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Não tributada",
+        "chave": "7654541",
+        "icms": "Não",
+        "cst_descr": "541|Não Tributada - Nacional < 40",
+        "numeracao": "68"
+    },
+    {
+        "cfop": "1128",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1128550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1253",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1253550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1356",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1356550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1504",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1504550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1653",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1653550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1909",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1909550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1925",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "1925550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2124",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2124550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2251",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2251550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2354",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2354550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2505",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2505550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2661",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2661550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2913",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2913550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "2949",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "2949550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "3354",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "3354550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5105",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5105550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5124",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5124550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5252",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5252550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5353",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5353550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5413",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5413550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5601",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5601550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5662",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5662550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5912",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5912550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "5928",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "5928550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6111",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6111550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6153",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6153550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6256",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6256550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6357",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6357550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6503",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6503550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6656",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6656550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6906",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6906550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "6922",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "6922550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "7205",
+        "cst": "550",
+        "descr_resumida": "Suspensão - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Suspensão",
+        "chave": "7205550",
+        "icms": "Não",
+        "cst_descr": "550|Suspensão - Nacional < 40",
+        "numeracao": "69"
+    },
+    {
+        "cfop": "1101",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1101551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1153",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1153551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1256",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1256551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1403",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1403551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1551",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1551551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1660",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1660551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1912",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1912551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1932",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "1932551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "2151",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "2151551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "2254",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "2254551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "2401",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "2401551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "2552",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "2552551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "2664",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "2664551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "2916",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "2916551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "3126",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "3126551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "3503",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "3503551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5110",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5110551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5152",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5152551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5255",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5255551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5356",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5356551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5451",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5451551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5605",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5605551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5665",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5665551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5915",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5915551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "5932",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "5932551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6114",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6114551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6201",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6201551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6301",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6301551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6402",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6402551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6551",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6551551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6659",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6659551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6909",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6909551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "6925",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "6925551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "7210",
+        "cst": "551",
+        "descr_resumida": "Diferimento - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - Diferimento",
+        "chave": "7210551",
+        "icms": "Não",
+        "cst_descr": "551|Diferimento - Nacional < 40",
+        "numeracao": "70"
+    },
+    {
+        "cfop": "1113",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1113560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1202",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1202560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1302",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1302560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1408",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1408560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1554",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1554560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1663",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1663560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1915",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1915560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "2101",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2101560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "2154",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2154560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "2257",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2257560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "2407",
+        "cst": "560",
+        "descr_resumida": "ST Retido anteriomente - Nacional < 40",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40% (quarenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2407560",
+        "icms": "Não",
+        "cst_descr": "560|ST Retido anteriomente - Nacional < 40",
+        "numeracao": "71"
+    },
+    {
+        "cfop": "1664",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1664650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "1916",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1916650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2102",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2102650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2201",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2201650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2301",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2301650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2408",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2408650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2556",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2556650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2904",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2904650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2920",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "2920650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "3205",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "3205650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "3651",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "3651650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "5114",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "5114650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "5201",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "5201650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    }
+]

@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5666",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "5666240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "5916",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "5916240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "5933",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "5933240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6115",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6115240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6202",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6202240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6302",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6302240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6403",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6403240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6552",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6552240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6660",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6660240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6910",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6910240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "6929",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "6929240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "7211",
+        "cst": "240",
+        "descr_resumida": "Isento  - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Isenta",
+        "chave": "7211240",
+        "icms": "Não",
+        "cst_descr": "240|Isento  - Extrangeira",
+        "numeracao": "34"
+    },
+    {
+        "cfop": "1116",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1116241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1203",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1203241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1303",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1303241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1409",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1409241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1555",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1555241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1664",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1664241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1916",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "1916241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2102",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2102241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2201",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2201241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2301",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2301241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2408",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2408241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2556",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2556241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2904",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2904241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "2920",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "2920241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "3205",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "3205241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "3651",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "3651241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5114",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5114241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5201",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5201241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5301",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5301241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5401",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5401241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5504",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5504241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5653",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5653241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5903",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5903241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "5919",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "5919241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6102",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6102241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6118",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6118241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6207",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6207241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6305",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6305241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6409",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6409241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6555",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6555241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6663",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6663241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6913",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6913241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "6933",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "6933241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "7358",
+        "cst": "241",
+        "descr_resumida": "Não Tributada - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Não tributada",
+        "chave": "7358241",
+        "icms": "Não",
+        "cst_descr": "241|Não Tributada - Extrangeira",
+        "numeracao": "35"
+    },
+    {
+        "cfop": "1120",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1120250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1206",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1206250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1306",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1306250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1414",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1414250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1601",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1601250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1903",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1903250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1919",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "1919250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2116",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2116250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2204",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2204250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2304",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2304250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2411",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2411250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2651",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2651250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2907",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2907250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "2923",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "2923250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "3211",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "3211250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "3930",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "3930250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5117",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5117250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5206",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5206250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5304",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5304250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5405",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5405250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5552",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5552250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5656",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5656250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5906",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5906250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "5922",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "5922250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6105",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6105250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6122",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6122250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6210",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6210250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6351",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6351250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6412",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6412250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6603",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6603250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6666",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6666250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "6916",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "6916250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "7102",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "7102250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "7553",
+        "cst": "250",
+        "descr_resumida": "Suspensão - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Suspensão",
+        "chave": "7553250",
+        "icms": "Não",
+        "cst_descr": "250|Suspensão - Extrangeira",
+        "numeracao": "36"
+    },
+    {
+        "cfop": "1124",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1124251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "1209",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1209251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "1353",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1353251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "1452",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1452251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "1604",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1604251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "1906",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1906251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "1922",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "1922251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2120",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2120251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2207",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2207251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2351",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2351251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2501",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2501251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2658",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2658251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2910",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2910251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "2931",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "2931251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "3351",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "3351251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "5102",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "5102251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "5120",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "5120251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "5209",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "5209251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "5307",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "5307251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    },
+    {
+        "cfop": "5410",
+        "cst": "251",
+        "descr_resumida": "Diferimento - Extrangeira",
+        "descr": "Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7 da Tabela A - Diferimento",
+        "chave": "5410251",
+        "icms": "Não",
+        "cst_descr": "251|Diferimento - Extrangeira",
+        "numeracao": "37"
+    }
+]

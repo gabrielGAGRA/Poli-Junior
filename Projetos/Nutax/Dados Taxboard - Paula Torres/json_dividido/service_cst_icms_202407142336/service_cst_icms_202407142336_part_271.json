@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5110",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5110670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5152",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5152670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5255",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5255670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5356",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5356670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5451",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5451670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5605",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5605670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5665",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5665670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5915",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5915670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "5932",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5932670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6114",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6114670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6201",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6201670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6301",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6301670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6402",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6402670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6551",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6551670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6659",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6659670",
+        "icms": "Sim",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6909",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6909670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "6925",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6925670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "7210",
+        "cst": "670",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7210670",
+        "icms": "Não",
+        "cst_descr": "670|Simples Nacional",
+        "numeracao": "83"
+    },
+    {
+        "cfop": "1113",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1113690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "1202",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1202690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "1302",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1302690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "1408",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1408690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "1554",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1554690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "1663",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1663690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "1915",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1915690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2101",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2101690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2154",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2154690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2257",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2257690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2407",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2407690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2555",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2555690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2903",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2903690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "2919",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2919690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "3202",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "3202690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "3556",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "3556690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5113",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5113690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5156",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5156690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5258",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5258690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5360",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5360690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5503",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5503690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5652",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5652690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5902",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5902690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5918",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5918690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "6101",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6101690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "6117",
+        "cst": "690",
+        "descr_resumida": "Outras - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6117690",
+        "icms": "Não",
+        "cst_descr": "690|Outras - Importado CAMEX",
+        "numeracao": "84"
+    },
+    {
+        "cfop": "5305",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5305610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "5408",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5408610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "5553",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5553610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "5657",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5657610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "5907",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5907610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "5923",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5923610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6106",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6106610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6123",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6123610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6251",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6251610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6352",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6352610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6413",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6413610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6651",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6651610",
+        "icms": "Sim",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6901",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6901610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "6917",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6917610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "7105",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7105610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "7556",
+        "cst": "610",
+        "descr_resumida": "Tributado com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7556610",
+        "icms": "Não",
+        "cst_descr": "610|Tributado com ST - Importado CAMEX",
+        "numeracao": "75"
+    },
+    {
+        "cfop": "1125",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1125620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1251",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1251620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1354",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1354620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1501",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1501620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1605",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1605620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1907",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1907620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1923",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "1923620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2121",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2121620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2208",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2208620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2352",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2352620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2503",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2503620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2659",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2659620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2911",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2911620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "2932",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "2932620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "3352",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "3352620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5103",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5103620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5122",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5122620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5210",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5210620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5351",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5351620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5411",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5411620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5556",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5556620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5660",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5660620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5910",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5910620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "5926",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "5926620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6109",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6109620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6151",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6151620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6254",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6254620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6355",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6355620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6501",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6501620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6654",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6654620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6904",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6904620",
+        "icms": "Sim",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "6920",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6920620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "7201",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "7201620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "7930",
+        "cst": "620",
+        "descr_resumida": "Redução BC - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "7930620",
+        "icms": "Não",
+        "cst_descr": "620|Redução BC - Importado CAMEX",
+        "numeracao": "76"
+    },
+    {
+        "cfop": "1151",
+        "cst": "630",
+        "descr_resumida": "Isento ou NT com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1151630",
+        "icms": "Não",
+        "cst_descr": "630|Isento ou NT com ST - Importado CAMEX",
+        "numeracao": "77"
+    },
+    {
+        "cfop": "1254",
+        "cst": "630",
+        "descr_resumida": "Isento ou NT com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1254630",
+        "icms": "Não",
+        "cst_descr": "630|Isento ou NT com ST - Importado CAMEX",
+        "numeracao": "77"
+    },
+    {
+        "cfop": "1360",
+        "cst": "630",
+        "descr_resumida": "Isento ou NT com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1360630",
+        "icms": "Não",
+        "cst_descr": "630|Isento ou NT com ST - Importado CAMEX",
+        "numeracao": "77"
+    },
+    {
+        "cfop": "1505",
+        "cst": "630",
+        "descr_resumida": "Isento ou NT com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1505630",
+        "icms": "Não",
+        "cst_descr": "630|Isento ou NT com ST - Importado CAMEX",
+        "numeracao": "77"
+    },
+    {
+        "cfop": "1658",
+        "cst": "630",
+        "descr_resumida": "Isento ou NT com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1658630",
+        "icms": "Não",
+        "cst_descr": "630|Isento ou NT com ST - Importado CAMEX",
+        "numeracao": "77"
+    },
+    {
+        "cfop": "1910",
+        "cst": "630",
+        "descr_resumida": "Isento ou NT com ST - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1910630",
+        "icms": "Não",
+        "cst_descr": "630|Isento ou NT com ST - Importado CAMEX",
+        "numeracao": "77"
+    }
+]

@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6114",
+        "cst": "103",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Isenção do ICMS no Simples Nacional para faixa de receita bruta",
+        "chave": "6114103",
+        "icms": "Não",
+        "cst_descr": "103|Simples Nacional",
+        "numeracao": "3"
+    },
+    {
+        "cfop": "5304",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "5304140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "5405",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "5405140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "5552",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "5552140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "5656",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "5656140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "5906",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "5906140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "5922",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "5922140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6105",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6105140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6122",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6122140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6210",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6210140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6351",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6351140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6412",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6412140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6603",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6603140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6666",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6666140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "6916",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "6916140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "7102",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "7102140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "7553",
+        "cst": "140",
+        "descr_resumida": "Isento  - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Isenta",
+        "chave": "7553140",
+        "icms": "Não",
+        "cst_descr": "140|Isento  - Importado",
+        "numeracao": "23"
+    },
+    {
+        "cfop": "1124",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1124141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1209",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1209141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1353",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1353141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1452",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1452141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1604",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1604141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1906",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1906141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1922",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "1922141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2120",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2120141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2207",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2207141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2351",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2351141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2501",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2501141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2658",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2658141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2910",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2910141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "2931",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "2931141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "3351",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "3351141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5102",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5102141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5120",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5120141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5209",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5209141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5307",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5307141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5410",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5410141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5555",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5555141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5659",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5659141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5909",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5909141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "5925",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "5925141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6108",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6108141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6125",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6125141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6253",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6253141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6354",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6354141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6415",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6415141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6653",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6653141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6903",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6903141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "6919",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "6919141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "7127",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "7127141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "7654",
+        "cst": "141",
+        "descr_resumida": "Não Tributada - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Não tributada",
+        "chave": "7654141",
+        "icms": "Não",
+        "cst_descr": "141|Não Tributada - Importado",
+        "numeracao": "24"
+    },
+    {
+        "cfop": "1128",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1128150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1253",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1253150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1356",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1356150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1504",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1504150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1653",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1653150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1909",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1909150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1925",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "1925150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2124",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2124150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2251",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2251150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2354",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2354150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2505",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2505150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2661",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2661150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2913",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2913150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "2949",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "2949150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "3354",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "3354150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5105",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5105150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5124",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5124150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5252",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5252150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5353",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5353150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5413",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5413150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5601",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5601150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5662",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5662150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5912",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5912150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "5928",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "5928150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6111",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6111150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6153",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6153150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6256",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6256150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6357",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6357150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6503",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6503150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6656",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6656150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6906",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6906150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "6922",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "6922150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "7205",
+        "cst": "150",
+        "descr_resumida": "Suspensão - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Suspensão",
+        "chave": "7205150",
+        "icms": "Não",
+        "cst_descr": "150|Suspensão - Importado",
+        "numeracao": "25"
+    },
+    {
+        "cfop": "1101",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1101151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1153",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1153151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1256",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1256151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1403",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1403151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1551",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1551151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1660",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1660151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1912",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1912151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1932",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "1932151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2151",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2151151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2254",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2254151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2401",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2401151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2552",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2552151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2664",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2664151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2916",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2916151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "3126",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "3126151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "3503",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "3503151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    }
+]

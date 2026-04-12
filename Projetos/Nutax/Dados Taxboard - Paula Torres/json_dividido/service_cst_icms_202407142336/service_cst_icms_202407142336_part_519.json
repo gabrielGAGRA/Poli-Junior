@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5210",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5210870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5351",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5351870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5411",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5411870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5556",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5556870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5660",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5660870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5910",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5910870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "5926",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5926870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6109",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6109870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6151",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6151870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6254",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6254870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6355",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6355870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6501",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6501870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6654",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6654870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6904",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6904870",
+        "icms": "Sim",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "6920",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6920870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "7201",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7201870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "7930",
+        "cst": "870",
+        "descr_resumida": "Redução BC com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7930870",
+        "icms": "Não",
+        "cst_descr": "870|Redução BC com ST - Nacional > 70",
+        "numeracao": "105"
+    },
+    {
+        "cfop": "1151",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1151890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1254",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1254890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1360",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1360890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1505",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1505890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1658",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1658890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1910",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1910890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1926",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "1926890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2125",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2125890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2252",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2252890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2355",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2355890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2506",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2506890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2662",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2662890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "2914",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "2914890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "3101",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "3101890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "3355",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "3355890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5106",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5106890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5125",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5125890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5253",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5253890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5354",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5354890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5414",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5414890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5602",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5602890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5663",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5663890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5913",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5913890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "5929",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "5929890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6112",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6112890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6155",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6155890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6257",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6257890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6359",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6359890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6504",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6504890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6657",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6657890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6907",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6907890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "6923",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "6923890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "7206",
+        "cst": "890",
+        "descr_resumida": "Outras - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Outras",
+        "chave": "7206890",
+        "icms": "Não",
+        "cst_descr": "890|Outras - Nacional > 70",
+        "numeracao": "106"
+    },
+    {
+        "cfop": "1102",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1102900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1154",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1154900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1257",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1257900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1406",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1406900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1552",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1552900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1661",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1661900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1913",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1913900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1933",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "1933900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "2152",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "2152900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "2255",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "2255900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "2403",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "2403900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "2553",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "2553900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "2901",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "2901900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "2917",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "2917900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "3127",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "3127900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "3551",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "3551900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5111",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5111900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5153",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5153900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5256",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5256900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5357",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5357900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5501",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5501900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5606",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5606900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5666",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5666900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5916",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5916900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "5933",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "5933900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6115",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6115900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6202",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6202900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6302",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6302900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6403",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6403900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6552",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6552900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6660",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6660900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6910",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6910900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "6929",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "6929900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "7211",
+        "cst": "900",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Simples Nacional - Outros",
+        "chave": "7211900",
+        "icms": "Não",
+        "cst_descr": "900|Simples Nacional",
+        "numeracao": "7"
+    },
+    {
+        "cfop": "1116",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1116000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1203",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1203000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1303",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1303000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1409",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1409000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1555",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1555000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1664",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1664000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "1916",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "1916000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2102",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2102000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2201",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2201000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2301",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2301000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2408",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2408000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2556",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2556000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2904",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2904000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "2920",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "2920000",
+        "icms": "Não",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "3205",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "3205000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    },
+    {
+        "cfop": "3651",
+        "cst": "000",
+        "descr_resumida": "Tributada integralmente - Nacional",
+        "descr": "Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8 da Tabela A - Tributada integralmente",
+        "chave": "3651000",
+        "icms": "Sim",
+        "cst_descr": "000|Tributada integralmente - Nacional",
+        "numeracao": "8"
+    }
+]

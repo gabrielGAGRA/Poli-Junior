@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6657",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6657410",
+        "icms": "Sim",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "6907",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6907410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "6923",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6923410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "7206",
+        "cst": "410",
+        "descr_resumida": "Tributado com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/08 - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7206410",
+        "icms": "Não",
+        "cst_descr": "410|Tributado com ST - Nacional PPB ZFM",
+        "numeracao": "53"
+    },
+    {
+        "cfop": "1102",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1102420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1154",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1154420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1257",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1257420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1406",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1406420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1552",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1552420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1661",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1661420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1913",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1913420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1933",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "1933420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "2152",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "2152420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "2255",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "2255420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "2403",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "2403420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "2553",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "2553420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "2901",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "2901420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "2917",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "2917420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "3127",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "3127420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "3551",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "3551420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5111",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5111420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5153",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5153420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5256",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5256420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5357",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5357420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5501",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5501420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5606",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5606420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5666",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5666420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5916",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5916420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "5933",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "5933420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6115",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6115420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6202",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6202420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6302",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6302420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6403",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6403420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6552",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6552420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6660",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6660420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6910",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6910420",
+        "icms": "Sim",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "6929",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "6929420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "7211",
+        "cst": "420",
+        "descr_resumida": "Redução BC - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/09 - Com redução de base de cálculo",
+        "chave": "7211420",
+        "icms": "Não",
+        "cst_descr": "420|Redução BC - Nacional PPB ZFM",
+        "numeracao": "54"
+    },
+    {
+        "cfop": "1116",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1116430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1203",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1203430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1303",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1303430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1409",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1409430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1555",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1555430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1664",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1664430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1916",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1916430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2102",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2102430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2201",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2201430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2301",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2301430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2408",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2408430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2556",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2556430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2904",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2904430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "2920",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2920430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "3205",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3205430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "3651",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3651430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5114",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5114430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5201",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5201430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5301",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5301430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5401",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5401430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5504",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5504430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5653",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5653430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5903",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5903430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "5919",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5919430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6102",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6102430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6118",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6118430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6207",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6207430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6305",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6305430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6409",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6409430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6555",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6555430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6663",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6663430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6913",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6913430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "6933",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6933430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "7358",
+        "cst": "430",
+        "descr_resumida": "Isento ou NT com ST - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/10 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7358430",
+        "icms": "Não",
+        "cst_descr": "430|Isento ou NT com ST - Nacional PPB ZFM",
+        "numeracao": "55"
+    },
+    {
+        "cfop": "1120",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1120440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "1206",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1206440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "1306",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1306440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "1414",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1414440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "1601",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1601440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "1903",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1903440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "1919",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "1919440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2116",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2116440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2204",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2204440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2304",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2304440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2411",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2411440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2651",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2651440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2907",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2907440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "2923",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "2923440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "3211",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "3211440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "3930",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "3930440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5117",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5117440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5206",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5206440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5304",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5304440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5405",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5405440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5552",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5552440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5656",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5656440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5906",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5906440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "5922",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "5922440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "6105",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "6105440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "6122",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "6122440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "6210",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "6210440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    },
+    {
+        "cfop": "6351",
+        "cst": "440",
+        "descr_resumida": "Isento  - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/11 - Isenta",
+        "chave": "6351440",
+        "icms": "Não",
+        "cst_descr": "440|Isento  - Nacional PPB ZFM",
+        "numeracao": "56"
+    }
+]

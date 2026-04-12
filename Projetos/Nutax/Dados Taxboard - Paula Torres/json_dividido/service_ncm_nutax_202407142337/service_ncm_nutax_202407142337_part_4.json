@@ -1,0 +1,502 @@
+[
+    {
+        "ncm": "1806",
+        "class": "Chocolate",
+        "sub": "Chocolate e outras preparações alimentícias que contenham cacau."
+    },
+    {
+        "ncm": "4411",
+        "class": "Painéis De Outras Madeira",
+        "sub": "Painéis de fibras de madeira ou de outras matérias lenhosas, mesmo aglomeradas com resinas ou com outros aglutinantes orgânicos."
+    },
+    {
+        "ncm": "6903",
+        "class": "Outros Produtos Cerâmicos",
+        "sub": "Outros produtos cerâmicos refratários (por exemplo, retortas, cadinhos, muflas, bocais, tampões, suportes, copelas, tubos, mangas, varetas, portas deslizantes (slide gates)) que não sejam de farinhas siliciosas fósseis nem de terras siliciosas semelhantes."
+    },
+    {
+        "ncm": "6003",
+        "class": "Tecidos Malha",
+        "sub": "Tecidos de malha de largura não superior a 30 cm, exceto os das posições 60.01 e 60.02."
+    },
+    {
+        "ncm": "5806",
+        "class": "Fitas De Fios",
+        "sub": "Fitas, exceto os artigos da posição 58.07, fitas sem trama, de fios ou fibras paralelizados e colados (bolducs)."
+    },
+    {
+        "ncm": "6107",
+        "class": "Roupa Intima",
+        "sub": "Cuecas, ceroulas, camisolões (camisas de noite*), pijamas, roupões de banho, robes e semelhantes, de malha, de uso masculino."
+    },
+    {
+        "ncm": "4703",
+        "class": "Pastas Químicas De Madeira",
+        "sub": "Pastas químicas de madeira, à soda ou ao sulfato, exceto pastas para dissolução."
+    },
+    {
+        "ncm": "4115",
+        "class": "Couro Reconstituído",
+        "sub": "Couro reconstituído, à base de couro ou de fibras de couro, em chapas, folhas ou tiras, mesmo enroladas, aparas e outros desperdícios de couros ou de peles preparados ou de couro reconstituído, não utilizáveis para fabricação de obras de couro, serragem, pó e farinha, de couro."
+    },
+    {
+        "ncm": "3213",
+        "class": "Cores Para Pintura",
+        "sub": "Cores para pintura artística, atividades educativas, pintura de tabuletas, modificação de tonalidades, recreação e cores semelhantes, em pastilhas, tubos, potes, frascos, godês ou acondicionamentos semelhantes."
+    },
+    {
+        "ncm": "2504",
+        "class": "Grafita",
+        "sub": "Grafita natural."
+    },
+    {
+        "ncm": "9401",
+        "class": "Assentos",
+        "sub": "Assentos (exceto os da posição 94.02), mesmo transformáveis em camas, e suas partes."
+    },
+    {
+        "ncm": "6208",
+        "class": "Roupa Intima",
+        "sub": "Corpetes (Camisolas interiores*), combinações, anáguas (saiotes), calcinhas, camisolas (camisas de noite*), pijamas, déshabillés, roupões de banho, penhoares (robes de quarto*), e artigos semelhantes, de uso feminino."
+    },
+    {
+        "ncm": "0407",
+        "class": "Ovos De Aves",
+        "sub": "Ovos de aves, com casca, frescos, conservados ou cozidos."
+    },
+    {
+        "ncm": "6505",
+        "class": "Chapéus",
+        "sub": "Chapéus e outros artigos de uso semelhante, de malha ou confeccionados com rendas, feltro ou outros produtos têxteis, em peça (mas não em tiras), mesmo guarnecidos, coifas e redes, para o cabelo, de qualquer matéria, mesmo guarnecidas."
+    },
+    {
+        "ncm": "1904",
+        "class": "Produtos A Base De Cereais",
+        "sub": "Produtos à base de cereais, obtidos por expansão ou por torrefação (flocos de milho (corn flakes), por exemplo), cereais (exceto milho) em grãos ou sob a forma de flocos ou de outros grãos trabalhados (com exceção da farinha, do grumo e da sêmola), pré-cozidos ou preparados de outro modo, não especificados nem compreendidos noutras posições."
+    },
+    {
+        "ncm": "5607",
+        "class": "Cordéis E Cabos",
+        "sub": "Cordéis, cordas e cabos, entrançados ou não, mesmo impregnados, revestidos, recobertos ou embainhados de borracha ou de plástico."
+    },
+    {
+        "ncm": "9114",
+        "class": "Artigos De Relojoaria",
+        "sub": "Outras partes de artigos de relojoaria."
+    },
+    {
+        "ncm": "3205",
+        "class": "Lacas Corantes",
+        "sub": "Lacas corantes"
+    },
+    {
+        "ncm": "3001",
+        "class": "Glândulas",
+        "sub": "Glândulas e outros órgãos para usos opoterápicos, dessecados, mesmo em pó, extratos de glândulas ou de outros órgãos ou das suas secreções, para usos opoterápicos, heparina e seus sais, outras substâncias humanas ou animais preparadas para fins terapêuticos ou profiláticos, não especificadas nem compreendidas noutras posições."
+    },
+    {
+        "ncm": "8413",
+        "class": "Bombas Para Líquidos",
+        "sub": "Bombas para líquidos, mesmo com dispositivo medidor, elevadores de líquidos."
+    },
+    {
+        "ncm": "2617",
+        "class": "Outros Minérios",
+        "sub": "Outros minérios e seus concentrados."
+    },
+    {
+        "ncm": "0707",
+        "class": "Pepinos",
+        "sub": "Pepinos e pepininhos (cornichons), frescos ou refrigerados. "
+    },
+    {
+        "ncm": "4418",
+        "class": "Obras De Marcenaria E Peças De Carpintaria",
+        "sub": "Obras de marcenaria e peças de carpintaria para construções, incluindo os painéis celulares, os painéis montados para revestimento de pisos (pavimentos) e as fasquias para telhados (shingles e shakes), de madeira."
+    },
+    {
+        "ncm": "2205",
+        "class": "Vinhos Aromatizados",
+        "sub": "Vermutes e outros vinhos de uvas frescas aromatizados por plantas ou substâncias aromáticas."
+    },
+    {
+        "ncm": "9112",
+        "class": "Caixas De Relógio",
+        "sub": "Caixas e semelhantes de artigos de relojoaria, e suas partes."
+    },
+    {
+        "ncm": "9304",
+        "class": "Outras  Armas",
+        "sub": "Outras armas (por exemplo, espingardas, carabinas e pistolas, de mola, de ar comprimido ou de gás, cassetetes), exceto as da posição 93.07."
+    },
+    {
+        "ncm": "4203",
+        "class": "Vestuário De Couro",
+        "sub": "Vestuário e seus acessórios, de couro natural ou reconstituído."
+    },
+    {
+        "ncm": "5504",
+        "class": "Fibras Artificiais",
+        "sub": "Fibras artificiais descontínuas, não cardadas, não penteadas nem transformadas de outro modo para fiação."
+    },
+    {
+        "ncm": "0706",
+        "class": "Raízes Comestíveis",
+        "sub": "Cenouras, nabos, beterrabas para salada, cercefi, aipo-rábano, rabanetes e raízes comestíveis semelhantes, frescos ou refrigerados."
+    },
+    {
+        "ncm": "2918",
+        "class": "Ácidos Carboxílicos ",
+        "sub": "Ácidos carboxílicos que contenham funções oxigenadas suplementares e seus anidridos, halogenetos, peróxidos e peroxiácidos, seus derivados halogenados, sulfonados, nitrados ou nitrosados."
+    },
+    {
+        "ncm": "5107",
+        "class": "Fios De Lã Penteada",
+        "sub": "Fios de lã penteada, não acondicionados para venda a retalho."
+    },
+    {
+        "ncm": "9209",
+        "class": "Partes Instrumentos Musicais",
+        "sub": "Partes (mecanismos de caixas de música, por exemplo) e acessórios (por exemplo, cartões, discos e rolos para instrumentos mecânicos) de instrumentos musicais, metrônomos e diapasões de qualquer tipo."
+    },
+    {
+        "ncm": "1005",
+        "class": "Milho",
+        "sub": "Milho."
+    },
+    {
+        "ncm": "9604",
+        "class": "Peneiras",
+        "sub": "Peneiras e crivos, manuais.  "
+    },
+    {
+        "ncm": "1104",
+        "class": "Grãos De Cereais Trabalhados",
+        "sub": "Grãos de cereais trabalhados de outro modo (por exemplo, descascados, esmagados, em flocos, em pérolas, cortados ou partidos), com exclusão do arroz da posição 10.06, germes de cereais, inteiros, esmagados, em flocos ou moídos."
+    },
+    {
+        "ncm": "2822",
+        "class": "Óxidos E Hidróxidos ",
+        "sub": "Óxidos e hidróxidos de cobalto, óxidos de cobalto comerciais."
+    },
+    {
+        "ncm": "2612",
+        "class": "Minério Urânio",
+        "sub": "Minérios de urânio ou de tório, e seus concentrados."
+    },
+    {
+        "ncm": "8423",
+        "class": "Instrumentos De Pesagem",
+        "sub": "Aparelhos e instrumentos de pesagem, incluindo as básculas e balanças para verificar peças usinadas (fabricadas*), excluindo as balanças sensíveis a pesos não superiores a 5 cg, pesos para quaisquer balanças."
+    },
+    {
+        "ncm": "1905",
+        "class": "Produtos De Padaria",
+        "sub": "Produtos de padaria, pastelaria ou da indústria de bolachas e biscoitos, mesmo adicionados de cacau, hóstias, cápsulas vazias para medicamentos, obreias, pastas secas de farinha, amido ou fécula, em folhas, e produtos semelhantes."
+    },
+    {
+        "ncm": "2208",
+        "class": "Álcool  Etílico=<80%",
+        "sub": "Álcool etílico não desnaturado, com um teor alcoólico, em volume, inferior a 80 % vol., aguardentes, licores e outras bebidas espirituosas."
+    },
+    {
+        "ncm": "2937",
+        "class": "Hormônio",
+        "sub": "Hormônios, prostaglandinas, tromboxanas e leucotrienos, naturais ou reproduzidos por síntese, seus derivados e análogos estruturais, incluindo os polipeptídios de cadeia modificada, utilizados principalmente como hormônios."
+    },
+    {
+        "ncm": "0901",
+        "class": "Café",
+        "sub": "Café, mesmo torrado ou descafeinado, cascas e películas de café, sucedâneos do café que contenham café em qualquer proporção."
+    },
+    {
+        "ncm": "7502",
+        "class": "Níquel ",
+        "sub": "Níquel em formas brutas."
+    },
+    {
+        "ncm": "4405",
+        "class": "Lã ou farinha de madeira",
+        "sub": "Lã de madeira, farinha de madeira.  "
+    },
+    {
+        "ncm": "6401",
+        "class": "Calçado Impermeável ",
+        "sub": "Calçado impermeável de sola exterior e parte superior de borracha ou plástico, em que a parte superior não tenha sido reunida à sola exterior por costura ou por meio de rebites, pregos, parafusos, espigões ou dispositivos semelhantes, nem formada por diferentes partes reunidas pelos mesmos processos."
+    },
+    {
+        "ncm": "1701",
+        "class": "Açúcar De Cana E Beterraba",
+        "sub": "Açúcares de cana ou de beterraba e sacarose quimicamente pura, no estado sólido."
+    },
+    {
+        "ncm": "5109",
+        "class": "Fios De Lã",
+        "sub": "Fios de lã ou de pelos finos, acondicionados para venda a retalho."
+    },
+    {
+        "ncm": "8702",
+        "class": "Veículos Automóveis Para Transporte De + 9 Pessoas",
+        "sub": "Veículos automóveis para transporte de dez pessoas ou mais, incluindo o motorista."
+    },
+    {
+        "ncm": "2826",
+        "class": "Fluoretos E Similares",
+        "sub": "Fluoretos, fluorossilicatos, fluoraluminatos e outros sais complexos de flúor."
+    },
+    {
+        "ncm": "1107",
+        "class": "Malte",
+        "sub": "Malte, mesmo torrado."
+    },
+    {
+        "ncm": "1208",
+        "class": "Farinha De Sementes E Oleaginosos",
+        "sub": "Farinhas de sementes ou de frutos oleaginosos, exceto farinha de mostarda."
+    },
+    {
+        "ncm": "8301",
+        "class": "Cadeados",
+        "sub": "Cadeados, fechaduras e ferrolhos (de chave, de segredo ou elétricos), de metais comuns, fechos e armações com fecho, com fechadura, de metais comuns, chaves para estes artigos, de metais comuns."
+    },
+    {
+        "ncm": "7321",
+        "class": "Aquecedores De Ambiente",
+        "sub": "Aquecedores de ambiente (fogões de sala), caldeiras de fornalha, fogões de cozinha (incluindo os que possam ser utilizados acessoriamente no aquecimento central), churrasqueiras (grelhadores), braseiras, fogareiros a gás, aquecedores de pratos, e aparelhos não elétricos semelhantes, de uso doméstico, e suas partes, de ferro fundido, ferro ou aço."
+    },
+    {
+        "ncm": "0601",
+        "class": "Bulbos E Tubérculos",
+        "sub": "Bulbos, tubérculos, raízes tuberosas, cormos, coroas e rizomas, em repouso vegetativo, em vegetação ou em flor, mudas, plantas e raízes de chicória, exceto as raízes da posição 12.12."
+    },
+    {
+        "ncm": "6911",
+        "class": "Serviço Artigos De Cozinha",
+        "sub": "Serviços de mesa, artigos de cozinha, outros artigos de uso doméstico e artigos de higiene ou de toucador, de porcelana."
+    },
+    {
+        "ncm": "8510",
+        "class": "Aparelhos De Barbear",
+        "sub": "Aparelhos ou máquinas de barbear, máquinas de cortar o cabelo ou de tosquiar e aparelhos de depilar, com motor elétrico incorporado."
+    },
+    {
+        "ncm": "6303",
+        "class": "Cortinas",
+        "sub": "Cortinados, cortinas, reposteiros e estores, sanefas."
+    },
+    {
+        "ncm": "8406",
+        "class": "Turbinas A Vapor",
+        "sub": "Turbinas a vapor."
+    },
+    {
+        "ncm": "3073",
+        "class": "Mexilhões",
+        "sub": "- Mexilhões (Mytilus spp., Perna spp.):"
+    },
+    {
+        "ncm": "8445",
+        "class": "Preparadeiras De Texteis",
+        "sub": "Máquinas para preparação de matérias têxteis, máquinas para fiação, dobragem ou torção, de matérias têxteis e outras máquinas e aparelhos para fabricação de fios têxteis, máquinas de bobinar (incluindo as bobinadoras de trama) ou de dobar matérias têxteis e máquinas para preparação de fios têxteis para a sua utilização nas máquinas das posições 84.46 ou 84.47."
+    },
+    {
+        "ncm": "5201",
+        "class": "Algodão",
+        "sub": "Algodão não cardado nem penteado."
+    },
+    {
+        "ncm": "8515",
+        "class": "Máquinas Elétricas Para Soldar",
+        "sub": "Máquinas e aparelhos para soldar (mesmo de corte) elétricos (incluindo os a gás aquecido eletricamente), a laser ou outros feixes de luz ou de fótons, a ultrassom, a feixes de elétrons, a impulsos magnéticos ou a jato de plasma, máquinas e aparelhos elétricos para projeção a quente de metais ou de cermets."
+    },
+    {
+        "ncm": "5909",
+        "class": "Mangueiras e tubos",
+        "sub": " Tecidos impregnados, revestidos, recobertos ou estratificados, artigos para usos técnicos de matérias têxteis - Mangueiras e tubos semelhantes,dematériastêxteis,mesmocomreforçoou acessórios de outras matérias."
+    },
+    {
+        "ncm": "2303",
+        "class": "Resíduos Vegetais Da Indústria",
+        "sub": "Resíduos da fabricação do amido e resíduos semelhantes, polpas de beterraba, bagaços de cana-de açúcar e outros desperdícios da indústria do açúcar, borras e desperdícios da indústria da cerveja e das destilarias, mesmo em pellets."
+    },
+    {
+        "ncm": "8454",
+        "class": "Maquinas Para Fundição",
+        "sub": "Conversores, cadinhos ou colheres de fundição, lingoteiras e máquinas de vazar (moldar), para metalurgia, aciaria ou fundição."
+    },
+    {
+        "ncm": "1204",
+        "class": "Linhaça",
+        "sub": "Linhaça (sementes de linho), mesmo triturada."
+    },
+    {
+        "ncm": "2603",
+        "class": "Minério Cobre",
+        "sub": "Minérios de cobre e seus concentrados."
+    },
+    {
+        "ncm": "7220",
+        "class": "Produtos Laminados Planos De Aço Inoxidável",
+        "sub": "Produtos laminados planos de aço inoxidável, de largura inferior a 600 mm."
+    },
+    {
+        "ncm": "9613",
+        "class": "Isqueiros",
+        "sub": "Isqueiros e outros acendedores, mesmo mecânicos ou elétricos, e suas partes, exceto pedras e pavios."
+    },
+    {
+        "ncm": "3606",
+        "class": "Ligas Pirofóricas",
+        "sub": "Ferrocério e outras ligas pirofóricas, sob quaisquer formas, artigos de matérias inflamáveis indicados na Nota 2 do presente Capítulo."
+    },
+    {
+        "ncm": "3811",
+        "class": "Preparações Antidetonantes",
+        "sub": "Preparações antidetonantes, inibidores de oxidação, aditivos peptizantes, beneficiadores de viscosidade, aditivos anticorrosivos e outros aditivos preparados, para óleos minerais (incluindo a gasolina) ou para outros líquidos utilizados para os mesmos fins que os óleos minerais."
+    },
+    {
+        "ncm": "8101",
+        "class": "Tungstênio",
+        "sub": "Tungstênio (volfrâmio) e suas obras, incluindo os desperdícios e resíduos, e sucata."
+    },
+    {
+        "ncm": "5509",
+        "class": "Fios De Fibras",
+        "sub": "Fios de fibras sintéticas descontínuas (exceto linhas para costurar), não acondicionados para venda a retalho."
+    },
+    {
+        "ncm": "0506",
+        "class": "Ossos E Não Cortados Preparados",
+        "sub": "Ossos e núcleos córneos, em bruto, desengordurados ou simplesmente preparados (mas não cortados em forma determinada), acidulados ou degelatinados, pós e desperdícios destas matérias."
+    },
+    {
+        "ncm": "8477",
+        "class": "Máquinas Para Tratar Borracha E Plástico",
+        "sub": "Máquinas e aparelhos para trabalhar borracha ou plástico ou para fabricação de produtos dessas matérias, não especificados nem compreendidos noutras posições deste Capítulo."
+    },
+    {
+        "ncm": "3203",
+        "class": "Matérias Corantes ",
+        "sub": "Matérias corantes de origem vegetal ou animal (incluindo os extratos tintoriais, mas excluindo os negros de origem animal), mesmo de constituição química definida, preparações indicadas na Nota 3 do presente Capítulo, à base de matérias corantes de origem vegetal ou animal."
+    },
+    {
+        "ncm": "7116",
+        "class": "Obras De Pérolas",
+        "sub": "Obras de pérolas naturais ou cultivadas, de pedras preciosas ou semipreciosas ou de pedras sintéticas ou reconstituídas."
+    },
+    {
+        "ncm": "9705",
+        "class": "Coleções Arqueológicas",
+        "sub": "Coleções e peças de coleção que apresentem um interesse arqueológico, etnográfico, histórico, zoológico, botânico, mineralógico, anatômico, paleontológico ou numismático."
+    },
+    {
+        "ncm": "8108",
+        "class": "Titânio",
+        "sub": "Titânio e suas obras, incluindo os desperdícios e resíduos, e sucata."
+    },
+    {
+        "ncm": "0702",
+        "class": "Tomates",
+        "sub": "Tomates, frescos ou refrigerados. "
+    },
+    {
+        "ncm": "2911",
+        "class": "Acetais E Hemiacetais",
+        "sub": "Acetais e hemiacetais, mesmo que contenham outras funções oxigenadas, e seus derivados halogenados, sulfonados, nitrados ou nitrosados."
+    },
+    {
+        "ncm": "5311",
+        "class": "Tecidos fibras têxteis vegetais",
+        "sub": "\tTecidos de outras fibras têxteis vegetais, tecidos de fios de papel."
+    },
+    {
+        "ncm": "8401",
+        "class": "Reatores Nucleares",
+        "sub": "Reatores nucleares, elementos combustíveis (cartuchos) não irradiados, para reatores nucleares, máquinas e aparelhos para a separação de isótopos."
+    },
+    {
+        "ncm": "3820",
+        "class": "Preparações anticongelantes",
+        "sub": "Preparações anticongelantes e líquidos preparados para descongelamento.  "
+    },
+    {
+        "ncm": "8458",
+        "class": "Tornos",
+        "sub": "Tornos (incluindo os centros de torneamento) para metais."
+    },
+    {
+        "ncm": "2528",
+        "class": "Obras de couro",
+        "sub": "Outras obras de couro natural ou reconstituído.  "
+    },
+    {
+        "ncm": "6603",
+        "class": "Partes De Guarda-Chuva",
+        "sub": "Partes, guarnições e acessórios, para os artigos das posições 66.01 ou 66.02."
+    },
+    {
+        "ncm": "9013",
+        "class": "Laser",
+        "sub": "Lasers, exceto diodos laser, outros aparelhos e instrumentos de óptica, não especificados nem compreendidos noutras posições do presente Capítulo."
+    },
+    {
+        "ncm": "1521",
+        "class": "Ceras",
+        "sub": "Ceras vegetais (exceto os triglicerídeos), ceras de abelha ou de outros insetos e espermacete, mesmo refinados ou corados."
+    },
+    {
+        "ncm": "8703",
+        "class": "Veículos Automóveis Para Transporte De  Pessoas",
+        "sub": "Automóveis de passageiros e outros veículos automóveis principalmente concebidos para transporte de pessoas (exceto os da posição 87.02), incluindo os veículos de uso misto (station wagons) e os automóveis de corrida."
+    },
+    {
+        "ncm": "5515",
+        "class": "Outros Tecidos De Fibras Sintéticas",
+        "sub": "Outros tecidos de fibras sintéticas descontínuas."
+    },
+    {
+        "ncm": "8449",
+        "class": "Máquinas De Chapeus",
+        "sub": "Máquinas e aparelhos para fabricação ou acabamento de feltro ou de falsos tecidos (tecidos não tecidos), em peça ou em forma determinada, incluindo as máquinas e aparelhos para fabricação de chapéus de feltro, formas para chapelaria."
+    },
+    {
+        "ncm": "7217",
+        "class": "Fios De Ferro Ou Aço Não Ligado",
+        "sub": "Fios de ferro ou aço não ligado."
+    },
+    {
+        "ncm": "8503",
+        "class": "Partes De Geradores",
+        "sub": "Partes reconhecíveis como exclusiva ou principalmente destinadas às máquinas das posições 85.01 ou 85.02."
+    },
+    {
+        "ncm": "6908",
+        "class": " Ladrilhos e Pastilhas",
+        "sub": "Produtos cerâmicos - Ladrilhos e placas (lajes), para pavimentação ou revestimento, vidrados ou esmaltados, de cerâmica, cubos, pastilhas e artigos semelhantes, para mosaicos, vidrados ou esmaltados, de cerâmica, mesmo com suporte - Outros"
+    },
+    {
+        "ncm": "7214",
+        "class": "Barras De Ferro Ou Aço Não Ligado",
+        "sub": "Barras de ferro ou aço não ligado, simplesmente forjadas, laminadas, estiradas ou extrudadas, a quente, incluindo as que tenham sido submetidas a torção após laminagem."
+    },
+    {
+        "ncm": "8102",
+        "class": "Molibdênio",
+        "sub": "Molibdênio e suas obras, incluindo os desperdícios e resíduos, e sucata."
+    },
+    {
+        "ncm": "2710",
+        "class": "Óleo De Petróleo 70%",
+        "sub": "Óleos de petróleo ou de minerais betuminosos, exceto óleos brutos, preparações não especificadas nem compreendidas noutras posições, que contenham, como constituintes básicos, 70 % ou mais, em peso, de óleos de petróleo ou de minerais betuminosos, resíduos de óleos."
+    },
+    {
+        "ncm": "8439",
+        "class": "Máquina Para Pasta E Papel",
+        "sub": "Máquinas e aparelhos para fabricação de pasta de matérias fibrosas celulósicas ou para fabricação ou acabamento de papel ou cartão."
+    },
+    {
+        "ncm": "2521",
+        "class": "Pedras Calcárias",
+        "sub": "Castinas, pedras calcárias utilizadas na fabricação de cal ou de cimento."
+    }
+]

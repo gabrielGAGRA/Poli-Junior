@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6254",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6254640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "6355",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6355640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "6501",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6501640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "6654",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6654640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "6904",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6904640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "6920",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6920640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "7201",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "7201640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "7930",
+        "cst": "640",
+        "descr_resumida": "Isento  - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "7930640",
+        "icms": "Não",
+        "cst_descr": "640|Isento  - Importado CAMEX",
+        "numeracao": "78"
+    },
+    {
+        "cfop": "1151",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1151641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1254",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1254641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1360",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1360641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1505",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1505641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1658",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1658641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1910",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1910641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1926",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1926641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "2125",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2125641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "2252",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2252641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "2355",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2355641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "2506",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2506641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "2662",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2662641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "2914",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2914641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "3101",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "3101641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "3355",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "3355641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5106",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5106641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5125",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5125641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5253",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5253641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5354",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5354641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5414",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5414641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5602",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5602641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5663",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5663641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5913",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5913641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "5929",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5929641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6112",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6112641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6155",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6155641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6257",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6257641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6359",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6359641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6504",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6504641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6657",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6657641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6907",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6907641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "6923",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6923641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "7206",
+        "cst": "641",
+        "descr_resumida": "Não Tributada - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "7206641",
+        "icms": "Não",
+        "cst_descr": "641|Não Tributada - Importado CAMEX",
+        "numeracao": "79"
+    },
+    {
+        "cfop": "1102",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1102650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "1154",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1154650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "1257",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1257650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "1406",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1406650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "1552",
+        "cst": "650",
+        "descr_resumida": "Suspensão - Importado CAMEX",
+        "descr": "Estrangeira - Importação direta, sem similar nacional, constante em lista de Resolução CAMEX - Suspensão",
+        "chave": "1552650",
+        "icms": "Não",
+        "cst_descr": "650|Suspensão - Importado CAMEX",
+        "numeracao": "80"
+    },
+    {
+        "cfop": "2407",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "2407740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "2555",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "2555740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "2903",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "2903740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "2919",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "2919740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "3202",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "3202740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "3556",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "3556740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5113",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5113740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5156",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5156740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5258",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5258740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5360",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5360740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5503",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5503740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5652",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5652740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5902",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5902740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "5918",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "5918740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6101",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6101740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6117",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6117740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6206",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6206740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6304",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6304740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6408",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6408740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6554",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6554740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6662",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6662740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6912",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6912740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6932",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "6932740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "7301",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "7301740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1118",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1118741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "1205",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1205741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "1305",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1305741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "1411",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1411741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "1557",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1557741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "1902",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1902741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "1918",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "1918741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2113",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2113741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2203",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2203741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2303",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2303741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2410",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2410741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2603",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2603741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2906",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2906741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "2922",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "2922741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "3207",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "3207741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "3653",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "3653741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5116",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5116741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5205",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5205741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5303",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5303741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5403",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5403741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5551",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5551741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5655",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5655741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5905",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5905741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "5921",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "5921741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "6104",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6104741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "6120",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6120741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "6209",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6209741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "6307",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6307741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "6411",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6411741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    },
+    {
+        "cfop": "6557",
+        "cst": "741",
+        "descr_resumida": "Não Tributada - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Não tributada",
+        "chave": "6557741",
+        "icms": "Não",
+        "cst_descr": "741|Não Tributada - Estrageiro CAMEX",
+        "numeracao": "90"
+    }
+]

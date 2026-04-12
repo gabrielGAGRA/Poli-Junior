@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "6152",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6152720",
+        "icms": "Sim",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "6255",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6255720",
+        "icms": "Sim",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "6356",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6356720",
+        "icms": "Sim",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "6502",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6502720",
+        "icms": "Não",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "6655",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6655720",
+        "icms": "Sim",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "6905",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6905720",
+        "icms": "Não",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "6921",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "6921720",
+        "icms": "Não",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "7202",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "7202720",
+        "icms": "Não",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "7949",
+        "cst": "720",
+        "descr_resumida": "Redução BC - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo",
+        "chave": "7949720",
+        "icms": "Não",
+        "cst_descr": "720|Redução BC - Estrageiro CAMEX",
+        "numeracao": "87"
+    },
+    {
+        "cfop": "1152",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1152730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1255",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1255730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1401",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1401730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1506",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1506730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1659",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1659730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1911",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1911730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1931",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1931730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "2126",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2126730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "2253",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2253730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "2356",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2356730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "2551",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2551730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "2663",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2663730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "2915",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2915730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "3102",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3102730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "3356",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3356730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5109",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5109730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5151",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5151730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5254",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5254730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5355",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5355730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5415",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5415730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5603",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5603730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5664",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5664730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5914",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5914730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "5931",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5931730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6113",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6113730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6156",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6156730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6258",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6258730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6401",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6401730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6505",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6505730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6658",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6658730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6908",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6908730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "6924",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "6924730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "7207",
+        "cst": "730",
+        "descr_resumida": "Isento ou NT com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta ou não tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "7207730",
+        "icms": "Não",
+        "cst_descr": "730|Isento ou NT com ST - Estrageiro CAMEX",
+        "numeracao": "88"
+    },
+    {
+        "cfop": "1111",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1111740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1201",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1201740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1301",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1301740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1407",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1407740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1553",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1553740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1662",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1662740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1914",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1914740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "1949",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "1949740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "2153",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "2153740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "2256",
+        "cst": "740",
+        "descr_resumida": "Isento  - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Isenta",
+        "chave": "2256740",
+        "icms": "Não",
+        "cst_descr": "740|Isento  - Estrageiro CAMEX",
+        "numeracao": "89"
+    },
+    {
+        "cfop": "6411",
+        "cst": "760",
+        "descr_resumida": "ST Retido anteriomente - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6411760",
+        "icms": "Não",
+        "cst_descr": "760|ST Retido anteriomente - Estrageiro CAMEX",
+        "numeracao": "93"
+    },
+    {
+        "cfop": "6557",
+        "cst": "760",
+        "descr_resumida": "ST Retido anteriomente - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6557760",
+        "icms": "Não",
+        "cst_descr": "760|ST Retido anteriomente - Estrageiro CAMEX",
+        "numeracao": "93"
+    },
+    {
+        "cfop": "6665",
+        "cst": "760",
+        "descr_resumida": "ST Retido anteriomente - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6665760",
+        "icms": "Não",
+        "cst_descr": "760|ST Retido anteriomente - Estrageiro CAMEX",
+        "numeracao": "93"
+    },
+    {
+        "cfop": "6915",
+        "cst": "760",
+        "descr_resumida": "ST Retido anteriomente - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6915760",
+        "icms": "Não",
+        "cst_descr": "760|ST Retido anteriomente - Estrageiro CAMEX",
+        "numeracao": "93"
+    },
+    {
+        "cfop": "7101",
+        "cst": "760",
+        "descr_resumida": "ST Retido anteriomente - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "7101760",
+        "icms": "Não",
+        "cst_descr": "760|ST Retido anteriomente - Estrageiro CAMEX",
+        "numeracao": "93"
+    },
+    {
+        "cfop": "7551",
+        "cst": "760",
+        "descr_resumida": "ST Retido anteriomente - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "7551760",
+        "icms": "Não",
+        "cst_descr": "760|ST Retido anteriomente - Estrageiro CAMEX",
+        "numeracao": "93"
+    },
+    {
+        "cfop": "1122",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1122770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1208",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1208770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1352",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1352770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1451",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1451770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1603",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1603770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1905",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1905770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1921",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1921770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2118",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2118770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2206",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2206770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2306",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2306770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2415",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2415770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2653",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2653770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2909",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2909770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "2925",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2925770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "3301",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "3301770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5101",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5101770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5119",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5119770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5208",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5208770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5306",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5306770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5409",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5409770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5554",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5554770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5658",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5658770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5908",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5908770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5924",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5924770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6107",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6107770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6124",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6124770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6252",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6252770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6353",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6353770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6414",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6414770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6652",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6652770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6902",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6902770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6918",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6918770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "7106",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7106770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "7651",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7651770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1126",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1126790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1252",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1252790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1355",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1355790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1503",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1503790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1652",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1652790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1908",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1908790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1924",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1924790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2122",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2122790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    }
+]

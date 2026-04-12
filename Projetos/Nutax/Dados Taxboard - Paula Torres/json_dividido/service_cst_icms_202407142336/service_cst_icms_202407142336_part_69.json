@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "5357",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5357770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5501",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5501770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5606",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5606770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5666",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5666770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5916",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5916770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "5933",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5933770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6115",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6115770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6202",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6202770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6302",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6302770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6403",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6403770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6552",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6552770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6660",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6660770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6910",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6910770",
+        "icms": "Sim",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "6929",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6929770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "7211",
+        "cst": "770",
+        "descr_resumida": "Redução BC com ST - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7211770",
+        "icms": "Não",
+        "cst_descr": "770|Redução BC com ST - Estrageiro CAMEX",
+        "numeracao": "94"
+    },
+    {
+        "cfop": "1116",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1116790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1203",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1203790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1303",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1303790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1409",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1409790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1555",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1555790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1664",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1664790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1916",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "1916790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2102",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2102790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2201",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2201790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2301",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2301790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2408",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2408790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2556",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2556790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2904",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2904790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "2920",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "2920790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "3205",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "3205790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "3651",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "3651790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5114",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5114790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5201",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5201790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5301",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5301790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5401",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5401790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5504",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5504790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5653",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5653790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5903",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5903790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "5919",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "5919790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6102",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6102790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6118",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6118790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6207",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6207790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6305",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6305790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6409",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6409790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6555",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6555790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6663",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6663790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6913",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6913790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "6933",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "6933790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "7358",
+        "cst": "790",
+        "descr_resumida": "Outras - Estrageiro CAMEX",
+        "descr": "Estrangeira - Adquirida no mercado interno, sem similar nacional, constante em lista de Resolução CAMEX - Outras",
+        "chave": "7358790",
+        "icms": "Não",
+        "cst_descr": "790|Outras - Estrageiro CAMEX",
+        "numeracao": "95"
+    },
+    {
+        "cfop": "1120",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1120800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1206",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1206800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1306",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1306800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1414",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1414800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1601",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1601800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1903",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1903800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1919",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "1919800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2116",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2116800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2204",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2204800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2304",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2304800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2411",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2411800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2651",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2651800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2907",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2907800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "2923",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "2923800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "3211",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "3211800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "3930",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "3930800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5117",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5117800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5206",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5206800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5304",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5304800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5405",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5405800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5552",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5552800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5656",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5656800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5906",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5906800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "5922",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "5922800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6105",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6105800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6122",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6122800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6210",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6210800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6351",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6351800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6412",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6412800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6603",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6603800",
+        "icms": "Sim",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6666",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6666800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "6916",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "6916800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "7102",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "7102800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "7553",
+        "cst": "800",
+        "descr_resumida": "Tributada integralmente - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada integralmente",
+        "chave": "7553800",
+        "icms": "Não",
+        "cst_descr": "800|Tributada integralmente - Nacional > 70",
+        "numeracao": "96"
+    },
+    {
+        "cfop": "1124",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1124810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "1209",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1209810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "1353",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1353810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "1452",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1452810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "1604",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1604810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "1906",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1906810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "1922",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "1922810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2120",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2120810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2207",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2207810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2351",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2351810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2501",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2501810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2658",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2658810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2910",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2910810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "2931",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "2931810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "3351",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "3351810",
+        "icms": "Não",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "5102",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5102810",
+        "icms": "Sim",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    },
+    {
+        "cfop": "5120",
+        "cst": "810",
+        "descr_resumida": "Tributado com ST - Nacional > 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70% (setenta por cento) - Tributada e com cobrança do ICMS por substituição tributária",
+        "chave": "5120810",
+        "icms": "Sim",
+        "cst_descr": "810|Tributado com ST - Nacional > 70",
+        "numeracao": "97"
+    }
+]

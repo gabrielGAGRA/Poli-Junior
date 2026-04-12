@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "2554",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2554151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2902",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2902151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "2918",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "2918151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "3201",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "3201151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "3553",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "3553151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5112",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5112151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5155",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5155151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5257",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5257151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5359",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5359151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5502",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5502151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5651",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5651151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5901",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5901151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5917",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5917151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "5949",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "5949151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6116",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6116151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6205",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6205151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6303",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6303151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6404",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6404151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6553",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6553151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6661",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6661151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6911",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6911151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "6931",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "6931151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "7251",
+        "cst": "151",
+        "descr_resumida": "Diferimento - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Diferimento",
+        "chave": "7251151",
+        "icms": "Não",
+        "cst_descr": "151|Diferimento - Importado",
+        "numeracao": "26"
+    },
+    {
+        "cfop": "1117",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1117160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1204",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1204160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1304",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1304160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1410",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1410160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1556",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1556160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1901",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1901160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1917",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1917160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2111",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2111160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2202",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2202160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2302",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2302160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2409",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2409160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2557",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2557160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2905",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2905160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "2921",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2921160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "3206",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "3206160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "3652",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "3652160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5115",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5115160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5202",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5202160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5302",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5302160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5402",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5402160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5505",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5505160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5654",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5654160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5904",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5904160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "5920",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5920160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6103",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6103160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6119",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6119160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6208",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6208160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6306",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6306160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6410",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6410160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6556",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6556160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6664",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6664160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6914",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6914160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "6949",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "6949160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "7501",
+        "cst": "160",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "7501160",
+        "icms": "Não",
+        "cst_descr": "160|Simples Nacional",
+        "numeracao": "27"
+    },
+    {
+        "cfop": "1121",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1121170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1207",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1207170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1351",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1351170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1415",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1415170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1602",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1602170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1904",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1904170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1920",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1920170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2117",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2117170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2205",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2205170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2305",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2305170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2414",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2414170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2652",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2652170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2908",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2908170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "2924",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2924170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "3251",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "3251170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "3949",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "3949170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5118",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5118170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5207",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5207170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5305",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5305170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5408",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5408170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5553",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5553170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5657",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5657170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5907",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5907170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "5923",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5923170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6106",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6106170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6123",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6123170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6251",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6251170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6352",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6352170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6413",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6413170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6651",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6651170",
+        "icms": "Sim",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6901",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6901170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "6917",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6917170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "7105",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7105170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "7556",
+        "cst": "170",
+        "descr_resumida": "Simples Nacional",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7556170",
+        "icms": "Não",
+        "cst_descr": "170|Simples Nacional",
+        "numeracao": "28"
+    },
+    {
+        "cfop": "1125",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1125190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "1251",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1251190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "1354",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1354190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "1501",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1501190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "1605",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1605190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "1907",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1907190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "1923",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "1923190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "2121",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "2121190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    },
+    {
+        "cfop": "2208",
+        "cst": "190",
+        "descr_resumida": "Outras - Importado",
+        "descr": "Estrangeira - Importação direta, exceto a indicada no código 6 da Tabela A - Outras",
+        "chave": "2208190",
+        "icms": "Não",
+        "cst_descr": "190|Outras - Importado",
+        "numeracao": "29"
+    }
+]

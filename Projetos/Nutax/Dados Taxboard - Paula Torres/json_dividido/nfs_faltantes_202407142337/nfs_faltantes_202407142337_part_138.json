@@ -1,0 +1,802 @@
+[
+    {
+        "nf_key": "43230235068230000339550010000001061083548960",
+        "_id": "d20879db-1c9c-49d6-8838-b880f7eaa513",
+        "cnpj": "35068230000339",
+        "branch_name": "PAULA TORRES COMERCIO DE CALCADOS LTDA",
+        "sped_competence": "02/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000533001034304747",
+        "_id": "74476869-80aa-47b3-82ef-104fc1bdf8e3",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000454001080042745",
+        "_id": "98eb89fc-2885-4b47-bb8e-d9940cd97b46",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000421201059896640",
+        "_id": "98c390d4-07dc-464c-91b5-dca364cd8f0b",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000513681017954434",
+        "_id": "5d4ebb49-2803-4126-b62a-af6fc7d07f6a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000543701047429100",
+        "_id": "b3923646-81fc-4948-831a-d672d38076ca",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000574581205408166",
+        "_id": "c607c4c3-be16-4524-a1af-7ed2e9bcfa23",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000479141073573787",
+        "_id": "7e5b219c-0e38-41da-9db8-c5f27724c807",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35230809017661000528550010000117891255964290",
+        "_id": "1b25e3f5-2226-4824-a4d0-98820d30d9aa",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000564581128824496",
+        "_id": "58c2b3ba-b27f-40c2-81b9-ee1d50da2877",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000506251041647869",
+        "_id": "6e17d407-bf38-4266-b263-35a970aa6fe4",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000543401060601699",
+        "_id": "1914d53e-6bbb-4636-8f44-fc75c840b433",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000576541902528114",
+        "_id": "39655662-4bad-481a-8c9d-f6f4185d3821",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000512701014426979",
+        "_id": "55bc808d-f864-476c-920b-2b7a2cbd9910",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000478541016787242",
+        "_id": "08174b0c-8567-4475-8510-f8ed1251b4ca",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35230809017661000528550970000001531203606532",
+        "_id": "e760dcec-ff4d-4a0b-9d93-2080223baad7",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000564621287044234",
+        "_id": "09bcd431-2580-4766-b0e3-3b73d156a92f",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000560181088193612",
+        "_id": "b4740884-a491-450b-83f8-bf92e2ba42fe",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000564631268371648",
+        "_id": "0453f43d-cb97-4af0-a8c3-4a220e3052f2",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000428341049792420",
+        "_id": "8d0e4cdf-291a-43d0-8931-a1919c44042a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000499591042485074",
+        "_id": "e8a1d129-ffaa-4546-953e-b6055a963018",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000473811060651792",
+        "_id": "e668d51b-7d97-4efd-a8cb-08795542a574",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000442491090081218",
+        "_id": "b6849fca-d97d-42a4-901f-a28febfaf9e1",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000542981013447870",
+        "_id": "a2b57c81-adab-4946-8b79-796aef1e7e58",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000417901019581749",
+        "_id": "f9df04a2-d482-41ca-9b3a-9208ab684237",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000430061079872577",
+        "_id": "ae138dc1-9aad-47a7-ad1d-777a11b120ae",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000437841065107570",
+        "_id": "2ee017ae-b987-46fe-b2bf-3487d3c6c1c6",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35230809017661000528550960000003901336792998",
+        "_id": "14e0ea22-b82e-42bd-95a5-9b1dc154219a",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000521821070354716",
+        "_id": "83ecd71d-b456-42b5-a5ed-c3ee0c7ff77c",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000478731090746371",
+        "_id": "0b16f51a-2786-4640-9d76-b7418e2bf1f1",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000449361054122368",
+        "_id": "58b20520-86a7-4c2b-8c2d-f404908a46a6",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000532041095736489",
+        "_id": "7e04b314-63f5-4b97-ab38-2efb78d959a3",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000476521068927007",
+        "_id": "d36f20c9-85d4-4cd3-a8f4-222a539d4121",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35230809017661000528550040000041061133757367",
+        "_id": "7af4cce4-f32d-41ed-be38-7a4ff3aa48cb",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000432561058717390",
+        "_id": "d7911151-06ff-4787-907c-700a0344a5fd",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000415641093503283",
+        "_id": "1f84e6be-d4e6-49b6-809e-29bd7c563261",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000503471075834867",
+        "_id": "c240597e-1fdf-44e3-824c-dd71d06517fc",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000539611008793580",
+        "_id": "293e7766-f5ec-48ac-8750-97c32b4a2635",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000552701058867379",
+        "_id": "414e4891-5fe2-4541-97c3-8cf09c3f1a01",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000511371009163795",
+        "_id": "5e3c1554-750d-494e-8c50-b6531760295d",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000532351081695200",
+        "_id": "f52aa729-742a-41df-92c9-5b5a9c4eaff0",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000564521171500997",
+        "_id": "920a4969-9278-4bc2-b21a-7ba1e28032fa",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000572521476416748",
+        "_id": "d966de21-a1fe-4656-8e57-80a0a4a8ce5a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000427771085143730",
+        "_id": "83e041ce-674a-44d6-aac4-94a0b0272432",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000508921006544491",
+        "_id": "ec61dabf-3dd5-426d-9fce-eadbcce6b2f7",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000564811233646541",
+        "_id": "4f61801d-84a6-4ef2-b10c-8058f5120236",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000471261026729684",
+        "_id": "dc460e41-b565-41cc-8eb7-c7e12b9afa42",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000523911007513748",
+        "_id": "d5ce886c-a8be-4322-94a6-07180413b81c",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550090000000021273838697",
+        "_id": "9321f56b-5020-43b9-84fb-328f03649a3f",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000504901028107403",
+        "_id": "a7909292-5cc3-4f51-babf-b77a73108bc0",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000469821065903914",
+        "_id": "01bd7983-d70c-4822-84ff-1a7b868fc32f",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000568501185624755",
+        "_id": "ebf961a5-31b4-4bf8-af14-e8e85506437a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000437661084706280",
+        "_id": "00624106-83bd-4ea6-96a0-49385a9301d8",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000526981021956586",
+        "_id": "dbc44e72-538a-42a2-acad-83dc05d982c2",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000416881027635875",
+        "_id": "50d07c65-f6f1-4710-81aa-1968ec65fca5",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000422891042133761",
+        "_id": "9edf7161-a177-41f4-aabc-664733819f7f",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000521511022346036",
+        "_id": "c7c82a90-c544-41fa-8142-ed37ca5b6bd7",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35230409017661000528550050000000141035208776",
+        "_id": "a1f55cd1-38f6-41ca-9f5f-d5429546ba85",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "04/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000456241074995348",
+        "_id": "2ca5f821-fad0-4252-80b3-92f5093ae34e",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000566581954163758",
+        "_id": "e9501c9e-2627-4b65-8204-75cf82df53f0",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000425221094002916",
+        "_id": "faae8698-5bbb-46d6-9eee-2cddce4516bd",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000554891053231703",
+        "_id": "8ada1bf6-41eb-4897-9219-c0f3df76057b",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000536431019420123",
+        "_id": "46a3d5cf-2ac3-4fab-b6ef-56bc6e5b1e11",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000411381044343705",
+        "_id": "499cb89f-ecd3-4839-86d4-3fc59bc4b800",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000528541097228669",
+        "_id": "d99072fc-8f5e-4fb8-996d-13990bba6bee",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000416631095125845",
+        "_id": "ee7c8df8-8e66-4ac2-98ff-7a2ea608b737",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000412781067486252",
+        "_id": "c241e343-32b2-4e1a-b3fc-d25c36f59877",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000412311003765910",
+        "_id": "4790c14d-c46a-4cd2-8423-f09bfed2d75a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000431921001793052",
+        "_id": "20901ca9-d2c7-4cba-a9da-36a488eaba48",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000414661015325851",
+        "_id": "d6be81ef-1acb-420a-8781-b30389b5b52c",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35231009017661000528550980000009361990877756",
+        "_id": "be421e28-6e3c-4127-af6c-b340d829184d",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "10/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000458591037183459",
+        "_id": "20e02b4d-1b49-46ca-9382-d03a69cd5965",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35231109017661000528550960000005431305023419",
+        "_id": "22b8d1c5-bc97-4df4-9870-982ee38ef613",
+        "cnpj": "09017661000528",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2023",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000423141047023632",
+        "_id": "fa6594ae-f48a-400d-a256-4ebf3d767b0a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000427481073044420",
+        "_id": "94c6e7bf-2b2c-4431-a9cf-d86eb0512cd4",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000498411023435334",
+        "_id": "f6c446d9-ca6d-43d2-b83d-586a08d82832",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000528681025528130",
+        "_id": "a2a26563-9abd-4235-a5b3-3c0457b4b7b1",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000445631026005145",
+        "_id": "4379208c-2e69-451f-86ef-a9f6cd8a6946",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000558901077210431",
+        "_id": "9103fd08-b875-4386-899b-859ee3d41a88",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000509731070017138",
+        "_id": "96731a33-c25a-4a23-8d3d-e23d274865be",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000519561027879372",
+        "_id": "f9ca7d24-8151-4513-869a-3e5c408c9c0f",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000425401002427034",
+        "_id": "01352dac-6282-4d0c-9061-d6bd936ad2cb",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000464961067231210",
+        "_id": "31269ce2-a90b-494d-9227-c7109280977a",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000429651036556156",
+        "_id": "c1cf2260-8b4c-4491-8e1d-be3b95c210b3",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000530671016305470",
+        "_id": "e3f86a6a-3bdd-4a94-b1c7-bf70a7269557",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000448191017500684",
+        "_id": "0198b677-fcc6-4fa5-9782-d303986b47ba",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000536401095457324",
+        "_id": "b9b18b3c-7d9e-42e2-a64a-ce3fdc478850",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000476631091480840",
+        "_id": "ba85a3e9-25f5-4e4f-bc2c-2d36e5fff19d",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000478171049908215",
+        "_id": "535747ff-d980-46c2-87d2-ca175638234e",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000530941084209837",
+        "_id": "3c42135c-7048-4c88-8939-316deb0cc6f2",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000506041062537477",
+        "_id": "aa3eaba1-028a-433e-9285-c2dbbe55abe1",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000562311319246611",
+        "_id": "bb682727-b4f6-439d-8efd-16b63e0d9ec3",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220909017661000609550010000462511058520482",
+        "_id": "f5c96482-ec11-48a7-9b01-038a50e6784f",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "09/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000572071154634563",
+        "_id": "83506fd8-71f8-4a52-b268-215e3aacf1b2",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221109017661000609550010000517501056800571",
+        "_id": "7a08761c-6cf3-4f44-877c-caa4509bb909",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "11/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000428811040931550",
+        "_id": "c826d637-8f0b-41e8-9b8c-cb7df8fb2451",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000456471059796598",
+        "_id": "cf9dabb9-c79f-4ce7-8603-bec102409c6d",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220809017661000609550010000451491014671289",
+        "_id": "688dbb5c-b2dc-4b3a-a47b-db4feb1845aa",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "08/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35220709017661000609550010000414581060067899",
+        "_id": "4b5347a4-14d4-4efa-bb4e-b039c3de0b5c",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "07/2022",
+        "rown": "1"
+    },
+    {
+        "nf_key": "35221209017661000609550010000555111022006280",
+        "_id": "414523d6-8d63-40a6-958f-7e1cb0bc7706",
+        "cnpj": "09017661000609",
+        "branch_name": "TORRES COMERCIO DE CALCADOS - EIRELI",
+        "sped_competence": "12/2022",
+        "rown": "1"
+    }
+]

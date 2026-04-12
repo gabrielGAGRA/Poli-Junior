@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "2253",
+        "cst": "341",
+        "descr_resumida": "Não Tributada - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "chave": "2253341",
+        "icms": "Não",
+        "cst_descr": "341|Não Tributada - Nacional > 40 < 70",
+        "numeracao": "46"
+    },
+    {
+        "cfop": "2356",
+        "cst": "341",
+        "descr_resumida": "Não Tributada - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "chave": "2356341",
+        "icms": "Não",
+        "cst_descr": "341|Não Tributada - Nacional > 40 < 70",
+        "numeracao": "46"
+    },
+    {
+        "cfop": "2551",
+        "cst": "341",
+        "descr_resumida": "Não Tributada - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "chave": "2551341",
+        "icms": "Não",
+        "cst_descr": "341|Não Tributada - Nacional > 40 < 70",
+        "numeracao": "46"
+    },
+    {
+        "cfop": "2663",
+        "cst": "341",
+        "descr_resumida": "Não Tributada - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "chave": "2663341",
+        "icms": "Não",
+        "cst_descr": "341|Não Tributada - Nacional > 40 < 70",
+        "numeracao": "46"
+    },
+    {
+        "cfop": "2915",
+        "cst": "341",
+        "descr_resumida": "Não Tributada - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "chave": "2915341",
+        "icms": "Não",
+        "cst_descr": "341|Não Tributada - Nacional > 40 < 70",
+        "numeracao": "46"
+    },
+    {
+        "cfop": "3102",
+        "cst": "341",
+        "descr_resumida": "Não Tributada - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Não tributada",
+        "chave": "3102341",
+        "icms": "Não",
+        "cst_descr": "341|Não Tributada - Nacional > 40 < 70",
+        "numeracao": "46"
+    },
+    {
+        "cfop": "6663",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6663441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6913",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6913441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "6933",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "6933441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "7358",
+        "cst": "441",
+        "descr_resumida": "Não Tributada - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/12 - Não tributada",
+        "chave": "7358441",
+        "icms": "Não",
+        "cst_descr": "441|Não Tributada - Nacional PPB ZFM",
+        "numeracao": "57"
+    },
+    {
+        "cfop": "1120",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1120450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1206",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1206450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1306",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1306450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1414",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1414450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1601",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1601450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1903",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1903450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1919",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "1919450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2116",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2116450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2204",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2204450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2304",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2304450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2411",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2411450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2651",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2651450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2907",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2907450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "2923",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "2923450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "3211",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "3211450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "3930",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "3930450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5117",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5117450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5206",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5206450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5304",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5304450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5405",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5405450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5552",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5552450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5656",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5656450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5906",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5906450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "5922",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "5922450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6105",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6105450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6122",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6122450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6210",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6210450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6351",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6351450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6412",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6412450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6603",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6603450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6666",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6666450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "6916",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "6916450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "7102",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "7102450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "7553",
+        "cst": "450",
+        "descr_resumida": "Suspensão - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/13 - Suspensão",
+        "chave": "7553450",
+        "icms": "Não",
+        "cst_descr": "450|Suspensão - Nacional PPB ZFM",
+        "numeracao": "58"
+    },
+    {
+        "cfop": "1124",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1124451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1209",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1209451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1353",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1353451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1452",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1452451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1604",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1604451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1906",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1906451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1922",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "1922451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2120",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2120451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2207",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2207451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2351",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2351451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2501",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2501451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2658",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2658451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2910",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2910451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "2931",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "2931451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "3351",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "3351451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5102",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5102451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5120",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5120451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5209",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5209451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5307",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5307451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5410",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5410451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5555",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5555451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5659",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5659451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5909",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5909451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "5925",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "5925451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6108",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6108451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6125",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6125451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6253",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6253451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6354",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6354451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6415",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6415451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6653",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6653451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6903",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6903451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "6919",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "6919451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "7127",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "7127451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "7654",
+        "cst": "451",
+        "descr_resumida": "Diferimento - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/14 - Diferimento",
+        "chave": "7654451",
+        "icms": "Não",
+        "cst_descr": "451|Diferimento - Nacional PPB ZFM",
+        "numeracao": "59"
+    },
+    {
+        "cfop": "1128",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1128460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "1253",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1253460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "1356",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1356460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "1504",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1504460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "1653",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1653460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "1909",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1909460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "1925",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "1925460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2124",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2124460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2251",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2251460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2354",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2354460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2505",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2505460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2661",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2661460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2913",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2913460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "2949",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "2949460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "3354",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "3354460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5105",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5105460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5124",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5124460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5252",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5252460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5353",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5353460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5413",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5413460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5601",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5601460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    },
+    {
+        "cfop": "5662",
+        "cst": "460",
+        "descr_resumida": "ST Retido anteriomente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/15 - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "5662460",
+        "icms": "Não",
+        "cst_descr": "460|ST Retido anteriomente - Nacional PPB ZFM",
+        "numeracao": "60"
+    }
+]

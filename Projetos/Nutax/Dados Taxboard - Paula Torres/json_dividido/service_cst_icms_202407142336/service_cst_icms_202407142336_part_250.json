@@ -1,0 +1,1002 @@
+[
+    {
+        "cfop": "7127",
+        "cst": "360",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "7127360",
+        "icms": "Não",
+        "cst_descr": "360|ST Retido anteriomente - Nacional > 40 < 70",
+        "numeracao": "49"
+    },
+    {
+        "cfop": "7654",
+        "cst": "360",
+        "descr_resumida": "ST Retido anteriomente - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - ICMS cobrado anteriormente por substituição tributária",
+        "chave": "7654360",
+        "icms": "Não",
+        "cst_descr": "360|ST Retido anteriomente - Nacional > 40 < 70",
+        "numeracao": "49"
+    },
+    {
+        "cfop": "1128",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1128370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1253",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1253370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1356",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1356370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1504",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1504370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1653",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1653370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1909",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1909370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1925",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "1925370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2124",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2124370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2251",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2251370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2354",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2354370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2505",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2505370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2661",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2661370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2913",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2913370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "2949",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "2949370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "3354",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "3354370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5105",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5105370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5124",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5124370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5252",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5252370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5353",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5353370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5413",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5413370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5601",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5601370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5662",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5662370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5912",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5912370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "5928",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "5928370",
+        "icms": "Checar",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6111",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6111370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6153",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6153370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6256",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6256370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6357",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6357370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6503",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6503370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6656",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6656370",
+        "icms": "Sim",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6906",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6906370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "6922",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "6922370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "7205",
+        "cst": "370",
+        "descr_resumida": "Redução BC com ST - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Com redução de base de cálculo e cobrança do ICMS por substituição tributária",
+        "chave": "7205370",
+        "icms": "Não",
+        "cst_descr": "370|Redução BC com ST - Nacional > 40 < 70",
+        "numeracao": "50"
+    },
+    {
+        "cfop": "1101",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1101390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1153",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1153390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1256",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1256390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1403",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1403390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1551",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1551390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1660",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1660390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1912",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1912390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1932",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "1932390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "2151",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "2151390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "2254",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "2254390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "2401",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "2401390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "2552",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "2552390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "2664",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "2664390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "2916",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "2916390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "3126",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "3126390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "3503",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "3503390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5110",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5110390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5152",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5152390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5255",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5255390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5356",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5356390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5451",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5451390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5605",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5605390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5665",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5665390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5915",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5915390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "5932",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "5932390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6114",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6114390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6201",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6201390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6301",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6301390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6402",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6402390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6551",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6551390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6659",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6659390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6909",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6909390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "6925",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "6925390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "7210",
+        "cst": "390",
+        "descr_resumida": "Outras - Nacional > 40 < 70",
+        "descr": "Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% (quarenta por cento) e inferior ou igual a 70% (setenta por cento) - Outras",
+        "chave": "7210390",
+        "icms": "Não",
+        "cst_descr": "390|Outras - Nacional > 40 < 70",
+        "numeracao": "51"
+    },
+    {
+        "cfop": "1113",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1113400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1202",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1202400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1302",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1302400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1408",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1408400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1554",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1554400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1663",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1663400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "1915",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "1915400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2101",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2101400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2154",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2154400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2257",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2257400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2407",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2407400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2555",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2555400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2903",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2903400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "2919",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "2919400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3202",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3202400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "3556",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "3556400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5113",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5113400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5156",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5156400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5258",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5258400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5360",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5360400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5503",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5503400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5652",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5652400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5902",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5902400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "5918",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "5918400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6101",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6101400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6117",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6117400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6206",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6206400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6304",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6304400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6408",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6408400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6554",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6554400",
+        "icms": "Não",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    },
+    {
+        "cfop": "6662",
+        "cst": "400",
+        "descr_resumida": "Tributada integralmente - Nacional PPB ZFM",
+        "descr": "Nacional, cuja produção tenha sido feita em conformidade com os processos produtivos básicos de que tratam o Decreto-Lei nº 288/67, e as Leis nºs 8.248/91, 8.387/91, 10.176/01 e 11.484/07 - Tributada integralmente",
+        "chave": "6662400",
+        "icms": "Sim",
+        "cst_descr": "400|Tributada integralmente - Nacional PPB ZFM",
+        "numeracao": "52"
+    }
+]
