@@ -2,7 +2,7 @@
 // Última atualização: 24/03/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 const PIPEDRIVE_API_TOKEN = '';
-const OPENAI_API_KEY = '';
+const OPENAI_API_KEY = 'sk-proj-';
 
 const PIPEDRIVE_API_BASE_URL = "https://polijunior.pipedrive.com/api/v1";
 
