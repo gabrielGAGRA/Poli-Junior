@@ -9,7 +9,7 @@ const Flow_FluxoNCiv = {
     Tools: {
         fileSearch: {
             type: "file_search"
-        }
+        , vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] }
     },
 
     Schemas: {
@@ -73,8 +73,9 @@ Você receberá o contexto do negócio e de e-mails anteriores. Sua tarefa é an
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -130,7 +131,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         return finalOutput;
     },
 
-    _runRedator: function (redatorConfig, inputPrompt, tools = []) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -175,17 +176,16 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
                 // Roda RedatorDeRetomadaCase com FileSearch
                 const redatorPrompt = `CONTEXTO DO NEGÓCIO: ${input_as_text}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NCiv] Rodando RedatorDeRetomadaCase para Etapa 1`);
-                return this._runRedator(
+                return yield* this._runRedator(
                     this.RedatorDeRetomadaCase,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
                 const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NCiv] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
+                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
             }
 
         }
@@ -197,4 +197,3 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Flow_FluxoNCiv;
 }
-

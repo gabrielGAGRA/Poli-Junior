@@ -73,8 +73,9 @@ Você receberá o contexto do negócio e de e-mails anteriores. Sua tarefa é an
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,

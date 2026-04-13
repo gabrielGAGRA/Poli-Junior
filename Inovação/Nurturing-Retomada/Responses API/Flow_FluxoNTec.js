@@ -18,12 +18,11 @@ const Flow_FluxoNTec = {
             type: "web_search"
         },
         fileSearch: {
-            type: "file_search",
-            vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"]
-        }
+            type: "file_search"
+        , vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] }
     },
 
-        Schemas: {
+    Schemas: {
         RedatorOutputSchema: {
             type: "json_schema",
             json_schema: {
@@ -49,7 +48,7 @@ const Flow_FluxoNTec = {
      */
     Pesquisador: {
         name: "Pesquisador",
-        model: "gpt-5.4",
+        model: "gpt-5.4-mini",
         settings: {
             reasoning_effort: "low",
             store: true
@@ -80,8 +79,9 @@ Insight Chave: Um resumo conciso e factual (1-2 frases) da descoberta mais impor
 
     RedatorDeNurturingCase: {
         name: "Redator de Nurturing - Case",
-        model: "gpt-4.1",
+        model: "gpt-5.4",
         settings: {
+            reasoning_effort: "medium",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048, // Ajustado do original (10000 -> 2048)
@@ -141,8 +141,9 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -182,8 +183,9 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
     RedatorDeReEngajementPSNurturingFup: {
         name: "Redator de Re-engajement Pós Nurturing - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -352,7 +354,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         return finalOutput;
     },
 
-    _runRedator: function (redatorConfig, inputPrompt, tools = []) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -366,6 +368,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
+        
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -403,16 +406,17 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 // 2. Roda RedatorDeNurturingPesquisa
                 const redatorPrompt = `PASSO: ${etapa}\n\nPESQUISA: ${pesquisaText}\nCONTEXTO DO NEGÓCIO: ${input_as_text}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NTec] Rodando RedatorDeNurturingPesquisa`);
-                return this._runRedator(this.RedatorDeNurturingPesquisa, redatorPrompt);
+                return yield* this._runRedator(this.RedatorDeNurturingPesquisa, redatorPrompt);
             }
             else if (etapa === 2 || etapa === 4) {
                 // Roda RedatorDeNurturingCase via FileSearch
                 const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NTec] Rodando RedatorDeNurturingCase para Etapa ${etapa}`);
-                return this._runRedator(
+                return yield* this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorPrompt,
-                    [this.Tools.fileSearch]);
+                    [this.Tools.fileSearch]
+                );
             }
 
         } else if (cadencia === 'Retomada') {
@@ -434,22 +438,23 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 // 2. Roda RedatorDeRetomadaCasePesquisa com FileSearch embutido 
                 const redatorPrompt = `CONTEXTO DO NEGÓCIO: ${input_as_text}\nPESQUISA: ${pesquisaText}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NTec] Rodando RedatorDeRetomadaCasePesquisa`);
-                return this._runRedator(
+                return yield* this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorPrompt,
-                    [this.Tools.fileSearch]);
+                    [this.Tools.fileSearch]
+                );
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
                 const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
                 console.log(`[NTec] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
+                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
             }
 
         } else if (cadencia === 'Re-engajement do Nurturing') {
 
             const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
             console.log(`[NTec] Rodando RedatorDeReEngajementPSNurturingFup para Etapa ${etapa}`);
-            return this._runRedator(this.RedatorDeReEngajementPSNurturingFup, redatorPrompt);
+            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, redatorPrompt);
 
         }
 
@@ -460,7 +465,3 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Flow_FluxoNTec;
 }
-
-
-
-

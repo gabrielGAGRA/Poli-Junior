@@ -28,8 +28,9 @@ const Flow_FluxoOwnerInativo = {
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -73,8 +74,9 @@ Você receberá o nome do coordenador que saiu, o passo, contexto do negócio e 
 
     RedatorDeReEngajementPSNurturingFup: {
         name: "Redator de Re-engajement Pós Nurturing - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,

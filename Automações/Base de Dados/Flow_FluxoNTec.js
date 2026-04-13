@@ -48,7 +48,7 @@ const Flow_FluxoNTec = {
      */
     Pesquisador: {
         name: "Pesquisador",
-        model: "gpt-5.4",
+        model: "gpt-5.4-mini",
         settings: {
             reasoning_effort: "low",
             store: true
@@ -79,8 +79,9 @@ Insight Chave: Um resumo conciso e factual (1-2 frases) da descoberta mais impor
 
     RedatorDeNurturingCase: {
         name: "Redator de Nurturing - Case",
-        model: "gpt-4.1",
+        model: "gpt-5.4",
         settings: {
+            reasoning_effort: "medium",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048, // Ajustado do original (10000 -> 2048)
@@ -140,8 +141,9 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -181,8 +183,9 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
     RedatorDeReEngajementPSNurturingFup: {
         name: "Redator de Re-engajement Pós Nurturing - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,

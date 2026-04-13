@@ -28,8 +28,9 @@ const Flow_FluxoOwnerInativo = {
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -73,8 +74,9 @@ Você receberá o nome do coordenador que saiu, o passo, contexto do negócio e 
 
     RedatorDeReEngajementPSNurturingFup: {
         name: "Redator de Re-engajement Pós Nurturing - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 2048,
@@ -141,7 +143,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         return finalOutput;
     },
 
-    _runRedator: function (redatorConfig, instructionsLoaded, inputPrompt) {
+    _runRedator: function* (redatorConfig, instructionsLoaded, inputPrompt) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: instructionsLoaded,
@@ -186,7 +188,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
             const inst = this.RedatorDeRetomadaFup.getInstructions(nucleo_nome_completo);
 
             console.log(`[OwnerInativo] Rodando Diretoria (RetomadaFup) para Etapa ${etapa}`);
-            return this._runRedator(this.RedatorDeRetomadaFup, inst, redatorPrompt);
+            return yield* this._runRedator(this.RedatorDeRetomadaFup, inst, redatorPrompt);
 
         } else if (cadencia === 'Re-engajement do Nurturing') {
             // Roda o Redator para ReEngajamento usando FUP Diretoria
@@ -194,7 +196,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
             const inst = this.RedatorDeReEngajementPSNurturingFup.getInstructions(nucleo_nome_completo);
 
             console.log(`[OwnerInativo] Rodando Diretoria (ReEngajementPSNurturing) para Etapa ${etapa}`);
-            return this._runRedator(this.RedatorDeReEngajementPSNurturingFup, inst, redatorPrompt);
+            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, inst, redatorPrompt);
         }
 
         throw new Error(`[Owner-Inativo] Cadeia ou etapa não foi mapeada: Cadencia '${cadencia}', Etapa '${etapa}'`);

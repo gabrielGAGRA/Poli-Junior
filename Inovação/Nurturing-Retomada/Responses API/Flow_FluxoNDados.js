@@ -21,15 +21,8 @@ const Flow_FluxoNDados = {
             // enviar propriedades customizadas associadas se aceitas
         },
         fileSearch: {
-            type: "file_search"
-        }
-    },
-
-    ToolResources: {
-        fileSearchVectorStore: {
-            file_search: {
-                vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
-            }
+            type: "file_search",
+            vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
         }
     },
 
@@ -61,7 +54,7 @@ const Flow_FluxoNDados = {
      */
     Pesquisador: {
         name: "Pesquisador",
-        model: "gpt-5.4",
+        model: "gpt-5.4-mini",
         settings: {
             reasoning_effort: "low",
             store: true
@@ -92,8 +85,9 @@ Insight Chave: Um resumo conciso e factual (1-2 frases) da descoberta mais impor
 
     RedatorDeNurturingCase: {
         name: "Redator de Nurturing - Case",
-        model: "gpt-4.1",
+        model: "gpt-5.4",
         settings: {
+            reasoning_effort: "medium",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 10000,
@@ -153,8 +147,9 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 10000,
@@ -194,8 +189,9 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
     RedatorDeReEngajementPSNurturingFup: {
         name: "Redator de Re-engajement Pós Nurturing - FUP",
-        model: "gpt-4.1",
+        model: "gpt-5.4-mini",
         settings: {
+            reasoning_effort: "low",
             temperature: 0.8,
             top_p: 1,
             max_completion_tokens: 10000,
@@ -384,7 +380,6 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
         };
 
         if (tools && tools.length > 0) apiOptions.tools = tools;
-        
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -435,8 +430,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return yield* this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
 
@@ -462,8 +456,7 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
                 return yield* this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorPrompt,
-                    [this.Tools.fileSearch],
-                    this.ToolResources.fileSearchVectorStore
+                    [this.Tools.fileSearch]
                 );
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
@@ -487,4 +480,3 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesqu
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = Flow_FluxoNDados;
 }
-

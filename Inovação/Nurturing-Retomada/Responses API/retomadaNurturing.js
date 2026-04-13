@@ -4,17 +4,31 @@
  */
 
 function syncAndSummarize() {
-    const stagesToSync = Object.keys(WORKFLOW_STAGE_MAPPING).map(Number);
+    const stageMapping = WORKFLOW_STAGE_MAPPING;
+    const stagesToSync = Object.keys(stageMapping).map(Number);
+
+    // Adiciona o estágio de Espera da Nutrição para gerar resumos mais cedo
+    if (REGRAS_CONFIG.STAGE_ESPERA && !stagesToSync.includes(REGRAS_CONFIG.STAGE_ESPERA)) {
+        stagesToSync.push(REGRAS_CONFIG.STAGE_ESPERA);
+    }
+
     let deals = PipedriveRepository.fetchDealsInStages(stagesToSync);
 
     deals = deduplicateDeals(deals);
     const labelIdMap = PipedriveRepository.getLabelMapping();
+    const summarizedCache = SummarizedDealsCache.getCache();
+    let cacheUpdated = false;
 
     let workflowsToRun = [];
     let dealsToDelete = [];
 
     for (const deal of deals) {
         try {
+            if (summarizedCache[deal.id]) {
+                console.log(`[DEBUG] Deal ID: ${deal.id} skipped -> Encontrado no cache de 181 dias (já tem resumo).`);
+                continue;
+            }
+
             console.info(`[INFO] Starting summary analysis for Deal ID: ${deal.id}, Title: ${deal.title}`);
 
             let notesForSummary = [];
@@ -37,6 +51,11 @@ function syncAndSummarize() {
                 notesForSummary = PipedriveRepository.getNotesFromDeal(deal.id);
                 const hasSummary = notesForSummary.some(n => n.content && n.content.includes(AGENT_CONFIG.RESUMO_PREFIX));
                 needsSummary = !hasSummary && notesForSummary.length > 0;
+
+                if (hasSummary) {
+                    summarizedCache[deal.id] = Date.now();
+                    cacheUpdated = true;
+                }
             }
 
             if (needsSummary) {
@@ -79,7 +98,7 @@ function syncAndSummarize() {
                     });
 
                     // Limita processamento a X cards
-                    if (workflowsToRun.length >= (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT ? REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT : 10)) {
+                    if (workflowsToRun.length >= (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT ? REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT : 30)) {
                         console.info(`[INFO] Limite de processamento atingido (${workflowsToRun.length} cards) para syncAndSummarize.`);
                         break;
                     }
@@ -108,6 +127,9 @@ function syncAndSummarize() {
                     payload: JSON.stringify({ deal_id: res.meta.dealId, content: content }),
                     muteHttpExceptions: true
                 });
+
+                summarizedCache[res.meta.dealId] = Date.now();
+                cacheUpdated = true;
                 console.info(`[INFO] Strategic summary generated successfully for Deal ID: ${res.meta.dealId}, Nucleus: ${res.meta.nucleus}`);
             }
         });
@@ -122,11 +144,16 @@ function syncAndSummarize() {
         console.info(`[INFO] Executing bulk deletion of ${dealsToDelete.length} deals lacking original annotations.`);
         PipedriveRepository.executeBulkDeletes(dealsToDelete);
     }
+
+    if (cacheUpdated) {
+        SummarizedDealsCache.saveCache(summarizedCache);
+    }
 }
 
 function executeEmailCadence() {
     const activeUsers = PipedriveRepository.getActiveUsers();
-    const stagesToProcess = Object.keys(WORKFLOW_STAGE_MAPPING).map(Number);
+    const stageMapping = WORKFLOW_STAGE_MAPPING;
+    const stagesToProcess = Object.keys(stageMapping).map(Number);
     let deals = PipedriveRepository.fetchDealsInStages(stagesToProcess);
 
     deals = deduplicateDeals(deals);
@@ -136,7 +163,33 @@ function executeEmailCadence() {
 
     for (const deal of deals) {
         try {
-            const stepInfo = WORKFLOW_STAGE_MAPPING[deal.stage_id];
+            const stepInfo = stageMapping[deal.stage_id];
+
+            if (!stepInfo) continue;
+
+            // Validações da Retomada (duas primeiras etapas: aguardar 7 dias p/ < 50k, ou > 50k gera logo no preparar e-mail)
+            if (stepInfo.cadencia === 'Retomada' && stepInfo.passo <= 2) {
+                const dealValue = parseFloat(deal.value) || 0;
+                let canGenerateEmail = false;
+
+                if (dealValue > 50000 && stepInfo.passo === 1) {
+                    canGenerateEmail = true; // Valor > 50k no preparar-email (passo 1) gera logo
+                } else {
+                    const dataRetomadaStr = deal[CUSTOM_FIELDS.DATA_RETOMADA];
+                    if (dataRetomadaStr) {
+                        const dataRet = new Date(dataRetomadaStr);
+                        const diffDays = (dataRet.getTime() - Date.now()) / (1000 * 3600 * 24);
+                        if (diffDays <= 7) {
+                            canGenerateEmail = true;
+                        }
+                    }
+                }
+
+                if (!canGenerateEmail) {
+                    console.log(`[DEBUG] Deal ID: ${deal.id} skipped email cadence -> Retomada < 50k aguardando prazo de 7 dias para envio de email.`);
+                    continue;
+                }
+            }
 
             // O valor real recebido do Pipedrive via CUSTOM_FIELDS.LABEL
             let rawLabelValue = deal[CUSTOM_FIELDS.LABEL];
@@ -202,7 +255,7 @@ function executeEmailCadence() {
             });
 
             // Limita processamento a X cards
-            if (workflowsToRun.length >= (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT ? REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT : 10)) {
+            if (workflowsToRun.length >= (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT ? REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT : 30)) {
                 console.info(`[INFO] Limite de processamento atingido (${workflowsToRun.length} cards) para executeEmailCadence.`);
                 break;
             }
@@ -362,7 +415,7 @@ var PipedriveRepository = {
 
     fetchDealsInStages: function (stageIds) {
         const requests = stageIds.map(id => ({
-            url: `${PIPEDRIVE_API_BASE_URL}/deals?stage_id=${id}&status=open&api_token=${PIPEDRIVE_API_TOKEN}`,
+            url: `${PIPEDRIVE_API_BASE_URL}/deals?stage_id=${id}&status=open&limit=500&api_token=${PIPEDRIVE_API_TOKEN}`,
             method: 'get',
             muteHttpExceptions: true
         }));
@@ -699,7 +752,7 @@ var OpenAIRepository = {
                 } else {
                     flowModule = eval(workflowId);
                 }
-                
+
                 const generator = flowModule.runWorkflow(data.payload);
                 activeGenerators.push({
                     id: i,
@@ -732,10 +785,10 @@ var OpenAIRepository = {
                         const fetchReq = OpenAI_ResponsesAPI.buildFetchRequest(apiOptions);
                         fetchRequests.push(fetchReq);
                         indicesMap.push(i);
-                    } catch(e) {
-                         console.error(`[ERROR] Failed to build request for ${state.workflowId}: ${e.message}`);
-                         state.error = e;
-                         state.done = true;
+                    } catch (e) {
+                        console.error(`[ERROR] Failed to build request for ${state.workflowId}: ${e.message}`);
+                        state.error = e;
+                        state.done = true;
                     }
                 }
             }
@@ -748,9 +801,9 @@ var OpenAIRepository = {
                     rawResponses = UrlFetchApp.fetchAll(fetchRequests);
                 } catch (err) {
                     console.error(`[FATAL] fetchAll failed entirely: ${err.message}.`);
-                    indicesMap.forEach(idx => { 
-                       activeGenerators[idx].error = err; 
-                       activeGenerators[idx].done = true; 
+                    indicesMap.forEach(idx => {
+                        activeGenerators[idx].error = err;
+                        activeGenerators[idx].done = true;
                     });
                 }
             }
@@ -798,7 +851,7 @@ var OpenAIRepository = {
                         state.done = true;
                     }
                 }
-                
+
                 // Has execution finished?
                 if (state.currentYield && state.currentYield.done) {
                     state.done = true;
@@ -813,26 +866,26 @@ var OpenAIRepository = {
                         LoggerService.logToGoogleSheets(state.data.meta.dealId, state.workflowId, state.data.payload, "FALHA DE EXECUÇÃO", duration, state.error.message);
                         allResponses.push({ meta: state.data.meta, result: null, errorType: 'EXECUTION_FAIL' });
                     } else {
-                         const output = state.currentYield.value;
-                         console.info(`[INFO] Workflow completed. Module: ${state.workflowId}, Deal ID: ${state.data.meta.dealId}, Duration: ${duration}ms`);
-                         LoggerService.logToGoogleSheets(state.data.meta.dealId, state.workflowId, state.data.payload, output, duration, "");
-                         
-                         if (output && output.bypass) {
-                              allResponses.push({ meta: state.data.meta, result: null, errorType: null });
-                         } else if (typeof output === 'object') {
-                              allResponses.push({ meta: state.data.meta, result: output, errorType: null });
-                         } else if (typeof output === 'string') {
-                              allResponses.push({ meta: state.data.meta, result: output, errorType: null });
-                         } else {
-                              allResponses.push({ meta: state.data.meta, result: null, errorType: null });
-                         }
+                        const output = state.currentYield.value;
+                        console.info(`[INFO] Workflow completed. Module: ${state.workflowId}, Deal ID: ${state.data.meta.dealId}, Duration: ${duration}ms`);
+                        LoggerService.logToGoogleSheets(state.data.meta.dealId, state.workflowId, state.data.payload, output, duration, "");
+
+                        if (output && output.bypass) {
+                            allResponses.push({ meta: state.data.meta, result: null, errorType: null });
+                        } else if (typeof output === 'object') {
+                            allResponses.push({ meta: state.data.meta, result: output, errorType: null });
+                        } else if (typeof output === 'string') {
+                            allResponses.push({ meta: state.data.meta, result: output, errorType: null });
+                        } else {
+                            allResponses.push({ meta: state.data.meta, result: null, errorType: null });
+                        }
                     }
                 }
             }
 
             if (needsSleep > 0 && stillActive.length > 0) {
-                 console.warn(`[WARN] Sleeping globally for ${needsSleep}ms due to 429/5xx responses in batch.`);
-                 Utilities.sleep(needsSleep);
+                console.warn(`[WARN] Sleeping globally for ${needsSleep}ms due to 429/5xx responses in batch.`);
+                Utilities.sleep(needsSleep);
             }
 
             activeGenerators = stillActive;
@@ -961,3 +1014,41 @@ function deduplicateDeals(deals) {
 
     return uniqueDeals;
 }
+
+/**
+ * =================================================================
+ * CACHE DE SUMÁRIOS (181 DIAS)
+ * =================================================================
+ */
+const SummarizedDealsCache = {
+    getCache: function () {
+        try {
+            const props = PropertiesService.getScriptProperties();
+            const data = props.getProperty('summarized_deals_cache');
+            return data ? JSON.parse(data) : {};
+        } catch (e) {
+            console.error('[ERROR] Falha ao ler cache de sumários: ' + e.message);
+            return {};
+        }
+    },
+    saveCache: function (cacheObj) {
+        try {
+            // Limpa mais velhos que 181 dias antes de salvar
+            const maxAge = 181 * 24 * 60 * 60 * 1000;
+            const now = Date.now();
+            let count = 0;
+            for (const id in cacheObj) {
+                if (now - cacheObj[id] > maxAge) {
+                    delete cacheObj[id];
+                } else {
+                    count++;
+                }
+            }
+            const props = PropertiesService.getScriptProperties();
+            props.setProperty('summarized_deals_cache', JSON.stringify(cacheObj));
+            console.info(`[INFO] Cache salvo com sucesso. Contém ${count} deals sumariados.`);
+        } catch (e) {
+            console.error('[ERROR] Falha ao salvar cache de sumários: ' + e.message);
+        }
+    }
+};
