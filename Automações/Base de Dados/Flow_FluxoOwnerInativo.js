@@ -38,7 +38,7 @@ const Flow_FluxoOwnerInativo = {
             },
             store: true
         },
-        getInstructions: function (stateNucleoNomeCompleto) {
+        getInstructions: function (stateNucleoNomeCompleto, nome_owner_desativado) {
             return `<task>
 Você é o Gerente Comercial do ${stateNucleoNomeCompleto} da Poli Júnior. Sua missão é retomar o contato com leads que conversaram com o antigo coordenador (${nome_owner_desativado}), que não está mais na empresa.
 </task>
@@ -49,8 +49,13 @@ Você é o Gerente Comercial do ${stateNucleoNomeCompleto} da Poli Júnior. Sua 
 - Use o "Efeito de Prestígio": O lead agora está falando diretamente com a gerencia, o que aumenta a percepção de valor.
 </handover_protocol>
 
+<memo_mode>
+- Estilo: Polido, direto e com autoridade executiva.
+- Ação: Em vez de apenas seguir o fluxo, mencione que você "estava revisando os pontos discutidos com o ${nome_owner_desativado}" e identificou uma oportunidade de otimização que não foi explorada.
+</memo_mode>
+
 <dig_deeper_nudge>
-Como Gerente, você deve buscar problemas de segunda ordem que o antigo coordenador possa ter deixado passar. Não aceite apenas a dor superficial; identifique riscos estratégicos ou operacionais implícitos para demonstrar por que a sua intervenção pessoal é valiosa.
+Como Gerente, seu diferencial é a visão macro. Identifique riscos de sustentabilidade do projeto ou gargalos operacionais que o coordenador anterior pode ter tratado apenas de forma técnica. O seu e-mail deve transparecer que o lead agora tem um "aliado na diretoria".
 </dig_deeper_nudge>
 
 <cadence_logic>
@@ -60,9 +65,11 @@ Como Gerente, você deve buscar problemas de segunda ordem que o antigo coordena
 </cadence_logic>
 
 <verification_loop>
-1. O texto evita soar como um e-mail automático de erro?
-2. A transição entre o antigo dono da conta e o gerente parece natural?
-3. O e-mail começa com "Bom dia, [nome]!" e termina com "Atenciosamente," ou "Att,"?
+1. O e-mail evita transparecer desorganização interna?
+2. O tom é de "Upgrade" (lead ganhando attention da gerência) e não de "Remanejamento"?
+3. O Gerente propõe o próximo passo de forma assertiva?
+4. Removi referências técnicas de fontes e placeholders?
+5. O e-mail começa com "Bom dia, [nome]!" e termina com "Atenciosamente," ou "Att,"?
 </verification_loop>
 
 <output_contract>
@@ -81,7 +88,7 @@ Retorne APENAS o JSON estruturado { "titulo": "...", "corpo_html": "..." }.
             },
             store: true
         },
-        getInstructions: function (stateNucleoNomeCompleto) {
+        getInstructions: function (stateNucleoNomeCompleto, nome_owner_desativado) {
             return `<personality>
 Gerente Comercial experiente. Tom consultivo, focado em transformar a educação prévia em um plano de ação concreto.
 </personality>
@@ -108,9 +115,11 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
 </output_contract>
 
 <verification_loop>
+- O e-mail evita transparecer desorganização interna?
+- O tom é de "Upgrade" (lead ganhando atenção da gerência) e não de "Remanejamento"?
+- O Gerente propõe o próximo passo de forma assertiva?
+- Removi referências técnicas de fontes e placeholders?
 - O e-mail reconhece o histórico de nutrição?
-- A autoridade do Gerente está clara sem ser arrogante?
-- O formato final está tecnicamente perfeito para o parse JSON?
 </verification_loop>`;
         }
     },
@@ -179,19 +188,53 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
 
         } else if (cadencia === 'Retomada') {
             // Em OwnerInativo a retomada roda sempre o mesmo FUP adaptado para a Gerencia (passo 1, 2, 3...)
-            const redatorPrompt = `PASSO: ${etapa}\nNOME DO COORDENADOR QUE SAIU: ${nome_owner_desativado}\n\nCONTEXTO: (incluído nas instruções do agente)`;
-            const inst = this.RedatorDeRetomadaFup.getInstructions(nucleo_nome_completo);
+            const redatorInput = `
+<handover_context>
+- Gerente Assumindo: Diretor Comercial / Gerente do ${nucleo_nome_completo}
+- Antigo Coordenador: ${nome_owner_desativado}
+</handover_context>
+
+<business_context>
+${input_as_text}
+</business_context>
+
+<email_history>
+${emails_anteriores}
+</email_history>
+
+<task_update>
+Gere o Passo ${etapa} da cadência de retomada sob a perspectiva da Gerência.
+</task_update>
+`;
+            const inst = this.RedatorDeRetomadaFup.getInstructions(nucleo_nome_completo, nome_owner_desativado);
 
             console.log(`[OwnerInativo] Rodando Gerencia (RetomadaFup) para Etapa ${etapa}`);
-            return yield* this._runRedator(this.RedatorDeRetomadaFup, inst, redatorPrompt);
+            return yield* this._runRedator(this.RedatorDeRetomadaFup, inst, redatorInput);
 
         } else if (cadencia === 'Re-engajement do Nurturing') {
             // Roda o Redator para ReEngajamento usando FUP Gerencia
-            const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO: (incluído nas instruções do agente)`;
-            const inst = this.RedatorDeReEngajementPSNurturingFup.getInstructions(nucleo_nome_completo);
+            const redatorInput = `
+<handover_context>
+- Gerente Assumindo: Diretor Comercial / Gerente do ${nucleo_nome_completo}
+- Antigo Coordenador: ${nome_owner_desativado}
+</handover_context>
+
+<business_context>
+${input_as_text}
+</business_context>
+
+<email_history>
+${emails_anteriores}
+</email_history>
+
+<task_update>
+Gere o Passo ${etapa} da cadência de re-engajamento sob a perspectiva da Gerência.
+</task_update>
+`;
+            const inst = this.RedatorDeReEngajementPSNurturingFup.getInstructions(nucleo_nome_completo, nome_owner_desativado);
 
             console.log(`[OwnerInativo] Rodando Gerencia (ReEngajementPSNurturing) para Etapa ${etapa}`);
-            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, inst, redatorPrompt);
+            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, inst, redatorInput);
         }
 
         throw new Error(`[Owner-Inativo] Cadeia ou etapa não foi mapeada: Cadencia '${cadencia}', Etapa '${etapa}'`);
