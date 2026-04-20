@@ -1,3 +1,5 @@
+// Att: 17/04/2026
+
 /**
  * Google Apps Script - Fluxo de Tradução: NCiv (Apenas Retomada)
  * 
@@ -9,7 +11,8 @@ const Flow_FluxoNCiv = {
     Tools: {
         fileSearch: {
             type: "file_search"
-        , vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"] }
+            , vector_store_ids: ["vs_68e2e52a08fc8191a8c3a6bef08f747a"]
+        }
     },
 
     Schemas: {
@@ -35,39 +38,60 @@ const Flow_FluxoNCiv = {
         name: "Redator de Retomada - Case",
         model: "gpt-5.4",
         settings: {
-            reasoning_effort: "medium",
+            reasoning: {
+                effort: "medium",
+                summary: "concise"
+            },
             store: true
         },
         getInstructions: function () {
-            return `Você é um Agente de IA especialista em Redação para Reativação de Oportunidades (Retomada) do **Núcleo de Engenharia Civil e Arquitetura da Poli Júnior**. A sua persona é a de um consultor sênior, direto e focado em resultados. A sua missão é executar uma "intervenção cirúrgica": uma cadência curta e intensa para requalificar uma oportunidade que está "fria" há 3-6 meses.
+            return `<task_definition>
+Você é o Agente de Redação para o Gancho de Retomada do Núcleo de Engenharia Civil e Arquitetura. Sua missão é criar o primeiro e-mail de uma cadência de reativação, utilizando o "Gancho de Sucesso" mais forte disponível no Vector Storage.
+</task_definition>
 
------
+<personality_and_writing_controls>
+- Persona: Engenheiro Consultor da Poli Júnior. Especialista em normas técnicas e otimização de sistemas construtivos.
+- Tom: Sóbrio, autoritativo e focado em viabilidade.
+- Expertise: Mencione (quando pertinente) o uso de softwares como Eberick ou metodologias de gestão pré-obra para demonstrar domínio tecnológico.
+- Formato: "Bom dia, [nome]!", "Atenciosamente," ou "Att,". Sem placeholders.
+</personality_and_writing_controls>
 
-**REGRAS DE OURO:**
+<rules>
+- Foco Setorial: Engenharia Civil, Arquitetura e Projetos Técnicos.
+- Personalização: O e-mail deve ser indistinguível de um escrito por um humano.
+</rules>
 
-1.  **INICIE UMA NOVA CONVERSA:** O seu objetivo **NÃO** é continuar a conversa anterior com frases como "faz tempo que não conversamos". É usar um "gancho" forte e relevante para gerar uma nova faísca de interesse e validar se o problema original ainda existe ou se um novo surgiu.
-2.  **RITMO INTENSO E DIRETO:** A cadência é um tiro de meta: **3 a 4 contatos em 2-3 semanas**. Sua comunicação deve ser concisa e focada no valor do gancho.
-3.  **CTA FOCADO EM CONVERSA:** A sua Chamada para Ação (CTA) deve ser mais direta, mas ainda centrada em valor. O objetivo é propor uma conversa curta para explorar o novo insight. Exemplo: *"Teria 15 minutos na próxima semana para eu compartilhar essa nova perspectiva?"*.
-4.  **TOM:** De um especialista sênior que traz notícias e insights novos. Confiante, direto ao ponto e respeitoso.
-- Linguagem Natural do Português Brasileiro:** Comece como um e-mail normal, "Bom dia, [nome]! \n Tudo bem?...". SEMPRE termine com um "Atenciosamente" ou "Att" sem "[seu nome]" ou qualquer placeholder no e-mail.
+<decision_hierarchy_gancho>
+1) Prioridade 1 (Sucesso Relevante): Use um Case de Sucesso do Vector Storage com dor/setor similar (ex: reforma, cálculo estrutural, consultoria BIM).
+2) Prioridade 2 (Genérico de Capacidade): Se não houver case similar, use um case de alta complexidade técnica da Poli Júnior para demonstrar autoridade.
+</decision_hierarchy_gancho>
 
------
+<decision_hierarchy_especifica>
+1. Se o lead buscou Estrutural: Foque em segurança, economia de materiais e detalhamento via software.
+2. Se o lead buscou Gestão/Planejamento: Foque em cumprimento de cronograma e controle de custos (evitar desperdício).
+3. Se o lead buscou Elétrico/Hidro: Foque em eficiência energética, reuso de água e, principalmente, na compatibilização para evitar quebras na obra.
+</decision_hierarchy_especifica>
 
-**LÓGICA DE EXECUÇÃO E HIERARQUIA DE CONTEÚDO:**
+<dig_deeper_nudge>
+Vá além do projeto em si. Identifique riscos de "patologias estruturais", "retrabalho por falta de compatibilização entre elétrico/hidro" ou "estouro de orçamento por falta de planejamento pré-obra". Use esses riscos para restabelecer a urgência.
+</dig_deeper_nudge>
 
-Você será responsável pelo passo 1 da cadência. Você DEVE seguir a lógica para esse passo, sendo essa a cadência completa:
+<empty_result_recovery>
+Caso não encontre um case similar no Vector Storage, utilize um "Gancho de Conformidade":
+- Fale sobre os riscos de não seguir as NBRs específicas do setor do lead.
+- Destaque como um erro de dimensionamento (elétrico ou estrutural) pode gerar custos 10x maiores no futuro.
+- Proponha uma revisão técnica para garantir a viabilidade econômica do que ele planejou.
+</empty_result_recovery>
 
-  * **Passo 1 (O Gancho Crítico):** Esta é a sua ação mais importante. Verifique o Vector Storage. Se houver um case de sucesso da Poli Júnior com setor ou desafio de negócio similar ao do lead, use-o como o gancho principal. Este é o mais poderoso.
-CASO não haja um projeto similar, faça uma demonstração de capacidade com algo mais genérico.
+<verification_loop>
+1) O case é real e está no Vector Storage? 
+2) O CTA propõe uma conversa de 15 min sobre o gancho apresentado?
+3) O output é APENAS o JSON com 'titulo' e 'corpo_html'?
+</verification_loop>
 
-  * **Passo 2 e 3 (Follow-up de Valor)**
-
-  * **Passo 4 (Breakup)**
-
------
-
-**TAREFA:**
-Você receberá o contexto do negócio e de e-mails anteriores. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
+<output_contract>
+Gere apenas o JSON conforme o schema RedatorOutputSchema.
+</output_contract>`;
         }
     },
 
@@ -75,41 +99,42 @@ Você receberá o contexto do negócio e de e-mails anteriores. Sua tarefa é an
         name: "Redator de Retomada - FUP",
         model: "gpt-5.4-mini",
         settings: {
-            reasoning_effort: "low",
-            temperature: 0.8,
-            top_p: 1,
-            max_completion_tokens: 2048,
+            reasoning: {
+                effort: "low",
+                summary: "none"
+            },
             store: true
         },
         getInstructions: function () {
-            return `Você é um Agente de IA especialista em Redação para Reativação de Oportunidades (Retomada) do **Núcleo de Engenharia Civil e Arquitetura da Poli Júnior**. A sua persona é a de um consultor sênior, direto e focado em resultados. A sua missão é executar uma "intervenção cirúrgica": uma cadência curta e intensa para requalificar uma oportunidade que está "fria" há 3-6 meses.
+            return `<task_definition>
+Você é o Agente de Redação para Reativação de Oportunidades do Núcleo de Engenharia Civil e Arquitetura. Sua missão é reaquecer leads "frios" (3-6 meses sem contato) com mensagens curtas e potentes baseadas no gancho anterior.
+</task_definition>
 
------
+<personality_and_writing_controls>
+- Persona: Engenheiro Consultor da Poli Júnior. Especialista em normas técnicas e otimização de sistemas construtivos.
+- Tom: Sócio-consultor, sóbrio e focado em viabilidade.
+- Expertise: Uso estratégico de tecnologia para prevenção de patologias e estouros orçamentários.
+</personality_and_writing_controls>
 
-**REGRAS DE OURO:**
+<rules>
+- Jamais use termos de "sumiço". Inicie como uma nova conversa de valor técnico.
+- Ritmo: Cadência intensa de 3-4 contatos em 15 dias. 
+- CTA: Proponha uma conversa técnica/alinhamento de 15 min. 
+- Formato: "Bom dia, [nome]!", "Atenciosamente," ou "Att,". Sem placeholders.
+</rules>
 
-1.  **INICIE UMA NOVA CONVERSA:** O seu objetivo **NÃO** é continuar a conversa anterior com frases como "faz tempo que não conversamos". É usar um "gancho" forte e relevante para gerar uma nova faísca de interesse e validar se o problema original ainda existe ou se um novo surgiu.
-2.  **RITMO INTENSO E DIRETO:** A cadência é um tiro de meta: **3 a 4 contatos em 2-3 semanas**. Sua comunicação deve ser concisa e focada no valor do gancho.
-3.  **CTA FOCADO EM CONVERSA:** A sua Chamada para Ação (CTA) deve ser mais direta, mas ainda centrada em valor. O objetivo é propor uma conversa curta para explorar o novo insight. Exemplo: *"Teria 15 minutos na próxima semana para eu compartilhar essa nova perspectiva?"*.
-4.  **TOM:** De um especialista sênior que traz notícias e insights novos. Confiante, direto ao ponto e respeitoso.
-- Linguagem Natural do Português Brasileiro:** Comece como um e-mail normal, "Bom dia, [nome]! \n Tudo bem?...". SEMPRE termine com um "Atenciosamente" ou "Att" sem "[seu nome]" ou qualquer placeholder no e-mail.
+<dig_deeper_nudge>
+Vá além do projeto em si. Identifique riscos de "patologias estruturais", "retrabalho por falta de compatibilização entre elétrico/hidro" ou "estouro de orçamento por falta de planejamento pré-obra". Use esses riscos para restabelecer a urgência.
+</dig_deeper_nudge>
 
------
+<cadence_logic>
+- PASSO 2 e 3 (Follow-up de Valor): E-mails ultra-curtos. Relembre o case proposto no Passo 1 e valide se faz sentido para a realidade atual do lead.
+- PASSO 4 (Breakup): E-mail de encerramento profissional. Assuma que o timing mudou e libere o lead, mantendo a Poli Júnior como referência técnica futura.
+</cadence_logic>
 
-**LÓGICA DE EXECUÇÃO E HIERARQUIA DE CONTEÚDO:**
-
-Você receberá o passo da cadência, sendo estritamente 2 ou 3 ou 4. Você DEVE seguir a lógica para o passo, sendo essa a cadência completa:
-
-  * **Passo 1 (O Gancho Crítico: Sucesso Relevante ou Novo Insight de Mercado)** 
-
-* **Passo 2 e 3 (Follow-up de Valor):** Estes e-mails devem ser curtos. Faça referência ao gancho do primeiro e-mail e reforce o valor da conversa. Não introduza um case ou insight completamente novo. Exemplo: *"Só para garantir que você viu meu e-mail sobre [insight do gancho]. Acredito que essa abordagem poderia ser realmente relevante para a [Nome da Empresa]. Algum pensamento sobre isso?"*
-
-  * **Passo 4 (Breakup):** Redija um e-mail de "breakup" educado e profissional para obter uma resposta final (sim ou não) e fechar o arquivo, como o template do playbook sugere.
-
------
-
-**TAREFA:**
-Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
+<output_contract>
+Gere apenas o JSON conforme o schema RedatorOutputSchema.
+</output_contract>`;
         }
     },
 
@@ -119,7 +144,8 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
             finalOutput = response.output_text;
         } else if (response.output && response.output.length > 0) {
             for (let item of response.output) {
-                if (item.type === "message" && item.content) {
+                // Ignorar mensagens intermediárias de "pensamento em voz alta"
+                if (item.type === "message" && item.content && item.phase !== "commentary") {
                     for (let block of item.content) {
                         if (block.type === "output_text" || block.type === "text") {
                             finalOutput += (block.text || block.output_text || "");
@@ -138,14 +164,15 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
             input: inputPrompt,
             store: redatorConfig.settings.store,
             textFormat: this.Schemas.RedatorOutputSchema,
-            temperature: redatorConfig.settings.temperature,
-            top_p: redatorConfig.settings.top_p,
-            max_completion_tokens: redatorConfig.settings.max_completion_tokens,
-            reasoning_effort: redatorConfig.settings.reasoning_effort
+            tools: tools
         };
 
-        if (tools && tools.length > 0) apiOptions.tools = tools;
-        
+        if (redatorConfig.settings.reasoning.effort !== "none") {
+            apiOptions.reasoning = {
+                effort: redatorConfig.settings.reasoning.effort,
+                summary: redatorConfig.settings.reasoning.summary
+            };
+        }
 
         const response = yield apiOptions;
         const text = this._extractTextFromOutput(response);
@@ -164,6 +191,23 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
         const emails_anteriores = state.emails_anteriores || "";
         const input_as_text = workflow.input_as_text || "";
 
+        const createRedatorInput = (etapa, context, research = "", history = "") => {
+            return `
+<business_context>
+${context}
+</business_context>
+
+<email_history>
+${history}
+</email_history>
+
+${research ? `<research_data>\n${research}\n</research_data>\n` : ""}
+<task_update>
+Gere o Passo ${etapa} da cadência.
+</task_update>
+`;
+        };
+
         if (cadencia === 'Nurturing' || cadencia === 'Re-engajement do Nurturing') {
             // O fluxo original NCiv apenas passava a bola sem fazer nada. 
             // Mantendo a compatibilidade estrita orginal.
@@ -174,18 +218,18 @@ Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua taref
 
             if (etapa === 1) {
                 // Roda RedatorDeRetomadaCase com FileSearch
-                const redatorPrompt = `CONTEXTO DO NEGÓCIO: ${input_as_text}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
+                const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
                 console.log(`[NCiv] Rodando RedatorDeRetomadaCase para Etapa 1`);
                 return yield* this._runRedator(
                     this.RedatorDeRetomadaCase,
-                    redatorPrompt,
+                    redatorInput,
                     [this.Tools.fileSearch]
                 );
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
-                const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
+                const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
                 console.log(`[NCiv] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
+                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorInput);
             }
 
         }

@@ -1,7 +1,33 @@
 // Autor: Gabriel Agra de Castro Motta
-// Última atualização: 12/12/2025
+// Última atualização: 17/04/2026
 // Descrição: Processamento manual de retomada e nutrição utilizando configurações globais.
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
+
+/**
+ * ESTÁGIO 1: ESPERA
+ * 
+ * Lógica de negócios:
+ * - NUTRIÇÃO: Tem "Data de Retomada" definida, move no dia exato agendado (+ 1 dia de buffer)
+ * - RETOMADA:
+ *   * Calcula 90 dias base + dias úteis de espera (conforme valor da oportunidade)
+ *   * Leads de alto valor (>= R$ 50k): aguarda 11 dias úteis
+ *   * Leads de baixo valor (< R$ 50k): aguarda 64 dias úteis
+ *   * Move para Preparo quando esta data é atingida (+ 1 dia de buffer)
+ */
+
+/**
+ * ESTÁGIO 2: PREPARO DE E-MAIL
+ * 
+ * Validações obrigatórias:
+ * 1. Passou pelo menos 1 dia no estágio
+ * 2. Campo "Título do E-mail" preenchido (não vazio)
+ * 3. Campo "Corpo do E-mail" preenchido (não vazio)
+ * 4. Data limite atingida (conforme tipo de oportunidade)
+ * 
+ * Critérios de movimentação:
+ * - NUTRIÇÃO: Move automaticamente para Envio se passou 1 dia + email preenchido
+ * - RETOMADA: Move para Envio se atingiu o prazo total (180 dias + business days) + email preenchido
+ */
 
 /**
  * Função principal para ser agendada diariamente

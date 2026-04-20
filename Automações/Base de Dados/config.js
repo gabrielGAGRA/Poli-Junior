@@ -1,22 +1,28 @@
 // Autor: Gabriel Agra de Castro Motta
 // Última atualização: 24/03/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
+
+/* 
+  Chaves de API e URL
+*/
 const PIPEDRIVE_API_TOKEN = '';
 const OPENAI_API_KEY = 'sk-proj-';
 
 const PIPEDRIVE_API_BASE_URL = "https://polijunior.pipedrive.com/api/v1";
 
-// Dicionário de Nomes e Valores Fixos. Edite os nomes aqui caso mudem na planilha.
+/* 
+  Detalhes pra Nutrição/Retomada
+*/
+// Edite os nomes dos estágios aqui caso mudem
 const RAW_CONFIG = {
     REGRAS_CONFIG: {
         PIPELINE_RETOMADA: "Retomada",
         PIPELINE_NURTURING: "Nutrição",
-        STAGE_INDO_PARA_EMAIL_1: "Indo para E-mail 1", // Estágio de preparo de e-mail (segundo estágio)
-        STAGE_ENVIO_EMAIL_1: "Começo", // Estágio de envio
+        STAGE_INDO_PARA_EMAIL_1: "Indo para E-mail 1",
+        STAGE_ENVIO_EMAIL_1: "Começo",
         STAGE_ESPERA: "Espera",
 
-        DIRETOR_ID: 15199383,
-        MAX_CARDS_PROCESS_LIMIT: 30,
+        MAX_CARDS_PROCESS_LIMIT: 10,
         PLANILHA_LOGS_IA_ID: "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
     },
 
@@ -30,7 +36,7 @@ const RAW_CONFIG = {
     },
 
     WORKFLOW_CADENCES: [
-        "Retomada", "Nutrição"  // Nomes das pipelines para ler os estágios na ordem
+        "Retomada", "Nutrição"
     ]
 };
 
@@ -48,15 +54,8 @@ const AGENT_CONFIG = {
     WORKFLOW_REDACAO_INATIVO: "Flow_FluxoOwnerInativo"
 };
 
+const MAIN_SHEET_NAME = 'Base_Pipedrive';
+
 const MAINTENANCE_CONFIG = {
     HUNTER_CLEANUP_FILTERS: [1892, 1901]
 };
-
-// Referências dinâmicas exportadas sem quebrar o restante dos códigos
-const REGRAS_CONFIG = new Proxy({}, { get: (_, prop) => getResolvedConfig().REGRAS_CONFIG[prop] });
-const CUSTOM_FIELDS = new Proxy({}, { get: (_, prop) => getResolvedConfig().CUSTOM_FIELDS[prop] });
-const WORKFLOW_STAGE_MAPPING = new Proxy({}, {
-    get: (_, prop) => getResolvedConfig().WORKFLOW_STAGE_MAPPING[prop],
-    ownKeys: () => Reflect.ownKeys(getResolvedConfig().WORKFLOW_STAGE_MAPPING),
-    getOwnPropertyDescriptor: (_, prop) => Reflect.getOwnPropertyDescriptor(getResolvedConfig().WORKFLOW_STAGE_MAPPING, prop)
-});

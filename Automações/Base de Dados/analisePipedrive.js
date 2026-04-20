@@ -1,5 +1,5 @@
 ﻿// Autor: Gabriel Agra de Castro Motta
-// Última atualização: 03/03/2026
+// Última atualização: 17/04/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 
@@ -745,7 +745,6 @@ function getResolvedConfig() {
             STAGE_INDO_PARA_EMAIL_1: stageMap[RAW_CONFIG.REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1] || 85,
             STAGE_ENVIO_EMAIL_1: stageMap[RAW_CONFIG.REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1] || 86,
             STAGE_ESPERA: stageMap[RAW_CONFIG.REGRAS_CONFIG.STAGE_ESPERA] || 80,
-            DIRETOR_ID: RAW_CONFIG.REGRAS_CONFIG.DIRETOR_ID || 15199383,
             MAX_CARDS_PROCESS_LIMIT: RAW_CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 10,
             PLANILHA_LOGS_IA_ID: RAW_CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID || "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
         },
