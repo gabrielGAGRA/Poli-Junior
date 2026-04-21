@@ -5,10 +5,15 @@
 
 function syncAndSummarize() {
     const stageMapping = WORKFLOW_STAGE_MAPPING;
-    const stagesToSync = Object.keys(stageMapping).map(Number);
+    let stagesToSync = [];
+    for (const stageId in stageMapping) {
+        if (stageMapping[stageId] && stageMapping[stageId].passo === 1) {
+            stagesToSync.push(Number(stageId));
+        }
+    }
 
     // Adiciona o estágio de Espera da Nutrição para gerar resumos mais cedo
-    if (REGRAS_CONFIG.STAGE_ESPERA && !stagesToSync.includes(REGRAS_CONFIG.STAGE_ESPERA)) {
+    if (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.STAGE_ESPERA && !stagesToSync.includes(REGRAS_CONFIG.STAGE_ESPERA)) {
         stagesToSync.push(REGRAS_CONFIG.STAGE_ESPERA);
     }
 
@@ -25,26 +30,29 @@ function syncAndSummarize() {
     for (const deal of deals) {
         try {
             if (summarizedCache[deal.id]) {
-                console.log(`[DEBUG] Deal ID: ${deal.id} skipped -> Encontrado no cache de 181 dias (já tem resumo).`);
+                // [DEBUG] silencioso: Deal ID: ${deal.id} skipped -> Encontrado no cache de 181 dias (já tem resumo).
                 continue;
             }
 
-            console.info(`[INFO] Starting summary analysis for Deal ID: ${deal.id}, Title: ${deal.title}`);
+            // Exibir log indicando que a análise vai começar para esse ID
+            // console.info(`[INFO] Starting summary analysis for Deal ID: ${deal.id}, Title: ${deal.title}`);
 
             let notesForSummary = [];
             let needsSummary = false;
 
             if (deal.notes_count === 0) {
-                const originalDealId = deal[CUSTOM_FIELDS.ORIGIN_ID_FIELD];
+                const originalDealId = deal["e465d18813a12b0bbd089af1996b1090751ab057"];
                 if (originalDealId) {
-                    notesForSummary = PipedriveRepository.syncOriginNotes(deal.id, originalDealId);
+                    const originalNotes = PipedriveRepository.getNotesFromDeal(originalDealId);
 
-                    if (!notesForSummary || notesForSummary.length === 0) {
-                        console.warn(`[WARN] Deal ID: ${deal.id} lacks annotations in original Deal ID: ${originalDealId}. Marking for deletion.`);
+                    if (!originalNotes || originalNotes.length === 0) {
+                        const dealUrl = `https://polijunior.pipedrive.com/deal/${deal.id}`;
+                        console.warn(`[WARN] Deal ID: ${deal.id} lacks annotations in original Deal ID: ${originalDealId}. Link: ${dealUrl}. Marking for deletion.`);
                         dealsToDelete.push(deal.id);
                         continue;
                     }
 
+                    notesForSummary = PipedriveRepository.syncOriginNotes(deal.id, originalDealId, originalNotes);
                     needsSummary = notesForSummary.length > 0;
                 }
             } else {
@@ -104,7 +112,7 @@ function syncAndSummarize() {
                     }
                 }
             } else {
-                console.log(`[DEBUG] Deal ID: ${deal.id} skipped. Summary already exists or no original notes to summarize.`);
+                // [DEBUG] silencioso: Deal ID: ${deal.id} skipped. Summary already exists or no original notes to summarize.
             }
         } catch (e) {
             console.error(`[ERROR] Failed to analyze Deal ID: ${deal.id}. Reason: ${e.toString()}`);
@@ -128,21 +136,33 @@ function syncAndSummarize() {
                     muteHttpExceptions: true
                 });
 
-                summarizedCache[res.meta.dealId] = Date.now();
-                cacheUpdated = true;
                 console.info(`[INFO] Strategic summary generated successfully for Deal ID: ${res.meta.dealId}, Nucleus: ${res.meta.nucleus}`);
             }
         });
 
         if (saveRequests.length > 0) {
             console.info(`[INFO] Executing bulk creation of ${saveRequests.length} summary notes in Pipedrive.`);
-            UrlFetchApp.fetchAll(saveRequests);
+            const responses = UrlFetchApp.fetchAll(saveRequests);
+
+            responses.forEach((resp, idx) => {
+                const reqPayload = JSON.parse(saveRequests[idx].payload);
+                const respCode = resp.getResponseCode();
+
+                if (respCode >= 200 && respCode < 300) {
+                    summarizedCache[reqPayload.deal_id] = Date.now();
+                    cacheUpdated = true;
+                    console.info(`[INFO] Summary note successfully saved in Pipedrive for Deal ID: ${reqPayload.deal_id}`);
+                } else {
+                    console.error(`[ERROR] Failed to save summary in Pipedrive for Deal ID: ${reqPayload.deal_id}. Response Code: ${respCode}, Body: ${resp.getContentText()}`);
+                }
+            });
         }
     }
 
     if (dealsToDelete.length > 0) {
-        console.info(`[INFO] Executing bulk deletion of ${dealsToDelete.length} deals lacking original annotations.`);
-        PipedriveRepository.executeBulkDeletes(dealsToDelete);
+        const limitedDeletes = dealsToDelete.slice(0, 10);
+        console.info(`[INFO] Executing bulk deletion of ${limitedDeletes.length} deals (capped at 10) lacking original annotations.`);
+        PipedriveRepository.executeBulkDeletes(limitedDeletes);
     }
 
     if (cacheUpdated) {
@@ -175,7 +195,7 @@ function executeEmailCadence() {
                 if (dealValue > 50000 && stepInfo.passo === 1) {
                     canGenerateEmail = true; // Valor > 50k no preparar-email (passo 1) gera logo
                 } else {
-                    const dataRetomadaStr = deal[CUSTOM_FIELDS.DATA_RETOMADA];
+                    const dataRetomadaStr = deal["91cf62129f1fb478eb05f1aaa580952967f55e27"];
                     if (dataRetomadaStr) {
                         const dataRet = new Date(dataRetomadaStr);
                         const diffDays = (dataRet.getTime() - Date.now()) / (1000 * 3600 * 24);
@@ -246,7 +266,7 @@ function executeEmailCadence() {
                 payload.state.nome_owner_desativado = deal.user_id.name || "nosso antigo coordenador";
             }
 
-            console.log(`[DEBUG] Preparando envio para fluxo ${workflowId} no Deal ID: ${deal.id} com Payload: \n${JSON.stringify(payload, null, 2)}`);
+            console.log(`[DEBUG] Preparando envio para fluxo ${workflowId} no Deal ID: ${deal.id}`);
 
             workflowsToRun.push({
                 workflowId: workflowId,
@@ -289,8 +309,8 @@ function executeEmailCadence() {
                         method: 'put',
                         contentType: 'application/json',
                         payload: JSON.stringify({
-                            [CUSTOM_FIELDS.EMAIL_TITLE]: title,
-                            [CUSTOM_FIELDS.EMAIL_BODY]: body
+                            "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d": title,
+                            "e616420fb16e671963854114c6bba6bd5c3bcef1": body
                         }),
                         muteHttpExceptions: true
                     });
@@ -532,10 +552,10 @@ var PipedriveRepository = {
         UrlFetchApp.fetch(url, { method: 'post', contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
     },
 
-    syncOriginNotes: function (dealId, originalDealId) {
+    syncOriginNotes: function (dealId, originalDealId, preFetchedNotes) {
         if (!originalDealId) return [];
 
-        const originalNotes = this.getNotesFromDeal(originalDealId);
+        const originalNotes = preFetchedNotes || this.getNotesFromDeal(originalDealId);
         if (originalNotes && originalNotes.length > 0) {
             const requests = originalNotes.map(note => ({
                 url: `${PIPEDRIVE_API_BASE_URL}/notes?api_token=${PIPEDRIVE_API_TOKEN}`,
@@ -559,8 +579,8 @@ var PipedriveRepository = {
     saveEmailToDeal: function (dealId, title, body) {
         const url = `${PIPEDRIVE_API_BASE_URL}/deals/${dealId}?api_token=${PIPEDRIVE_API_TOKEN}`;
         const payload = {
-            [CUSTOM_FIELDS.EMAIL_TITLE]: title,
-            [CUSTOM_FIELDS.EMAIL_BODY]: body
+            "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d": title,
+            "e616420fb16e671963854114c6bba6bd5c3bcef1": body
         };
         const startLog = Date.now();
         UrlFetchApp.fetch(url, { method: 'put', contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
@@ -692,6 +712,12 @@ const OpenAI_ResponsesAPI = {
                 }
 
                 if (responseCode === 429 || responseCode >= 500) {
+                    // Interrompe imediatamente se for falta de saldo/cota
+                    if (responseCode === 429 && responseText.includes("insufficient_quota")) {
+                        console.error(`[FATAL] OpenAI Quota Exceeded (429): Parando execução imediatamente.`);
+                        throw new Error(`OPENAI_INSUFFICIENT_QUOTA: ${responseText}`);
+                    }
+
                     if (attempt === maxRetries) {
                         throw new Error(`OpenAI API Error ${responseCode}: Limites atingidos. Payload: ${responseText}`);
                     }
@@ -833,6 +859,12 @@ var OpenAIRepository = {
                                 state.done = true;
                             }
                         } else if (responseCode === 429 || responseCode >= 500) {
+                            // Verifica se o erro 429 é por falta de cota/saldo (insufficient_quota)
+                            if (responseCode === 429 && responseText.includes("insufficient_quota")) {
+                                console.error(`[FATAL] OpenAI Quota Exceeded (429): Parando execução imediatamente.`);
+                                throw new Error(`OPENAI_INSUFFICIENT_QUOTA: ${responseText}`);
+                            }
+
                             state.retries++;
                             if (state.retries > 3) {
                                 state.error = new Error(`OpenAI Limit Reached/Server Error (${responseCode}): ${responseText}`);
@@ -1050,5 +1082,23 @@ const SummarizedDealsCache = {
         } catch (e) {
             console.error('[ERROR] Falha ao salvar cache de sumários: ' + e.message);
         }
+    },
+    clearCacheManually: function () {
+        try {
+            const props = PropertiesService.getScriptProperties();
+            props.deleteProperty('summarized_deals_cache');
+            console.info('[INFO] O cache de sumários de deals foi deletado manualmente com sucesso.');
+            return "Cache apagado com sucesso.";
+        } catch (e) {
+            console.error('[ERROR] Falha ao apagar cache manualmente: ' + e.message);
+            return "Falha ao apagar o cache.";
+        }
     }
 };
+
+/**
+ * Função utilitária para chamar manualmente a limpeza do cache de resumos no Editor do Apps Script.
+ */
+function manualClearSummarizedDealsCache() {
+    SummarizedDealsCache.clearCacheManually();
+}

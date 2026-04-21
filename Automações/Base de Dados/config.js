@@ -22,17 +22,18 @@ const RAW_CONFIG = {
         STAGE_ENVIO_EMAIL_1: "Começo",
         STAGE_ESPERA: "Espera",
 
+        // IDs Fixos como Fallback
+        ID_STAGE_INDO_PARA_EMAIL_1: 85,
+        ID_STAGE_ENVIO_EMAIL_1: 81,
+        ID_STAGE_ESPERA: 80,
+
         MAX_CARDS_PROCESS_LIMIT: 10,
         PLANILHA_LOGS_IA_ID: "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
     },
 
     CUSTOM_FIELDS: {
-        EMAIL_TITLE: "Título do E-mail",
-        EMAIL_BODY: "Corpo E-mail",
         LABEL: "Etiqueta",
-        COMPANY_SECTOR: "Setor da Empresa",
-        ORIGIN_ID_FIELD: "Origem",
-        DATA_RETOMADA: "Data de Retomada"
+        COMPANY_SECTOR: "Setor da Empresa"
     },
 
     WORKFLOW_CADENCES: [
