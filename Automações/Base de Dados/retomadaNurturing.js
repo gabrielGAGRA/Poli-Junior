@@ -228,6 +228,34 @@ function executeEmailCadence() {
             let nucleus = validNuclei.includes(mappedLabel) ? mappedLabel : 'Geral';
             const isOwnerActive = activeUsers.includes(deal.user_id.id);
 
+            // 2 e 3. Coleta Notas e Histórico de E-mails (Antecipado para validação de owner)
+            const history = PipedriveRepository.getNotesAndEmailHistory(deal.id);
+            const notes = history.notes;
+            const emailHistory = history.emailHistory;
+
+            // Validação de Owner Inativo
+            if (!isOwnerActive) {
+                // Caso ele detecte que o owner atual está inativo e NÃO for caso de troca (owner != gerente), cancela
+
+                const isRetomada = stepInfo.cadencia.includes("Retomada");
+                const isNurturingReengagement = stepInfo.cadencia.includes("Nurturing") && stepInfo.cadencia.includes("Breakup");
+
+                if (!isRetomada && !isNurturingReengagement) {
+                    console.warn(`[WARN] Deal ID: ${deal.id} owner ${deal.user_id.name} is inactive and not first e-mail in Retomada/Reengagement. Marking as LOST.`);
+                    PipedriveRepository.markDealAsLost(deal.id, `Owner Inativo (${deal.user_id.name}) fora de primeiro em Retomada/Reengagement.`);
+                    continue;
+                }
+
+                const hasPreviousEmails = emailHistory && emailHistory.length > 0;
+
+                // Caso contudo, ja tenha sido enviado um email de retomada pelo owner anterior (nao eh o primeiro da sequencia), devemos dar lost no card. nunca mudamos de pessoa mid-sequence.
+                if (hasPreviousEmails && stepInfo.passo > 1) {
+                    console.warn(`[WARN] Deal ID: ${deal.id} owner inactive mid-sequence. Marking as LOST.`);
+                    PipedriveRepository.markDealAsLost(deal.id, `Owner Inativo (${deal.user_id.name}) detectado no meio da sequência.`);
+                    continue;
+                }
+            }
+
             let workflowId;
             if (isOwnerActive) {
                 const workflowMap = AGENT_CONFIG.WORKFLOW_REDACAO_ATIVO;
@@ -236,8 +264,6 @@ function executeEmailCadence() {
                 workflowId = AGENT_CONFIG.WORKFLOW_REDACAO_INATIVO;
             }
 
-            // 2 e 3. Coleta Notas e Histórico de E-mails
-            const { notes, emailHistory } = PipedriveRepository.getNotesAndEmailHistory(deal.id);
             const summaries = notes
                 .filter(n => n.content && n.content.includes(AGENT_CONFIG.RESUMO_PREFIX))
                 .sort((a, b) => new Date(b.add_time) - new Date(a.add_time));
