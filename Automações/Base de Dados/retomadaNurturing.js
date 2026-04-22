@@ -106,7 +106,7 @@ function syncAndSummarize() {
                     });
 
                     // Limita processamento a X cards
-                    if (workflowsToRun.length >= (CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 30)) {
+                    if (workflowsToRun.length >= (CONFIG.MAX_CARDS_PROCESS_LIMIT || 30)) {
                         console.info(`[INFO] Limite de processamento atingido (${workflowsToRun.length} cards) para syncAndSummarize.`);
                         break;
                     }
@@ -301,7 +301,7 @@ function executeEmailCadence() {
             });
 
             // Limita processamento a X cards
-            if (workflowsToRun.length >= (CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 30)) {
+            if (workflowsToRun.length >= (CONFIG.MAX_CARDS_PROCESS_LIMIT || 30)) {
                 console.info(`[INFO] Limite de processamento atingido (${workflowsToRun.length} cards) para executeEmailCadence.`);
                 break;
             }
@@ -970,13 +970,13 @@ function getNucleusInfo(labelId) {
  */
 const LoggerService = {
     logToGoogleSheets: function (dealId, workflowId, inputPayload, outputResult, durationMs, errorMsg = "") {
-        if (!CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID) {
-            console.warn("[WARN] CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID não está configurado. Pulando gravação no Sheets.");
+        if (!CONFIG.PLANILHA_LOGS_IA_ID) {
+            console.warn("[WARN] CONFIG.PLANILHA_LOGS_IA_ID não está configurado. Pulando gravação no Sheets.");
             return;
         }
 
         try {
-            const ss = SpreadsheetApp.openById(CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID);
+            const ss = SpreadsheetApp.openById(CONFIG.PLANILHA_LOGS_IA_ID);
             let sheet = ss.getSheetByName("Logs IA");
             if (!sheet) {
                 console.log("[DEBUG] Aba 'Logs IA' não encontrada. Criando nova aba.");

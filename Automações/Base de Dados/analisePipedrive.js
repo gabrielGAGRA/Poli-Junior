@@ -1,5 +1,5 @@
 ﻿// Autor: Gabriel Agra de Castro Motta
-// Última atualização: 17/04/2026
+// Última atualização: 21/04/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 
@@ -738,11 +738,16 @@ function getResolvedConfig() {
         }
     }
 
+    // O config resolvido abaixo é o ponto único de verdade em runtime:
+    // - usa IDs/keys estáveis para lógica;
+    // - mantém o nome apenas como referência humana;
+    // - aceita fallback legado para não quebrar fluxos antigos.
     const entityConfig = RAW_CONFIG.ENTITIES || {};
     const pipelineEntities = entityConfig.PIPELINES || {};
     const stageEntities = entityConfig.STAGES || {};
     const customFieldEntities = entityConfig.CUSTOM_FIELDS || {};
 
+    // Prioridade de resolução: entity.id/key -> mapa legado da planilha -> default.
     const resolveEntityId = (entity, legacyName, legacyId, fallbackMap, fallbackValue) => {
         if (entity && entity.id !== undefined && entity.id !== null && entity.id !== "") return entity.id;
         if (legacyName && fallbackMap && fallbackMap[legacyName] !== undefined) return fallbackMap[legacyName];
@@ -750,6 +755,7 @@ function getResolvedConfig() {
         return fallbackValue;
     };
 
+    // Para campos customizados, a chave técnica é preferida; o nome só ajuda na migração.
     const resolveEntityKey = (entity, legacyName, fallbackMap, fallbackValue) => {
         if (entity && entity.key) return entity.key;
         if (legacyName && fallbackMap && fallbackMap[legacyName]) return fallbackMap[legacyName];
@@ -759,57 +765,59 @@ function getResolvedConfig() {
     const config = {
         PIPELINES: {
             RETOMADA: {
-                id: resolveEntityId(pipelineEntities.RETOMADA, RAW_CONFIG.REGRAS_CONFIG.PIPELINE_RETOMADA, 15, pipelineMap, 15),
-                name: RAW_CONFIG.REGRAS_CONFIG.PIPELINE_RETOMADA
+                id: resolveEntityId(pipelineEntities.RETOMADA, pipelineEntities.RETOMADA.name, 15, pipelineMap, 15),
+                name: pipelineEntities.RETOMADA.name
             },
             NURTURING: {
-                id: resolveEntityId(pipelineEntities.NURTURING, RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING, 16, pipelineMap, 16),
-                name: RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING
+                id: resolveEntityId(pipelineEntities.NURTURING, pipelineEntities.NURTURING.name, 16, pipelineMap, 16),
+                name: pipelineEntities.NURTURING.name
             }
         },
         STAGES: {
             INDO_PARA_EMAIL_1: {
-                id: resolveEntityId(stageEntities.INDO_PARA_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_INDO_PARA_EMAIL_1, stageMap, 85),
-                name: RAW_CONFIG.REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1
+                id: resolveEntityId(stageEntities.INDO_PARA_EMAIL_1, stageEntities.INDO_PARA_EMAIL_1.name, stageEntities.INDO_PARA_EMAIL_1.id, stageMap, 85),
+                name: stageEntities.INDO_PARA_EMAIL_1.name
             },
             ENVIO_EMAIL_1: {
-                id: resolveEntityId(stageEntities.ENVIO_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_ENVIO_EMAIL_1, stageMap, 81),
-                name: RAW_CONFIG.REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1
+                id: resolveEntityId(stageEntities.ENVIO_EMAIL_1, stageEntities.ENVIO_EMAIL_1.name, stageEntities.ENVIO_EMAIL_1.id, stageMap, 81),
+                name: stageEntities.ENVIO_EMAIL_1.name
             },
             ESPERA: {
-                id: resolveEntityId(stageEntities.ESPERA, RAW_CONFIG.REGRAS_CONFIG.STAGE_ESPERA, RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_ESPERA, stageMap, 80),
-                name: RAW_CONFIG.REGRAS_CONFIG.STAGE_ESPERA
+                id: resolveEntityId(stageEntities.ESPERA, stageEntities.ESPERA.name, stageEntities.ESPERA.id, stageMap, 80),
+                name: stageEntities.ESPERA.name
             }
         },
         CUSTOM_FIELDS: {
             EMAIL_TITLE: {
-                key: resolveEntityKey(customFieldEntities.EMAIL_TITLE, RAW_CONFIG.CUSTOM_FIELDS.EMAIL_TITLE, customFieldsMap, "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d"),
-                name: RAW_CONFIG.CUSTOM_FIELDS.EMAIL_TITLE
+                key: resolveEntityKey(customFieldEntities.EMAIL_TITLE, customFieldEntities.EMAIL_TITLE.name, customFieldsMap, "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d"),
+                name: customFieldEntities.EMAIL_TITLE.name
             },
             EMAIL_BODY: {
-                key: resolveEntityKey(customFieldEntities.EMAIL_BODY, RAW_CONFIG.CUSTOM_FIELDS.EMAIL_BODY, customFieldsMap, "e616420fb16e671963854114c6bba6bd5c3bcef1"),
-                name: RAW_CONFIG.CUSTOM_FIELDS.EMAIL_BODY
+                key: resolveEntityKey(customFieldEntities.EMAIL_BODY, customFieldEntities.EMAIL_BODY.name, customFieldsMap, "e616420fb16e671963854114c6bba6bd5c3bcef1"),
+                name: customFieldEntities.EMAIL_BODY.name
             },
             LABEL: {
-                key: resolveEntityKey(customFieldEntities.LABEL, RAW_CONFIG.CUSTOM_FIELDS.LABEL, customFieldsMap, "label"),
-                name: RAW_CONFIG.CUSTOM_FIELDS.LABEL
+                key: resolveEntityKey(customFieldEntities.LABEL, customFieldEntities.LABEL.name, customFieldsMap, "label"),
+                name: customFieldEntities.LABEL.name
             },
             COMPANY_SECTOR: {
-                key: resolveEntityKey(customFieldEntities.COMPANY_SECTOR, RAW_CONFIG.CUSTOM_FIELDS.COMPANY_SECTOR, customFieldsMap, "6ea1ea74da5fbb8cb6a8dd741a96a9bc8b4e379f"),
-                name: RAW_CONFIG.CUSTOM_FIELDS.COMPANY_SECTOR
+                key: resolveEntityKey(customFieldEntities.COMPANY_SECTOR, customFieldEntities.COMPANY_SECTOR.name, customFieldsMap, "6ea1ea74da5fbb8cb6a8dd741a96a9bc8b4e379f"),
+                name: customFieldEntities.COMPANY_SECTOR.name
             },
             ORIGIN_ID_FIELD: {
-                key: resolveEntityKey(customFieldEntities.ORIGIN_ID_FIELD, RAW_CONFIG.CUSTOM_FIELDS.ORIGIN_ID_FIELD, customFieldsMap, "e465d18813a12b0bbd089af1996b1090751ab057"),
-                name: RAW_CONFIG.CUSTOM_FIELDS.ORIGIN_ID_FIELD
+                key: resolveEntityKey(customFieldEntities.ORIGIN_ID_FIELD, customFieldEntities.ORIGIN_ID_FIELD.name, customFieldsMap, "e465d18813a12b0bbd089af1996b1090751ab057"),
+                name: customFieldEntities.ORIGIN_ID_FIELD.name
             },
             DATA_RETOMADA: {
-                key: resolveEntityKey(customFieldEntities.DATA_RETOMADA, RAW_CONFIG.CUSTOM_FIELDS.DATA_RETOMADA, customFieldsMap, "91cf62129f1fb478eb05f1aaa580952967f55e27"),
-                name: RAW_CONFIG.CUSTOM_FIELDS.DATA_RETOMADA
+                key: resolveEntityKey(customFieldEntities.DATA_RETOMADA, customFieldEntities.DATA_RETOMADA.name, customFieldsMap, "91cf62129f1fb478eb05f1aaa580952967f55e27"),
+                name: customFieldEntities.DATA_RETOMADA.name
             }
         },
         WORKFLOW_STAGE_MAPPING: {}
     };
 
+    // Mantém o contrato antigo para quem ainda consome REGRAS_CONFIG,
+    // mas o código novo deve preferir CONFIG.PIPELINES / CONFIG.STAGES / CONFIG.CUSTOM_FIELDS.
     config.REGRAS_CONFIG = {
         PIPELINE_RETOMADA: config.PIPELINES.RETOMADA.id,
         PIPELINE_NURTURING: config.PIPELINES.NURTURING.id,
@@ -820,17 +828,19 @@ function getResolvedConfig() {
         PLANILHA_LOGS_IA_ID: RAW_CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID || "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
     };
 
-    // Montar WORKFLOW_STAGE_MAPPING baseado na ordem literal das linhas da planilha
-    const tryMapWorkflow = (pipeName) => {
-        if (stagesByPipelineList[pipeName]) {
+    // Montar WORKFLOW_STAGE_MAPPING baseado na ordem literal das linhas da planilha.
+    // Aqui trabalhamos com a chave da cadência (RETOMADA/NURTURING), não com o nome exibido.
+    const tryMapWorkflow = (cadenceKey) => {
+        const pipeName = config.PIPELINES[cadenceKey]?.name;
+        if (pipeName && stagesByPipelineList[pipeName]) {
             let step = 1;
             // Iterar sequencialmente seguindo a ordem da planilha
             stagesByPipelineList[pipeName].forEach(stg => {
                 if (stg.name.includes("Indo para E-mail") || stg.name.match(/Preparar E-mail/)) {
-                    config.WORKFLOW_STAGE_MAPPING[stg.id] = { passo: step++, cadencia: pipeName === RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING ? "Nurturing Final" : pipeName };
+                    config.WORKFLOW_STAGE_MAPPING[stg.id] = { passo: step++, cadencia: cadenceKey === "NURTURING" ? "Nurturing Final" : pipeName };
                 } else if (stg.name.includes("Breakup") && stg.name !== "Breakup") {
-                    config.WORKFLOW_STAGE_MAPPING[stg.id] = { passo: step++, cadencia: (pipeName === RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING ? "Nurturing Final" : pipeName) + " (Breakup)" };
-                } else if (stg.name === "Preparando Nutrição" && pipeName === RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING) {
+                    config.WORKFLOW_STAGE_MAPPING[stg.id] = { passo: step++, cadencia: (cadenceKey === "NURTURING" ? "Nurturing Final" : pipeName) + " (Breakup)" };
+                } else if (stg.name === "Preparando Nutrição" && cadenceKey === "NURTURING") {
                     config.WORKFLOW_STAGE_MAPPING[stg.id] = { passo: step++, cadencia: "Nurturing" };
                 }
             });

@@ -32,6 +32,9 @@ function auditoriaGlobalRetomada() {
 
             const temEmail = verificarCamposEmail(deal);
 
+            // A automação usa CONFIG.STAGES porque o ID é a referência estável.
+            // O nome do estágio pode mudar na planilha, mas o ID continua sendo o gatilho.
+
             // CASO 1: Deal travado na etapa de ESPERA
             if (deal.stage_id === CONFIG.STAGES.ESPERA.id) {
                 if (diasDeVida >= prazoMoverParaPreparo) {
@@ -62,6 +65,7 @@ function auditoriaGlobalRetomada() {
  * Verifica se os campos de Título e Corpo estão preenchidos
  */
 function verificarCamposEmail(deal) {
+    // Campos customizados também são lidos por key técnica, não por nome exibido.
     const titulo = deal[CONFIG.CUSTOM_FIELDS.EMAIL_TITLE.key];
     const corpo = deal[CONFIG.CUSTOM_FIELDS.EMAIL_BODY.key];
 

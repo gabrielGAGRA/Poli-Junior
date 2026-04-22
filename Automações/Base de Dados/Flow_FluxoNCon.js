@@ -1,4 +1,4 @@
-// Att: 17/04/2026
+// Att: 21/04/2026
 
 /**
  * Google Apps Script - Fluxo de Tradução: NCon (Nurturing, Retomada, Re-engajement)
