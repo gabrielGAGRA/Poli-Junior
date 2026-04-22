@@ -370,7 +370,7 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
         return finalOutput;
     },
 
-    _runPesquisador: function* (pesquisadorConfig, instructions, input, tools = []) {
+    _runPesquisador: function* (pesquisadorConfig, instructions, input, tools = [], previousResponseId = null) {
         const apiOptions = {
             model: pesquisadorConfig.model,
             instructions: instructions,
@@ -378,6 +378,10 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
             store: pesquisadorConfig.settings.store,
             tools: tools
         };
+
+        if (previousResponseId) {
+            apiOptions.previous_response_id = previousResponseId;
+        }
 
         if (pesquisadorConfig.settings.reasoning.effort !== "none") {
             apiOptions.reasoning = {
@@ -387,11 +391,13 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
         }
 
         const response = yield apiOptions;
-        const text = this._extractTextFromOutput(response);
-        return text;
+        return {
+            text: this._extractTextFromOutput(response),
+            response_id: response && response.id ? response.id : null
+        };
     },
 
-    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = [], previousResponseId = null) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -400,6 +406,10 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
             textFormat: this.Schemas.RedatorOutputSchema,
             tools: tools
         };
+
+        if (previousResponseId) {
+            apiOptions.previous_response_id = previousResponseId;
+        }
 
         if (redatorConfig.settings.reasoning.effort !== "none") {
             apiOptions.reasoning = {
@@ -412,10 +422,25 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
         const text = this._extractTextFromOutput(response);
 
         try {
-            return JSON.parse(text);
+            return {
+                data: JSON.parse(text),
+                response_id: response && response.id ? response.id : null
+            };
         } catch (e) {
             throw new Error("Flow_FluxoNCon: Falha ao fazer parse do JSON do Redator. Saída bruta: " + text);
         }
+    },
+
+    _trackResponseId: function (workflow, agentName, responseId) {
+        if (!responseId) return;
+
+        if (!workflow.state) {
+            workflow.state = {};
+        }
+
+        workflow.state.previous_response_id = responseId;
+        workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
+        workflow.state.response_ids_by_agent[agentName] = responseId;
     },
 
     runWorkflow: function* (workflow) {
@@ -424,6 +449,8 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
         const etapa = Number(state.etapa);
         const emails_anteriores = state.emails_anteriores || "";
         const input_as_text = workflow.input_as_text || "";
+        const previousResponseId = state.previous_response_id || null;
+        const includeEmailHistory = !previousResponseId;
 
         const createRedatorInput = (etapa, context, research = "", history = "") => {
             return `
@@ -431,9 +458,7 @@ Retorne apenas o JSON estruturado: {"titulo": "...", "corpo_html": "..."}.
 ${context}
 </business_context>
 
-<email_history>
-${history}
-</email_history>
+${includeEmailHistory ? `<email_history>\n${history}\n</email_history>\n\n` : ""}
 
 ${research ? `<research_data>\n${research}\n</research_data>\n` : ""}
 <task_update>
@@ -450,29 +475,44 @@ Gere o Passo ${etapa} da cadência.
 ${input_as_text}
 </business_context>
 
-<email_history>
-${emails_anteriores}
-</email_history>
+${includeEmailHistory ? `<email_history>\n${emails_anteriores}\n</email_history>\n\n` : ""}
 
 <task_update>
 Inicie a pesquisa para a etapa ${etapa}.
 </task_update>
 `;
                 console.log(`[NCon] Rodando Pesquisador (Nurturing) para Etapa ${etapa}`);
-                const pesquisaText = yield* this._runPesquisador(this.Pesquisador, this.Pesquisador.getInstructions(), pesquisadorInput, [this.Tools.webSearchPreview]);
+                const pesquisaRun = yield* this._runPesquisador(
+                    this.Pesquisador,
+                    this.Pesquisador.getInstructions(),
+                    pesquisadorInput,
+                    [this.Tools.webSearchPreview],
+                    previousResponseId
+                );
+                this._trackResponseId(workflow, "Pesquisador", pesquisaRun.response_id);
 
-                const redatorInput = createRedatorInput(etapa, input_as_text, pesquisaText, emails_anteriores);
+                const redatorInput = createRedatorInput(etapa, input_as_text, pesquisaRun.text, emails_anteriores);
                 console.log(`[NCon] Rodando RedatorDeNurturingPesquisa`);
-                return yield* this._runRedator(this.RedatorDeNurturingPesquisa, redatorInput);
+                const redatorRun = yield* this._runRedator(
+                    this.RedatorDeNurturingPesquisa,
+                    redatorInput,
+                    [],
+                    pesquisaRun.response_id || previousResponseId
+                );
+                this._trackResponseId(workflow, "RedatorDeNurturingPesquisa", redatorRun.response_id);
+                return redatorRun.data;
             }
             else if (etapa === 2 || etapa === 4) {
                 const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
                 console.log(`[NCon] Rodando RedatorDeNurturingCase para Etapa ${etapa}`);
-                return yield* this._runRedator(
+                const redatorRun = yield* this._runRedator(
                     this.RedatorDeNurturingCase,
                     redatorInput,
-                    [this.Tools.fileSearch]
+                    [this.Tools.fileSearch],
+                    previousResponseId
                 );
+                this._trackResponseId(workflow, "RedatorDeNurturingCase", redatorRun.response_id);
+                return redatorRun.data;
             }
 
         } else if (cadencia === 'Retomada') {
@@ -483,36 +523,58 @@ Inicie a pesquisa para a etapa ${etapa}.
 ${input_as_text}
 </business_context>
 
-<email_history>
-${emails_anteriores}
-</email_history>
+${includeEmailHistory ? `<email_history>\n${emails_anteriores}\n</email_history>\n\n` : ""}
 
 <task_update>
 Inicie a pesquisa para retomada do contato.
 </task_update>
 `;
                 console.log(`[NCon] Rodando Pesquisador (Retomada) para Etapa 1`);
-                const pesquisaText = yield* this._runPesquisador(this.Pesquisador, this.Pesquisador.getInstructions(), pesquisadorInput, [this.Tools.webSearchPreview]);
+                const pesquisaRun = yield* this._runPesquisador(
+                    this.Pesquisador,
+                    this.Pesquisador.getInstructions(),
+                    pesquisadorInput,
+                    [this.Tools.webSearchPreview],
+                    previousResponseId
+                );
+                this._trackResponseId(workflow, "Pesquisador", pesquisaRun.response_id);
 
-                const redatorInput = createRedatorInput(etapa, input_as_text, pesquisaText, emails_anteriores);
+                const redatorInput = createRedatorInput(etapa, input_as_text, pesquisaRun.text, emails_anteriores);
                 console.log(`[NCon] Rodando RedatorDeRetomadaCasePesquisa`);
-                return yield* this._runRedator(
+                const redatorRun = yield* this._runRedator(
                     this.RedatorDeRetomadaCasePesquisa,
                     redatorInput,
-                    [this.Tools.fileSearch]
+                    [this.Tools.fileSearch],
+                    pesquisaRun.response_id || previousResponseId
                 );
+                this._trackResponseId(workflow, "RedatorDeRetomadaCasePesquisa", redatorRun.response_id);
+                return redatorRun.data;
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
                 const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
                 console.log(`[NCon] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorInput);
+                const redatorRun = yield* this._runRedator(
+                    this.RedatorDeRetomadaFup,
+                    redatorInput,
+                    [],
+                    previousResponseId
+                );
+                this._trackResponseId(workflow, "RedatorDeRetomadaFup", redatorRun.response_id);
+                return redatorRun.data;
             }
 
         } else if (cadencia === 'Re-engajement do Nurturing') {
 
             const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
             console.log(`[NCon] Rodando RedatorDeReEngajementPSNurturingFup para Etapa ${etapa}`);
-            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, redatorInput);
+            const redatorRun = yield* this._runRedator(
+                this.RedatorDeReEngajementPSNurturingFup,
+                redatorInput,
+                [],
+                previousResponseId
+            );
+            this._trackResponseId(workflow, "RedatorDeReEngajementPSNurturingFup", redatorRun.response_id);
+            return redatorRun.data;
 
         }
 

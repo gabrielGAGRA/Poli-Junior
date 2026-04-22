@@ -10,11 +10,3 @@ const BATCH_CONFIG = {
 };
 
 const MAX_EXECUTION_TIME = 25 * 60 * 1000;; // 25 minutos
-
-const REGRAS_CONFIG = new Proxy({}, { get: (_, prop) => getResolvedConfig().REGRAS_CONFIG[prop] });
-const CUSTOM_FIELDS = new Proxy({}, { get: (_, prop) => getResolvedConfig().CUSTOM_FIELDS[prop] });
-const WORKFLOW_STAGE_MAPPING = new Proxy({}, {
-    get: (_, prop) => getResolvedConfig().WORKFLOW_STAGE_MAPPING[prop],
-    ownKeys: () => Reflect.ownKeys(getResolvedConfig().WORKFLOW_STAGE_MAPPING),
-    getOwnPropertyDescriptor: (_, prop) => Reflect.getOwnPropertyDescriptor(getResolvedConfig().WORKFLOW_STAGE_MAPPING, prop)
-});

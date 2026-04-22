@@ -144,7 +144,7 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
         return finalOutput;
     },
 
-    _runRedator: function* (redatorConfig, instructionsLoaded, inputPrompt) {
+    _runRedator: function* (redatorConfig, instructionsLoaded, inputPrompt, previousResponseId = null) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: instructionsLoaded,
@@ -152,6 +152,10 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
             store: redatorConfig.settings.store,
             textFormat: this.Schemas.RedatorOutputSchema
         };
+
+        if (previousResponseId) {
+            apiOptions.previous_response_id = previousResponseId;
+        }
 
         if (redatorConfig.settings.reasoning.effort !== "none") {
             apiOptions.reasoning = {
@@ -164,10 +168,25 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
         const text = this._extractTextFromOutput(response);
 
         try {
-            return JSON.parse(text);
+            return {
+                data: JSON.parse(text),
+                response_id: response && response.id ? response.id : null
+            };
         } catch (e) {
             throw new Error("Flow_FluxoOwnerInativo: Falha ao fazer parse do JSON do Redator. Saída bruta: " + text);
         }
+    },
+
+    _trackResponseId: function (workflow, agentName, responseId) {
+        if (!responseId) return;
+
+        if (!workflow.state) {
+            workflow.state = {};
+        }
+
+        workflow.state.previous_response_id = responseId;
+        workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
+        workflow.state.response_ids_by_agent[agentName] = responseId;
     },
 
 
@@ -177,6 +196,8 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
         const etapa = Number(state.etapa);
         const emails_anteriores = state.emails_anteriores || "";
         const input_as_text = workflow.input_as_text || "";
+        const previousResponseId = state.previous_response_id || null;
+        const includeEmailHistory = !previousResponseId;
 
         // Propriedades exclusivas deste fluxo:
         const nucleo_nome_completo = state.nucleo_nome_completo || "Núcleo de Especialistas";
@@ -198,9 +219,7 @@ Retorne APENAS o JSON { "titulo": "...", "corpo_html": "..." }.
 ${input_as_text}
 </business_context>
 
-<email_history>
-${emails_anteriores}
-</email_history>
+${includeEmailHistory ? `<email_history>\n${emails_anteriores}\n</email_history>\n\n` : ""}
 
 <task_update>
 Gere o Passo ${etapa} da cadência de retomada sob a perspectiva da Gerência.
@@ -209,7 +228,14 @@ Gere o Passo ${etapa} da cadência de retomada sob a perspectiva da Gerência.
             const inst = this.RedatorDeRetomadaFup.getInstructions(nucleo_nome_completo, nome_owner_desativado);
 
             console.log(`[OwnerInativo] Rodando Gerencia (RetomadaFup) para Etapa ${etapa}`);
-            return yield* this._runRedator(this.RedatorDeRetomadaFup, inst, redatorInput);
+            const redatorRun = yield* this._runRedator(
+                this.RedatorDeRetomadaFup,
+                inst,
+                redatorInput,
+                previousResponseId
+            );
+            this._trackResponseId(workflow, "RedatorDeRetomadaFup", redatorRun.response_id);
+            return redatorRun.data;
 
         } else if (cadencia === 'Re-engajement do Nurturing') {
             // Roda o Redator para ReEngajamento usando FUP Gerencia
@@ -223,9 +249,7 @@ Gere o Passo ${etapa} da cadência de retomada sob a perspectiva da Gerência.
 ${input_as_text}
 </business_context>
 
-<email_history>
-${emails_anteriores}
-</email_history>
+${includeEmailHistory ? `<email_history>\n${emails_anteriores}\n</email_history>\n\n` : ""}
 
 <task_update>
 Gere o Passo ${etapa} da cadência de re-engajamento sob a perspectiva da Gerência.
@@ -234,7 +258,14 @@ Gere o Passo ${etapa} da cadência de re-engajamento sob a perspectiva da Gerên
             const inst = this.RedatorDeReEngajementPSNurturingFup.getInstructions(nucleo_nome_completo, nome_owner_desativado);
 
             console.log(`[OwnerInativo] Rodando Gerencia (ReEngajementPSNurturing) para Etapa ${etapa}`);
-            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, inst, redatorInput);
+            const redatorRun = yield* this._runRedator(
+                this.RedatorDeReEngajementPSNurturingFup,
+                inst,
+                redatorInput,
+                previousResponseId
+            );
+            this._trackResponseId(workflow, "RedatorDeReEngajementPSNurturingFup", redatorRun.response_id);
+            return redatorRun.data;
         }
 
         throw new Error(`[Owner-Inativo] Cadeia ou etapa não foi mapeada: Cadencia '${cadencia}', Etapa '${etapa}'`);

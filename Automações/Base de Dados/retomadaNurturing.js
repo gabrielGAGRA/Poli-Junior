@@ -4,7 +4,7 @@
  */
 
 function syncAndSummarize() {
-    const stageMapping = WORKFLOW_STAGE_MAPPING;
+    const stageMapping = CONFIG.WORKFLOW_STAGE_MAPPING;
     let stagesToSync = [];
     for (const stageId in stageMapping) {
         if (stageMapping[stageId] && stageMapping[stageId].passo === 1) {
@@ -13,8 +13,8 @@ function syncAndSummarize() {
     }
 
     // Adiciona o estágio de Espera da Nutrição para gerar resumos mais cedo
-    if (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.STAGE_ESPERA && !stagesToSync.includes(REGRAS_CONFIG.STAGE_ESPERA)) {
-        stagesToSync.push(REGRAS_CONFIG.STAGE_ESPERA);
+    if (CONFIG.STAGES.ESPERA.id && !stagesToSync.includes(CONFIG.STAGES.ESPERA.id)) {
+        stagesToSync.push(CONFIG.STAGES.ESPERA.id);
     }
 
     let deals = PipedriveRepository.fetchDealsInStages(stagesToSync);
@@ -41,7 +41,7 @@ function syncAndSummarize() {
             let needsSummary = false;
 
             if (deal.notes_count === 0) {
-                const originalDealId = deal["e465d18813a12b0bbd089af1996b1090751ab057"];
+                const originalDealId = deal[CONFIG.CUSTOM_FIELDS.ORIGIN_ID_FIELD.key];
                 if (originalDealId) {
                     const originalNotes = PipedriveRepository.getNotesFromDeal(originalDealId);
 
@@ -73,7 +73,7 @@ function syncAndSummarize() {
                     .join('\n---\n');
 
                 if (rawNotesText.trim()) {
-                    let rawLabelValue = deal[CUSTOM_FIELDS.LABEL];
+                    let rawLabelValue = deal[CONFIG.CUSTOM_FIELDS.LABEL.key];
                     if (Array.isArray(rawLabelValue) && rawLabelValue.length > 0) {
                         rawLabelValue = rawLabelValue[0];
                     }
@@ -106,7 +106,7 @@ function syncAndSummarize() {
                     });
 
                     // Limita processamento a X cards
-                    if (workflowsToRun.length >= (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT ? REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT : 30)) {
+                    if (workflowsToRun.length >= (CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 30)) {
                         console.info(`[INFO] Limite de processamento atingido (${workflowsToRun.length} cards) para syncAndSummarize.`);
                         break;
                     }
@@ -172,7 +172,7 @@ function syncAndSummarize() {
 
 function executeEmailCadence() {
     const activeUsers = PipedriveRepository.getActiveUsers();
-    const stageMapping = WORKFLOW_STAGE_MAPPING;
+    const stageMapping = CONFIG.WORKFLOW_STAGE_MAPPING;
     const stagesToProcess = Object.keys(stageMapping).map(Number);
     let deals = PipedriveRepository.fetchDealsInStages(stagesToProcess);
 
@@ -195,7 +195,7 @@ function executeEmailCadence() {
                 if (dealValue > 50000 && stepInfo.passo === 1) {
                     canGenerateEmail = true; // Valor > 50k no preparar-email (passo 1) gera logo
                 } else {
-                    const dataRetomadaStr = deal["91cf62129f1fb478eb05f1aaa580952967f55e27"];
+                    const dataRetomadaStr = deal[CONFIG.CUSTOM_FIELDS.DATA_RETOMADA.key];
                     if (dataRetomadaStr) {
                         const dataRet = new Date(dataRetomadaStr);
                         const diffDays = (dataRet.getTime() - Date.now()) / (1000 * 3600 * 24);
@@ -212,7 +212,7 @@ function executeEmailCadence() {
             }
 
             // O valor real recebido do Pipedrive via CUSTOM_FIELDS.LABEL
-            let rawLabelValue = deal[CUSTOM_FIELDS.LABEL];
+            let rawLabelValue = deal[CONFIG.CUSTOM_FIELDS.LABEL.key];
             if (Array.isArray(rawLabelValue) && rawLabelValue.length > 0) {
                 rawLabelValue = rawLabelValue[0]; // Extrai o primeiro se for array
             }
@@ -272,7 +272,7 @@ function executeEmailCadence() {
             if (!summaryNote) continue;
 
             const companyName = deal.org_name || "Desconhecida";
-            const companySector = deal[CUSTOM_FIELDS.COMPANY_SECTOR] || "Não informado";
+            const companySector = deal[CONFIG.CUSTOM_FIELDS.COMPANY_SECTOR.key] || "Não informado";
             const combinedInput = `Empresa: ${companyName}\nSetor: ${companySector}\n\nResumo Estratégico:\n${summaryNote.content}`;
 
             const payload = {
@@ -301,7 +301,7 @@ function executeEmailCadence() {
             });
 
             // Limita processamento a X cards
-            if (workflowsToRun.length >= (typeof REGRAS_CONFIG !== 'undefined' && REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT ? REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT : 30)) {
+            if (workflowsToRun.length >= (CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 30)) {
                 console.info(`[INFO] Limite de processamento atingido (${workflowsToRun.length} cards) para executeEmailCadence.`);
                 break;
             }
@@ -561,7 +561,7 @@ var PipedriveRepository = {
         let mapping = {};
         if (resp.getResponseCode() === 200) {
             const data = JSON.parse(resp.getContentText()).data || [];
-            const labelField = data.find(f => f.key === CUSTOM_FIELDS.LABEL);
+            const labelField = data.find(f => f.key === CONFIG.CUSTOM_FIELDS.LABEL.key);
             if (labelField && labelField.options) {
                 labelField.options.forEach(opt => {
                     mapping[String(opt.id)] = opt.label;
@@ -605,8 +605,8 @@ var PipedriveRepository = {
     saveEmailToDeal: function (dealId, title, body) {
         const url = `${PIPEDRIVE_API_BASE_URL}/deals/${dealId}?api_token=${PIPEDRIVE_API_TOKEN}`;
         const payload = {
-            "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d": title,
-            "e616420fb16e671963854114c6bba6bd5c3bcef1": body
+            [CONFIG.CUSTOM_FIELDS.EMAIL_TITLE.key]: title,
+            [CONFIG.CUSTOM_FIELDS.EMAIL_BODY.key]: body
         };
         const startLog = Date.now();
         UrlFetchApp.fetch(url, { method: 'put', contentType: 'application/json', payload: JSON.stringify(payload), muteHttpExceptions: true });
@@ -970,13 +970,13 @@ function getNucleusInfo(labelId) {
  */
 const LoggerService = {
     logToGoogleSheets: function (dealId, workflowId, inputPayload, outputResult, durationMs, errorMsg = "") {
-        if (!REGRAS_CONFIG.PLANILHA_LOGS_IA_ID) {
-            console.warn("[WARN] REGRAS_CONFIG.PLANILHA_LOGS_IA_ID não está configurado. Pulando gravação no Sheets.");
+        if (!CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID) {
+            console.warn("[WARN] CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID não está configurado. Pulando gravação no Sheets.");
             return;
         }
 
         try {
-            const ss = SpreadsheetApp.openById(REGRAS_CONFIG.PLANILHA_LOGS_IA_ID);
+            const ss = SpreadsheetApp.openById(CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID);
             let sheet = ss.getSheetByName("Logs IA");
             if (!sheet) {
                 console.log("[DEBUG] Aba 'Logs IA' não encontrada. Criando nova aba.");

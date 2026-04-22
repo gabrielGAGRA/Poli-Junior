@@ -126,6 +126,7 @@ Formato:
         // Inicialização defensiva do state
         const state = workflow.state || { nucleo: "", nucleo_nome_completo: "" };
         const inputText = workflow.input_as_text || "";
+        const previousResponseId = state.previous_response_id || null;
 
         if (!inputText) {
             throw new Error("Fluxo_Atas: input_as_text é obrigatório na entrada do workflow.");
@@ -159,6 +160,10 @@ Formato:
             store: agentConfig.settings.store
         };
 
+        if (previousResponseId) {
+            apiOptions.previous_response_id = previousResponseId;
+        }
+
         // Adiciona reasoning se não for "none"
         if (agentConfig.settings.reasoning.effort !== "none") {
             apiOptions.reasoning = {
@@ -170,6 +175,15 @@ Formato:
         // Chama o Wrapper do GAS para encapsular o API Request HTTP real
         // Agora via Generators (yield) delegando a chamada paralela pro Orchestrator
         const response = yield apiOptions;
+
+        if (!workflow.state) {
+            workflow.state = {};
+        }
+        if (response && response.id) {
+            workflow.state.previous_response_id = response.id;
+            workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
+            workflow.state.response_ids_by_agent[agentConfig.name || "AnalistaDeAta"] = response.id;
+        }
 
         let finalOutput = "";
 

@@ -738,25 +738,86 @@ function getResolvedConfig() {
         }
     }
 
+    const entityConfig = RAW_CONFIG.ENTITIES || {};
+    const pipelineEntities = entityConfig.PIPELINES || {};
+    const stageEntities = entityConfig.STAGES || {};
+    const customFieldEntities = entityConfig.CUSTOM_FIELDS || {};
+
+    const resolveEntityId = (entity, legacyName, legacyId, fallbackMap, fallbackValue) => {
+        if (entity && entity.id !== undefined && entity.id !== null && entity.id !== "") return entity.id;
+        if (legacyName && fallbackMap && fallbackMap[legacyName] !== undefined) return fallbackMap[legacyName];
+        if (legacyId !== undefined && legacyId !== null && legacyId !== "") return legacyId;
+        return fallbackValue;
+    };
+
+    const resolveEntityKey = (entity, legacyName, fallbackMap, fallbackValue) => {
+        if (entity && entity.key) return entity.key;
+        if (legacyName && fallbackMap && fallbackMap[legacyName]) return fallbackMap[legacyName];
+        return fallbackValue;
+    };
+
     const config = {
-        REGRAS_CONFIG: {
-            PIPELINE_RETOMADA: pipelineMap[RAW_CONFIG.REGRAS_CONFIG.PIPELINE_RETOMADA] || 15,
-            PIPELINE_NURTURING: pipelineMap[RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING] || 16,
-            STAGE_INDO_PARA_EMAIL_1: stageMap[RAW_CONFIG.REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1] || RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_INDO_PARA_EMAIL_1 || 85,
-            STAGE_ENVIO_EMAIL_1: stageMap[RAW_CONFIG.REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1] || RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_ENVIO_EMAIL_1 || 81,
-            STAGE_ESPERA: stageMap[RAW_CONFIG.REGRAS_CONFIG.STAGE_ESPERA] || RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_ESPERA || 80,
-            MAX_CARDS_PROCESS_LIMIT: RAW_CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 10,
-            PLANILHA_LOGS_IA_ID: RAW_CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID || "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
+        PIPELINES: {
+            RETOMADA: {
+                id: resolveEntityId(pipelineEntities.RETOMADA, RAW_CONFIG.REGRAS_CONFIG.PIPELINE_RETOMADA, 15, pipelineMap, 15),
+                name: RAW_CONFIG.REGRAS_CONFIG.PIPELINE_RETOMADA
+            },
+            NURTURING: {
+                id: resolveEntityId(pipelineEntities.NURTURING, RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING, 16, pipelineMap, 16),
+                name: RAW_CONFIG.REGRAS_CONFIG.PIPELINE_NURTURING
+            }
+        },
+        STAGES: {
+            INDO_PARA_EMAIL_1: {
+                id: resolveEntityId(stageEntities.INDO_PARA_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_INDO_PARA_EMAIL_1, stageMap, 85),
+                name: RAW_CONFIG.REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1
+            },
+            ENVIO_EMAIL_1: {
+                id: resolveEntityId(stageEntities.ENVIO_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1, RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_ENVIO_EMAIL_1, stageMap, 81),
+                name: RAW_CONFIG.REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1
+            },
+            ESPERA: {
+                id: resolveEntityId(stageEntities.ESPERA, RAW_CONFIG.REGRAS_CONFIG.STAGE_ESPERA, RAW_CONFIG.REGRAS_CONFIG.ID_STAGE_ESPERA, stageMap, 80),
+                name: RAW_CONFIG.REGRAS_CONFIG.STAGE_ESPERA
+            }
         },
         CUSTOM_FIELDS: {
-            EMAIL_TITLE: customFieldsMap[RAW_CONFIG.CUSTOM_FIELDS.EMAIL_TITLE] || "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d",
-            EMAIL_BODY: customFieldsMap[RAW_CONFIG.CUSTOM_FIELDS.EMAIL_BODY] || "e616420fb16e671963854114c6bba6bd5c3bcef1",
-            LABEL: customFieldsMap[RAW_CONFIG.CUSTOM_FIELDS.LABEL] || "label",
-            COMPANY_SECTOR: customFieldsMap[RAW_CONFIG.CUSTOM_FIELDS.COMPANY_SECTOR] || "6ea1ea74da5fbb8cb6a8dd741a96a9bc8b4e379f",
-            ORIGIN_ID_FIELD: customFieldsMap[RAW_CONFIG.CUSTOM_FIELDS.ORIGIN_ID_FIELD] || "e465d18813a12b0bbd089af1996b1090751ab057",
-            DATA_RETOMADA: customFieldsMap[RAW_CONFIG.CUSTOM_FIELDS.DATA_RETOMADA] || "91cf62129f1fb478eb05f1aaa580952967f55e27"
+            EMAIL_TITLE: {
+                key: resolveEntityKey(customFieldEntities.EMAIL_TITLE, RAW_CONFIG.CUSTOM_FIELDS.EMAIL_TITLE, customFieldsMap, "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d"),
+                name: RAW_CONFIG.CUSTOM_FIELDS.EMAIL_TITLE
+            },
+            EMAIL_BODY: {
+                key: resolveEntityKey(customFieldEntities.EMAIL_BODY, RAW_CONFIG.CUSTOM_FIELDS.EMAIL_BODY, customFieldsMap, "e616420fb16e671963854114c6bba6bd5c3bcef1"),
+                name: RAW_CONFIG.CUSTOM_FIELDS.EMAIL_BODY
+            },
+            LABEL: {
+                key: resolveEntityKey(customFieldEntities.LABEL, RAW_CONFIG.CUSTOM_FIELDS.LABEL, customFieldsMap, "label"),
+                name: RAW_CONFIG.CUSTOM_FIELDS.LABEL
+            },
+            COMPANY_SECTOR: {
+                key: resolveEntityKey(customFieldEntities.COMPANY_SECTOR, RAW_CONFIG.CUSTOM_FIELDS.COMPANY_SECTOR, customFieldsMap, "6ea1ea74da5fbb8cb6a8dd741a96a9bc8b4e379f"),
+                name: RAW_CONFIG.CUSTOM_FIELDS.COMPANY_SECTOR
+            },
+            ORIGIN_ID_FIELD: {
+                key: resolveEntityKey(customFieldEntities.ORIGIN_ID_FIELD, RAW_CONFIG.CUSTOM_FIELDS.ORIGIN_ID_FIELD, customFieldsMap, "e465d18813a12b0bbd089af1996b1090751ab057"),
+                name: RAW_CONFIG.CUSTOM_FIELDS.ORIGIN_ID_FIELD
+            },
+            DATA_RETOMADA: {
+                key: resolveEntityKey(customFieldEntities.DATA_RETOMADA, RAW_CONFIG.CUSTOM_FIELDS.DATA_RETOMADA, customFieldsMap, "91cf62129f1fb478eb05f1aaa580952967f55e27"),
+                name: RAW_CONFIG.CUSTOM_FIELDS.DATA_RETOMADA
+            }
         },
         WORKFLOW_STAGE_MAPPING: {}
+    };
+
+    config.REGRAS_CONFIG = {
+        PIPELINE_RETOMADA: config.PIPELINES.RETOMADA.id,
+        PIPELINE_NURTURING: config.PIPELINES.NURTURING.id,
+        STAGE_INDO_PARA_EMAIL_1: config.STAGES.INDO_PARA_EMAIL_1.id,
+        STAGE_ENVIO_EMAIL_1: config.STAGES.ENVIO_EMAIL_1.id,
+        STAGE_ESPERA: config.STAGES.ESPERA.id,
+        MAX_CARDS_PROCESS_LIMIT: RAW_CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 10,
+        PLANILHA_LOGS_IA_ID: RAW_CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID || "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
     };
 
     // Montar WORKFLOW_STAGE_MAPPING baseado na ordem literal das linhas da planilha

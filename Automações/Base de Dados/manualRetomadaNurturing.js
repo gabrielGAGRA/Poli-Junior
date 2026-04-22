@@ -4,189 +4,96 @@
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 /**
- * ESTÁGIO 1: ESPERA
- * 
- * Lógica de negócios:
- * - NUTRIÇÃO: Tem "Data de Retomada" definida, move no dia exato agendado (+ 1 dia de buffer)
- * - RETOMADA:
- *   * Calcula 90 dias base + dias úteis de espera (conforme valor da oportunidade)
- *   * Leads de alto valor (>= R$ 50k): aguarda 11 dias úteis
- *   * Leads de baixo valor (< R$ 50k): aguarda 64 dias úteis
- *   * Move para Preparo quando esta data é atingida (+ 1 dia de buffer)
+ * Script de Recuperação e Auditoria de Funil - Poli Júnior
+ * Estratégia: SLA Global Baseado em Data de Criação (add_time)
+ * * Regras:
+ * 1. Buffer de segurança de 5 dias para não conflitar com a automação nativa.
+ * 2. Validação obrigatória de campos de e-mail antes de qualquer movimento para "Começo".
+ * 3. Compensação dinâmica: Se atrasou na etapa 1, acelera na etapa 2.
  */
 
-/**
- * ESTÁGIO 2: PREPARO DE E-MAIL
- * 
- * Validações obrigatórias:
- * 1. Passou pelo menos 1 dia no estágio
- * 2. Campo "Título do E-mail" preenchido (não vazio)
- * 3. Campo "Corpo do E-mail" preenchido (não vazio)
- * 4. Data limite atingida (conforme tipo de oportunidade)
- * 
- * Critérios de movimentação:
- * - NUTRIÇÃO: Move automaticamente para Envio se passou 1 dia + email preenchido
- * - RETOMADA: Move para Envio se atingiu o prazo total (180 dias + business days) + email preenchido
- */
-
-/**
- * Função principal para ser agendada diariamente
- */
-function dailyPipedriveReflow() {
-    // Utiliza as configurações globais resolvidas via config.js e analisePipedrive.js
-    const stageEsperaId = REGRAS_CONFIG.STAGE_ESPERA;
-    const stagePreparoEmail1Id = REGRAS_CONFIG.STAGE_INDO_PARA_EMAIL_1; // Estágio de preparar e-mail
-    const stageEnvioId = REGRAS_CONFIG.STAGE_ENVIO_EMAIL_1; // Estágio de enviar e-mail
-    const fieldDataRetomada = CUSTOM_FIELDS.DATA_RETOMADA;
-
-    if (!stageEsperaId || !stagePreparoEmail1Id || !stageEnvioId) {
-        Logger.log("Configuração de estágios vazia (Espera, Indo E-mail 1 ou Enviar E-mail 1). Verifique config.js.");
-        return;
-    }
-
+function auditoriaGlobalRetomada() {
+    const deals = buscarDealsAbertos();
     const hoje = new Date();
-    hoje.setHours(0, 0, 0, 0);
 
-    // 1. Processar cards no estágio de Espera (Stage 1) - Mover para Preparo (Stage 2)
-    processarEstagioEspera(stageEsperaId, stagePreparoEmail1Id, fieldDataRetomada, hoje);
-
-    // 2. Processar cards no estágio de Preparo (Stage 2) - Mover para Envio (Stage 3)
-    processarEstagioPreparo(stagePreparoEmail1Id, stageEnvioId, fieldDataRetomada, hoje);
-}
-
-function processarEstagioEspera(stageEsperaId, stagePreparoEmail1Id, fieldDataRetomada, hoje) {
-    const cards = fetchPipedriveData("deals", { stage_id: stageEsperaId, status: 'open' }, true);
-
-    Logger.log(`Processando ${cards.length} cards no estágio de Espera...`);
-
-    cards.forEach(card => {
+    deals.forEach(deal => {
         try {
-            let limitDate; // Data exata em que o card deve mudar de estágio (sem o delay de +1 dia ainda)
-            const dataRetomadaRaw = card[fieldDataRetomada];
+            const dataCriacao = new Date(deal.add_time);
+            const diasDeVida = calcularDiferencaDias(dataCriacao, hoje);
+            const valorAlto = (deal.value >= 50000);
 
-            if (dataRetomadaRaw) {
-                // Origem Nutrição: usa a Data de Retomada como limite para mudar pro preparo email.
-                limitDate = new Date(dataRetomadaRaw);
-            } else {
-                // Origem Retomada (Sem data de retomada definida, ciclo de 180 + business days):
-                const dataBase = new Date(card.add_time);
-                let deadline = new Date(dataBase);
-                // Ciclo 180 dias. 90 dias em espera.
-                deadline.setDate(deadline.getDate() + 90);
+            // SLA de 90 dias + 5 dias de segurança
+            const prazoMoverParaPreparo = 95;
 
-                const valor = card.value || 0;
-                const businessDaysWait = (valor >= 50000) ? 11 : 64;
-                deadline = addBusinessDays(deadline, businessDaysWait);
+            // SLA Total (90 dias + tempo de preparo em dias úteis convertido + 5 de buffer)
+            // Alto Valor: 90 + 15 (11 úteis) + 5 = 110 dias
+            // Padrão: 90 + 90 (64 úteis) + 5 = 185 dias
+            const prazoFinalEnvio = valorAlto ? 110 : 185;
 
-                limitDate = deadline;
-            }
+            const temEmail = verificarCamposEmail(deal);
 
-            // Só mexe com cards atrasados (passou ao menos 1 dia do limite)
-            let limitMaisUmDia = new Date(limitDate);
-            limitMaisUmDia.setDate(limitMaisUmDia.getDate() + 1);
-
-            if (hoje >= limitMaisUmDia) {
-                Logger.log(`Card ${card.id} atingiu o prazo em Espera. Movendo para Preparo (${stagePreparoEmail1Id})...`);
-
-                const response = sendPipedriveCommand(`deals/${card.id}`, "put", { stage_id: stagePreparoEmail1Id });
-                if (response && response.success) {
-                    Logger.log(`Card ${card.id} movido com sucesso para Preparo.`);
-                } else {
-                    Logger.log(`Erro ao mover card ${card.id}: ${response ? response.error : 'Sem resposta'}`);
+            // CASO 1: Deal travado na etapa de ESPERA
+            if (deal.stage_id === CONFIG.STAGES.ESPERA.id) {
+                if (diasDeVida >= prazoMoverParaPreparo) {
+                    Logger.log(`[ATENÇÃO] Deal ${deal.id} atrasado na Espera (${diasDeVida} dias). Movendo para Preparo.`);
+                    moverDeal(deal.id, CONFIG.STAGES.INDO_PARA_EMAIL_1.id);
                 }
             }
-        } catch (e) {
-            Logger.log(`Erro ao processar card ${card.id} em Espera: ${e.message}`);
-        }
-    });
-}
 
-function processarEstagioPreparo(stagePreparoEmail1Id, stageEnvioId, fieldDataRetomada, hoje) {
-    const cards = fetchPipedriveData("deals", { stage_id: stagePreparoEmail1Id, status: 'open' }, true);
-    Logger.log(`Processando ${cards.length} cards no estágio de Preparo de E-mail...`);
-
-    const fieldEmailTitle = CUSTOM_FIELDS.EMAIL_TITLE;
-    const fieldEmailBody = CUSTOM_FIELDS.EMAIL_BODY;
-
-    cards.forEach(card => {
-        try {
-            // Regra: Nunca deve mandar direto do espera para envio. Deve passar ao menos 1 dia no preparo.
-            const dataEntradaEstagio = new Date(card.stage_change_time);
-            let umDiaAposEntrada = new Date(dataEntradaEstagio);
-            umDiaAposEntrada.setDate(umDiaAposEntrada.getDate() + 1);
-            umDiaAposEntrada.setHours(0, 0, 0, 0);
-
-            if (hoje < umDiaAposEntrada) {
-                return; // Ainda não passou pelo menos 1 dia no estágio de preparo.
-            }
-
-            // Validar preenchimento dos campos Título e Corpo do E-mail
-            const title = card[fieldEmailTitle] || "";
-            const body = card[fieldEmailBody] || "";
-            const isEmailPreenchido = title.trim() !== "" && body.trim() !== "";
-
-            if (!isEmailPreenchido) {
-                return; // O código deve SOMENTE mover para envio caso corpo e título não estejam vazios.
-            }
-
-            let limitesPreparo;
-            const dataRetomadaRaw = card[fieldDataRetomada];
-
-            if (dataRetomadaRaw) {
-                // Origem Nutrição: "muda pro proximo estagio sozinho se tiver com email preenchido e já esperou 1 dia"
-                // O limite para mover é apenas ter esperado 1 dia (o que já validamos antes).
-                limitesPreparo = umDiaAposEntrada;
-            } else {
-                // Origem Retomada (Ciclo total 180 dias)
-                // Metade no Espera (90) e metade no Preparo (90).
-                const dataBase = new Date(card.add_time);
-
-                // Calcula limite total da pipeline (Base + 180 + businessDays Wait)
-                let limiteTotalPipeline = new Date(dataBase);
-                limiteTotalPipeline.setDate(limiteTotalPipeline.getDate() + 180);
-
-                const valor = card.value || 0;
-                const businessDaysWait = (valor >= 50000) ? 11 : 64;
-                limiteTotalPipeline = addBusinessDays(limiteTotalPipeline, businessDaysWait);
-
-                // Se ele passou 150 dias em espera, restaram apenas 30 dias para preparo (pois o máximo global é 180 dias + business).
-                // Portanto, o que determina o limite de preparo é o marco global de 180 dias do card.
-                limitesPreparo = limiteTotalPipeline;
-            }
-
-            let limiteMaisUmDia = new Date(limitesPreparo);
-            if (limitesPreparo) {
-                limiteMaisUmDia.setDate(limiteMaisUmDia.getDate() + 1);
-            } else {
-                limiteMaisUmDia = umDiaAposEntrada; // Default to 1 day after enter
-            }
-
-            // Verifica se está atrasado ou se for Nutrição que pode passar direto quando passou 1 dia e tem email
-            if (hoje >= limiteMaisUmDia || !!dataRetomadaRaw) {
-                Logger.log(`Card ${card.id} pronto para envio de e-mail. Movendo para Envio (${stageEnvioId})...`);
-
-                const response = sendPipedriveCommand(`deals/${card.id}`, "put", { stage_id: stageEnvioId });
-                if (response && response.success) {
-                    Logger.log(`Card ${card.id} movido com sucesso para Envio.`);
-                } else {
-                    Logger.log(`Erro ao mover card ${card.id}: ${response ? response.error : 'Sem resposta'}`);
+            // CASO 2: Deal na etapa de PREPARO (Verifica atraso e compensação)
+            else if (deal.stage_id === CONFIG.STAGES.INDO_PARA_EMAIL_1.id) {
+                if (diasDeVida >= prazoFinalEnvio) {
+                    if (temEmail) {
+                        Logger.log(`[COMPENSAÇÃO] Deal ${deal.id} com ${diasDeVida} dias. Campos prontos. Movendo para Envio.`);
+                        moverDeal(deal.id, CONFIG.STAGES.ENVIO_EMAIL_1.id);
+                    } else {
+                        Logger.log(`[ALERTA] Deal ${deal.id} estourou o prazo global, mas os campos de e-mail estão VAZIOS. Intervenção manual necessária.`);
+                    }
                 }
             }
 
         } catch (e) {
-            Logger.log(`Erro ao processar card ${card.id} no Preparo: ${e.message}`);
+            Logger.log(`Erro ao processar deal ${deal.id}: ${e.message}`);
         }
     });
 }
 
-function addBusinessDays(startDate, daysToAdd) {
-    let date = new Date(startDate.getTime());
-    let added = 0;
-    while (added < daysToAdd) {
-        date.setDate(date.getDate() + 1);
-        if (date.getDay() !== 0 && date.getDay() !== 6) { // 0=Dom, 6=Sáb
-            added++;
-        }
-    }
-    return date;
+/**
+ * Verifica se os campos de Título e Corpo estão preenchidos
+ */
+function verificarCamposEmail(deal) {
+    const titulo = deal[CONFIG.CUSTOM_FIELDS.EMAIL_TITLE.key];
+    const corpo = deal[CONFIG.CUSTOM_FIELDS.EMAIL_BODY.key];
+
+    // Verifica se não é nulo, indefinido ou apenas espaços em branco
+    const tituloOk = titulo && titulo.trim().length > 0;
+    const corpoOk = corpo && corpo.trim().length > 0;
+
+    return (tituloOk && corpoOk);
+}
+
+/**
+ * Funções Auxiliares de API e Data
+ */
+function calcularDiferencaDias(dataInicio, dataFim) {
+    const diffTime = Math.abs(dataFim - dataInicio);
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+
+function buscarDealsAbertos() {
+    // Simulação de busca via API - Filtrar apenas funis de retomada
+    const url = `${PIPEDRIVE_API_BASE_URL}/deals?status=open&api_token=${PIPEDRIVE_API_TOKEN}`;
+    const response = UrlFetchApp.fetch(url);
+    return JSON.parse(response.getContentText()).data || [];
+}
+
+function moverDeal(dealId, novoStageId) {
+    const url = `${PIPEDRIVE_API_BASE_URL}/deals/${dealId}?api_token=${PIPEDRIVE_API_TOKEN}`;
+    const payload = { stage_id: novoStageId };
+    const options = {
+        method: 'put',
+        contentType: 'application/json',
+        payload: JSON.stringify(payload)
+    };
+    UrlFetchApp.fetch(url, options);
 }

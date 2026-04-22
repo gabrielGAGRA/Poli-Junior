@@ -157,7 +157,7 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema.
         return finalOutput;
     },
 
-    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
+    _runRedator: function* (redatorConfig, inputPrompt, tools = [], previousResponseId = null) {
         const apiOptions = {
             model: redatorConfig.model,
             instructions: redatorConfig.getInstructions(),
@@ -166,6 +166,10 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema.
             textFormat: this.Schemas.RedatorOutputSchema,
             tools: tools
         };
+
+        if (previousResponseId) {
+            apiOptions.previous_response_id = previousResponseId;
+        }
 
         if (redatorConfig.settings.reasoning.effort !== "none") {
             apiOptions.reasoning = {
@@ -178,10 +182,25 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema.
         const text = this._extractTextFromOutput(response);
 
         try {
-            return JSON.parse(text);
+            return {
+                data: JSON.parse(text),
+                response_id: response && response.id ? response.id : null
+            };
         } catch (e) {
             throw new Error("Flow_FluxoNCiv: Falha ao fazer parse do JSON do Redator. Saída bruta: " + text);
         }
+    },
+
+    _trackResponseId: function (workflow, agentName, responseId) {
+        if (!responseId) return;
+
+        if (!workflow.state) {
+            workflow.state = {};
+        }
+
+        workflow.state.previous_response_id = responseId;
+        workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
+        workflow.state.response_ids_by_agent[agentName] = responseId;
     },
 
     runWorkflow: function* (workflow) {
@@ -190,6 +209,8 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema.
         const etapa = Number(state.etapa);
         const emails_anteriores = state.emails_anteriores || "";
         const input_as_text = workflow.input_as_text || "";
+        const previousResponseId = state.previous_response_id || null;
+        const includeEmailHistory = !previousResponseId;
 
         const createRedatorInput = (etapa, context, research = "", history = "") => {
             return `
@@ -197,9 +218,7 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema.
 ${context}
 </business_context>
 
-<email_history>
-${history}
-</email_history>
+${includeEmailHistory ? `<email_history>\n${history}\n</email_history>\n\n` : ""}
 
 ${research ? `<research_data>\n${research}\n</research_data>\n` : ""}
 <task_update>
@@ -220,16 +239,26 @@ Gere o Passo ${etapa} da cadência.
                 // Roda RedatorDeRetomadaCase com FileSearch
                 const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
                 console.log(`[NCiv] Rodando RedatorDeRetomadaCase para Etapa 1`);
-                return yield* this._runRedator(
+                const redatorRun = yield* this._runRedator(
                     this.RedatorDeRetomadaCase,
                     redatorInput,
-                    [this.Tools.fileSearch]
+                    [this.Tools.fileSearch],
+                    previousResponseId
                 );
+                this._trackResponseId(workflow, "RedatorDeRetomadaCase", redatorRun.response_id);
+                return redatorRun.data;
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
                 const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
                 console.log(`[NCiv] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorInput);
+                const redatorRun = yield* this._runRedator(
+                    this.RedatorDeRetomadaFup,
+                    redatorInput,
+                    [],
+                    previousResponseId
+                );
+                this._trackResponseId(workflow, "RedatorDeRetomadaFup", redatorRun.response_id);
+                return redatorRun.data;
             }
 
         }
