@@ -1,1 +1,11 @@
-1. Etapa de espera 2 em Retomada
+1. Etapa de espera 2 em Retomada (para não misturar com cards de <50k e >50k)
+
+2. Cases de sucesso do NCon, NTec e NCiv. Atualizar para a nova estrutura de input. Remover file search.
+
+3. Corrigir Fluxos com as tags XML do Prompt Guidance (Fluxo NDados é o modelo, já ajustado)
+
+4. Restaurar deals apagados (todos de Domingo)
+
+5. Colocar condição de RETOMADA is empty na automação de mover de lost para funil
+
+6. Testar manualRetomadaNurturing para remover deals nesses casos

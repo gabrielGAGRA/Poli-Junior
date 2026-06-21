@@ -1,3 +1,5 @@
+// Att: 21/04/2026
+
 /**
  * Google Apps Script - Fluxo de Tradução: Resumidor de Atas
  * 
@@ -21,76 +23,86 @@ const Flow_FluxoAtas = {
         model: "gpt-5.4-mini",
         // Configurações do wrapper Responses
         settings: {
-            reasoning_effort: "low",
+            reasoning: {
+                effort: "low",
+                summary: "detailed"
+            },
             store: true
         },
         getInstructions: function () {
-            return `Você é um Agente de IA especialista em análise de vendas consultivas do **Núcleo de ANÁLISE DE DADOS E INTELIGÊNCIA ARTIFICIAL**. A sua tarefa é ler o texto de uma ata de reunião e preencher um "Dossiê Estratégico" estruturado, seguindo rigorosamente as regras abaixo.
+            return `<task_objective>
+Atuar como Analista de Inteligência de Negócios para o Núcleo de Dados & IA. Sua missão é converter transcrições de reuniões brutas em um Dossiê Estratégico de alta densidade informativa.
+</task_objective>
 
-**REGRAS DE OURO:**
-1.  **EXTRAIA, NÃO INVENTE:** A sua função é identificar e extrair textualmente ou resumir de forma concisa as informações pedidas. **Não adicione opiniões ou informações que não estejam explicitamente na ata.**
-2.  **FOCO NO "SINAL", IGNORE O "RUÍDO":** Ignore informações secundárias como "empresa júnior pode cobrar mais barato", "relacionamento com o cliente é importante" ou detalhes logísticos da reunião. Foque-se nos problemas de negócio, objetivos, contexto técnico e stakeholders.
-3.  **SEJA CONCISO E ESTRUTURADO:** Use bullet points para listar os desafios e objetivos. Mantenha as descrições diretas ao ponto.
+<noise_gating_rules>
+- Ignore explicitamente: cumprimentos, agendamentos, problemas técnicos de áudio/vídeo e discussões sobre preços baixos da Poli Júnior (ruído de branding).
+- Foque apenas em: dores de negócio, infraestrutura tecnológica citada e objetivos estratégicos.
+</noise_gating_rules>
 
-**TAREFA:**
-Analise a ata_de_reuniao fornecida abaixo e preencha o dossiê.
+<extraction_contract>
+Para cada seção do dossiê, extraia fatos e dados. Se a informação não foi mencionada, utilize "[Não mencionado]".
+1. Contexto Geral: Resumo de 1 frase do cenário do cliente.
+2. Desafios: Bullet points sobre dores latentes (braço técnico, BI estático, processos manuais).
+3. Objetivos: O que o sucesso do projeto significa para o negócio deles.
+4. Infraestrutura: ERPs, CRMs, APIs e volumes de dados citados.
+5. Oportunidades: Onde a IA e os Dados podem gerar ROI imediato.
+</extraction_contract>
 
-**FORMATO DA RESPOSTA:**
-Organize sua resposta em seções claras:
-- Contexto Geral
-- Principais Desafios do Cliente
-- Objetivos de Negócio
-- Infraestrutura e Dados
-- Oportunidades Identificadas
+<verification_loop>
+Antes de finalizar:
+- Verifique se você não "inventou" detalhes técnicos para preencher as lacunas.
+- Certifique-se de que a linguagem é profissional e isenta de interjeições conversacionais.
+</verification_loop>
 
-EXEMPLOS:
-- Contexto Geral: 
-Ex: 'Discussão sobre a necessidade de evoluir o BI estático da empresa para um sistema de análise preditiva para otimizar a precificação e identificar fraudes no setor de seguros agrícolas'
-- Principais Desafios do Cliente: 
-"Falta de capacidade técnica interna ('braço') para explorar os dados em profundidade."
-"BI atual é estático e não gera insights acionáveis para as áreas de negócio."
-"Processos de análise de risco, fraude e precificação são manuais e empíricos."
-"Dependência excessiva da equipe de TI para extração de relatórios simples."
-- Objetivos de Negócio:
-"Automatizar a geração de relatórios e gráficos dinâmicos."
-"Utilizar análise preditiva para antecipar preço e cobertura de risco para safras futuras."
-"Aumentar a autonomia das áreas de negócio na análise de dados."
-- Infraestrutura e Dados:
-"ERP principal: E4Pro. CRM: Salesforce."
-"BI atual usado principalmente para manipular planilhas."
-"Dados de precificação não estão no ERP, mas em sistemas menores integrados via API."
-"Grande volume de dados: ~100 mil apólices em 3 anos."
-- Oportunidades Identificadas:
-"Desenvolvimento de modelos preditivos para precificação de seguros agrícolas."
-"Criação de dashboards de BI dinâmicos para as áreas de subscrição e sinistros."
-"Implementação de sistema de deteção de anomalias/fraudes baseado em dados históricos de sinistros."`;
+<output_format>
+Use Markdown para cabeçalhos e listas flat (sem bullets aninhados).
+</output_format>`;
         }
     },
 
     AnalistaDeAtaGeral: {
         name: "Analista de Ata",
-        model: "gpt-5.4-mini",
+        model: "gpt-5.4-nano",
         settings: {
-            reasoning_effort: "none", // Como no exportado, esse agente não exige reasoning
+            reasoning: {
+                effort: "none",
+                summary: "none"
+            },
             store: true
         },
         getInstructions: function (stateNucleoNomeCompleto) {
-            return `Você é um Agente de IA especialista em análise de vendas consultivas do **${stateNucleoNomeCompleto}**. A sua tarefa é ler o texto de uma ata de reunião e preencher um "Dossiê Estratégico" estruturado, seguindo rigorosamente as regras abaixo.
+            return `<critical_rule>
+Você é um extrator de dados para o ${stateNucleoNomeCompleto}. Extraia apenas o que é factual. NÃO adicione opiniões ou interpretações.
+</critical_rule>
 
-**REGRAS DE OURO:**
-1.  **EXTRAIA, NÃO INVENTE:** A sua função é identificar e extrair textualmente ou resumir de forma concisa as informações pedidas. **Não adicione opiniões ou informações que não estejam explicitamente na ata.**
-2.  **FOCO NO "SINAL", IGNORE O "RUÍDO":** Ignore informações secundárias como "empresa júnior pode cobrar mais barato", "relacionamento com o cliente é importante" ou detalhes logísticos da reunião. Foque-se nos problemas de negócio, objetivos, contexto técnico e stakeholders.
-3.  **SEJA CONCISO E ESTRUTURADO:** Use bullet points para listar os desafios e objetivos. Mantenha as descrições diretas ao ponto.
+<task>
+Preencher o Dossiê Estratégico a partir da ata fornecida.
+</task>
 
-**TAREFA:**
-Analise a ata_de_reuniao fornecida abaixo e preencha o dossiê.
+<workflow_steps>
+1. Identificar o Contexto Geral.
+2. Listar Desafios do Cliente (máximo 5 bullets).
+3. Listar Objetivos de Negócio.
+4. Identificar Oportunidades de Projeto.
+</workflow_steps>
 
-**FORMATO DA RESPOSTA:**
-Organize sua resposta em seções claras:
-- Contexto Geral
-- Principais Desafios do Cliente
-- Objetivos de Negócio
-- Oportunidades Identificadas`;
+<verbosity_controls>
+- Seja extremamente conciso.
+- Evite repetir a pergunta do usuário ou o contexto.
+- Não use meta-comentários como "Entendido" ou "Aqui está o resumo".
+</verbosity_controls>
+
+<output_contract>
+Formato:
+# Contexto Geral
+(texto)
+# Desafios
+- (item)
+# Objetivos
+- (item)
+# Oportunidades
+- (item)
+</output_contract>`;
         }
     },
 
@@ -114,6 +126,7 @@ Organize sua resposta em seções claras:
         // Inicialização defensiva do state
         const state = workflow.state || { nucleo: "", nucleo_nome_completo: "" };
         const inputText = workflow.input_as_text || "";
+        const previousResponseId = state.previous_response_id || null;
 
         if (!inputText) {
             throw new Error("Fluxo_Atas: input_as_text é obrigatório na entrada do workflow.");
@@ -144,13 +157,33 @@ Organize sua resposta em seções claras:
             model: agentConfig.model,
             instructions: instructions,
             input: inputText,
-            store: agentConfig.settings.store,
-            reasoning_effort: agentConfig.settings.reasoning_effort !== "none" ? agentConfig.settings.reasoning_effort : undefined
+            store: agentConfig.settings.store
         };
+
+        if (previousResponseId) {
+            apiOptions.previous_response_id = previousResponseId;
+        }
+
+        // Adiciona reasoning se não for "none"
+        if (agentConfig.settings.reasoning.effort !== "none") {
+            apiOptions.reasoning = {
+                effort: agentConfig.settings.reasoning.effort,
+                summary: agentConfig.settings.reasoning.summary
+            };
+        }
 
         // Chama o Wrapper do GAS para encapsular o API Request HTTP real
         // Agora via Generators (yield) delegando a chamada paralela pro Orchestrator
         const response = yield apiOptions;
+
+        if (!workflow.state) {
+            workflow.state = {};
+        }
+        if (response && response.id) {
+            workflow.state.previous_response_id = response.id;
+            workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
+            workflow.state.response_ids_by_agent[agentConfig.name || "AnalistaDeAta"] = response.id;
+        }
 
         let finalOutput = "";
 
@@ -160,7 +193,8 @@ Organize sua resposta em seções claras:
             finalOutput = response.output_text;
         } else if (response.output && response.output.length > 0) {
             for (let item of response.output) {
-                if (item.type === "message" && item.content) {
+                // Ignorar mensagens intermediárias de fase commentary
+                if (item.type === "message" && item.content && item.phase !== "commentary") {
                     for (let block of item.content) {
                         if (block.type === "output_text" || block.type === "text") {
                             finalOutput += (block.text || block.output_text || "");
@@ -180,6 +214,10 @@ Organize sua resposta em seções claras:
         };
     }
 };
+
+if (typeof globalThis !== 'undefined') {
+    globalThis.Flow_FluxoAtas = Flow_FluxoAtas;
+}
 
 // Facilita testes parciais via Node/Jest, omitido sem erros no ambiente global interno GAS
 if (typeof module !== 'undefined' && module.exports) {

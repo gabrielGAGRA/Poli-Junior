@@ -109,7 +109,7 @@ function weeklyFlowSync() {
 
     refreshMetadataCache();
 
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(MAIN_SHEET_NAME);
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(DATABASE_SHEET_NAME);
     if (!sheet) return console.error("Planilha base não encontrada.");
 
     const data = sheet.getDataRange().getValues();
@@ -146,7 +146,7 @@ function weeklyFlowSync() {
  */
 function upsertDealsToSheet(deals, fieldMapping, optionMapping, stageMapping) {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
-    const sheet = ss.getSheetByName(MAIN_SHEET_NAME) || ss.insertSheet(MAIN_SHEET_NAME);
+    const sheet = ss.getSheetByName(DATABASE_SHEET_NAME) || ss.insertSheet(DATABASE_SHEET_NAME);
 
     let data = sheet.getDataRange().getValues();
     let headers = data.length > 0 && data[0][0] !== "" ? data[0] : ["ID", "Title", "Status", "Stage"];
@@ -700,133 +700,238 @@ function getResolvedConfig() {
 
     const data = sheet.getDataRange().getValues();
 
-    const pipelineMap = {};
-    const stageMap = {};
     const stagesByPipelineList = {};
-    const customFieldsMap = {};
-
-    let currentPipelineId = null;
 
     // A planilha tem Cabeçalhos na linha 1.
     for (let i = 1; i < data.length; i++) {
         const pipelineName = data[i][3]; // Coluna D (Pipeline)
         const stageName = data[i][4];    // Coluna E (Estágio)
         const stageId = data[i][5];      // Coluna F (ID Estágio)
-        const fieldName = data[i][7];    // Coluna H (Nome do Campo)
-        const fieldKey = data[i][8];     // Coluna I (Key)
 
         if (stageName && stageId) {
-            stageMap[stageName] = stageId;
-
             if (pipelineName) {
                 if (!stagesByPipelineList[pipelineName]) stagesByPipelineList[pipelineName] = [];
                 stagesByPipelineList[pipelineName].push({ id: stageId, name: stageName });
             }
         }
-
-        if (fieldName && fieldKey) {
-            customFieldsMap[fieldName] = fieldKey;
-        }
     }
 
-    // Identificar IDs de pipeline consultando a aba JSON_PIPELINES_STAGES
-    let pipelinesJsonData = sheet.getRange("B100").getValue();
-    if (pipelinesJsonData) {
-        const pipelinesEStages = JSON.parse(pipelinesJsonData);
-        for (const [pName, pData] of Object.entries(pipelinesEStages)) {
-            pipelineMap[pName] = pData.id;
-        }
-    }
-
-    // O config resolvido abaixo é o ponto único de verdade em runtime:
-    // - usa IDs/keys estáveis para lógica;
-    // - mantém o nome apenas como referência humana;
-    // - aceita fallback legado para não quebrar fluxos antigos.
-    const entityConfig = RAW_CONFIG.ENTITIES || {};
+    const entityConfig = CONFIG_BASE.ENTITIES || {};
     const pipelineEntities = entityConfig.PIPELINES || {};
     const stageEntities = entityConfig.STAGES || {};
     const customFieldEntities = entityConfig.CUSTOM_FIELDS || {};
 
-    // Prioridade de resolução: entity.id/key -> mapa legado da planilha -> default.
-    const resolveEntityId = (entity, legacyName, legacyId, fallbackMap, fallbackValue) => {
+    const fail = (message) => {
+        throw new Error(`[CONFIG] ${message}`);
+    };
+
+    const isNonEmptyString = (value) => typeof value === "string" && value.trim() !== "";
+    const isPresent = (value) => value !== undefined && value !== null && value !== "";
+    const isPositiveId = (value) => {
+        const parsed = typeof value === "number" ? value : Number(value);
+        return Number.isFinite(parsed) && parsed > 0;
+    };
+
+    const assertEntityName = (entity, path) => {
+        if (!entity) fail(`${path} ausente.`);
+        if (!isNonEmptyString(entity.name)) fail(`${path}.name ausente/vazio.`);
+    };
+
+    const assertEntityId = (entity, path) => {
+        if (!entity) fail(`${path} ausente.`);
+        if (!isPresent(entity.id) || !isPositiveId(entity.id)) fail(`${path}.id ausente ou inválido.`);
+    };
+
+    const assertEntityKey = (entity, path) => {
+        if (!entity) fail(`${path} ausente.`);
+        if (!isNonEmptyString(entity.key)) fail(`${path}.key ausente/vazio.`);
+    };
+
+    // Checagem operacional: estas chaves são as que o código realmente usa.
+    ["RETOMADA", "NURTURING"].forEach((key) => {
+        const ent = pipelineEntities[key];
+        const path = `CONFIG_BASE.ENTITIES.PIPELINES.${key}`;
+        assertEntityName(ent, path);
+        assertEntityId(ent, path);
+    });
+
+    ["INDO_PARA_EMAIL_1", "ENVIO_EMAIL_1", "ESPERA"].forEach((key) => {
+        const ent = stageEntities[key];
+        const path = `CONFIG_BASE.ENTITIES.STAGES.${key}`;
+        assertEntityName(ent, path);
+        assertEntityId(ent, path);
+    });
+
+    ["EMAIL_TITLE", "EMAIL_BODY", "LABEL", "COMPANY_SECTOR", "ORIGIN_ID_FIELD", "DATA_RETOMADA"].forEach((key) => {
+        const ent = customFieldEntities[key];
+        const path = `CONFIG_BASE.ENTITIES.CUSTOM_FIELDS.${key}`;
+        assertEntityName(ent, path);
+        assertEntityKey(ent, path);
+    });
+
+    // Resolução canônica: a entidade declara o id/key; se faltar, cai para o default fixo.
+    const resolveEntityId = (entity, fallbackValue) => {
         if (entity && entity.id !== undefined && entity.id !== null && entity.id !== "") return entity.id;
-        if (legacyName && fallbackMap && fallbackMap[legacyName] !== undefined) return fallbackMap[legacyName];
-        if (legacyId !== undefined && legacyId !== null && legacyId !== "") return legacyId;
         return fallbackValue;
     };
 
-    // Para campos customizados, a chave técnica é preferida; o nome só ajuda na migração.
-    const resolveEntityKey = (entity, legacyName, fallbackMap, fallbackValue) => {
-        if (entity && entity.key) return entity.key;
-        if (legacyName && fallbackMap && fallbackMap[legacyName]) return fallbackMap[legacyName];
+    const resolveEntityKey = (entity, fallbackValue) => {
+        if (entity && isNonEmptyString(entity.key)) return entity.key;
         return fallbackValue;
     };
 
     const config = {
         PIPELINES: {
             RETOMADA: {
-                id: resolveEntityId(pipelineEntities.RETOMADA, pipelineEntities.RETOMADA.name, 15, pipelineMap, 15),
+                id: resolveEntityId(pipelineEntities.RETOMADA, 15),
                 name: pipelineEntities.RETOMADA.name
             },
             NURTURING: {
-                id: resolveEntityId(pipelineEntities.NURTURING, pipelineEntities.NURTURING.name, 16, pipelineMap, 16),
+                id: resolveEntityId(pipelineEntities.NURTURING, 16),
                 name: pipelineEntities.NURTURING.name
             }
         },
         STAGES: {
             INDO_PARA_EMAIL_1: {
-                id: resolveEntityId(stageEntities.INDO_PARA_EMAIL_1, stageEntities.INDO_PARA_EMAIL_1.name, stageEntities.INDO_PARA_EMAIL_1.id, stageMap, 85),
+                id: resolveEntityId(stageEntities.INDO_PARA_EMAIL_1, 85),
                 name: stageEntities.INDO_PARA_EMAIL_1.name
             },
             ENVIO_EMAIL_1: {
-                id: resolveEntityId(stageEntities.ENVIO_EMAIL_1, stageEntities.ENVIO_EMAIL_1.name, stageEntities.ENVIO_EMAIL_1.id, stageMap, 81),
+                id: resolveEntityId(stageEntities.ENVIO_EMAIL_1, 81),
                 name: stageEntities.ENVIO_EMAIL_1.name
             },
             ESPERA: {
-                id: resolveEntityId(stageEntities.ESPERA, stageEntities.ESPERA.name, stageEntities.ESPERA.id, stageMap, 80),
+                id: resolveEntityId(stageEntities.ESPERA, 80),
                 name: stageEntities.ESPERA.name
             }
         },
         CUSTOM_FIELDS: {
             EMAIL_TITLE: {
-                key: resolveEntityKey(customFieldEntities.EMAIL_TITLE, customFieldEntities.EMAIL_TITLE.name, customFieldsMap, "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d"),
+                key: resolveEntityKey(customFieldEntities.EMAIL_TITLE, "74647c02e74ca7b4d0f98a71cfdc436bac8f0f5d"),
                 name: customFieldEntities.EMAIL_TITLE.name
             },
             EMAIL_BODY: {
-                key: resolveEntityKey(customFieldEntities.EMAIL_BODY, customFieldEntities.EMAIL_BODY.name, customFieldsMap, "e616420fb16e671963854114c6bba6bd5c3bcef1"),
+                key: resolveEntityKey(customFieldEntities.EMAIL_BODY, "e616420fb16e671963854114c6bba6bd5c3bcef1"),
                 name: customFieldEntities.EMAIL_BODY.name
             },
             LABEL: {
-                key: resolveEntityKey(customFieldEntities.LABEL, customFieldEntities.LABEL.name, customFieldsMap, "label"),
+                key: resolveEntityKey(customFieldEntities.LABEL, "label"),
                 name: customFieldEntities.LABEL.name
             },
             COMPANY_SECTOR: {
-                key: resolveEntityKey(customFieldEntities.COMPANY_SECTOR, customFieldEntities.COMPANY_SECTOR.name, customFieldsMap, "6ea1ea74da5fbb8cb6a8dd741a96a9bc8b4e379f"),
+                key: resolveEntityKey(customFieldEntities.COMPANY_SECTOR, "6ea1ea74da5fbb8cb6a8dd741a96a9bc8b4e379f"),
                 name: customFieldEntities.COMPANY_SECTOR.name
             },
             ORIGIN_ID_FIELD: {
-                key: resolveEntityKey(customFieldEntities.ORIGIN_ID_FIELD, customFieldEntities.ORIGIN_ID_FIELD.name, customFieldsMap, "e465d18813a12b0bbd089af1996b1090751ab057"),
+                key: resolveEntityKey(customFieldEntities.ORIGIN_ID_FIELD, "e465d18813a12b0bbd089af1996b1090751ab057"),
                 name: customFieldEntities.ORIGIN_ID_FIELD.name
             },
             DATA_RETOMADA: {
-                key: resolveEntityKey(customFieldEntities.DATA_RETOMADA, customFieldEntities.DATA_RETOMADA.name, customFieldsMap, "91cf62129f1fb478eb05f1aaa580952967f55e27"),
+                key: resolveEntityKey(customFieldEntities.DATA_RETOMADA, "91cf62129f1fb478eb05f1aaa580952967f55e27"),
                 name: customFieldEntities.DATA_RETOMADA.name
             }
         },
-        WORKFLOW_STAGE_MAPPING: {}
+        WORKFLOW_STAGE_MAPPING: {},
+        OPERATIONS: {}
     };
 
-    // Mantém o contrato antigo para quem ainda consome REGRAS_CONFIG,
-    // mas o código novo deve preferir CONFIG.PIPELINES / CONFIG.STAGES / CONFIG.CUSTOM_FIELDS.
-    config.REGRAS_CONFIG = {
-        PIPELINE_RETOMADA: config.PIPELINES.RETOMADA.id,
-        PIPELINE_NURTURING: config.PIPELINES.NURTURING.id,
-        STAGE_INDO_PARA_EMAIL_1: config.STAGES.INDO_PARA_EMAIL_1.id,
-        STAGE_ENVIO_EMAIL_1: config.STAGES.ENVIO_EMAIL_1.id,
-        STAGE_ESPERA: config.STAGES.ESPERA.id,
-        MAX_CARDS_PROCESS_LIMIT: RAW_CONFIG.REGRAS_CONFIG.MAX_CARDS_PROCESS_LIMIT || 10,
-        PLANILHA_LOGS_IA_ID: RAW_CONFIG.REGRAS_CONFIG.PLANILHA_LOGS_IA_ID || "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q"
+    // Valores globais de runtime. Ficam no topo da config porque não são entidades.
+    const operationsConfig = CONFIG_BASE.OPERATIONS || {};
+    const summaryOps = operationsConfig.SUMMARY || {};
+    const emailOps = operationsConfig.EMAIL || {};
+    const continuationOps = operationsConfig.CONTINUATION || {};
+    const cacheOps = operationsConfig.CACHE || {};
+    const batchOps = operationsConfig.BATCH || {};
+    const simulationOps = operationsConfig.SIMULATION_MODE || operationsConfig.SIMULATION || {};
+
+    const maxResumoLimit = Number(isPresent(summaryOps.MAX_DEALS_PER_RUN) ? summaryOps.MAX_DEALS_PER_RUN : 120);
+    if (!Number.isFinite(maxResumoLimit) || maxResumoLimit <= 0 || !Number.isInteger(maxResumoLimit)) {
+        fail("CONFIG_BASE.OPERATIONS.SUMMARY.MAX_DEALS_PER_RUN deve ser um inteiro positivo.");
+    }
+    config.MAX_CARDS_RESUMO_PROCESSO = maxResumoLimit;
+    config.OPERATIONS.SUMMARY = {
+        MAX_DEALS_PER_RUN: maxResumoLimit,
+        GAS_RUNTIME_BUDGET_MS: Number(isPresent(summaryOps.GAS_RUNTIME_BUDGET_MS) ? summaryOps.GAS_RUNTIME_BUDGET_MS : (5.5 * 60 * 1000)),
+        OPENAI_CHUNK_SIZE: Number(isPresent(summaryOps.OPENAI_CHUNK_SIZE) ? summaryOps.OPENAI_CHUNK_SIZE : 5),
+        EMPTY_NOTES_DELETE_CAP: Number(isPresent(summaryOps.EMPTY_NOTES_DELETE_CAP) ? summaryOps.EMPTY_NOTES_DELETE_CAP : 100)
     };
+    config.OPERATIONS.SUMMARY.MAX_CARDS_PER_RUN = config.OPERATIONS.SUMMARY.MAX_DEALS_PER_RUN;
+    config.OPERATIONS.SUMMARY.RUNTIME_BUDGET_MS = config.OPERATIONS.SUMMARY.GAS_RUNTIME_BUDGET_MS;
+    config.OPERATIONS.SUMMARY.DELETE_CAP = config.OPERATIONS.SUMMARY.EMPTY_NOTES_DELETE_CAP;
+
+    const maxEmailLimit = Number(isPresent(emailOps.MAX_DEALS_PER_RUN) ? emailOps.MAX_DEALS_PER_RUN : 20);
+    if (!Number.isFinite(maxEmailLimit) || maxEmailLimit <= 0 || !Number.isInteger(maxEmailLimit)) {
+        fail("CONFIG_BASE.OPERATIONS.EMAIL.MAX_DEALS_PER_RUN deve ser um inteiro positivo.");
+    }
+    config.MAX_CARDS_EMAIL_PROCESSO = maxEmailLimit;
+    config.OPERATIONS.EMAIL = {
+        MAX_DEALS_PER_RUN: maxEmailLimit,
+        GAS_RUNTIME_BUDGET_MS: Number(isPresent(emailOps.GAS_RUNTIME_BUDGET_MS) ? emailOps.GAS_RUNTIME_BUDGET_MS : (4.5 * 60 * 1000)),
+        OPENAI_CHUNK_SIZE: Number(isPresent(emailOps.OPENAI_CHUNK_SIZE) ? emailOps.OPENAI_CHUNK_SIZE : 5)
+    };
+    config.OPERATIONS.EMAIL.MAX_CARDS_PER_RUN = config.OPERATIONS.EMAIL.MAX_DEALS_PER_RUN;
+    config.OPERATIONS.EMAIL.RUNTIME_BUDGET_MS = config.OPERATIONS.EMAIL.GAS_RUNTIME_BUDGET_MS;
+
+    config.OPERATIONS.CONTINUATION = {
+        CONTINUATION_DELAY_MS: Number(isPresent(continuationOps.CONTINUATION_DELAY_MS) ? continuationOps.CONTINUATION_DELAY_MS : (10 * 60 * 1000)),
+        CONTINUATION_MIN_SCHEDULE_INTERVAL_MS: Number(isPresent(continuationOps.CONTINUATION_MIN_SCHEDULE_INTERVAL_MS) ? continuationOps.CONTINUATION_MIN_SCHEDULE_INTERVAL_MS : (8 * 60 * 1000)),
+        CONTINUATION_MAX_RUNS_PER_DAY: Number(isPresent(continuationOps.CONTINUATION_MAX_RUNS_PER_DAY) ? continuationOps.CONTINUATION_MAX_RUNS_PER_DAY : 12),
+        CONTINUATION_MAX_GENERATIONS: Number(isPresent(continuationOps.CONTINUATION_MAX_GENERATIONS) ? continuationOps.CONTINUATION_MAX_GENERATIONS : 10)
+    };
+    config.OPERATIONS.CONTINUATION.DELAY_MS = config.OPERATIONS.CONTINUATION.CONTINUATION_DELAY_MS;
+    config.OPERATIONS.CONTINUATION.MIN_SCHEDULE_INTERVAL_MS = config.OPERATIONS.CONTINUATION.CONTINUATION_MIN_SCHEDULE_INTERVAL_MS;
+    config.OPERATIONS.CONTINUATION.MAX_RUNS_PER_DAY = config.OPERATIONS.CONTINUATION.CONTINUATION_MAX_RUNS_PER_DAY;
+    config.OPERATIONS.CONTINUATION.MAX_GENERATIONS = config.OPERATIONS.CONTINUATION.CONTINUATION_MAX_GENERATIONS;
+
+    config.OPERATIONS.CACHE = {
+        DEAL_FAILURE_ENTRY_MAX_AGE_MS: Number(isPresent(cacheOps.DEAL_FAILURE_ENTRY_MAX_AGE_MS) ? cacheOps.DEAL_FAILURE_ENTRY_MAX_AGE_MS : (7 * 24 * 60 * 60 * 1000)),
+        DEAL_FAILURE_CACHE_MAX_ITEMS: Number(isPresent(cacheOps.DEAL_FAILURE_CACHE_MAX_ITEMS) ? cacheOps.DEAL_FAILURE_CACHE_MAX_ITEMS : 500),
+        SUMMARIZED_DEALS_CACHE_MAX_ITEMS: Number(isPresent(cacheOps.SUMMARIZED_DEALS_CACHE_MAX_ITEMS) ? cacheOps.SUMMARIZED_DEALS_CACHE_MAX_ITEMS : 300),
+        SUMMARIZED_DEALS_CACHE_MAX_AGE_MS: Number(isPresent(cacheOps.SUMMARIZED_DEALS_CACHE_MAX_AGE_MS) ? cacheOps.SUMMARIZED_DEALS_CACHE_MAX_AGE_MS : (181 * 24 * 60 * 60 * 1000))
+    };
+    config.OPERATIONS.CACHE.DEAL_FAILURE_MAX_AGE_MS = config.OPERATIONS.CACHE.DEAL_FAILURE_ENTRY_MAX_AGE_MS;
+    config.OPERATIONS.CACHE.DEAL_FAILURE_MAX_ITEMS = config.OPERATIONS.CACHE.DEAL_FAILURE_CACHE_MAX_ITEMS;
+    config.OPERATIONS.CACHE.SUMMARIZED_DEALS_MAX_ITEMS = config.OPERATIONS.CACHE.SUMMARIZED_DEALS_CACHE_MAX_ITEMS;
+    config.OPERATIONS.CACHE.SUMMARIZED_DEALS_MAX_AGE_MS = config.OPERATIONS.CACHE.SUMMARIZED_DEALS_CACHE_MAX_AGE_MS;
+
+    config.OPERATIONS.BATCH = {
+        OPENAI_BATCH_RUNTIME_BUDGET_MS: Number(isPresent(batchOps.OPENAI_BATCH_RUNTIME_BUDGET_MS) ? batchOps.OPENAI_BATCH_RUNTIME_BUDGET_MS : (5 * 60 * 1000)),
+        OPENAI_CHUNK_SIZE: Number(isPresent(batchOps.OPENAI_CHUNK_SIZE) ? batchOps.OPENAI_CHUNK_SIZE : 5),
+        LOG_BATCH_SHEET_NAME: isNonEmptyString(batchOps.LOG_BATCH_SHEET_NAME) ? batchOps.LOG_BATCH_SHEET_NAME : "Logs IA"
+    };
+    config.OPERATIONS.BATCH.OPENAI_RUNTIME_MS = config.OPERATIONS.BATCH.OPENAI_BATCH_RUNTIME_BUDGET_MS;
+
+    config.MODO_SIMULACAO_OPERACOES = simulationOps.ENABLED === true;
+    config.OPERATIONS.SIMULATION_MODE = { ENABLED: config.MODO_SIMULACAO_OPERACOES };
+    config.OPERATIONS.SIMULATION = config.OPERATIONS.SIMULATION_MODE;
+    config.SUMMARY_RUNTIME_BUDGET_MS = config.OPERATIONS.SUMMARY.RUNTIME_BUDGET_MS;
+    config.SUMMARY_OPENAI_RUNTIME_MS = config.OPERATIONS.SUMMARY.OPENAI_RUNTIME_MS;
+    config.SUMMARY_OPENAI_CHUNK_SIZE = config.OPERATIONS.SUMMARY.OPENAI_CHUNK_SIZE;
+    config.MAX_CARDS_RESUMO_PROCESSO = config.OPERATIONS.SUMMARY.MAX_CARDS_PER_RUN;
+    config.MAX_CARDS_DELETE_LIMIT = config.OPERATIONS.SUMMARY.DELETE_CAP;
+    config.EMAIL_RUNTIME_BUDGET_MS = config.OPERATIONS.EMAIL.RUNTIME_BUDGET_MS;
+    config.EMAIL_OPENAI_RUNTIME_MS = config.OPERATIONS.EMAIL.OPENAI_RUNTIME_MS;
+    config.EMAIL_OPENAI_CHUNK_SIZE = config.OPERATIONS.EMAIL.OPENAI_CHUNK_SIZE;
+    config.MAX_CARDS_EMAIL_PROCESSO = config.OPERATIONS.EMAIL.MAX_CARDS_PER_RUN;
+    config.CONTINUATION = config.OPERATIONS.CONTINUATION;
+    config.DEAL_FAILURE_MAX_AGE_MS = config.OPERATIONS.CACHE.DEAL_FAILURE_ENTRY_MAX_AGE_MS;
+    config.DEAL_FAILURE_MAX_ITEMS = config.OPERATIONS.CACHE.DEAL_FAILURE_CACHE_MAX_ITEMS;
+    config.SUMMARIZED_DEALS_MAX_ITEMS = config.OPERATIONS.CACHE.SUMMARIZED_DEALS_CACHE_MAX_ITEMS;
+    config.SUMMARIZED_DEALS_MAX_AGE_MS = config.OPERATIONS.CACHE.SUMMARIZED_DEALS_CACHE_MAX_AGE_MS;
+    config.LOG_BATCH_SHEET_NAME = config.OPERATIONS.BATCH.LOG_BATCH_SHEET_NAME;
+    config.BATCH_OPENAI_RUNTIME_MS = config.OPERATIONS.BATCH.OPENAI_BATCH_RUNTIME_BUDGET_MS;
+    config.BATCH_OPENAI_CHUNK_SIZE = config.OPERATIONS.BATCH.OPENAI_CHUNK_SIZE;
+    config.CONTINUATION_MAX_GENERATIONS = config.CONTINUATION.CONTINUATION_MAX_GENERATIONS;
+    config.CONTINUATION_DELAY_MS = config.CONTINUATION.CONTINUATION_DELAY_MS;
+    config.CONTINUATION_MIN_SCHEDULE_INTERVAL_MS = config.CONTINUATION.CONTINUATION_MIN_SCHEDULE_INTERVAL_MS;
+    config.CONTINUATION_MAX_RUNS_PER_DAY = config.CONTINUATION.CONTINUATION_MAX_RUNS_PER_DAY;
+
+    config.PLANILHA_LOGS_IA_ID = isNonEmptyString(CONFIG_BASE.PLANILHA_LOGS_IA_ID)
+        ? CONFIG_BASE.PLANILHA_LOGS_IA_ID
+        : "1fvgjELHcDPRK5PoNu6fINayDHxnwdsref72pWzVYr1Q";
+    if (!isNonEmptyString(config.PLANILHA_LOGS_IA_ID)) {
+        fail("CONFIG_BASE.PLANILHA_LOGS_IA_ID ausente/vazio.");
+    }
 
     // Montar WORKFLOW_STAGE_MAPPING baseado na ordem literal das linhas da planilha.
     // Aqui trabalhamos com a chave da cadência (RETOMADA/NURTURING), não com o nome exibido.
@@ -847,8 +952,26 @@ function getResolvedConfig() {
         }
     };
 
-    if (RAW_CONFIG.WORKFLOW_CADENCES) {
-        RAW_CONFIG.WORKFLOW_CADENCES.forEach(c => tryMapWorkflow(c));
+    const pipelineKeys = Object.keys(config.PIPELINES);
+    if (pipelineKeys.length === 0) {
+        fail("CONFIG.PIPELINES deve conter ao menos um pipeline.");
+    }
+
+    pipelineKeys.forEach((pipelineKey) => {
+        tryMapWorkflow(pipelineKey);
+    });
+
+    // Fail-fast se não conseguimos mapear nada: normalmente isso indica inconsistência entre
+    // o nome do pipeline no config e a coluna D da aba "Estágios".
+    const mappedCount = Object.keys(config.WORKFLOW_STAGE_MAPPING).length;
+    if (mappedCount === 0) {
+        const pipelineNames = pipelineKeys
+            .map((pipelineKey) => config.PIPELINES[pipelineKey]?.name)
+            .filter(Boolean);
+        fail(
+            "WORKFLOW_STAGE_MAPPING ficou vazio. Verifique a aba 'Estágios' (coluna D = Pipeline, coluna F = ID) e se os nomes em CONFIG.ENTITIES.PIPELINES batem exatamente com a planilha. " +
+            `Pipelines esperados: ${pipelineNames.join(", ")}`
+        );
     }
 
     _resolvedConfig = config;

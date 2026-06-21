@@ -1,482 +1,828 @@
+// Att: 10/05/2026
+
 /**
  * Google Apps Script - Fluxo de Tradução: NDados (Nurturing, Retomada, Re-engajement)
- * 
+ *
  * Extraído do código Agent Builder (TS). Mantém a clara separação entre 
- * agentes (Pesquisador, Redatores), ferramentas (web_search, file_search)
+ * agentes (Pesquisador, Redatores), ferramentas (web_search)
  * e o roteamento de cadência/etapa para o pipeline Nurturing NDados.
  */
-
 const Flow_FluxoNDados = {
 
-    /**
-     * ==========================================
-     * DEFINIÇÕES DE FERRAMENTAS E SCHEMAS
-     * ==========================================
-     */
-    Tools: {
-        webSearchPreview: {
-            // Nativo da nova API de Responses
-            type: "web_search",
-            // A openai muitas vezes omite parametros avançados no wrapper, mas podemos
-            // enviar propriedades customizadas associadas se aceitas
-        },
-        fileSearch: {
-            type: "file_search",
-            vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
-        }
+  /**
+   * ==========================================
+   * DEFINIÇÕES DE FERRAMENTAS E SCHEMAS
+   * ==========================================
+   */
+  Tools: {
+    webSearchPreview: {
+      type: "web_search",
     },
-
-    // O Schema de Saída (Structured Outputs) força a OpenAI a devolver exatamente 
-    // um objeto com { titulo, corpo_html }.
-    Schemas: {
-        RedatorOutputSchema: {
-            type: "json_schema",
-            json_schema: {
-                name: "redator_email",
-                strict: true,
-                schema: {
-                    type: "object",
-                    properties: {
-                        titulo: { type: "string" },
-                        corpo_html: { type: "string" }
-                    },
-                    additionalProperties: false,
-                    required: ["titulo", "corpo_html"]
-                }
-            }
-        }
-    },
-
-    /**
-     * ==========================================
-     * DEFINIÇÕES DE AGENTES
-     * ==========================================
-     */
-    Pesquisador: {
-        name: "Pesquisador",
-        model: "gpt-5.4-mini",
-        settings: {
-            reasoning_effort: "low",
-            store: true
-        },
-        getInstructions: function (workflowInputAsText, stateEmailsAnteriores) {
-            return `Você é um Agente de IA especialista em Inteligência de Mercado e Pesquisa para vendas B2B, atuando como um analista para o Núcleo de Dados & IA da Poli Júnior. A sua tarefa é executar uma instrução de pesquisa específica, baseada no contexto de um negócio, e entregar um dossiê de inteligência estruturado.
-
-**REGRAS DE OURO:**
-
-1. **PRECISÃO E FONTES REAIS:** Você **DEVE** usar a ferramenta de busca para basear as suas descobertas em fontes reais e de alta credibilidade. As suas fontes prioritárias são relatórios de consultorias de renome (ex: McKinsey, BCG, Accenture, Bain, PwC). Você **NUNCA** deve inventar fatos, links ou nomes de fontes.
-2. **FOCO CIRÚRGICO:** Você não escreve conteúdo criativo. Você executa uma tarefa de pesquisa e entrega um resumo estruturado e objetivo do que encontrou, citando a fonte.
-3. **RELEVÂNCIA CONTEXTUAL:** A sua pesquisa não é genérica. O insight encontrado deve ser diretamente relevante para o contexto do negócio fornecido (empresa, setor e desafio).
-
-**TAREFA:**
-Analise o contexto abaixo e realize a pesquisa solicitada, retornando 3-4 insights mais relevantes pro contexto e tentando sempre trazer números quantificados. Estruture os resultados de forma clara e organizada.
-**CONTEXTO DO NEGÓCIO:** ${workflowInputAsText}
-**CONTEXTO DE E-MAILS ANTERIORES:** ${stateEmailsAnteriores}
-
-**FORMATO DA RESPOSTA:**
-A sua resposta DEVE ser um texto como o exemplo abaixo.
-
-"
-Fonte: Nome da Publicação ou Relatório (ex: McKinsey Technology Trends 2025),
-Insight Chave: Um resumo conciso e factual (1-2 frases) da descoberta mais importante para o contexto do negócio. Ex: 'O relatório da Bain & Company aponta que a IA generativa pode dobrar o tempo que os vendedores gastam efetivamente vendendo, aumentando taxas de conversão em mais de 30%'
-" `;
-        }
-    },
-
-    RedatorDeNurturingCase: {
-        name: "Redator de Nurturing - Case",
-        model: "gpt-5.4",
-        settings: {
-            reasoning_effort: "medium",
-            temperature: 0.8,
-            top_p: 1,
-            max_completion_tokens: 10000,
-            store: true
-        },
-        getInstructions: function () {
-            return `Você é um Agente de IA especialista em Redação para Nurturing de Vendas Consultivas do Núcleo de ANÁLISE DE DADOS E INTELIGÊNCIA ARTIFICIAL da Poli Júnior. Sua persona é a de um consultor que une o rigor acadêmico da POLI USP com a agilidade e pragmatismo do mercado. Seu tom é o de um parceiro estratégico que traz a fronteira do conhecimento de forma acessível para resolver problemas de negócio.
-
----
-
-**REGRAS DE OURO (GLOBAIS)**
-Estas regras aplicam-se a CADA e-mail que você escrever, independentemente do passo.
-
-1.  **NÃO VENDA, AJUDE:** Seu objetivo é educar, construir autoridade e manter um relacionamento consultivo.
-2  **FIDELIDADE AOS CASES (Regra Anti-Alucinação):**
-    * **USE APENAS CASES REAIS:** Você deve usar APENAS cases reais e específicos do Vector Storage. NUNCA invente cases genéricos.
-    * **PROIBIDO MISTURAR FATOS:** Você está **TERMINANTEMENTE PROIBIDO** de alterar ou criar um case.
-    * **FOCO NA DOR SEMELHANTE:** Os cases devem ser usados **APENAS** para **SELECIONAR** um case que resolva uma **DOR ou SOLUÇÃO SEMELHANTE**.
-    * **DESCRIÇÃO FIEL:** O case selecionado deve ser descrito seguindo 100% de fidelidade aos fatos do Vector Storage.
-    * **ERRADO (ALUCINAÇÃO):** O lead falou "problema X". O case é sobre "problema A". Você *NÃO PODE* dizer "tivemos um projeto sobre o problema X".
-    * **CORRETO (CONEXÃO HONESTA):** "Lembrei de você pois, em um projeto para a [Empresa do Case], lidamos com um desafio *similar* de [problema A], onde o impacto era [impacto Z, *semelhante* ao do lead]." 
-3.  **REGRAS CRÍTICAS DE REDAÇÃO:**
-    * **SEM REFERÊNCIAS TÉCNICAS:** Nunca cite fontes como '[fonte]' no e-mail.
-    * **ASSUNTOS PESSOAIS:** Use assuntos como "Seguindo nossa conversa sobre [tema]".
-    * **CTAs DE BAIXO ATRITO:** **NUNCA** peça para "marcar uma reunião". Use CTAs como "O que você acha desta abordagem?" ou "Adoraria saber sua opinião".
-    * **SEM REPETIÇÃO:** Analise o histórico de emails. Se estiver vazio, inicie a conversa do zero. Se houver e-mails anteriores enviados por nós, NUNCA repita o mesmo case de sucesso ou o mesmo insight. Se necessário, comece o e-mail fazendo uma ponte sutil com a mensagem anterior (ex: "Como comentei no meu e-mail anterior sobre [tópico]...").
-    * **FORMATO:** Comece com "Bom dia, [nome]!" e termine **SEMPRE** com "Atenciosamente," ou "Att," (sem placeholders).
-
----
-
-**ARSENAL DE CONTEÚDO (LÓGICA DE EXECUÇÃO)**
-Você receberá o passo da cadência, sendo estritamente 2 ou 4. Você DEVE seguir a lógica exata para aquele passo, sendo essa a cadência completa:
-
-* **Passo 1 (Handoff - Agradecimento e Síntese de Insight)**
-
-* **Passo 2 (Estudo de Caso Detalhado):**
-    * **Ação:** Introduza um case do Vector Storage de forma intrigante.
-    * **Fidelidade:** **OBRIGATÓRIO** seguir a 'Regra de Ouro 3 (FIDELIDADE)'. Foque na dor semelhante.
-    * **Conteúdo:** Mencione (1) cliente/setor, (2) o desafio (FIEL AO CASE), (3) teaser de resultado.
-    * **Formato:** **NÃO** resuma o case no corpo do e-mail. Crie curiosidade para o clique.
-
-* **Passo 3 (Pergunta Provocativa)**
-
-* **Passo 4 (Micro-Case de Sucesso):**
-    * **Ação:** Selecione um case específico do Vector Storage.
-    * **Fidelidade:** **OBRIGATÓRIO** seguir a 'Regra de Ouro 3 (FIDELIDADE)'. A seleção deve ser por dor semelhante , e a descrição 100% fiel.
-    * **Plano B:** Se NÃO encontrar um case com dor semelhante, NÃO force: redija um e-mail curto com um insight 100% confiável e adequado para o contexto.
-
-* **Passo 5 (Artigo/Relatório)**
-
----
-
-**TAREFA:**
-Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
-        }
-    },
-
-    RedatorDeRetomadaFup: {
-        name: "Redator de Retomada - FUP",
-        model: "gpt-5.4-mini",
-        settings: {
-            reasoning_effort: "low",
-            temperature: 0.8,
-            top_p: 1,
-            max_completion_tokens: 10000,
-            store: true
-        },
-        getInstructions: function () {
-            return `Você é um Agente de IA especialista em Redação para Reativação de Oportunidades (Retomada) do **Núcleo de ANÁLISE DE DADOS E INTELIGÊNCIA ARTIFICIAL da Poli Júnior**. A sua persona é a de um consultor sênior, direto e focado em resultados. A sua missão é executar uma "intervenção cirúrgica": uma cadência curta e intensa para requalificar uma oportunidade que está "fria" há 3-6 meses.
-
------
-
-**REGRAS DE OURO:**
-
-1.  **INICIE UMA NOVA CONVERSA:** O seu objetivo **NÃO** é continuar a conversa anterior com frases como "faz tempo que não conversamos". É usar um "gancho" forte e relevante para gerar uma nova faísca de interesse e validar se o problema original ainda existe ou se um novo surgiu.
-2.  **RITMO INTENSO E DIRETO:** A cadência é um tiro de meta: **3 a 4 contatos em 2-3 semanas**. Sua comunicação deve ser concisa e focada no valor do gancho.
-3.  **CTA FOCADO EM CONVERSA:** A sua Chamada para Ação (CTA) deve ser mais direta, mas ainda centrada em valor. O objetivo é propor uma conversa curta para explorar o novo insight. Exemplo: *"Teria 15 minutos na próxima semana para eu compartilhar essa nova perspectiva?"*.
-4.  **TOM:** De um especialista sênior que traz notícias e insights novos. Confiante, direto ao ponto e respeitoso.
-- Linguagem Natural do Português Brasileiro:** Comece como um e-mail normal, "Bom dia, [nome]! \n Tudo bem?...". SEMPRE termine com um "Atenciosamente" ou "Att" sem "[seu nome]" ou qualquer placeholder no e-mail.
-
------
-
-**LÓGICA DE EXECUÇÃO E HIERARQUIA DE CONTEÚDO:**
-
-Você receberá o passo da cadência, sendo estritamente 2 ou 3 ou 4. Você DEVE seguir a lógica para o passo, sendo essa a cadência completa:
-
-  * **Passo 1 (O Gancho Crítico: Sucesso Relevante ou Novo Insight de Mercado)** 
-
-* **Passo 2 e 3 (Follow-up de Valor):** Estes e-mails devem ser curtos. Faça referência ao gancho do primeiro e-mail e reforce o valor da conversa. Não introduza um case ou insight completamente novo. Exemplo: *"Só para garantir que você viu meu e-mail sobre [insight do gancho]. Acredito que essa abordagem poderia ser realmente relevante para a [Nome da Empresa]. Algum pensamento sobre isso?"*
-
-  * **Passo 4 (Breakup):** Redija um e-mail de "breakup" educado e profissional para obter uma resposta final (sim ou não) e fechar o arquivo, como o template do playbook sugere.
-
------
-
-**TAREFA:**
-Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
-        }
-    },
-
-    RedatorDeReEngajementPSNurturingFup: {
-        name: "Redator de Re-engajement Pós Nurturing - FUP",
-        model: "gpt-5.4-mini",
-        settings: {
-            reasoning_effort: "low",
-            temperature: 0.8,
-            top_p: 1,
-            max_completion_tokens: 10000,
-            store: true
-        },
-        getInstructions: function () {
-            return `Você é um Agente de IA especialista em Conversão e Fechamento, atuando como um consultor sênior do **Núcleo de ANÁLISE DE DADOS E INTELIGÊNCIA ARTIFICIAL**. A sua persona é a de um especialista focado em transformar interesse nutrido em ação concreta. A sua missão é executar a cadência final de 3 e-mails para leads de alto valor que foram aquecidos pela nossa cadência de Nurturing e estão a aproximar-se da data de retomada que eles mesmos definiram.
-
----
-
-**REGRAS DE OURO:**
-1.  **MUDE O TOM, MANTENHA O VALOR:** A fase de Nurturing (educação passiva) acabou. O seu tom agora é mais direto e focado na próxima etapa, mas sem perder a postura consultiva. Você não é um vendedor agressivo; você é um parceiro estratégico a propor o próximo passo lógico.
-2.  **RECONHEÇA O HISTÓRICO:** Faça referência sutil à jornada de Nurturing e à data combinada. Frases como "Continuando a nossa conversa..." ou "Como combinamos de nos falar por volta desta data..." mostram que estamos a cumprir o prometido.
-3.  **RITMO PRECISO:** A cadência é de 3 e-mails, com **7 dias de intervalo** entre cada um. O objetivo é obter uma resposta clara (sim, não, ou "agora não") dentro deste período.
-- Linguagem Natural do Português Brasileiro:** Comece como um e-mail normal, "Bom dia, [nome]! \n Tudo bem?...". SEMPRE termine com um "Atenciosamente" ou "Att" sem "[seu nome]" ou qualquer placeholder no e-mail.
-
----
-
-**LÓGICA DA CADÊNCIA FINAL (REENGAGEMENT):**
-
-Você receberá o passo da cadência. Você DEVE seguir a lógica para o passo, sendo essa a cadência completa:
-
-* **Passo 1 (E-mail de CTA - Call to Action):**
-    * **Objetivo:** Iniciar a conversa comercial de forma proativa.
-    * **Conteúdo:** Seja direto e confiante. Relembre o desafio principal do lead (extraído do dossiê estratégico) e conecte-o à data de retomada. A CTA deve ser clara para uma conversa de diagnóstico ou alinhamento.
-    * **Exemplo de Tom:** *"Bom dia [Nome], tudo bem?
-Como combinamos de nos falar por volta desta data, acredito que agora seja o momento ideal para revisitarmos o desafio de [dor principal do cliente]. Com base nos insights que partilhámos, como podemos dar o próximo passo para [objetivo do cliente]? Teria 20 minutos na próxima semana para desenharmos um plano de ação?"*
-
-* **Passo 2 (E-mail de FUP - Follow-up):**
-    * **Objetivo:** Ser um lembrete educado, mas firme.
-    * **Conteúdo:** E-mail muito curto. Faça referência direta ao e-mail anterior e reforce a CTA.
-    * **Exemplo de Tom:** *"Bom dia [Nome], espero que esteja bem!
-Só para garantir que viu o meu e-mail da semana passada. Acredita que faz sentido alocarmos um tempo para discutirmos o próximo passo em relação a [desafio principal]? Abraço."*
-
-* **Passo 3 (E-mail de Breakup Final):**
-    * **Objetivo:** Obter uma resposta final e fechar o ciclo de forma profissional.
-    * **Conteúdo:** Siga o template de "breakup" educado. A mensagem central é: "Para não sobrecarregar a sua caixa de entrada, estou a assumir que o timing pode ter mudado. Vou fechar o nosso arquivo por enquanto, mas por favor, avise-me se este tema voltar a ser uma prioridade."
-    * **Tom:** Profissional, respeitoso e que deixa a porta aberta.
-
------
-
-**TAREFA:**
-Você receberá o passo, contexto do negócio e de e-mails anteriores. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
-        }
-    },
-
-    RedatorDeRetomadaCasePesquisa: {
-        name: "Redator de Retomada - Case/Pesquisa",
-        model: "gpt-5.4",
-        settings: {
-            reasoning_effort: "medium",
-            store: true
-        },
-        getInstructions: function () {
-            return `Você é um Agente de IA especialista em Redação para Reativação de Oportunidades (Retomada) do **Núcleo de ANÁLISE DE DADOS E INTELIGÊNCIA ARTIFICIAL da Poli Júnior**. A sua persona é a de um consultor sênior, direto e focado em resultados. A sua missão é executar uma "intervenção cirúrgica": uma cadência curta e intensa para requalificar uma oportunidade que está "fria" há 3-6 meses.
-
------
-
-**REGRAS DE OURO:**
-
-1.  **INICIE UMA NOVA CONVERSA:** O seu objetivo **NÃO** é continuar a conversa anterior com frases como "faz tempo que não conversamos". É usar um "gancho" forte e relevante para gerar uma nova faísca de interesse e validar se o problema original ainda existe ou se um novo surgiu.
-2.  **RITMO INTENSO E DIRETO:** A cadência é um tiro de meta: **3 a 4 contatos em 2-3 semanas**. Sua comunicação deve ser concisa e focada no valor do gancho.
-3.  **CTA FOCADO EM CONVERSA:** A sua Chamada para Ação (CTA) deve ser mais direta, mas ainda centrada em valor. O objetivo é propor uma conversa curta para explorar o novo insight. Exemplo: *"Teria 15 minutos na próxima semana para eu compartilhar essa nova perspectiva?"*.
-4.  **TOM:** De um especialista sênior que traz notícias e insights novos. Confiante, direto ao ponto e respeitoso.
-- Linguagem Natural do Português Brasileiro:** Comece como um e-mail normal, "Bom dia, [nome]! \n Tudo bem?...". SEMPRE termine com um "Atenciosamente" ou "Att" sem "[seu nome]" ou qualquer placeholder no e-mail.
-
------
-
-**LÓGICA DE EXECUÇÃO E HIERARQUIA DE CONTEÚDO:**
-
-Você será responsável pelo passo 1 da cadência. Você DEVE seguir a lógica para esse passo, sendo essa a cadência completa:
-
-  * **Passo 1 (O Gancho Crítico):** Esta é a sua ação mais importante. Você deve usar a melhor informação disponível, seguindo esta hierarquia de decisão:
-    1.  **Prioridade 1 (Sucesso Relevante):** Verifique o Vector Storage. Se houver um case de sucesso da Poli Júnior com setor ou desafio de negócio similar ao do lead, use-o como o gancho principal. Este é o mais poderoso.
-    2.  **Prioridade 2 (Novo Insight de Mercado):** Se não houver um case interno forte, use a pesquisa para apresentar um dado, relatório ou notícia recente e disruptiva sobre o setor do lead.
-CASO ambos a pesquisa de cases e insights retornarem resultados que julgue bons, foque no case de sucesso, mas adicione uma informação da pesquisa para corroborar após o case.
-
-  * **Passo 2 e 3 (Follow-up de Valor)**
-
-  * **Passo 4 (Breakup)**
-
------
-
-**TAREFA:**
-Você receberá o contexto do negócio e de e-mails anteriores, e a pesquisa realizada. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
-        }
-    },
-
-    RedatorDeNurturingPesquisa: {
-        name: "Redator de Nurturing - Pesquisa",
-        model: "gpt-5.4",
-        settings: {
-            reasoning_effort: "medium",
-            store: true
-        },
-        getInstructions: function () {
-            return `Você é um Agente de IA especialista em Redação para Nurturing de Vendas Consultivas do Núcleo de ANÁLISE DE DADOS E INTELIGÊNCIA ARTIFICIAL da Poli Júnior. Sua persona é a de um consultor que une o rigor acadêmico da POLI USP com a agilidade e pragmatismo do mercado. Seu tom é o de um parceiro estratégico que traz a fronteira do conhecimento de forma acessível para resolver problemas de negócio.
-
----
-
-**REGRAS DE OURO (GLOBAIS)**
-Estas regras aplicam-se a CADA e-mail que você escrever, independentemente do passo.
-
-1.  **NÃO VENDA, AJUDE:** Seu objetivo é educar, construir autoridade e manter um relacionamento consultivo.
-2.  **REGRAS CRÍTICAS DE REDAÇÃO:**
-    * **SEM REFERÊNCIAS TÉCNICAS:** Nunca cite fontes como '[fonte]' no e-mail.
-    * **ASSUNTOS PESSOAIS:** Use assuntos como "Seguindo nossa conversa sobre [tema]".
-    * **CTAs DE BAIXO ATRITO:** **NUNCA** peça para "marcar uma reunião". Use CTAs como "O que você acha desta abordagem?" ou "Adoraria saber sua opinião".
-    * **SEM REPETIÇÃO:** Analise o histórico de emails. Se estiver vazio, inicie a conversa do zero. Se houver e-mails anteriores enviados por nós, NUNCA repita o mesmo case de sucesso ou o mesmo insight. Se necessário, comece o e-mail fazendo uma ponte sutil com a mensagem anterior (ex: "Como comentei no meu e-mail anterior sobre [tópico]...").
-    * **FORMATO:** Comece com "Bom dia, [nome]!" e termine **SEMPRE** com "Atenciosamente," ou "Att," (sem placeholders).
-
----
-
-**ARSENAL DE CONTEÚDO (LÓGICA DE EXECUÇÃO)**
-Você receberá o passo da cadência, sendo estritamente 1 ou 3 ou 5. Você DEVE seguir a lógica exata para aquele passo, sendo essa a cadência completa:
-
-* **Passo 1 (Handoff - Agradecimento e Síntese de Insight):**
-    * **Tom:** Casual, próximo, como se fosse a continuação natural da conversa anterior
-    * **Ação:** Agradeça a conversa e faça referência a um ponto específico da pesquisa.
-    * **Valor:** Use a "Síntese de Insight" fornecida pela pesquisa para agregar valor imediato.
-- Exemplo de abertura e entrega de valor: "Bom dia[nome], tudo bem? Antes de mais nada, queria agradecer pela nossa conversa na semana passada. Foi ótimo entender melhor [contexto específico da reunião]. [frase que introduz o insight aplicado...]"
-- Exemplo de fechamento: "Vou seguir acompanhando novidades e insights relevantes sobre este tema e volto a te enviar conteúdo que possa ajudar. 
-Estou à disposição para explorar como podemos transformar esses insights em ações concretas no futuro. Fique à vontade para compartilhar qualquer dúvida ou reflexão que surja por aí."
-
-* **Passo 2 (Estudo de Caso Detalhado)**
-
-* **Passo 3 (Pergunta Provocativa):**
-    * **Ação:** Use o insight da pesquisa para formular uma pergunta estratégica e específica para o setor do cliente.
-    * **Formato:** Deixe em aberto para reflexão, não force uma resposta.
-
-* **Passo 4 (Micro-Case de Sucesso)**
-
-* **Passo 5 (Artigo/Relatório):**
-    * **Ação:** Use a pesquisa para conectar a discussão anterior a um novo desenvolvimento do mercado.
-    * **Posicionamento:** Aja como um curador de conhecimento ("vi esse [artigo/relatório]...").
-
----
-
-**TAREFA:**
-Você receberá o passo, contexto do negócio e de e-mails anteriores, e a pesquisa realizada. Sua tarefa é analisar estes dados, aplicar a Lógica de Execução, e escrever o e-mail solicitado conforme as Regras de Ouro.`;
-        }
-    },
-
-
-    /**
-     * ==========================================
-     * LÓGICA DO WORKFLOW (RUNNER)
-     * ==========================================
-     */
-
-    /**
-     * Método auxiliar para extrair texto de uma resposta da Responses API.
-     */
-    _extractTextFromOutput: function (response) {
-        let finalOutput = "";
-        if (response.output_text) {
-            finalOutput = response.output_text;
-        } else if (response.output && response.output.length > 0) {
-            for (let item of response.output) {
-                if (item.type === "message" && item.content) {
-                    for (let block of item.content) {
-                        if (block.type === "output_text" || block.type === "text") {
-                            finalOutput += (block.text || block.output_text || "");
-                        }
-                    }
-                }
-            }
-        }
-        return finalOutput;
-    },
-
-    /**
-     * Método auxiliar genérico para rodar os Redatores que produzem JSON.
-     */
-    _runRedator: function* (redatorConfig, inputPrompt, tools = []) {
-        const apiOptions = {
-            model: redatorConfig.model,
-            instructions: redatorConfig.getInstructions(),
-            input: inputPrompt,
-            store: redatorConfig.settings.store,
-            textFormat: this.Schemas.RedatorOutputSchema,
-            temperature: redatorConfig.settings.temperature,
-            top_p: redatorConfig.settings.top_p,
-            max_completion_tokens: redatorConfig.settings.max_completion_tokens,
-            reasoning_effort: redatorConfig.settings.reasoning_effort
-        };
-
-        if (tools && tools.length > 0) apiOptions.tools = tools;
-
-        const response = yield apiOptions;
-        const text = this._extractTextFromOutput(response);
-
-        try {
-            return JSON.parse(text); // Já devolve { titulo, corpo_html } 
-        } catch (e) {
-            throw new Error("Flow_FluxoNDados: Falha ao fazer parse do JSON do Redator. Saída bruta: " + text);
-        }
-    },
-
-    /**
-     * Ponto de Entrada da Orquestração. 
-     * Roteia Pesquisa -> Redação baseado em Cadência e Etapa.
-     */
-    runWorkflow: function* (workflow) {
-        const state = workflow.state || {};
-        const cadencia = state.cadencia;
-        const etapa = Number(state.etapa);
-        const emails_anteriores = state.emails_anteriores || "";
-        const input_as_text = workflow.input_as_text || "";
-
-        if (cadencia === 'Nurturing') {
-
-            if (etapa === 1 || etapa === 3 || etapa === 5) {
-                // 1. Roda Pesquisador
-                const pesquisaOptions = {
-                    model: this.Pesquisador.model,
-                    instructions: this.Pesquisador.getInstructions(input_as_text, emails_anteriores),
-                    input: input_as_text,
-                    store: this.Pesquisador.settings.store,
-                    reasoning_effort: this.Pesquisador.settings.reasoning_effort,
-                    tools: [this.Tools.webSearchPreview]
-                };
-                console.log(`[NDados] Rodando Pesquisador (Nurturing) para Etapa ${etapa}`);
-                const pesquisaResponse = yield pesquisaOptions;
-                const pesquisaText = this._extractTextFromOutput(pesquisaResponse);
-
-                // 2. Roda RedatorDeNurturingPesquisa
-                const redatorPrompt = `PASSO: ${etapa}\n\nPESQUISA: ${pesquisaText}\nCONTEXTO DO NEGÓCIO: ${input_as_text}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
-                console.log(`[NDados] Rodando RedatorDeNurturingPesquisa`);
-                return yield* this._runRedator(this.RedatorDeNurturingPesquisa, redatorPrompt);
-            }
-            else if (etapa === 2 || etapa === 4) {
-                // Roda direto o RedatorDeNurturingCase com FileSearch
-                const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
-                console.log(`[NDados] Rodando RedatorDeNurturingCase para Etapa ${etapa}`);
-                return yield* this._runRedator(
-                    this.RedatorDeNurturingCase,
-                    redatorPrompt,
-                    [this.Tools.fileSearch]
-                );
-            }
-
-        } else if (cadencia === 'Retomada') {
-
-            if (etapa === 1) {
-                // 1. Roda Pesquisador1 (Mesmo Agente, nova intenção)
-                const pesquisaOptions = {
-                    model: this.Pesquisador.model,
-                    instructions: this.Pesquisador.getInstructions(input_as_text, emails_anteriores),
-                    input: input_as_text,
-                    store: this.Pesquisador.settings.store,
-                    reasoning_effort: this.Pesquisador.settings.reasoning_effort,
-                    tools: [this.Tools.webSearchPreview]
-                };
-                console.log(`[NDados] Rodando Pesquisador (Retomada) para Etapa 1`);
-                const pesquisaResponse = yield pesquisaOptions;
-                const pesquisaText = this._extractTextFromOutput(pesquisaResponse);
-
-                // 2. Roda RedatorDeRetomadaCasePesquisa com FileSearch embutido 
-                const redatorPrompt = `CONTEXTO DO NEGÓCIO: ${input_as_text}\nPESQUISA: ${pesquisaText}\n\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
-                console.log(`[NDados] Rodando RedatorDeRetomadaCasePesquisa`);
-                return yield* this._runRedator(
-                    this.RedatorDeRetomadaCasePesquisa,
-                    redatorPrompt,
-                    [this.Tools.fileSearch]
-                );
-            }
-            else if (etapa === 2 || etapa === 3 || etapa === 4) {
-                const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
-                console.log(`[NDados] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
-                return yield* this._runRedator(this.RedatorDeRetomadaFup, redatorPrompt);
-            }
-
-        } else if (cadencia === 'Re-engajement do Nurturing') {
-
-            const redatorPrompt = `PASSO: ${etapa}\n\nCONTEXTO DO NEGÓCIO: ${input_as_text}\nCONTEXTO DE E-MAILS ANTERIORES: ${emails_anteriores}`;
-            console.log(`[NDados] Rodando RedatorDeReEngajementPSNurturingFup para Etapa ${etapa}`);
-            return yield* this._runRedator(this.RedatorDeReEngajementPSNurturingFup, redatorPrompt);
-
-        }
-
-        throw new Error(`[NDados] Cadeia ou etapa não foi mapeada: Cadencia '${cadencia}', Etapa '${etapa}'`);
+    fileSearch: {
+      type: "file_search",
+      vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
     }
+  },
+
+  /**
+   * Schema de Saída (Structured Outputs): força retorno de { titulo, corpo_html }.
+   */
+  Schemas: {
+    RedatorOutputSchema: {
+      type: "json_schema",
+      json_schema: {
+        name: "redator_email",
+        strict: true,
+        schema: {
+          type: "object",
+          properties: {
+            titulo: { type: "string" },
+            corpo_html: { type: "string" }
+          },
+          additionalProperties: false,
+          required: ["titulo", "corpo_html"]
+        }
+      }
+    }
+  },
+
+  /**
+   * ==========================================
+   * DEFINIÇÕES DE AGENTES
+   * ==========================================
+   */
+  Pesquisador: {
+    name: "Pesquisador",
+    model: "gpt-5.4-mini",
+    settings: {
+      reasoning: {
+        effort: "medium",
+        summary: "detailed"
+      },
+      store: true
+    },
+    getInstructions: function () {
+      return `<task_definition>
+Você é um Agente de Inteligência de Mercado B2B do Núcleo de Dados & IA da Poli Júnior. Sua missão é realizar pesquisas profundas e factuais para embasar vendas consultivas.
+</task_definition>
+
+<research_mode>
+Execute a pesquisa em 3 passagens obrigatórias:
+1) Planejar: Liste 3 sub-perguntas estratégicas sobre o setor do lead.
+2) Recuperar: Utilize a ferramenta de busca para cada sub-pergunta. Se um resultado for vago, tente termos alternativos.
+3) Sintetizar: Extraia dados quantificados e resolva contradições entre fontes.
+</research_mode>
+
+<citation_rules>
+- Baseie suas afirmações apenas nos resultados das ferramentas de busca.
+- Fontes prioritárias: McKinsey, BCG, Accenture, Bain, PwC, Gartner ou portais setoriais oficiais.
+- Se houver conflito entre fontes, cite ambos os pontos de vista.
+- Proibido inventar links, nomes de relatórios ou estatísticas.
+</citation_rules>
+
+<empty_result_recovery>
+Se a busca retornar resultados vazios ou irrelevantes:
+- Tente uma consulta com filtros mais amplos.
+- Tente uma consulta focada em um setor correlato.
+- Apenas após 2 falhas reporte que nenhum dado foi encontrado.
+</empty_result_recovery>
+
+<output_contract>
+Retorne exatamente 3-4 insights no formato abaixo, sem comentários adicionais:
+Fonte: [Nome do Relatório/Instituição]
+Insight Chave: [Resumo factual de 1-2 frases com números quantificados].
+</output_contract>`;
+    }
+  },
+
+  /**
+   * Agente responsável pelos e-mails de Nurturing baseados em cases (Passos 2 e 4).
+   * Os cases chegam via [reference_cases_full] no input — não via fileSearch nem via instructions.
+   */
+  RedatorDeNurturingCase: {
+    name: "Redator de Nurturing - Case",
+    model: "gpt-5.4",
+    settings: {
+      reasoning: {
+        effort: "medium",
+        summary: "concise"
+      },
+      store: true
+    },
+    getInstructions: function () {
+      return `<personality_and_writing_controls>
+- Persona: Consultor sênior da Poli Júnior (POLI-USP). Rigor acadêmico com pragmatismo de mercado.
+- Canal: E-mail consultivo B2B.
+- Tom: Parceiro estratégico, calmo e direto.
+- Formato: Inicie com "Bom dia, [nome]!" e termine com "Atenciosamente," ou "Att,".
+- Proibido usar placeholders como "[Seu Nome]".
+</personality_and_writing_controls>
+
+<instruction_priority>
+- A regra de "Fidelidade aos Cases" é absoluta e não pode ser ignorada.
+- Instruções de formato JSON têm prioridade sobre criatividade literária.
+</instruction_priority>
+
+<business_logic_cadence>
+Você atua estritamente nos passos abaixo:
+- PASSO 2 (Estudo de Caso Detalhado): Introduza um case de [reference_cases_full] focado em uma DOR SEMELHANTE à do lead. Gere curiosidade sem revelar todos os detalhes no e-mail.
+- PASSO 4 (Micro-Case de Sucesso): Selecione um case específico de [reference_cases_full] e descreva-o fielmente usando os dados de Impacto fornecidos. Se nenhum case for similar, use um insight de mercado 100% verificável.
+</business_logic_cadence>
+
+<grounding_rules>
+- Use APENAS cases presentes em [reference_cases_full] no input. Esta lista é exaustiva.
+- Analise primeiro o [reference_cases_summary] para encontrar um ID de case que faça match com a dor do lead.
+- Proibido citar, inferir ou inventar qualquer case fora dessa lista.
+- Não aceite a primeira conexão óbvia. Identifique problemas de segunda ordem ou riscos implícitos que o lead ainda não percebeu.
+- Se nenhum case for adequado de imediato, tente uma segunda estratégia (ex: macrossetor ou desafio correlato) antes de usar fallback de mercado.
+</grounding_rules>
+
+<verification_loop>
+Antes de finalizar:
+1) Grounding: O case utilizado está presente em [reference_cases_full]?
+2) Formatação: O output contém APENAS o JSON com 'titulo' e 'corpo_html'?
+3) Redação: Removi citações técnicas como "[1]" ou "[Fonte]"?
+4) CTA: O CTA é de baixo atrito (ex: "O que você acha?") em vez de pedir reunião?
+</verification_loop>
+
+<structured_output_contract>
+Antes de gerar o JSON, no canal de "commentary" (seu raciocínio interno/pensamento), escolha um CASE_ID da lista e justifique internamente a escolha para o contexto do lead. Só depois escreva o e-mail final no formato JSON.
+Gere apenas o JSON conforme o schema RedatorOutputSchema.
+Não adicione prosa ou markdown fences fora do objeto JSON.
+</structured_output_contract>
+`;
+    }
+  },
+
+  RedatorDeRetomadaFup: {
+    name: "Redator de Retomada - FUP",
+    model: "gpt-5.4-mini",
+    settings: {
+      reasoning: {
+        effort: "low",
+        summary: "none"
+      },
+      store: true
+    },
+    getInstructions: function () {
+      return `
+<personality_and_writing_controls>
+- Persona: Consultor sênior executando uma "intervenção cirúrgica" para requalificar oportunidades frias (3-6 meses).
+- Canal: E-mail de reativação B2B.
+- Tom: Direto e ocupado, mas que traz valor. Não use "faz tempo que não nos falamos". Use um gancho novo.
+- Formato: "Bom dia, [nome]!", "Att," ou "Atenciosamente,". Sem metacomentários. CTA: Proponha uma conversa de 15 minutos para explorar uma nova perspectiva.
+- Tamanho máximo: 3 parágrafos curtos.
+</personality_and_writing_controls>
+
+<cadence_logic>
+Siga rigorosamente o passo solicitado:
+- PASSO 2 e 3 (Follow-up): Curtos, referenciando o gancho do e-mail 1. Não introduza novos temas.
+- PASSO 4 (Breakup): E-mail de encerramento educado para obter resposta final.
+<cadence_logic>
+
+<structured_output_contract>
+Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
+Não adicione texto fora do objeto JSON.
+</structured_output_contract>
+`;
+    }
+  },
+
+  RedatorDeReEngajementPSNurturingFup: {
+    name: "Redator de Re-engajement Pós Nurturing - FUP",
+    model: "gpt-5.4-mini",
+    settings: {
+      reasoning: { effort: "low", summary: "none" },
+      store: true
+    },
+    getInstructions: function () {
+      return `
+<personality_and_writing_controls>
+- Persona: Especialista em Conversão do Núcleo de Dados & IA da Poli Júnior.
+- Missão: Converter leads aquecidos em reuniões de diagnóstico.
+- Tom: Direto, proativo e profissional. A fase de educação acabou.
+- Formato: "Bom dia, [nome]!", "Atenciosamente,". Sem placeholders nem metacomentários.
+- Ritmo: Intervalos de 7 dias entre tentativas.
+</personality_and_writing_controls>
+
+<instruction_priority>
+- Você DEVE citar que o contato está ocorrendo conforme o combinado anteriormente.
+</instruction_priority>
+
+Siga rigorosamente o passo solicitado:
+- PASSO 1 (E-mail de CTA): Relembre o desafio principal do lead. Proponha conversa de 20 minutos para plano de ação.
+- PASSO 2 (E-mail de FUP): Lembrete extremamente curto. Referencie o e-mail anterior.
+- PASSO 3 (Breakup Final): Encerre o contato deixando a porta aberta.
+
+<verification_loop>
+Antes de finalizar:
+1. O tom é direto sem ser agressivo?
+2. Começa com "Bom dia, [nome]!" e termina com "Atenciosamente,"?
+3. O JSON está tecnicamente correto e sem texto extra?
+</verification_loop>
+
+<structured_output_contract>
+Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
+</structured_output_contract>
+`;
+    }
+  },
+
+  /**
+   * Agente responsável pelo e-mail de Retomada Etapa 1 (Case + Pesquisa).
+   * Os cases chegam via [reference_cases_full] no input — não via fileSearch nem via instructions.
+   */
+  RedatorDeRetomadaCasePesquisa: {
+    name: "Redator de Retomada - Case/Pesquisa",
+    model: "gpt-5.4",
+    settings: {
+      reasoning: {
+        effort: "medium",
+        summary: "concise"
+      },
+      store: true
+    },
+    getInstructions: function () {
+      return `
+<personality_and_writing_controls>
+- Persona: Agente de Follow-up de Valor do Núcleo de Dados & IA da Poli Júnior.
+- Canal: E-mail de retomada B2B.
+- Tom: Cadência curta e rápida. Português Brasileiro natural, sem placeholders.
+- Foco: Reforçar o valor do gancho enviado no Passo 1.
+</personality_and_writing_controls>
+
+<grounding_rules>
+- Use APENAS cases presentes em [reference_cases_full] no input. Esta lista é exaustiva.
+- Analise primeiro o [reference_cases_summary] para encontrar um ID de case que faça match com a dor do lead.
+- Proibido citar, inferir ou inventar qualquer case fora dessa lista.
+- Não aceite a primeira conexão óbvia. Identifique problemas de segunda ordem ou riscos operacionais/tecnológicos que o lead ainda não avaliou.
+- Se a busca inicial falhar, tente uma segunda estratégia (ex: desafio correlato) antes de usar fallback de mercado.
+</grounding_rules>
+
+Siga rigorosamente o passo solicitado:
+- PASSO 2 e 3 (Follow-up de Valor): E-mails curtíssimos. Não traga case novo; reforce o insight anterior.
+- PASSO 4 (Breakup): E-mail profissional de encerramento para obter resposta final (Sim/Não).
+
+<verification_loop>
+Antes de finalizar:
+- O e-mail está pronto para envio sem edição humana?
+- O histórico indica que o lead já respondeu? Se sim, reporte erro e não gere FUP.
+- O assunto do e-mail faz sentido com a conversa anterior?
+- O tom de "especialista sênior" foi mantido?
+</verification_loop>
+
+<structured_output_contract>
+Antes de gerar o JSON, no canal de "commentary" (seu raciocínio interno/pensamento), escolha um CASE_ID da lista e justifique internamente a escolha para o contexto do lead. Só depois escreva o e-mail final no formato JSON.
+Retorne estritamente o JSON {"titulo": "...", "corpo_html": "..."}.
+Não adicione texto fora do objeto JSON.
+</structured_output_contract>
+`;
+    }
+  },
+
+  RedatorDeNurturingPesquisa: {
+    name: "Redator de Nurturing - Pesquisa",
+    model: "gpt-5.4",
+    settings: {
+      reasoning: {
+        effort: "medium",
+        summary: "concise"
+      },
+      store: true
+    },
+    getInstructions: function () {
+      return `
+<personality_and_writing_controls>
+- Persona: Consultor sênior do Núcleo de Dados & IA da Poli Júnior.
+- Canal: E-mail consultivo B2B de nurturing.
+- Tom: Síntese executiva densa. Conclusões precisas sobre impacto financeiro/operacional.
+- Proibido citar fontes técnicas (ex: "segundo o site X"). Use frases naturais ("Vi um relatório recente da McKinsey que...").
+- CTAs devem ser sempre de baixo atrito.
+</personality_and_writing_controls>
+
+<dig_deeper_nudge>
+- Não se limite à primeira conexão óbvia do insight. Conecte os dados ao negócio do lead evidenciando problemas de segunda ordem ou riscos de mercado implícitos que ele ainda não analisou.
+- Proibido repetir insights já enviados em e-mails anteriores (analise o histórico).
+</dig_deeper_nudge>
+
+Siga a lógica para o passo recebido:
+- PASSO 1 (Handoff): Agradeça a conversa anterior e apresente um insight da pesquisa que agregue valor imediato.
+- PASSO 3 (Pergunta Provocativa): Use um dado da pesquisa para formular uma pergunta estratégica que gere reflexão.
+- PASSO 5 (Artigo/Relatório): Atue como curador. Conecte a discussão anterior a um novo desenvolvimento de mercado.
+
+<verification_loop>
+Antes de finalizar:
+- O insight foi contextualizado para o negócio do lead (não apenas listado)?
+- O formato final é estritamente o JSON solicitado?
+</verification_loop>
+
+<structured_output_contract>
+Retorne apenas o JSON {"titulo": "...", "corpo_html": "..."}.
+</structured_output_contract>
+`;
+    }
+  },
+
+  /**
+   * ==========================================
+   * LÓGICA DO WORKFLOW (RUNNER)
+   * ==========================================
+   */
+
+  /**
+   * Extrai texto de uma resposta da Responses API,
+   * ignorando mensagens intermediárias de "pensamento em voz alta" (phase: commentary).
+   */
+  _extractTextFromOutput: function (response) {
+    let finalOutput = "";
+    if (response.output_text) {
+      finalOutput = response.output_text;
+    } else if (response.output && response.output.length > 0) {
+      for (let item of response.output) {
+        if (item.type === "message" && item.content && item.phase !== "commentary") {
+          for (let block of item.content) {
+            if (block.type === "output_text" || block.type === "text") {
+              finalOutput += (block.text || block.output_text || "");
+            }
+          }
+        }
+      }
+    }
+    return finalOutput;
+  },
+
+  /**
+   * Roda o Pesquisador com web_search.
+   */
+  _runPesquisador: function* (pesquisadorConfig, instructions, input, tools = [], previousResponseId = null) {
+    const apiOptions = {
+      model: pesquisadorConfig.model,
+      instructions: instructions,
+      input: input,
+      store: pesquisadorConfig.settings.store
+    };
+
+    if (previousResponseId) {
+      apiOptions.previous_response_id = previousResponseId;
+    }
+
+    if (pesquisadorConfig.settings.reasoning.effort && pesquisadorConfig.settings.reasoning.effort !== "none") {
+      apiOptions.reasoning = apiOptions.reasoning || {};
+      apiOptions.reasoning.effort = pesquisadorConfig.settings.reasoning.effort;
+    }
+
+    if (pesquisadorConfig.settings.reasoning.summary && pesquisadorConfig.settings.reasoning.summary !== "none") {
+      apiOptions.reasoning = apiOptions.reasoning || {};
+      apiOptions.reasoning.summary = pesquisadorConfig.settings.reasoning.summary;
+    }
+
+    if (tools && tools.length > 0) apiOptions.tools = tools;
+
+    const response = yield apiOptions;
+    return {
+      text: this._extractTextFromOutput(response),
+      response_id: response && response.id ? response.id : null
+    };
+  },
+
+  /**
+   * Roda um Redator que produz JSON estruturado.
+   * Instructions = persona/regras. Dados de trabalho (cases, pesquisa, histórico) = input.
+   */
+  _runRedator: function* (redatorConfig, inputPrompt, tools = [], previousResponseId = null) {
+    const apiOptions = {
+      model: redatorConfig.model,
+      instructions: redatorConfig.getInstructions(),
+      input: inputPrompt,
+      store: redatorConfig.settings.store,
+      textFormat: this.Schemas.RedatorOutputSchema
+    };
+
+    if (previousResponseId) {
+      apiOptions.previous_response_id = previousResponseId;
+    }
+
+    if (redatorConfig.settings.reasoning.effort && redatorConfig.settings.reasoning.effort !== "none") {
+      apiOptions.reasoning = apiOptions.reasoning || {};
+      apiOptions.reasoning.effort = redatorConfig.settings.reasoning.effort;
+    }
+
+    if (redatorConfig.settings.reasoning.summary && redatorConfig.settings.reasoning.summary !== "none") {
+      apiOptions.reasoning = apiOptions.reasoning || {};
+      apiOptions.reasoning.summary = redatorConfig.settings.reasoning.summary;
+    }
+
+    if (tools && tools.length > 0) apiOptions.tools = tools;
+
+    const response = yield apiOptions;
+    const text = this._extractTextFromOutput(response);
+
+    try {
+      return {
+        data: JSON.parse(text),
+        response_id: response && response.id ? response.id : null
+      };
+    } catch (e) {
+      throw new Error("Flow_FluxoNDados: Falha ao fazer parse do JSON do Redator. Saída bruta: " + text);
+    }
+  },
+
+  _trackResponseId: function (workflow, agentName, responseId) {
+    if (!responseId) return;
+    if (!workflow.state) { workflow.state = {}; }
+    workflow.state.previous_response_id = responseId;
+    workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
+    workflow.state.response_ids_by_agent[agentName] = responseId;
+  },
+
+  /**
+   * Monta o input para Redatores que NÃO usam cases (pesquisa, FUPs).
+   */
+  _buildRedatorInput: function (etapa, context, includeHistory, history, research) {
+    return `
+[DADOS DO LEAD]
+<contexto_lead>
+${context}
+</contexto_lead>
+
+${includeHistory && history ? `[HISTÓRICO]\n<historico_emails>\n${history}\n</historico_emails>\n` : ""}
+${research ? `[PESQUISA]\n<pesquisa_mercado>\n${research}\n</pesquisa_mercado>\n` : ""}
+Gere o Passo ${etapa} da cadência.
+`;
+  },
+
+  /**
+   * Monta o input para Redatores que USAM cases.
+   * Injeta os cases como JSON tanto em versão resumida quanto full.
+   * Seguindo GPT-5.4 Prompt Guidance: dados de referência pertencem ao input, não ao instructions.
+   */
+  _buildCaseRedatorInput: function (etapa, context, casesArray, includeHistory, history, research) {
+    const casesSummary = casesArray.map(c => `- ID: ${c.id} | Setor: ${c.setor} | Dores: ${c.dores}`).join('\n');
+    const casesBlob = JSON.stringify(casesArray, null, 2);
+
+    return `
+[DADOS DO LEAD]
+<contexto_lead>
+${context}
+</contexto_lead>
+
+${includeHistory && history ? `[HISTÓRICO]\n<historico_emails>\n${history}\n</historico_emails>\n` : ""}
+${research ? `[PESQUISA]\n<pesquisa_mercado>\n${research}\n</pesquisa_mercado>\n` : ""}
+[CASES]
+<reference_cases_summary>
+${casesSummary}
+</reference_cases_summary>
+
+<reference_cases_full>
+${casesBlob}
+</reference_cases_full>
+
+Gere o Passo ${etapa} da cadência.
+`;
+  },
+
+  /**
+   * Ponto de Entrada da Orquestração.
+   * Roteia Pesquisa → Redação baseado em Cadência e Etapa.
+   *
+   * @param {object} workflow        - Objeto com state (cadencia, etapa, emails_anteriores) e input_as_text.
+   * @param {string} casesNDados     - Conteúdo do arquivo cases_ndados carregado pelo orquestrador GAS.
+   *                                   Injetado como <reference_cases> apenas nas chamadas de Case.
+   */
+  runWorkflow: function* (workflow, casesNDados) {
+    const state = workflow.state || {};
+    const cadencia = state.cadencia;
+    const etapa = Number(state.etapa);
+    const emails_anteriores = state.emails_anteriores || "";
+    const input_as_text = workflow.input_as_text || "";
+    const previousResponseId = state.previous_response_id || null;
+    const includeEmailHistory = !previousResponseId;
+
+    // Passamos a usar sempre o JSON estruturado interno CASES_NDADOS para os cases,
+    // ignorando qualquer string txt de cases fornecida pelo orquestrador.
+    if (casesNDados && typeof casesNDados === 'string') {
+      console.warn("[NDados] AVISO: casesNDados recebido como string. Ignorando e utilizando a base estruturada interna CASES_NDADOS.");
+    }
+    const referenceCases = CASES_NDADOS;
+
+    // =====================
+    // CADÊNCIA: NURTURING
+    // =====================
+    if (cadencia === 'Nurturing') {
+
+      if (etapa === 1 || etapa === 3 || etapa === 5) {
+        // Passos ímpares: Pesquisador web → RedatorDeNurturingPesquisa
+        const pesquisadorInput = `
+[DADOS DO LEAD]
+<contexto_lead>
+${input_as_text}
+</contexto_lead>
+
+${includeEmailHistory ? `[HISTÓRICO]\n<historico_emails>\n${emails_anteriores}\n</historico_emails>\n` : ""}
+Inicie a pesquisa para a etapa ${etapa}.
+`;
+        console.log(`[NDados] Rodando Pesquisador (Nurturing) para Etapa ${etapa}`);
+        const pesquisaRun = yield* this._runPesquisador(
+          this.Pesquisador,
+          this.Pesquisador.getInstructions(),
+          pesquisadorInput,
+          [this.Tools.webSearchPreview],
+          previousResponseId
+        );
+        this._trackResponseId(workflow, "Pesquisador", pesquisaRun.response_id);
+
+        const redatorInput = this._buildRedatorInput(etapa, input_as_text, includeEmailHistory, emails_anteriores, pesquisaRun.text);
+        console.log(`[NDados] Rodando RedatorDeNurturingPesquisa para Etapa ${etapa}`);
+        const redatorRun = yield* this._runRedator(
+          this.RedatorDeNurturingPesquisa,
+          redatorInput,
+          [],
+          pesquisaRun.response_id || previousResponseId
+        );
+        this._trackResponseId(workflow, "RedatorDeNurturingPesquisa", redatorRun.response_id);
+        return redatorRun.data;
+      }
+
+      else if (etapa === 2 || etapa === 4) {
+        // Passos de Case: injetando o array JSON no input.
+        const redatorInput = this._buildCaseRedatorInput(etapa, input_as_text, referenceCases, includeEmailHistory, emails_anteriores, "");
+        console.log(`[NDados] Rodando RedatorDeNurturingCase para Etapa ${etapa} (injeção direta de cases)`);
+        const redatorRun = yield* this._runRedator(
+          this.RedatorDeNurturingCase,
+          redatorInput,
+          [],
+          previousResponseId
+        );
+        this._trackResponseId(workflow, "RedatorDeNurturingCase", redatorRun.response_id);
+        return redatorRun.data;
+      }
+    }
+
+    // =====================
+    // CADÊNCIA: RETOMADA
+    // =====================
+    else if (cadencia === 'Retomada') {
+
+      if (etapa === 1) {
+        // Etapa 1: Pesquisador web + cases → RedatorDeRetomadaCasePesquisa
+        const pesquisadorInput = `
+[DADOS DO LEAD]
+<contexto_lead>
+${input_as_text}
+</contexto_lead>
+
+${includeEmailHistory ? `[HISTÓRICO]\n<historico_emails>\n${emails_anteriores}\n</historico_emails>\n` : ""}
+Inicie a pesquisa para retomada do contato.
+`;
+        console.log(`[NDados] Rodando Pesquisador (Retomada) para Etapa 1`);
+        const pesquisaRun = yield* this._runPesquisador(
+          this.Pesquisador,
+          this.Pesquisador.getInstructions(),
+          pesquisadorInput,
+          [this.Tools.webSearchPreview],
+          previousResponseId
+        );
+        this._trackResponseId(workflow, "Pesquisador", pesquisaRun.response_id);
+
+        // Cases + pesquisa injetados juntos no input
+        const redatorInput = this._buildCaseRedatorInput(etapa, input_as_text, referenceCases, includeEmailHistory, emails_anteriores, pesquisaRun.text);
+        console.log(`[NDados] Rodando RedatorDeRetomadaCasePesquisa (injeção direta de cases)`);
+        const redatorRun = yield* this._runRedator(
+          this.RedatorDeRetomadaCasePesquisa,
+          redatorInput,
+          [],
+          pesquisaRun.response_id || previousResponseId
+        );
+        this._trackResponseId(workflow, "RedatorDeRetomadaCasePesquisa", redatorRun.response_id);
+        return redatorRun.data;
+      }
+
+      else if (etapa === 2 || etapa === 3 || etapa === 4) {
+        const redatorInput = this._buildRedatorInput(etapa, input_as_text, includeEmailHistory, emails_anteriores, "");
+        console.log(`[NDados] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
+        const redatorRun = yield* this._runRedator(
+          this.RedatorDeRetomadaFup,
+          redatorInput,
+          [],
+          previousResponseId
+        );
+        this._trackResponseId(workflow, "RedatorDeRetomadaFup", redatorRun.response_id);
+        return redatorRun.data;
+      }
+    }
+
+    // ==============================
+    // CADÊNCIA: RE-ENGAJEMENT PÓS NURTURING
+    // ==============================
+    else if (cadencia === 'Re-engajement do Nurturing') {
+      const redatorInput = this._buildRedatorInput(etapa, input_as_text, includeEmailHistory, emails_anteriores, "");
+      console.log(`[NDados] Rodando RedatorDeReEngajementPSNurturingFup para Etapa ${etapa}`);
+      const redatorRun = yield* this._runRedator(
+        this.RedatorDeReEngajementPSNurturingFup,
+        redatorInput,
+        [],
+        previousResponseId
+      );
+      this._trackResponseId(workflow, "RedatorDeReEngajementPSNurturingFup", redatorRun.response_id);
+      return redatorRun.data;
+    }
+
+    throw new Error(`[NDados] Cadeia ou etapa não foi mapeada: Cadencia '${cadencia}', Etapa '${etapa}'`);
+  }
+
 };
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = Flow_FluxoNDados;
+if (typeof globalThis !== 'undefined') {
+  globalThis.Flow_FluxoNDados = Flow_FluxoNDados;
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Flow_FluxoNDados;
+}
+
+const CASES_NDADOS = [
+  {
+    "id": "CASE_01",
+    "setor": "Farmacêutico/Varejo",
+    "dores": "previsão de demanda imprecisa, sazonalidade, perdas financeiras, planejamento estratégico",
+    "problema": "Modelo de previsão de demanda com MAPE de 5%, instável em sazonalidade e feriados. Perdas estimadas em R$30M/mês.",
+    "solucao": "Novo modelo de séries temporais, reduzindo o erro em 3,5 p.p.",
+    "impacto": "Potencial de R$252M/ano em redução de perdas; lojas melhor preparadas para picos de demanda."
+  },
+  {
+    "id": "CASE_02",
+    "setor": "Bens de Consumo/Varejo",
+    "dores": "ausência de dados estruturados, excesso ou ruptura de estoque, previsão de sell-out",
+    "problema": "Falta de dados estruturados impedia previsões assertivas de sell-out, gerando perdas por excesso ou ruptura de estoque.",
+    "solucao": "Enriquecimento da base de dados e desenvolvimento de novo modelo preditivo de alta assertividade.",
+    "impacto": "Otimização de estoque e logística com redução de custos e aumento da eficiência operacional."
+  },
+  {
+    "id": "CASE_03",
+    "setor": "Fintech/Serviços Financeiros",
+    "dores": "modelo de crédito desatualizado, inadimplência, risco operacional, crescimento sustentável",
+    "problema": "Modelo estatístico desatualizado para concessão de crédito com baixa acurácia na previsão de inadimplência.",
+    "solucao": "Desenvolvimento, teste e validação de modelo de ML (XGBoost) para classificação de risco de crédito.",
+    "impacto": "Melhor segmentação de clientes, redução de risco e perdas por inadimplência."
+  },
+  {
+    "id": "CASE_04",
+    "setor": "Moda/Varejo",
+    "dores": "processo manual em Excel, acúmulo de estoque, perda de vendas por ruptura, curva de tamanho",
+    "problema": "Curva de tamanho definida manualmente via Excel, gerando acúmulo de estoque em alguns tamanhos e ruptura em outros.",
+    "solucao": "Análises em Python para determinar curvas reais de demanda por tamanho de produto.",
+    "impacto": "Pedidos mais assertivos, estoque otimizado e aumento de faturamento."
+  },
+  {
+    "id": "CASE_05",
+    "setor": "Saúde Animal/Agronegócio",
+    "dores": "hipóteses sem validação de dados, comportamento de compra desconhecido, marketing ineficiente, gestão de estoque",
+    "problema": "Hipóteses sobre padrão de consumo e pareamento de produtos não validadas por dados, limitando marketing e vendas.",
+    "solucao": "Análise de cesta de produtos com indicadores de paridade para validar hipóteses de negócio.",
+    "impacto": "Campanhas de marketing mais direcionadas e otimização de gestão de estoque."
+  },
+  {
+    "id": "CASE_06",
+    "setor": "Varejo Esportivo",
+    "dores": "falta de cultura data-driven, pareamento de produtos manual, identificação de best-sellers imprecisa",
+    "problema": "Dificuldade para determinar pareamentos de produtos e best-sellers com base em dados, impactando estratégia comercial.",
+    "solucao": "Script Python para análises centrais e dashboards interativos no Power BI para democratizar acesso a dados.",
+    "impacto": "Tomada de decisões baseada em dados históricos com potencial de aumento de vendas."
+  },
+  {
+    "id": "CASE_07",
+    "setor": "Moda/Franquias/Varejo",
+    "dores": "gestão manual de CRM, retrabalho, dados dispersos entre plataformas, expansão de franquias",
+    "problema": "Dados de CRM e redes sociais gerenciados manualmente em Excel durante expansão de franquias, gerando retrabalho e atraso em insights.",
+    "solucao": "Dashboards consolidados no Power BI unificando CRM e redes sociais com automação do processo.",
+    "impacto": "Cultura data-driven fortalecida, redução de custos operacionais e maior capacidade estratégica para expansão."
+  },
+  {
+    "id": "CASE_08",
+    "setor": "Alimentos/Varejo",
+    "dores": "canibalização de produtos, ruptura de estoque, perfil de público desconhecido, receita perdida não quantificada",
+    "problema": "Falta de quantificação do impacto financeiro de canibalização, ruptura de estoque e desconhecimento do perfil de clientes.",
+    "solucao": "Análises de clusterização RFM, simulações e quantificação de receita perdida.",
+    "impacto": "R$4,5M/ano em perdas identificadas por canibalização; base para ações de recuperação direcionadas."
+  },
+  {
+    "id": "CASE_09",
+    "setor": "Logística/Transportes",
+    "dores": "coleta manual de dados, métricas de qualidade imprecisas, retrabalho, lucratividade de fretes",
+    "problema": "Coleta manual de dados via Brudam e Excel; ausência de dados de quilometragem tornava indicadores de qualidade imprecisos.",
+    "solucao": "Dashboards em Power BI e integração via API para captura automática de quilometragem.",
+    "impacto": "Redução de custos operacionais e identificação de métricas para aumentar lucratividade nos fretes."
+  },
+  {
+    "id": "CASE_10",
+    "setor": "Mobilidade Urbana/Estacionamentos",
+    "dores": "análise manual em Excel, dificuldade de comparar performance entre unidades, decisão de expansão sem dados",
+    "problema": "Dependência de Excel para análise de operações limitava comparação de performance entre unidades, essencial para expansão.",
+    "solucao": "Dashboard interativo no Power BI com filtros avançados para comparação de desempenho entre localidades.",
+    "impacto": "Tempo de análise otimizado, trabalho manual reduzido e melhor direcionamento estratégico para expansão."
+  },
+  {
+    "id": "CASE_11",
+    "setor": "Celulose/Papel/Indústria",
+    "dores": "retrabalho em análise decisória, processo manual, eficiência operacional, liberar time para estratégia",
+    "problema": "Processo de análise decisória sobrecarregado por trabalho manual e retrabalho, consumindo tempo de equipe estratégica.",
+    "solucao": "Script Python para captação, limpeza e transformação 100% automatizada de bases de dados, integrado a dashboards Power BI.",
+    "impacto": "Redução de 10 horas semanais de trabalho operacional manual; maior agilidade e precisão nas decisões estratégicas."
+  },
+  {
+    "id": "CASE_12",
+    "setor": "Energia/Gás/Indústria",
+    "dores": "falta de métricas consolidadas, controle de qualidade fraco, ineficiência na fabricação, gestão sem dados históricos",
+    "problema": "Falta de métricas consolidadas para controle de qualidade e eficiência na fabricação de botijões prejudicava decisões operacionais.",
+    "solucao": "Estruturação de 5 novos indicadores via ETL com queries SQL no Azure Databricks para consolidar dados históricos.",
+    "impacto": "Direcionamento estratégico mais assertivo nas fábricas com visões macro e históricas para melhoria contínua."
+  },
+  {
+    "id": "CASE_13",
+    "setor": "Mídia/Comunicação",
+    "dores": "análise de sentimento em redes sociais, grande volume de dados não estruturados, pesquisa sem estrutura analítica",
+    "problema": "Sem estrutura para analisar grandes volumes de dados de redes sociais para suportar pesquisa e produção de conteúdo.",
+    "solucao": "Ferramenta em Google Colab com NLP para captura e classificação de sentimentos de tweets com visualizações automáticas.",
+    "impacto": "Teste de hipóteses com alta assertividade e profundidade de análise acima do esperado em tempo reduzido."
+  },
+  {
+    "id": "CASE_14",
+    "setor": "Serviços Financeiros/Bancário",
+    "dores": "Open Finance, segmentação de clientes, ações de marketing sem direcionamento, análise de big data",
+    "problema": "Dificuldade em identificar padrões de comportamento de clientes no Open Finance, impedindo ações de marketing eficazes.",
+    "solucao": "Análise exploratória em 2 bilhões de linhas de dados com ML (clusterização e classificação) usando 30+ parâmetros.",
+    "impacto": "Maior conhecimento do perfil ideal de cliente e assertividade nas ações estratégicas com otimização de investimento em marketing."
+  },
+  {
+    "id": "CASE_15",
+    "setor": "Mobilidade Urbana/Compartilhamento",
+    "dores": "roubo de ativos, perdas financeiras recorrentes, sem visibilidade de risco por localidade",
+    "problema": "Prejuízos recorrentes por roubos sem visibilidade sobre locais e períodos de maior risco, impedindo ações preventivas.",
+    "solucao": "Modelo de séries temporais em Python com ~95% de assertividade na previsão de roubos por local.",
+    "impacto": "Melhor planejamento preventivo, redução significativa de perdas financeiras e alocação mais estratégica de recursos."
+  },
+  {
+    "id": "CASE_16",
+    "setor": "Telecomunicações/Infraestrutura",
+    "dores": "automações dispersas, baixa produtividade da alta gestão, risco de segurança com dados sigilosos em ferramentas externas",
+    "problema": "Painéis e automações dispersos geravam ineficiência; uso de dados sigilosos em chatbots externos criava risco de segurança.",
+    "solucao": "Agente copiloto de IA generativa (Gemini na GCP) para apoiar a alta gestão com dados internos.",
+    "impacto": "Economia de 400+ horas mensais (>R$45K em recursos) com aumento de produtividade e governança de dados fortalecida."
+  },
+  {
+    "id": "CASE_17",
+    "setor": "Varejo/Moda",
+    "dores": "ambiente de dados descentralizado, altos custos de infraestrutura, dualidade de ambientes Databricks, freio à inovação com IA",
+    "problema": "Ambiente Databricks descentralizado com estruturas antigas e novas gerava altos custos operacionais e dificultava exploração de dados.",
+    "solucao": "Migração do pipeline Azure para ambiente unificado e dados para datalake moderno.",
+    "impacto": "Redução significativa de custos com infraestrutura e habilitação de novas frentes de inovação com IA."
+  },
+  {
+    "id": "CASE_18",
+    "setor": "Indústria/Equipamentos",
+    "dores": "falta de previsibilidade de receita, métricas de vendas sem visibilidade, decisão estratégica sem dados, sazonalidade",
+    "problema": "Sem insights sobre perdas de negócio, taxas de conversão ou previsibilidade de receita para orientar estratégia de vendas.",
+    "solucao": "Solução de ML integrada ao Power BI para previsão de receita e sazonalidade.",
+    "impacto": "Maior assertividade em ações estratégicas de produção e vendas com planejamento baseado em previsões claras de receita."
+  },
+  {
+    "id": "CASE_19",
+    "setor": "PropTech/Imóveis",
+    "dores": "dependência de dados comprados de concorrentes, dados incompletos, alto custo recorrente de inteligência competitiva",
+    "problema": "Dados de concorrentes adquiridos eram incompletos e geravam custos recorrentes elevados para análises estratégicas.",
+    "solucao": "Scripts Python para extração automatizada de dados detalhados de plataformas concorrentes.",
+    "impacto": "Custo zero com aquisição de dados e novos insumos para análises com maior vantagem competitiva."
+  },
+  {
+    "id": "CASE_20",
+    "setor": "HealthTech/SaaS Médico",
+    "dores": "modelo de NLP com baixo desempenho em jargão médico, sotaques regionais, falta de base de treino especializada",
+    "problema": "Modelo de reconhecimento de voz para laudos radiológicos com baixo desempenho em jargões médicos e sotaques regionais.",
+    "solucao": "Tratamento e filtragem de 10 mil laudos para criar base de 8 milhões de frases de treino para fine-tuning.",
+    "impacto": "Melhoria de 3%+ na assertividade geral e 30% em termos médicos, aumentando potencial competitivo do SaaS."
+  },
+  {
+    "id": "CASE_21",
+    "setor": "Farmacêutico/P&D",
+    "dores": "análise manual de PDFs em escala, custo elevado de consultoria externa, agilidade em P&D",
+    "problema": "Análise individual de 77 mil PDFs de moléculas feita por consultoria externa a R$300K por molécula.",
+    "solucao": "Código Python para extração automatizada de informações dos PDFs e dashboard com score objetivo por molécula.",
+    "impacto": "Economia de R$300K por análise eliminada; decisões de P&D mais precisas, eficientes e ágeis."
+  },
+  {
+    "id": "CASE_22",
+    "setor": "Seguros/Serviços Financeiros",
+    "dores": "previsão manual de volume operacional, assertividade abaixo de 80%, alocação de recursos ineficiente",
+    "problema": "Previsão manual do volume mensal de cálculos com assertividade inferior a 80%, gerando incertezas no planejamento de recursos.",
+    "solucao": "Modelo preditivo em Python usando métricas tarifárias, produção histórica e indicadores internos.",
+    "impacto": "95% de assertividade; economia anual superior a R$20M por otimização de recursos."
+  },
+  {
+    "id": "CASE_23",
+    "setor": "Logística/Distribuição/Alimentos",
+    "dores": "localização de centro de distribuição, dados geoespaciais complexos, decisão estratégica de infraestrutura, redução de custos logísticos",
+    "problema": "Definição do melhor local para novo CD com bases complexas de rotas, custos, volumes e variáveis geoespaciais.",
+    "solucao": "Integração e tratamento de dados em Python, análises geoespaciais e simulação de centenas de cenários de localização.",
+    "impacto": "CD otimizado com economia anual de R$5M (redução de 30% nos custos logísticos) e melhoria estrutural na malha de distribuição."
+  }
+];

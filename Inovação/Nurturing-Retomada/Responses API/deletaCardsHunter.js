@@ -10,38 +10,18 @@
 var HunterCleanupService = (function () {
 
     /**
-     * Tenta excluir um negócio com lógica de retentativa em caso de falha.
+     * Tenta excluir um negócio com lógica de retentativa fornecida pelo sendPipedriveCommand.
      */
-    function deleteWithRetry(deal, attempts = 0) {
-        const MAX_ATTEMPTS = 3;
-        const BASE_WAIT_TIME = 2000;
-
+    function deleteWithRetry(deal) {
         try {
-            const url = `${PIPEDRIVE_API_BASE_URL}/deals/${deal.id}?api_token=${PIPEDRIVE_API_TOKEN}`;
-            const response = UrlFetchApp.fetch(url, {
-                method: 'delete',
-                muteHttpExceptions: true
-            });
-
-            const content = JSON.parse(response.getContentText());
-
-            if (content.success) {
+            const content = sendPipedriveCommand(`deals/${deal.id}`, 'delete');
+            if (content && content.success) {
                 console.log(`✅ SUCESSO: Negócio ID ${deal.id} excluído.`);
                 return true;
-            } else {
-                console.error(`❌ FALHA: Erro ao excluir ID ${deal.id}. Resposta: ${response.getContentText()}`);
             }
         } catch (e) {
-            console.error(`⚠️ ERRO na tentativa ${attempts + 1} para o ID ${deal.id}: ${e.message}`);
+            console.error(`❌ FALHA ao excluir ID ${deal.id}: ${e.message}`);
         }
-
-        if (attempts < MAX_ATTEMPTS - 1) {
-            const waitTime = BASE_WAIT_TIME * Math.pow(2, attempts);
-            console.log(`Aguardando ${waitTime / 1000}s para nova tentativa...`);
-            Utilities.sleep(waitTime);
-            return deleteWithRetry(deal, attempts + 1);
-        }
-
         return false;
     }
 
@@ -49,7 +29,7 @@ var HunterCleanupService = (function () {
      * Executa a limpeza baseada nos filtros de manutenção.
      */
     function execute() {
-        const filters = MAINTENANCE_CONFIG.HUNTER_CLEANUP_FILTERS;
+        const filters = HUNTER_CLEANUP_CONFIG.HUNTER_CLEANUP_FILTERS;
 
         console.log('==== INICIANDO EXCLUSÃO DE CARDS ====');
 

@@ -1,109 +1,114 @@
-1. Hypera Pharma 
-Situação: A Hypera Pharma utilizava uma previsão de demanda para seu planejamento estratégico e alocação de recursos. 
-Complicação: O modelo existente apresentava um erro médio de 5% (MAPE), com instabilidade significativa em períodos de sazonalidade e feriados. Essa imprecisão no planejamento resultava em perdas financeiras estimadas em R$ 30 milhões mensais. 
-Resolução: Foi desenvolvido um novo modelo de séries temporais que reduziu o erro percentual absoluto médio em 3.5 pontos percentuais. A solução tem o potencial de gerar uma redução de perdas de até R$ 252 milhões anuais, além de garantir o preparo adequado das lojas para picos de demanda. 
+[CASE 01 | Hypera Pharma | Setor: Farmacêutico/Varejo | Dores: previsão de demanda imprecisa, sazonalidade, perdas financeiras, planejamento estratégico]
+Problema: Modelo de previsão de demanda com MAPE de 5%, instável em sazonalidade e feriados. Perdas estimadas em R$30M/mês.
+Solução: Novo modelo de séries temporais, reduzindo o erro em 3,5 p.p.
+Impacto: Potencial de R$252M/ano em redução de perdas; lojas melhor preparadas para picos de demanda.
 
-2. Colgate-Palmolive 
-Situação: A Colgate-Palmolive necessitava otimizar a previsão de demanda de sell-out para sua operação. 
-Complicação: A ausência de dados estruturados e acessíveis impedia a realização de previsões assertivas. Isso levava a perdas financeiras diretas, seja por excesso de estoque acumulado ou pela incapacidade de suprir a demanda do mercado. 
-Resolução: O banco de dados da empresa foi enriquecido para viabilizar análises e um novo modelo de previsão de alta assertividade foi desenvolvido. A iniciativa permitiu a otimização de estoque e logística, com consequente redução de custos e aumento da eficiência operacional. 
+[CASE 02 | Colgate-Palmolive | Setor: Bens de Consumo/Varejo | Dores: ausência de dados estruturados, excesso ou ruptura de estoque, previsão de sell-out]
+Problema: Falta de dados estruturados impedia previsões assertivas de sell-out, gerando perdas por excesso ou ruptura de estoque.
+Solução: Enriquecimento da base de dados e desenvolvimento de novo modelo preditivo de alta assertividade.
+Impacto: Otimização de estoque e logística com redução de custos e aumento da eficiência operacional.
 
-3. Bom pra Crédito 
-Situação: A Bom pra Crédito, uma fintech de crédito, utilizava um modelo estatístico para a concessão de crédito a seus clientes. 
-Complicação: O modelo estava desatualizado e não conseguia prever com acurácia o risco de inadimplência associado a cada cliente. Essa ineficiência expunha a empresa a riscos elevados e limitava seu potencial de crescimento sustentável. 
-Resolução: Foi criado, testado e validado um novo modelo de machine learning (XGBoost) para classificação de risco. O novo algoritmo permite uma melhor segmentação de clientes, diminuindo o risco e as perdas operacionais decorrentes da inadimplência. 
+[CASE 03 | Bom pra Crédito | Setor: Fintech/Serviços Financeiros | Dores: modelo de crédito desatualizado, inadimplência, risco operacional, crescimento sustentável]
+Problema: Modelo estatístico desatualizado para concessão de crédito com baixa acurácia na previsão de inadimplência.
+Solução: Desenvolvimento, teste e validação de modelo de ML (XGBoost) para classificação de risco de crédito.
+Impacto: Melhor segmentação de clientes, redução de risco e perdas por inadimplência.
 
-4. Empresa de Tênis e Calçados 
-Situação: Uma das cinco maiores empresas globais do segmento de calçados definia a curva de tamanho de seus produtos por meio de um processo manual em Excel. 
-Complicação: A falta de insights estratégicos nesse processo resultava em baixa assertividade, gerando acúmulo de estoque para alguns tamanhos e perda de vendas por falta de produto em outros. 
-Resolução: Foram desenvolvidas análises em Python para determinar as curvas reais de demanda por tamanho. Isso gerou insights valiosos que capacitaram a empresa a estruturar melhor seus pedidos, maximizar a eficiência do estoque e, consequentemente, aumentar o faturamento. 
+[CASE 04 | Empresa de Tênis e Calçados (Top 5 Global) | Setor: Moda/Varejo | Dores: processo manual em Excel, acúmulo de estoque, perda de vendas por ruptura, curva de tamanho]
+Problema: Curva de tamanho definida manualmente via Excel, gerando acúmulo de estoque em alguns tamanhos e ruptura em outros.
+Solução: Análises em Python para determinar curvas reais de demanda por tamanho de produto.
+Impacto: Pedidos mais assertivos, estoque otimizado e aumento de faturamento.
 
-5. Zoetis 
-Situação: A Zoetis, empresa de saúde animal, buscava um entendimento aprofundado sobre o comportamento de compra e o pareamento de produtos por parte de seus clientes. 
-Complicação: Hipóteses de negócio sobre o padrão de consumo e gestão de estoque não eram validadas por dados, o que limitava a eficácia de ações de marketing e vendas. 
-Resolução: Foi conduzida uma análise detalhada da cesta de produtos, criando indicadores de paridade para validar as hipóteses. O projeto entregou insights que permitiram à Zoetis executar campanhas de marketing mais direcionadas e otimizar o gerenciamento futuro de estoque. 
+[CASE 05 | Zoetis | Setor: Saúde Animal/Agronegócio | Dores: hipóteses sem validação de dados, comportamento de compra desconhecido, marketing ineficiente, gestão de estoque]
+Problema: Hipóteses sobre padrão de consumo e pareamento de produtos não validadas por dados, limitando marketing e vendas.
+Solução: Análise de cesta de produtos com indicadores de paridade para validar hipóteses de negócio.
+Impacto: Campanhas de marketing mais direcionadas e otimização de gestão de estoque.
 
-6. Centauro 
-Situação: A Centauro buscava implementar uma cultura Data Driven em sua Área de Negócios para orientar decisões. 
-Complicação: A equipe enfrentava desafios para determinar, com base em dados, os melhores pareamentos de produtos e identificar os Best Sellers de forma precisa, o que impactava a estratégia comercial. 
-Resolução: Foi desenvolvido um script em Python para as análises centrais e criados dashboards interativos em Power BI para democratizar o acesso aos dados. A solução viabilizou a tomada de decisões baseada em dados históricos, com potencial de aumento de vendas a partir do maior conhecimento do cliente. 
+[CASE 06 | Centauro | Setor: Varejo Esportivo | Dores: falta de cultura data-driven, pareamento de produtos manual, identificação de best-sellers imprecisa]
+Problema: Dificuldade para determinar pareamentos de produtos e best-sellers com base em dados, impactando estratégia comercial.
+Solução: Script Python para análises centrais e dashboards interativos no Power BI para democratizar acesso a dados.
+Impacto: Tomada de decisões baseada em dados históricos com potencial de aumento de vendas.
 
-7. Chilli Beans 
-Situação: Em fase de expansão de franquias, a Chilli Beans gerenciava dados de múltiplas plataformas de CRM de forma manual, utilizando o Excel. 
-Complicação: O processo manual era intensivo em trabalho, gerava retrabalho e retardava a obtenção de insights, dificultando a tomada de decisões ágeis e assertivas, cruciais para a expansão. 
-Resolução: Foram criados dashboards consolidados no Power BI, unificando as fontes de dados (CRM, redes sociais). A automação fortaleceu a cultura Data Driven e reduziu custos operacionais, aumentando a capacidade estratégica para impulsionar o crescimento da rede. 
+[CASE 07 | Chilli Beans | Setor: Moda/Franquias/Varejo | Dores: gestão manual de CRM, retrabalho, dados dispersos entre plataformas, expansão de franquias]
+Problema: Dados de CRM e redes sociais gerenciados manualmente em Excel durante expansão de franquias, gerando retrabalho e atraso em insights.
+Solução: Dashboards consolidados no Power BI unificando CRM e redes sociais com automação do processo.
+Impacto: Cultura data-driven fortalecida, redução de custos operacionais e maior capacidade estratégica para expansão.
 
-8. Dengo Chocolates 
-Situação: A Dengo Chocolates necessitava de insights de negócio para orientar decisões estratégicas sobre seu portfólio de produtos e operações. 
-Complicação: A empresa não possuía uma quantificação clara do impacto financeiro de desafios como canibalização de produtos, falta de estoque e um entendimento limitado sobre o perfil de seu público. 
-Resolução: Por meio de análises aprofundadas, como clusterização RFM e simulações, o projeto quantificou a receita perdida. Foi identificado que R$ 4,5 milhões anuais eram perdidos devido à canibalização de produtos, permitindo a criação de ações de recuperação direcionadas. 
+[CASE 08 | Dengo Chocolates | Setor: Alimentos/Varejo | Dores: canibalização de produtos, ruptura de estoque, perfil de público desconhecido, receita perdida não quantificada]
+Problema: Falta de quantificação do impacto financeiro de canibalização, ruptura de estoque e desconhecimento do perfil de clientes.
+Solução: Análises de clusterização RFM, simulações e quantificação de receita perdida.
+Impacto: R$4,5M/ano em perdas identificadas por canibalização; base para ações de recuperação direcionadas.
 
-9. DUX Trucking 
-Situação: A transportadora DUX Trucking realizava a coleta e consolidação de dados de forma manual, utilizando o sistema Brudam e planilhas Excel. 
-Complicação: A ausência de dados completos sobre a quilometragem das entregas tornava o cálculo de indicadores de qualidade impreciso. O processo manual gerava retrabalho e impedia decisões estratégicas baseadas em dados. 
-Resolução: Foram desenvolvidos dashboards em Power BI e implementada uma integração via API para captura automática da quilometragem. A automação reduziu custos operacionais e permitiu a identificação de métricas para aumentar a lucratividade a partir de um conhecimento aprofundado dos fretes. 
+[CASE 09 | DUX Trucking | Setor: Logística/Transportes | Dores: coleta manual de dados, métricas de qualidade imprecisas, retrabalho, lucratividade de fretes]
+Problema: Coleta manual de dados via Brudam e Excel; ausência de dados de quilometragem tornava indicadores de qualidade imprecisos.
+Solução: Dashboards em Power BI e integração via API para captura automática de quilometragem.
+Impacto: Redução de custos operacionais e identificação de métricas para aumentar lucratividade nos fretes.
 
-10. Estapar 
-Situação: A Estapar, rede de estacionamentos em expansão, dependia do Excel para a visualização e análise de dados de suas operações. 
-Complicação: O processo manual e repetitivo era ineficiente e limitava a capacidade de analisar a performance em diferentes localidades, informação crucial para suportar decisões de expansão. 
-Resolução: Foi desenvolvido um dashboard interativo em Power BI com filtros avançados para comparação de desempenho. A solução otimizou o tempo de análise, reduziu o trabalho manual e proveu um melhor direcionamento estratégico para a expansão do negócio. 
+[CASE 10 | Estapar | Setor: Mobilidade Urbana/Estacionamentos | Dores: análise manual em Excel, dificuldade de comparar performance entre unidades, decisão de expansão sem dados]
+Problema: Dependência de Excel para análise de operações limitava comparação de performance entre unidades, essencial para expansão.
+Solução: Dashboard interativo no Power BI com filtros avançados para comparação de desempenho entre localidades.
+Impacto: Tempo de análise otimizado, trabalho manual reduzido e melhor direcionamento estratégico para expansão.
 
-11. Klabin 
-Situação: A Klabin, maior produtora de celulose do Brasil, possuía um processo estabelecido para análise decisória. 
-Complicação: Este processo era sobrecarregado por esforço manual e retrabalho, consumindo tempo valioso da equipe que deveria ser focado em atividades estratégicas. A necessidade de otimizar essas operações era urgente para ganho de eficiência. 
-Resolução: Foi desenvolvido um script em Python para a captação, limpeza e transformação 100% automatizada das bases de dados. A solução, conectada a dashboards interativos no Power BI, resultou na redução de 10 horas semanais de trabalho operacional manual, permitindo maior agilidade e precisão na tomada de decisões estratégicas. 
+[CASE 11 | Klabin | Setor: Celulose/Papel/Indústria | Dores: retrabalho em análise decisória, processo manual, eficiência operacional, liberar time para estratégia]
+Problema: Processo de análise decisória sobrecarregado por trabalho manual e retrabalho, consumindo tempo de equipe estratégica.
+Solução: Script Python para captação, limpeza e transformação 100% automatizada de bases de dados, integrado a dashboards Power BI.
+Impacto: Redução de 10 horas semanais de trabalho operacional manual; maior agilidade e precisão nas decisões estratégicas.
 
-12. Ultragaz 
-Situação: A Ultragaz enfrentava desafios no acompanhamento do controle de qualidade e da eficiência na fabricação de botijões de gás. 
-Complicação: A falta de métricas consolidadas prejudicava decisões operacionais e estratégicas, ocultando problemas e oportunidades de melhoria nos processos. 
-Resolução: Foram estruturados 5 novos indicadores em ETL, com a criação de queries SQL no Azure Databricks para consolidar dados históricos. Os indicadores desenvolvidos proporcionaram um direcionamento estratégico mais assertivo nas fábricas, com visões macro e históricas para otimização contínua. 
+[CASE 12 | Ultragaz | Setor: Energia/Gás/Indústria | Dores: falta de métricas consolidadas, controle de qualidade fraco, ineficiência na fabricação, gestão sem dados históricos]
+Problema: Falta de métricas consolidadas para controle de qualidade e eficiência na fabricação de botijões prejudicava decisões operacionais.
+Solução: Estruturação de 5 novos indicadores via ETL com queries SQL no Azure Databricks para consolidar dados históricos.
+Impacto: Direcionamento estratégico mais assertivo nas fábricas com visões macro e históricas para melhoria contínua.
 
-13. Grande Empresa de Jornalismo 
-Situação: Uma grande empresa de jornalismo necessitava de dados e insights sobre o sentimento da população brasileira acerca do veganismo para a produção de artigos. 
-Complicação: A empresa não possuía uma estrutura consolidada para analisar grandes volumes de dados de redes sociais, necessitando de material visual e analítico para suportar a pesquisa. 
-Resolução: Foi criada uma ferramenta em Google Colab que utiliza NLP para capturar e classificar sentimentos de tweets, gerando visualizações automáticas. A solução permitiu testar hipóteses com alta assertividade e atingir uma profundidade de análise e tamanho amostral acima do esperado em um curto período. 
+[CASE 13 | Grande Empresa de Jornalismo | Setor: Mídia/Comunicação | Dores: análise de sentimento em redes sociais, grande volume de dados não estruturados, pesquisa sem estrutura analítica]
+Problema: Sem estrutura para analisar grandes volumes de dados de redes sociais para suportar pesquisa e produção de conteúdo.
+Solução: Ferramenta em Google Colab com NLP para captura e classificação de sentimentos de tweets com visualizações automáticas.
+Impacto: Teste de hipóteses com alta assertividade e profundidade de análise acima do esperado em tempo reduzido.
 
-14. Grande Banco Brasileiro 
-Situação: Um dos três maiores bancos do Brasil enfrentava dificuldades em identificar padrões de comportamento em clientes que aderiram ao Open Finance. 
-Complicação: A falta de conhecimento sobre o perfil desses clientes impedia a criação de ações de marketing direcionadas e eficazes para otimizar a estratégia de Open Finance. 
-Resolução: Foi realizada uma análise exploratória em 2 bilhões de linhas de dados e desenvolvida uma solução de Machine Learning (clusterização e classificação) com mais de 30 parâmetros. O resultado foi um maior conhecimento sobre o perfil ideal de cliente, permitindo maior assertividade nas ações estratégicas e a otimização do investimento em marketing. 
+[CASE 14 | Grande Banco Brasileiro (Top 3) | Setor: Serviços Financeiros/Bancário | Dores: Open Finance, segmentação de clientes, ações de marketing sem direcionamento, análise de big data]
+Problema: Dificuldade em identificar padrões de comportamento de clientes no Open Finance, impedindo ações de marketing eficazes.
+Solução: Análise exploratória em 2 bilhões de linhas de dados com ML (clusterização e classificação) usando 30+ parâmetros.
+Impacto: Maior conhecimento do perfil ideal de cliente e assertividade nas ações estratégicas com otimização de investimento em marketing.
 
-15. Tembici 
-Situação: A Tembici, empresa de compartilhamento de bicicletas, sofria prejuízos recorrentes devido ao roubo de seus ativos. 
-Complicação: A ausência de uma visão clara sobre os locais e períodos de maior risco impedia a implementação de ações preventivas eficazes para mitigar as perdas. 
-Resolução: Foi desenvolvido um modelo de séries temporais em Python que alcançou aproximadamente 95% de assertividade na previsão de roubos por local. Isso permitiu um melhor planejamento de ações preventivas, resultando em uma redução significativa das perdas financeiras e uma alocação mais estratégica de recursos. 
+[CASE 15 | Tembici | Setor: Mobilidade Urbana/Compartilhamento | Dores: roubo de ativos, perdas financeiras recorrentes, sem visibilidade de risco por localidade]
+Problema: Prejuízos recorrentes por roubos sem visibilidade sobre locais e períodos de maior risco, impedindo ações preventivas.
+Solução: Modelo de séries temporais em Python com ~95% de assertividade na previsão de roubos por local.
+Impacto: Melhor planejamento preventivo, redução significativa de perdas financeiras e alocação mais estratégica de recursos.
 
-16. V.tal 
-Situação: A V.tal operava com painéis internos e automações dispersas, o que gerava preocupações de ineficiência na alta gestão. 
-Complicação: Essa dispersão limitava a otimização de tarefas e criava riscos de segurança com o uso de dados sigilosos em plataformas externas de chatbot. Uma solução unificada era crítica para acelerar a produtividade e garantir a governança dos dados. 
-Resolução: Foi desenvolvido um agente copiloto de IA generativa (utilizando Gemini na GCP) para apoiar a alta gestão. A solução economizou mais de 400 horas mensais (um valor superior a R$ 45.000 em recursos), otimizando a produtividade e fortalecendo a cibersegurança. 
+[CASE 16 | V.tal | Setor: Telecomunicações/Infraestrutura | Dores: automações dispersas, baixa produtividade da alta gestão, risco de segurança com dados sigilosos em ferramentas externas]
+Problema: Painéis e automações dispersos geravam ineficiência; uso de dados sigilosos em chatbots externos criava risco de segurança.
+Solução: Agente copiloto de IA generativa (Gemini na GCP) para apoiar a alta gestão com dados internos.
+Impacto: Economia de 400+ horas mensais (>R$45K em recursos) com aumento de produtividade e governança de dados fortalecida.
 
-17. Riachuelo 
-Situação: A Riachuelo possuía um ambiente Databricks descentralizado, onde estruturas antigas e novas conviviam. 
-Complicação: Essa dualidade gerava altos custos operacionais, ineficiência na gestão de clusters e dificultava a exploração de dados, tornando essencial a unificação em um ambiente moderno. 
-Resolução: O pipeline do Azure foi adaptado para um novo ambiente unificado e os dados foram migrados para um datalake moderno. A mudança resultou em uma redução significativa de custos com infraestrutura e habilitou a empresa para novas frentes de inovação com IA. 
+[CASE 17 | Riachuelo | Setor: Varejo/Moda | Dores: ambiente de dados descentralizado, altos custos de infraestrutura, dualidade de ambientes Databricks, freio à inovação com IA]
+Problema: Ambiente Databricks descentralizado com estruturas antigas e novas gerava altos custos operacionais e dificultava exploração de dados.
+Solução: Migração do pipeline Azure para ambiente unificado e dados para datalake moderno.
+Impacto: Redução significativa de custos com infraestrutura e habilitação de novas frentes de inovação com IA.
 
-18. Mecalor 
-Situação: A Mecalor enfrentava dificuldades em seu processo de vendas, sem insights claros sobre os motivos de perda de negócios e suas taxas de conversão. 
-Complicação: A empresa não tinha previsibilidade de receita nem uma visualização completa de suas métricas, o que a impedia de transformar dados de vendas em uma estratégia acionável. 
-Resolução: Foi desenvolvida uma solução de Machine Learning integrada ao Power BI para previsão de receita e sazonalidade. O projeto permitiu à Mecalor obter maior assertividade em suas ações estratégicas de produção e vendas, além de melhorar a capacidade de planejamento com previsões claras de receita. 
+[CASE 18 | Mecalor | Setor: Indústria/Equipamentos | Dores: falta de previsibilidade de receita, métricas de vendas sem visibilidade, decisão estratégica sem dados, sazonalidade]
+Problema: Sem insights sobre perdas de negócio, taxas de conversão ou previsibilidade de receita para orientar estratégia de vendas.
+Solução: Solução de ML integrada ao Power BI para previsão de receita e sazonalidade.
+Impacto: Maior assertividade em ações estratégicas de produção e vendas com planejamento baseado em previsões claras de receita.
 
-19. Plataforma de Aluguel de Imóveis 
-Situação: Uma plataforma de aluguel de imóveis comprava dados de concorrentes sobre preços e ocupação para suas análises estratégicas. 
-Complicação: Os dados adquiridos eram incompletos, limitando seu valor estratégico, e geravam custos recorrentes e elevados. Havia a necessidade de obter informações mais completas de forma autônoma. 
-Resolução: Foram desenvolvidos scripts em Python para extrair dados detalhados de plataformas concorrentes de forma automática. A solução zerou os custos com a aquisição de dados e gerou novos insumos para análises, aumentando o potencial estratégico da empresa frente à concorrência. 
+[CASE 19 | Plataforma de Aluguel de Imóveis | Setor: PropTech/Imóveis | Dores: dependência de dados comprados de concorrentes, dados incompletos, alto custo recorrente de inteligência competitiva]
+Problema: Dados de concorrentes adquiridos eram incompletos e geravam custos recorrentes elevados para análises estratégicas.
+Solução: Scripts Python para extração automatizada de dados detalhados de plataformas concorrentes.
+Impacto: Custo zero com aquisição de dados e novos insumos para análises com maior vantagem competitiva.
 
-20. LEO RAD 
-Situação: A LEO RAD oferecia um modelo de reconhecimento de voz como SaaS para a transcrição de laudos de radiologia. 
-Complicação: O modelo apresentava baixo desempenho com jargões médicos e sotaques regionais, o que impedia a LEO RAD de ter uma solução mais robusta e aplicada. Adicionalmente, a empresa não possuía mão de obra especializada para se dedicar ao desenvolvimento. 
-Resolução: Foi conduzido um projeto para tratar e filtrar 10 mil laudos e criar uma base com 8 milhões de frases de treino. O trabalho resultou em uma melhoria de mais de 3% na assertividade geral do modelo e um aumento de 30% na assertividade de termos médicos, aumentando seu potencial competitivo. 
+[CASE 20 | LEO RAD | Setor: HealthTech/SaaS Médico | Dores: modelo de NLP com baixo desempenho em jargão médico, sotaques regionais, falta de base de treino especializada]
+Problema: Modelo de reconhecimento de voz para laudos radiológicos com baixo desempenho em jargões médicos e sotaques regionais.
+Solução: Tratamento e filtragem de 10 mil laudos para criar base de 8 milhões de frases de treino para fine-tuning.
+Impacto: Melhoria de 3%+ na assertividade geral e 30% em termos médicos, aumentando potencial competitivo do SaaS.
 
-21. Grande Empresa Farmacêutica 
-Situação: Uma das 25 maiores farmacêuticas do mundo planejava utilizar dados contidos em 77 mil PDFs de moléculas para o desenvolvimento de novos medicamentos. Para essa análise, a empresa contratava uma consultoria externa. 
-Complicação: Havia um grande desafio em realizar as análises individuais de forma assertiva e eficiente. Adicionalmente, a consultoria cobrava R$300 mil por molécula analisada, o que elevava a necessidade de otimizar o processo e diminuir os custos operacionais. 
-Resolução: Foi desenvolvido um código em Python para a extração de informações de cada um dos PDFs e um dashboard que atribuía uma nota objetiva a cada molécula de forma automática. A solução permitiu análises mais precisas e eficientes, uma economia de R$300 mil por análise ao eliminar os custos com a consultoria e maior agilidade na tomada de decisões estratégicas de P&D. 
+[CASE 21 | Grande Farmacêutica (Top 25 Global) | Setor: Farmacêutico/P&D | Dores: análise manual de PDFs em escala, custo elevado de consultoria externa, agilidade em P&D]
+Problema: Análise individual de 77 mil PDFs de moléculas feita por consultoria externa a R$300K por molécula.
+Solução: Código Python para extração automatizada de informações dos PDFs e dashboard com score objetivo por molécula.
+Impacto: Economia de R$300K por análise eliminada; decisões de P&D mais precisas, eficientes e ágeis.
 
-22. Grande Empresa de Seguros 
-Situação: Uma empresa, entre as 3 maiores do setor de seguros, enfrentava um processo manual para a previsão do volume mensal de cálculos. 
-Complicação: Essa abordagem, sem uma solução de previsão robusta, era menos de 80% assertiva e gerava incertezas no planejamento de recursos e atrasos operacionais. Era necessário, portanto, aumentar a previsibilidade para otimizar a alocação de recursos e agilizar as decisões. 
-Resolução: Foi desenvolvido um modelo preditivo em Python para estimar o volume de cálculos mensais, utilizando métricas tarifárias, produção histórica e indicadores internos. A solução entregou um modelo com 95% de assertividade, garantindo maior previsibilidade operacional e uma economia anual superior a R$ 20 milhões através da otimização de recursos.
+[CASE 22 | Grande Empresa de Seguros (Top 3) | Setor: Seguros/Serviços Financeiros | Dores: previsão manual de volume operacional, assertividade abaixo de 80%, alocação de recursos ineficiente]
+Problema: Previsão manual do volume mensal de cálculos com assertividade inferior a 80%, gerando incertezas no planejamento de recursos.
+Solução: Modelo preditivo em Python usando métricas tarifárias, produção histórica e indicadores internos.
+Impacto: 95% de assertividade; economia anual superior a R$20M por otimização de recursos.
+
+[CASE 23 | Kerry | Setor: Logística/Distribuição/Alimentos | Dores: localização de centro de distribuição, dados geoespaciais complexos, decisão estratégica de infraestrutura, redução de custos logísticos]
+Problema: Definição do melhor local para novo CD com bases complexas de rotas, custos, volumes e variáveis geoespaciais.
+Solução: Integração e tratamento de dados em Python, análises geoespaciais e simulação de centenas de cenários de localização.
+Impacto: CD otimizado com economia anual de R$5M (redução de 30% nos custos logísticos) e melhoria estrutural na malha de distribuição.

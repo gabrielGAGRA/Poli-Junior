@@ -23,6 +23,18 @@ function fetchPipedriveData(endpoint, params = {}, fetchAll = false) {
         throw new Error("PIPEDRIVE_API_TOKEN or PIPEDRIVE_API_BASE_URL configuration not defined.");
     }
 
+    // [Proteção] Valida se o filter_id existe antes de consultar
+    // O Pipedrive tem um comportamento perigoso de ignorar filter_id apagado/inválido
+    // e retornar a base INTEIRA no lugar, causando grandes vazamentos ou processamentos incorretos.
+    if (params && params.filter_id) {
+        try {
+            const filterUrl = `${PIPEDRIVE_API_BASE_URL}/filters/${params.filter_id}?api_token=${PIPEDRIVE_API_TOKEN}`;
+            _makeRequest(filterUrl);
+        } catch (e) {
+            throw new Error(`CRÍTICO: O filter_id ${params.filter_id} fornecido é inválido ou foi apagado! Consulta abortada para evitar sobrecarga ou alteração da base inteira.`);
+        }
+    }
+
     let url = `${PIPEDRIVE_API_BASE_URL}/${endpoint}?api_token=${PIPEDRIVE_API_TOKEN}`;
 
     // Add parameters to URL
@@ -116,3 +128,49 @@ function _makeRequest(url, options = { muteHttpExceptions: true }) {
         }
     }
 }
+
+// Text and field helpers used across scripts.
+function stripHtmlTags(value) {
+    return String(value || '').replace(/<[^>]*>?/gm, ' ');
+}
+
+function lerCampoCustomizado(deal, configField, fallbackLabels = []) {
+    const valores = [];
+
+    if (configField && configField.key) {
+        valores.push(extrairValorCampo(deal[configField.key]));
+    }
+
+    fallbackLabels.forEach(label => {
+        valores.push(extrairValorCampo(deal[label]));
+    });
+
+    return valores.find(valor => !estaVazio(valor));
+}
+
+function extrairValorCampo(valor) {
+    if (valor && typeof valor === 'object') {
+        return valor.value || valor.label || valor.name || valor.text || valor.id;
+    }
+
+    return valor;
+}
+
+function estaVazio(valor) {
+    return valor == null || String(valor).trim() === '';
+}
+
+function normalizarTexto(valor) {
+    return String(valor)
+        .trim()
+        .toUpperCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+}
+
+function calcularDiferencaDias(dataInicio, dataFim) {
+    const diffTime = Math.abs(dataFim - dataInicio);
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
+
+
