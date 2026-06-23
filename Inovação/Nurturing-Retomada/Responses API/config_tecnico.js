@@ -1,5 +1,5 @@
 // Autor: Gabriel Agra de Castro Motta
-// Última atualização: 24/03/2026
+// Última atualização: 08/06/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 // Tempo máximo de execução do script (Apps Script suporta até 30 min em contas Workspace)

@@ -1,5 +1,5 @@
 // Autor: Gabriel Agra de Castro Motta
-// Última atualização: 24/03/2026
+// Última atualização: 12/06/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 /* 
@@ -51,13 +51,13 @@ const CONFIG_BASE = {
             // O tempo máximo de execução é unificado via MAX_EXECUTION_TIME em config_tecnico.js.
             get GAS_RUNTIME_BUDGET_MS() { return MAX_EXECUTION_TIME; },
             // Tempo máximo reservado para a chamada/batch da OpenAI dentro do fluxo de resumo.
-            OPENAI_CHUNK_SIZE: 20,
+            OPENAI_CHUNK_SIZE: 4,
             EMPTY_NOTES_DELETE_CAP: 100
         },
 
         EMAIL: {
             get GAS_RUNTIME_BUDGET_MS() { return MAX_EXECUTION_TIME; },
-            OPENAI_CHUNK_SIZE: 10
+            OPENAI_CHUNK_SIZE: 3
         },
 
         METADATA: {
@@ -82,7 +82,7 @@ const CONFIG_BASE = {
 
         BATCH: {
             get OPENAI_BATCH_RUNTIME_BUDGET_MS() { return MAX_EXECUTION_TIME; },
-            OPENAI_CHUNK_SIZE: 5,
+            OPENAI_CHUNK_SIZE: 3,
             LOG_BATCH_SHEET_NAME: "IA - Retomada (Logs)"
         }
     },

@@ -1,6 +1,5 @@
 // Autor: Gabriel Agra de Castro Motta
-// Última atualização: 21/04/2026
-// Descrição: Processamento manual de retomada e nutrição utilizando configurações globais.
+// Última atualização: 14/06/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 /**

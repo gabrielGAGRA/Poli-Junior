@@ -1,6 +1,5 @@
 // Autor: Gabriel Agra de Castro Motta
 // Última atualização: 27/03/2026
-// Descrição: Exclui negócios do Pipedrive de Hunter abandonados
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 /**

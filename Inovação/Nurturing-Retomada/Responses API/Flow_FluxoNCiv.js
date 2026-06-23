@@ -1,4 +1,6 @@
-// Att: 21/04/2026
+// Autor: Gabriel Agra de Castro Motta
+// Última atualização: 21/06/2026
+// Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 /**
  * Google Apps Script - Fluxo de Tradução: NCiv (Apenas Retomada)
@@ -28,6 +30,8 @@ const Flow_FluxoNCiv = {
         }
     },
 
+
+
     RedatorDeRetomadaCase: {
         name: "Redator de Retomada - Case",
         model: "gpt-5.4",
@@ -40,20 +44,28 @@ const Flow_FluxoNCiv = {
         },
         getInstructions: function () {
             return `[task_definition]
-Você é o Agente de Redação para o Gancho de Retomada do Núcleo de Engenharia Civil e Arquitetura. Sua missão é criar o primeiro e-mail de uma cadência de reativação, utilizando o "Gancho de Sucesso" mais forte disponível na base de cases fornecida.
+Você é o vendedor ativo executando o Gancho de Retomada do Núcleo de Engenharia Civil e Arquitetura. Sua missão é criar o primeiro e-mail de uma cadência de reativação, utilizando o "Gancho de Sucesso" mais forte disponível na base de cases fornecida. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 [/task_definition]
 
 [personality_and_writing_controls]
-- Persona: Engenheiro Consultor da Poli Júnior. Especialista em normas técnicas e otimização de sistemas construtivos.
-- Tom: Sóbrio, autoritativo e focado em viabilidade.
+- Persona: Vendedor ativo e Engenheiro Consultor da Poli Júnior que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa"). Especialista em normas técnicas e otimização de sistemas construtivos.
+- Tom: Sóbrio, autoritativo, focado em viabilidade e parceiro comercial.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Regra de Abertura: A primeira frase do e-mail (para o primeiro contato da sequência, como Passo 1 ou Handoff) deve ser OBRIGATORIAMENTE: "Antes de tudo, gostaria de agradecer pela nossa conversa anterior." (Sem preâmbulos ou variações como "Obrigado por compartilhar o contexto").
+- Formato de Encerramento: Termine com "Atenciosamente," ou "Att,". Proibido usar placeholders como "[Seu Nome]".
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
 - Expertise: Mencione (quando pertinente) o uso de softwares como Eberick ou metodologias de gestão pré-obra para demonstrar domínio tecnológico.
-- Formato: "Bom dia, [nome]!", "Atenciosamente," ou "Att,". Sem placeholders.
 [/personality_and_writing_controls]
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
 
 [rules]
 - Foco Setorial: Engenharia Civil, Arquitetura e Projetos Técnicos.
 - Personalização: O e-mail deve ser indistinguível de um escrito por um humano.
 - Não use tags XML nas suas instruções ou no seu texto final, respeite o JSON de saída.
+- As regras de Saudação, Abertura e Perspectiva de Vendedor Ativo são prioritárias.
 [/rules]
 
 [decision_hierarchy_gancho]
@@ -76,6 +88,8 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema, contendo 'analise_tecn
         }
     },
 
+
+
     RedatorDeRetomadaFup: {
         name: "Redator de Retomada - FUP",
         model: "gpt-5.4-mini",
@@ -88,20 +102,27 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema, contendo 'analise_tecn
         },
         getInstructions: function () {
             return `[task_definition]
-Você é o Agente de Redação para Reativação de Oportunidades do Núcleo de Engenharia Civil e Arquitetura. Sua missão é reaquecer leads "frios" (3-6 meses sem contato) com mensagens curtas e potentes baseadas no gancho anterior.
+Você é o vendedor ativo executando uma missão para reaquecer leads "frios" (3-6 meses sem contato) com mensagens curtas e potentes baseadas no gancho anterior. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 [/task_definition]
 
 [personality_and_writing_controls]
-- Persona: Engenheiro Consultor da Poli Júnior. Especialista em normas técnicas e otimização de sistemas construtivos.
-- Tom: Sócio-consultor, sóbrio e focado em viabilidade.
+- Persona: Vendedor ativo e Engenheiro Consultor da Poli Júnior que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa"). Especialista em normas técnicas e otimização de sistemas construtivos.
+- Tom: Sócio-consultor, sóbrio, focado em viabilidade e parceiro comercial.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Formato de Encerramento: Termine com "Atenciosamente," ou "Att,". Sem placeholders.
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
 - Expertise: Uso estratégico de tecnologia para prevenção de patologias e estouros orçamentários.
 [/personality_and_writing_controls]
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
 
 [rules]
 - Jamais use termos de "sumiço". Inicie como uma nova conversa de valor técnico.
 - Ritmo: Cadência intensa de 3-4 contatos em 15 dias. 
 - CTA: Proponha uma conversa técnica/alinhamento de 15 min. 
-- Formato: "Bom dia, [nome]!", "Atenciosamente," ou "Att,". Sem placeholders.
+- As regras de Saudação e Perspectiva de Vendedor Ativo são prioritárias.
 [/rules]
 
 [chain_of_thought_instructions]
@@ -170,17 +191,7 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema, contendo 'analise_tecn
         }
     },
 
-    _trackResponseId: function (workflow, agentName, responseId) {
-        if (!responseId) return;
 
-        if (!workflow.state) {
-            workflow.state = {};
-        }
-
-        workflow.state.previous_response_id = responseId;
-        workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
-        workflow.state.response_ids_by_agent[agentName] = responseId;
-    },
 
     runWorkflow: function* (workflow) {
         const state = workflow.state || {};
@@ -188,25 +199,29 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema, contendo 'analise_tecn
         const etapa = Number(state.etapa);
         const emails_anteriores = state.emails_anteriores || "";
         const input_as_text = workflow.input_as_text || "";
-        const previousResponseId = state.previous_response_id || null;
-        const includeEmailHistory = !previousResponseId;
+        const includeEmailHistory = true;
 
-        const createRedatorInput = (etapa, context, research = "", history = "") => {
-            const casesSummary = CASES_NCIV.map(c => `ID: ${c.id} | Setor: ${c.setor} | Dores: ${c.dores}`).join('\n');
-            const casesBlob = JSON.stringify(CASES_NCIV);
+        const createRedatorInput = (etapa, context, research = "", history = "", includeCases = false) => {
+            let prompt = "";
 
-            let prompt = `[DADOS DO LEAD]\n<contexto_lead>\n${context}\n</contexto_lead>\n\n`;
+            if (includeCases) {
+                const casesSummary = CASES_NCIV.map(c => `ID: ${c.id} | Setor: ${c.setor} | Dores: ${c.dores}`).join('\n');
+                const casesBlob = JSON.stringify(CASES_NCIV);
+                prompt += `[CASES]\n<reference_cases_summary>\n${casesSummary}\n</reference_cases_summary>\n\n`;
+                prompt += `<reference_cases_full>\n${casesBlob}\n</reference_cases_full>\n\n`;
+            }
+
+            let promptLead = `[DADOS DO LEAD]\n<contexto_lead>\n${context}\n</contexto_lead>\n\n`;
 
             if (includeEmailHistory && history) {
-                prompt += `[HISTÓRICO]\n<historico_emails>\n${history}\n</historico_emails>\n\n`;
+                promptLead += `[HISTÓRICO]\n<historico_emails>\n${history}\n</historico_emails>\n\n`;
             }
 
             if (research) {
-                prompt += `[PESQUISA]\n<pesquisa_mercado>\n${research}\n</pesquisa_mercado>\n\n`;
+                promptLead += `[PESQUISA]\n<pesquisa_mercado>\n${research}\n</pesquisa_mercado>\n\n`;
             }
 
-            prompt += `[CASES]\n<reference_cases_summary>\n${casesSummary}\n</reference_cases_summary>\n\n`;
-            prompt += `<reference_cases_full>\n${casesBlob}\n</reference_cases_full>\n\n`;
+            prompt += promptLead;
 
             prompt += `<task_update>\nGere o Passo ${etapa} da cadência.\n</task_update>\n`;
             return prompt;
@@ -222,27 +237,23 @@ Gere apenas o JSON conforme o schema RedatorOutputSchema, contendo 'analise_tecn
 
             if (etapa === 1) {
                 // Roda RedatorDeRetomadaCase
-                const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
+                const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores, true);
                 console.log(`[NCiv] Rodando RedatorDeRetomadaCase para Etapa 1`);
                 const redatorRun = yield* this._runRedator(
                     this.RedatorDeRetomadaCase,
                     redatorInput,
-                    [],
-                    previousResponseId
+                    []
                 );
-                this._trackResponseId(workflow, "RedatorDeRetomadaCase", redatorRun.response_id);
                 return redatorRun.data;
             }
             else if (etapa === 2 || etapa === 3 || etapa === 4) {
-                const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores);
+                const redatorInput = createRedatorInput(etapa, input_as_text, "", emails_anteriores, false);
                 console.log(`[NCiv] Rodando RedatorDeRetomadaFup para Etapa ${etapa}`);
                 const redatorRun = yield* this._runRedator(
                     this.RedatorDeRetomadaFup,
                     redatorInput,
-                    [],
-                    previousResponseId
+                    []
                 );
-                this._trackResponseId(workflow, "RedatorDeRetomadaFup", redatorRun.response_id);
                 return redatorRun.data;
             }
 

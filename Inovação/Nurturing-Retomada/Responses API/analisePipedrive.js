@@ -1,5 +1,5 @@
 // Autor: Gabriel Agra de Castro Motta
-// Última atualização: 21/04/2026
+// Última atualização: 21/06/2026
 // Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 
@@ -78,10 +78,34 @@ function dailyMetadataSync() {
         const dataLength = response.data?.length || 0;
 
         if (dataLength > 0) {
-            allDealsToUpsert.push(...response.data);
-            totalProcessed += dataLength;
-            paginationStart = response.next_start;
-            hasMore = response.more_items;
+            let reachedOldDeals = false;
+            let recentDealsCount = 0;
+
+            // lastSync format: "yyyy-MM-dd HH:mm:ss" in GMT
+            const lastSyncMs = new Date(lastSync.replace(' ', 'T') + 'Z').getTime();
+
+            for (const deal of response.data) {
+                // deal.update_time format: "YYYY-MM-DD HH:MM:SS" (em UTC)
+                const updateTimeMs = new Date((deal.update_time || '').replace(' ', 'T') + 'Z').getTime();
+
+                if (!deal.update_time || updateTimeMs >= lastSyncMs) {
+                    allDealsToUpsert.push(deal);
+                    recentDealsCount++;
+                } else {
+                    reachedOldDeals = true;
+                    break; // Como está ordenado DESC, os próximos serão ainda mais antigos
+                }
+            }
+
+            totalProcessed += recentDealsCount;
+
+            if (reachedOldDeals) {
+                console.log(`[OTIMIZAÇÃO] Encontrou deal mais antigo que ${lastSync}. Interrompendo paginação da fase ${syncPhase}.`);
+                hasMore = false;
+            } else {
+                paginationStart = response.next_start;
+                hasMore = response.more_items;
+            }
         } else {
             hasMore = false;
         }
@@ -174,7 +198,10 @@ function upsertDealsToSheet(deals, fieldMapping, optionMapping, stageMapping, pi
     const sheet = ss.getSheetByName(DATABASE_SHEET_NAME) || ss.insertSheet(DATABASE_SHEET_NAME);
 
     let data = sheet.getDataRange().getValues();
-    let headers = data.length > 0 && data[0][0] !== "" ? data[0] : ["ID", "Title", "Status", "Stage", "Pipeline"];
+    const originalNumRows = data.length;
+    const isOriginalSheetEmpty = (data.length === 0 || (data.length === 1 && data[0][0] === ""));
+
+    let headers = !isOriginalSheetEmpty ? [...data[0]] : ["ID", "Title", "Status", "Stage", "Pipeline"];
 
     // Garantir que ID seja sempre o primeiro nos headers lidos
     const idIdxInitial = headers.indexOf("ID");
@@ -194,6 +221,7 @@ function upsertDealsToSheet(deals, fieldMapping, optionMapping, stageMapping, pi
     }
 
     const headerIndexMap = new Map(headers.map((h, i) => [h, i]));
+    const modifiedRowIndices = new Set();
 
     deals.forEach(deal => {
         const dealId = String(deal.id);
@@ -235,6 +263,7 @@ function upsertDealsToSheet(deals, fieldMapping, optionMapping, stageMapping, pi
             data[targetRowIndex] = headers.map((h, i) =>
                 h.startsWith("Tempo:") ? (existingRow[i] ?? "") : (newRowValues[i] ?? "")
             );
+            modifiedRowIndices.add(targetRowIndex);
         } else {
             data.push(newRowValues);
             idMap.set(dealId, data.length - 1);
@@ -249,9 +278,48 @@ function upsertDealsToSheet(deals, fieldMapping, optionMapping, stageMapping, pi
         cleanedResult.data[0] = cleanedResult.headers;
     }
 
-    sheet.clearContents(); // Limpa para evitar resquícios de colunas deletadas
-    sheet.getRange(1, 1, cleanedResult.data.length, cleanedResult.headers.length).setValues(cleanedResult.data);
-    sheet.getRange(1, 1, 1, cleanedResult.headers.length).setFontWeight("bold");
+    // Verificar se o schema permaneceu idêntico para decidir o tipo de atualização
+    const sheetHeaders = !isOriginalSheetEmpty ? data[0] : [];
+    const headersMatch = !isOriginalSheetEmpty && arraysEqual(sheetHeaders, cleanedResult.headers);
+
+    if (headersMatch) {
+        console.log(`[OTIMIZAÇÃO] Schema idêntico. Executando atualização diferencial.`);
+
+        // 1. Atualizar cirurgicamente as linhas modificadas
+        if (modifiedRowIndices.size > 0) {
+            modifiedRowIndices.forEach(rowIndex => {
+                const rowDataToWrite = [cleanedResult.data[rowIndex]];
+                const sheetRowNumber = rowIndex + 1; // 1-based index
+                sheet.getRange(sheetRowNumber, 1, 1, cleanedResult.headers.length).setValues(rowDataToWrite);
+            });
+            console.log(`[OTIMIZAÇÃO] ${modifiedRowIndices.size} linhas atualizadas cirurgicamente.`);
+        }
+
+        // 2. Adicionar novas linhas
+        const newRows = cleanedResult.data.slice(originalNumRows);
+        if (newRows.length > 0) {
+            sheet.getRange(originalNumRows + 1, 1, newRows.length, cleanedResult.headers.length).setValues(newRows);
+            console.log(`[OTIMIZAÇÃO] ${newRows.length} novas linhas adicionadas.`);
+        }
+    } else {
+        console.log(`[OTIMIZAÇÃO] Schema alterado ou planilha vazia. Executando regravação completa.`);
+        sheet.clearContents(); // Limpa para evitar resquícios de colunas deletadas
+        sheet.getRange(1, 1, cleanedResult.data.length, cleanedResult.headers.length).setValues(cleanedResult.data);
+        sheet.getRange(1, 1, 1, cleanedResult.headers.length).setFontWeight("bold");
+    }
+}
+
+/**
+ * Função auxiliar para comparar arrays simples.
+ */
+function arraysEqual(a, b) {
+    if (a === b) return true;
+    if (!a || !b) return false;
+    if (a.length !== b.length) return false;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
 }
 
 /**
@@ -776,9 +844,9 @@ function deleteTriggers(functionName) {
 function getLastSyncTimestamp() {
     const lastSync = PropertiesService.getScriptProperties().getProperty('LAST_SYNC_TIME');
     if (!lastSync) {
-        // Se nunca rodou, busca as últimas 24h como segurança
-        const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000);
-        return Utilities.formatDate(yesterday, "GMT", "yyyy-MM-dd HH:mm:ss");
+        // Se nunca rodou, busca as últimas 2 semanas (14 dias) como segurança
+        const twoWeeksAgo = new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);
+        return Utilities.formatDate(twoWeeksAgo, "GMT", "yyyy-MM-dd HH:mm:ss");
     }
     return lastSync;
 }
@@ -833,7 +901,7 @@ function getResolvedConfig() {
     if (pipelinesStagesJsonVal) {
         try {
             pipelinesStagesData = JSON.parse(pipelinesStagesJsonVal);
-        } catch(e) {}
+        } catch (e) { }
     }
 
     const entityConfig = CONFIG_BASE.ENTITIES || {};

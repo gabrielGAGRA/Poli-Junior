@@ -1,12 +1,7 @@
-// Att: 10/05/2026
+// Autor: Gabriel Agra de Castro Motta
+// Última atualização: 21/06/2026
+// Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
-/**
- * Google Apps Script - Fluxo de Tradução: NDados (Nurturing, Retomada, Re-engajement)
- *
- * Extraído do código Agent Builder (TS). Mantém a clara separação entre 
- * agentes (Pesquisador, Redatores), ferramentas (web_search)
- * e o roteamento de cadência/etapa para o pipeline Nurturing NDados.
- */
 const Flow_FluxoNDados = {
 
   /**
@@ -17,10 +12,6 @@ const Flow_FluxoNDados = {
   Tools: {
     webSearchPreview: {
       type: "web_search",
-    },
-    fileSearch: {
-      type: "file_search",
-      vector_store_ids: ["vs_68d1adb002b481918d197bbe50ee1974"]
     }
   },
 
@@ -36,11 +27,12 @@ const Flow_FluxoNDados = {
         schema: {
           type: "object",
           properties: {
+            commentary: { type: "string", description: "Raciocínio de dados/estratégico e análise da escolha do case (Chain of Thought)." },
             titulo: { type: "string" },
             corpo_html: { type: "string" }
           },
           additionalProperties: false,
-          required: ["titulo", "corpo_html"]
+          required: ["commentary", "titulo", "corpo_html"]
         }
       }
     }
@@ -97,7 +89,7 @@ Insight Chave: [Resumo factual de 1-2 frases com números quantificados].
 
   /**
    * Agente responsável pelos e-mails de Nurturing baseados em cases (Passos 2 e 4).
-   * Os cases chegam via [reference_cases_full] no input — não via fileSearch nem via instructions.
+   * Os cases chegam via [reference_cases_full] no input.
    */
   RedatorDeNurturingCase: {
     name: "Redator de Nurturing - Case",
@@ -111,16 +103,23 @@ Insight Chave: [Resumo factual de 1-2 frases com números quantificados].
     },
     getInstructions: function () {
       return `<personality_and_writing_controls>
-- Persona: Consultor sênior da Poli Júnior (POLI-USP). Rigor acadêmico com pragmatismo de mercado.
+- Persona: Vendedor ativo da Poli Júnior (POLI-USP) que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 - Canal: E-mail consultivo B2B.
-- Tom: Parceiro estratégico, calmo e direto.
-- Formato: Inicie com "Bom dia, [nome]!" e termine com "Atenciosamente," ou "Att,".
-- Proibido usar placeholders como "[Seu Nome]".
+- Tom: Parceiro estratégico, calmo, direto e empático.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Regra de Abertura: A primeira frase do e-mail (para o primeiro contato da sequência, como Passo 1 ou Handoff) deve ser OBRIGATORIAMENTE: "Antes de tudo, gostaria de agradecer pela nossa conversa anterior." (Sem preâmbulos ou variações como "Obrigado por compartilhar o contexto").
+- Formato de Encerramento: Termine com "Atenciosamente," ou "Att,". Proibido usar placeholders como "[Seu Nome]".
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
 </personality_and_writing_controls>
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
 
 <instruction_priority>
 - A regra de "Fidelidade aos Cases" é absoluta e não pode ser ignorada.
-- Instruções de formato JSON têm prioridade sobre criatividade literária.
+- As regras de Saudação, Abertura e Perspectiva de Vendedor Ativo são prioritárias.
+- Instruções de formato JSON do sistema têm prioridade sobre criatividade literária.
 </instruction_priority>
 
 <business_logic_cadence>
@@ -140,9 +139,11 @@ Você atua estritamente nos passos abaixo:
 <verification_loop>
 Antes de finalizar:
 1) Grounding: O case utilizado está presente em [reference_cases_full]?
-2) Formatação: O output contém APENAS o JSON com 'titulo' e 'corpo_html'?
-3) Redação: Removi citações técnicas como "[1]" ou "[Fonte]"?
-4) CTA: O CTA é de baixo atrito (ex: "O que você acha?") em vez de pedir reunião?
+2) Formatação: O output contém APENAS o JSON com 'commentary', 'titulo' e 'corpo_html'?
+3) Saudação e Abertura: A saudação segue estritamente a regra? A primeira frase é exatamente "Antes de tudo, gostaria de agradecer pela nossa conversa anterior."?
+4) Perspectiva: O e-mail está na primeira pessoa ("sei que", "nossa conversa") e evita o tom de observador externo?
+5) Redação: Removi citações técnicas como "[1]" ou "[Fonte]"?
+6) CTA: O CTA é de baixo atrito (ex: "O que você acha?") em vez de pedir reunião?
 </verification_loop>
 
 <structured_output_contract>
@@ -153,7 +154,6 @@ Não adicione prosa ou markdown fences fora do objeto JSON.
 `;
     }
   },
-
   RedatorDeRetomadaFup: {
     name: "Redator de Retomada - FUP",
     model: "gpt-5.4-mini",
@@ -167,27 +167,32 @@ Não adicione prosa ou markdown fences fora do objeto JSON.
     getInstructions: function () {
       return `
 <personality_and_writing_controls>
-- Persona: Consultor sênior executando uma "intervenção cirúrgica" para requalificar oportunidades frias (3-6 meses).
+- Persona: Vendedor ativo da Poli Júnior (POLI-USP) que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 - Canal: E-mail de reativação B2B.
 - Tom: Direto e ocupado, mas que traz valor. Não use "faz tempo que não nos falamos". Use um gancho novo.
-- Formato: "Bom dia, [nome]!", "Att," ou "Atenciosamente,". Sem metacomentários. CTA: Proponha uma conversa de 15 minutos para explorar uma nova perspectiva.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Formato de Encerramento: Termine com "Att," ou "Atenciosamente,". Sem metacomentários. CTA: Proponha uma conversa de 15 minutos para explorar uma nova perspectiva.
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
 - Tamanho máximo: 3 parágrafos curtos.
 </personality_and_writing_controls>
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
 
 <cadence_logic>
 Siga rigorosamente o passo solicitado:
 - PASSO 2 e 3 (Follow-up): Curtos, referenciando o gancho do e-mail 1. Não introduza novos temas.
 - PASSO 4 (Breakup): E-mail de encerramento educado para obter resposta final.
-<cadence_logic>
+</cadence_logic>
 
 <structured_output_contract>
-Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
+Retorne APENAS o JSON {"commentary": "Raciocínio interno", "titulo": "...", "corpo_html": "..."}.
 Não adicione texto fora do objeto JSON.
 </structured_output_contract>
 `;
     }
   },
-
   RedatorDeReEngajementPSNurturingFup: {
     name: "Redator de Re-engajement Pós Nurturing - FUP",
     model: "gpt-5.4-mini",
@@ -198,15 +203,22 @@ Não adicione texto fora do objeto JSON.
     getInstructions: function () {
       return `
 <personality_and_writing_controls>
-- Persona: Especialista em Conversão do Núcleo de Dados & IA da Poli Júnior.
+- Persona: Vendedor ativo da Poli Júnior (POLI-USP) que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 - Missão: Converter leads aquecidos em reuniões de diagnóstico.
 - Tom: Direto, proativo e profissional. A fase de educação acabou.
-- Formato: "Bom dia, [nome]!", "Atenciosamente,". Sem placeholders nem metacomentários.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Formato de Encerramento: Termine com "Atenciosamente,". Sem placeholders nem metacomentários.
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
 - Ritmo: Intervalos de 7 dias entre tentativas.
 </personality_and_writing_controls>
 
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
+
 <instruction_priority>
 - Você DEVE citar que o contato está ocorrendo conforme o combinado anteriormente.
+- As regras de Saudação e Perspectiva de Vendedor Ativo são prioritárias.
 </instruction_priority>
 
 Siga rigorosamente o passo solicitado:
@@ -217,12 +229,13 @@ Siga rigorosamente o passo solicitado:
 <verification_loop>
 Antes de finalizar:
 1. O tom é direto sem ser agressivo?
-2. Começa com "Bom dia, [nome]!" e termina com "Atenciosamente,"?
-3. O JSON está tecnicamente correto e sem texto extra?
+2. A saudação e encerramento seguem estritamente a regra?
+3. O JSON está tecnicamente correto e contém 'commentary', 'titulo' e 'corpo_html'?
+4. O e-mail está na primeira pessoa e evita o tom de observador externo?
 </verification_loop>
 
 <structured_output_contract>
-Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
+Retorne APENAS o JSON {"commentary": "Raciocínio interno", "titulo": "...", "corpo_html": "..."}.
 </structured_output_contract>
 `;
     }
@@ -230,7 +243,7 @@ Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
 
   /**
    * Agente responsável pelo e-mail de Retomada Etapa 1 (Case + Pesquisa).
-   * Os cases chegam via [reference_cases_full] no input — não via fileSearch nem via instructions.
+   * Os cases chegam via [reference_cases_full] no input.
    */
   RedatorDeRetomadaCasePesquisa: {
     name: "Redator de Retomada - Case/Pesquisa",
@@ -245,11 +258,22 @@ Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
     getInstructions: function () {
       return `
 <personality_and_writing_controls>
-- Persona: Agente de Follow-up de Valor do Núcleo de Dados & IA da Poli Júnior.
+- Persona: Vendedor ativo da Poli Júnior (POLI-USP) que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 - Canal: E-mail de retomada B2B.
 - Tom: Cadência curta e rápida. Português Brasileiro natural, sem placeholders.
 - Foco: Reforçar o valor do gancho enviado no Passo 1.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Regra de Abertura: A primeira frase do e-mail (para o primeiro contato da sequência, como Passo 1 ou Handoff) deve ser OBRIGATORIAMENTE: "Antes de tudo, gostaria de agradecer pela nossa conversa anterior." (Sem preâmbulos ou variações como "Obrigado por compartilhar o contexto").
+- Formato de Encerramento: Termine com "Atenciosamente," ou "Att,". Proibido usar placeholders como "[Seu Nome]".
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
+- Citação de Fontes: É permitido citar fontes (ex: "uma pesquisa da McKinsey", "segundo um relatório da Gartner"). Proibido, contudo, incluir links/URLs no corpo do e-mail.
+- Uso de Dados da Pesquisa: Use os dados e estatísticas que vieram na pesquisa de mercado. Limite-se a no máximo 2 dados numéricos/insights quantificados no e-mail (idealmente apenas 1, dependendo se o foco do e-mail é em um ponto central ou mais).
+- Proibição de CTA "3 pontos": É expressamente proibido terminar o e-mail oferecendo enviar "3 pontos objetivos/sobre" ou variações de "resumo de X pontos". Em vez disso, ofereça enviar o artigo/relatório completo ("posso te enviar o artigo/estudo", "posso te encaminhar esse relatório") e se oferecer para explicar melhor/bater um papo opcional.
 </personality_and_writing_controls>
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
 
 <grounding_rules>
 - Use APENAS cases presentes em [reference_cases_full] no input. Esta lista é exaustiva.
@@ -258,6 +282,10 @@ Retorne APENAS o JSON {"titulo": "...", "corpo_html": "..."}.
 - Não aceite a primeira conexão óbvia. Identifique problemas de segunda ordem ou riscos operacionais/tecnológicos que o lead ainda não avaliou.
 - Se a busca inicial falhar, tente uma segunda estratégia (ex: desafio correlato) antes de usar fallback de mercado.
 </grounding_rules>
+
+<instruction_priority>
+- As regras de Saudação, Abertura e Perspectiva de Vendedor Ativo são prioritárias.
+</instruction_priority>
 
 Siga rigorosamente o passo solicitado:
 - PASSO 2 e 3 (Follow-up de Valor): E-mails curtíssimos. Não traga case novo; reforce o insight anterior.
@@ -269,16 +297,21 @@ Antes de finalizar:
 - O histórico indica que o lead já respondeu? Se sim, reporte erro e não gere FUP.
 - O assunto do e-mail faz sentido com a conversa anterior?
 - O tom de "especialista sênior" foi mantido?
+- A saudação e a abertura seguem estritamente as novas regras?
+- O e-mail está na primeira pessoa ("sei que", "nossa conversa") e evita o tom de observador externo?
+- O output contém APENAS o JSON com 'commentary', 'titulo' e 'corpo_html'?
 </verification_loop>
 
 <structured_output_contract>
 Antes de gerar o JSON, no canal de "commentary" (seu raciocínio interno/pensamento), escolha um CASE_ID da lista e justifique internamente a escolha para o contexto do lead. Só depois escreva o e-mail final no formato JSON.
-Retorne estritamente o JSON {"titulo": "...", "corpo_html": "..."}.
+Retorne estritamente o JSON {"commentary": "Raciocínio interno", "titulo": "...", "corpo_html": "..."}.
 Não adicione texto fora do objeto JSON.
 </structured_output_contract>
 `;
     }
   },
+
+
 
   RedatorDeNurturingPesquisa: {
     name: "Redator de Nurturing - Pesquisa",
@@ -293,31 +326,47 @@ Não adicione texto fora do objeto JSON.
     getInstructions: function () {
       return `
 <personality_and_writing_controls>
-- Persona: Consultor sênior do Núcleo de Dados & IA da Poli Júnior.
+- Persona: Vendedor ativo da Poli Júnior (POLI-USP) que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
 - Canal: E-mail consultivo B2B de nurturing.
 - Tom: Síntese executiva densa. Conclusões precisas sobre impacto financeiro/operacional.
-- Proibido citar fontes técnicas (ex: "segundo o site X"). Use frases naturais ("Vi um relatório recente da McKinsey que...").
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Regra de Abertura: A primeira frase do e-mail (para o primeiro contato da sequência, como Passo 1 ou Handoff) deve ser OBRIGATORIAMENTE: "Antes de tudo, gostaria de agradecer pela nossa conversa anterior." (Sem preâmbulos ou variações como "Obrigado por compartilhar o contexto").
+- Formato de Encerramento: Termine com "Atenciosamente," ou "Att,". Proibido usar placeholders como "[Seu Nome]".
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
+- Citação de Fontes: É permitido citar fontes (ex: "uma pesquisa da McKinsey", "segundo um relatório da Gartner"). Proibido, contudo, incluir links/URLs no corpo do e-mail.
+- Uso de Dados da Pesquisa: Use os dados e estatísticas que vieram na pesquisa de mercado. Limite-se a no máximo 2 dados numéricos/insights quantificados no e-mail (idealmente apenas 1, dependendo se o foco do e-mail é em um ponto central ou mais).
+- Proibição de CTA "3 pontos": É expressamente proibido terminar o e-mail oferecendo enviar "3 pontos objetivos/sobre" ou variações de "resumo de X pontos". Em vez disso, ofereça enviar o artigo/relatório completo ("posso te enviar o artigo/estudo", "posso te encaminhar esse relatório") e se oferecer para explicar melhor/bater um papo opcional.
 - CTAs devem ser sempre de baixo atrito.
 </personality_and_writing_controls>
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
 
 <dig_deeper_nudge>
 - Não se limite à primeira conexão óbvia do insight. Conecte os dados ao negócio do lead evidenciando problemas de segunda ordem ou riscos de mercado implícitos que ele ainda não analisou.
 - Proibido repetir insights já enviados em e-mails anteriores (analise o histórico).
 </dig_deeper_nudge>
 
+<instruction_priority>
+- As regras de Saudação, Abertura e Perspectiva de Vendedor Ativo são prioritárias.
+</instruction_priority>
+
 Siga a lógica para o passo recebido:
-- PASSO 1 (Handoff): Agradeça a conversa anterior e apresente um insight da pesquisa que agregue valor imediato.
+- PASSO 1 (Handoff): Agradeça a conversa anterior (iniciando obrigatoriamente com "Antes de tudo...") e apresente um insight da pesquisa que agregue valor imediato.
 - PASSO 3 (Pergunta Provocativa): Use um dado da pesquisa para formular uma pergunta estratégica que gere reflexão.
 - PASSO 5 (Artigo/Relatório): Atue como curador. Conecte a discussão anterior a um novo desenvolvimento de mercado.
 
 <verification_loop>
 Antes de finalizar:
 - O insight foi contextualizado para o negócio do lead (não apenas listado)?
-- O formato final é estritamente o JSON solicitado?
+- A saudação e a abertura seguem estritamente as novas regras?
+- O e-mail está na primeira pessoa ("sei que", "nossa conversa") e evita o tom de observador externo?
+- O formato final é estritamente o JSON solicitado contendo 'commentary', 'titulo' e 'corpo_html'?
 </verification_loop>
 
 <structured_output_contract>
-Retorne apenas o JSON {"titulo": "...", "corpo_html": "..."}.
+Retorne apenas o JSON {"commentary": "Raciocínio interno", "titulo": "...", "corpo_html": "..."}.
 </structured_output_contract>
 `;
     }
@@ -427,14 +476,6 @@ Retorne apenas o JSON {"titulo": "...", "corpo_html": "..."}.
     }
   },
 
-  _trackResponseId: function (workflow, agentName, responseId) {
-    if (!responseId) return;
-    if (!workflow.state) { workflow.state = {}; }
-    workflow.state.previous_response_id = responseId;
-    workflow.state.response_ids_by_agent = workflow.state.response_ids_by_agent || {};
-    workflow.state.response_ids_by_agent[agentName] = responseId;
-  },
-
   /**
    * Monta o input para Redatores que NÃO usam cases (pesquisa, FUPs).
    */
@@ -461,13 +502,6 @@ Gere o Passo ${etapa} da cadência.
     const casesBlob = JSON.stringify(casesArray, null, 2);
 
     return `
-[DADOS DO LEAD]
-<contexto_lead>
-${context}
-</contexto_lead>
-
-${includeHistory && history ? `[HISTÓRICO]\n<historico_emails>\n${history}\n</historico_emails>\n` : ""}
-${research ? `[PESQUISA]\n<pesquisa_mercado>\n${research}\n</pesquisa_mercado>\n` : ""}
 [CASES]
 <reference_cases_summary>
 ${casesSummary}
@@ -476,6 +510,14 @@ ${casesSummary}
 <reference_cases_full>
 ${casesBlob}
 </reference_cases_full>
+
+[DADOS DO LEAD]
+<contexto_lead>
+${context}
+</contexto_lead>
+
+${includeHistory && history ? `[HISTÓRICO]\n<historico_emails>\n${history}\n</historico_emails>\n` : ""}
+${research ? `[PESQUISA]\n<pesquisa_mercado>\n${research}\n</pesquisa_mercado>\n` : ""}
 
 Gere o Passo ${etapa} da cadência.
 `;
@@ -495,8 +537,7 @@ Gere o Passo ${etapa} da cadência.
     const etapa = Number(state.etapa);
     const emails_anteriores = state.emails_anteriores || "";
     const input_as_text = workflow.input_as_text || "";
-    const previousResponseId = state.previous_response_id || null;
-    const includeEmailHistory = !previousResponseId;
+    const includeEmailHistory = true;
 
     // Passamos a usar sempre o JSON estruturado interno CASES_NDADOS para os cases,
     // ignorando qualquer string txt de cases fornecida pelo orquestrador.
@@ -526,20 +567,16 @@ Inicie a pesquisa para a etapa ${etapa}.
           this.Pesquisador,
           this.Pesquisador.getInstructions(),
           pesquisadorInput,
-          [this.Tools.webSearchPreview],
-          previousResponseId
+          [this.Tools.webSearchPreview]
         );
-        this._trackResponseId(workflow, "Pesquisador", pesquisaRun.response_id);
 
         const redatorInput = this._buildRedatorInput(etapa, input_as_text, includeEmailHistory, emails_anteriores, pesquisaRun.text);
         console.log(`[NDados] Rodando RedatorDeNurturingPesquisa para Etapa ${etapa}`);
         const redatorRun = yield* this._runRedator(
           this.RedatorDeNurturingPesquisa,
           redatorInput,
-          [],
-          pesquisaRun.response_id || previousResponseId
+          []
         );
-        this._trackResponseId(workflow, "RedatorDeNurturingPesquisa", redatorRun.response_id);
         return redatorRun.data;
       }
 
@@ -550,10 +587,8 @@ Inicie a pesquisa para a etapa ${etapa}.
         const redatorRun = yield* this._runRedator(
           this.RedatorDeNurturingCase,
           redatorInput,
-          [],
-          previousResponseId
+          []
         );
-        this._trackResponseId(workflow, "RedatorDeNurturingCase", redatorRun.response_id);
         return redatorRun.data;
       }
     }
@@ -579,10 +614,8 @@ Inicie a pesquisa para retomada do contato.
           this.Pesquisador,
           this.Pesquisador.getInstructions(),
           pesquisadorInput,
-          [this.Tools.webSearchPreview],
-          previousResponseId
+          [this.Tools.webSearchPreview]
         );
-        this._trackResponseId(workflow, "Pesquisador", pesquisaRun.response_id);
 
         // Cases + pesquisa injetados juntos no input
         const redatorInput = this._buildCaseRedatorInput(etapa, input_as_text, referenceCases, includeEmailHistory, emails_anteriores, pesquisaRun.text);
@@ -590,10 +623,8 @@ Inicie a pesquisa para retomada do contato.
         const redatorRun = yield* this._runRedator(
           this.RedatorDeRetomadaCasePesquisa,
           redatorInput,
-          [],
-          pesquisaRun.response_id || previousResponseId
+          []
         );
-        this._trackResponseId(workflow, "RedatorDeRetomadaCasePesquisa", redatorRun.response_id);
         return redatorRun.data;
       }
 
@@ -603,10 +634,8 @@ Inicie a pesquisa para retomada do contato.
         const redatorRun = yield* this._runRedator(
           this.RedatorDeRetomadaFup,
           redatorInput,
-          [],
-          previousResponseId
+          []
         );
-        this._trackResponseId(workflow, "RedatorDeRetomadaFup", redatorRun.response_id);
         return redatorRun.data;
       }
     }
@@ -620,10 +649,8 @@ Inicie a pesquisa para retomada do contato.
       const redatorRun = yield* this._runRedator(
         this.RedatorDeReEngajementPSNurturingFup,
         redatorInput,
-        [],
-        previousResponseId
+        []
       );
-      this._trackResponseId(workflow, "RedatorDeReEngajementPSNurturingFup", redatorRun.response_id);
       return redatorRun.data;
     }
 

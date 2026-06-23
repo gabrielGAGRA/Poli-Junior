@@ -1,0 +1,176 @@
+resp_0bea7dcd05c7555c006a385fb5ccc0819d8ab7aeb2bfe87b8d
+
+Instructions
+<memo_mode>
+
+Estilo: Síntese executiva densa.
+Conclusões: Prefira conclusões precisas sobre o impacto financeiro/operacional em vez de frases vagas.
+Calibragem: Se a pesquisa indicar um risco, ligue-o diretamente a um processo de gestão (ex: "Isso pode pressionar sua margem de contribuição"). </memo_mode>
+<dig_deeper_nudge>
+Vá além do óbvio. Se o insight é sobre "IA", não fale de tecnologia; fale de como a falta de governança dessa tecnologia pode criar silos de informação ou custos ocultos na operação do lead.
+</dig_deeper_nudge>
+
+<business_logic_cadence>
+Siga a lógica para o passo recebido:
+
+PASSO 1 (Handoff): Agradeça a conversa anterior e apresente um insight da pesquisa que agregue valor imediato.
+PASSO 3 (Pergunta Provocativa): Use um dado da pesquisa para formular uma pergunta estratégica que gere reflexão sobre o setor do cliente.
+PASSO 5 (Artigo/Relatório): Atue como curador. Conecte a discussão anterior a um novo desenvolvimento de mercado encontrado na pesquisa. </business_logic_cadence>
+<rules> - Proibido repetir insights já enviados em e-mails anteriores (analise o histórico). - Proibido citar fontes técnicas (ex: "segundo o site X"). Use frases naturais ("Vi um relatório recente da McKinsey que..."). - CTAs devem ser sempre de baixo atrito. </rules>
+<verification_loop>
+
+Verifique se o insight da pesquisa foi devidamente contextualizado para o negócio do lead.
+Garanta que a estrutura respeita os limites de comprimento (conciso e denso).
+Valide se o formato final é estritamente o JSON solicitado. </verification_loop>
+<output_contract>
+Retorne apenas o JSON estruturado: {"commentary": "...", "titulo": "...", "corpo_html": "..."}. O campo "commentary" DEVE ser utilizado como seu canal de raciocínio interno.
+</output_contract>
+
+Input
+26,350t
+user
+[DADOS DO LEAD]
+<contexto_lead>
+Empresa: Nacional Gás
+Setor: 159
+
+Resumo Estratégico:
+
+<h1>[RESUMO ESTRATÉGICO]</h1># Contexto Geral Há orçamento sendo montado a partir de agosto, com retomada na segunda semana; o principal problema indicado é o timing, devido à existência de outras pendências mais latentes. # Desafios - Timing inadequado para a execução - Existência de muitas outras pendências mais latentes - Orçamento em fase de montagem (iniciando em agosto) # Objetivos - Ajustar a execução ao cronograma com retomada na segunda semana - Consolidar e fechar o orçamento iniciado em agosto # Oportunidades - Planejar a retomada na segunda semana para destravar o projeto - Aproveitar o momento em que o orçamento estiver sendo montado a partir de agosto </contexto_lead>
+[HISTÓRICO]
+<historico_emails>
+[]
+</historico_emails>
+
+[PESQUISA]
+<pesquisa_mercado>
+Fonte: IBP – Downstream.
+Insight Chave: A cadeia de GLP no Brasil enfrenta um gargalo logístico estrutural: o IBP aponta que 90% dos derivados de petróleo ainda circulam por caminhões, com carência crônica de ferrovias, dutos e hidrovias; o próprio instituto estima R$ 3,1 bilhões em investimentos portuários em 10 anos para destravar a movimentação. (portal.ibp.org.br)
+
+Fonte: McKinsey – Digital transformation: Raising supply-chain performance to new levels.
+Insight Chave: O maior espaço de ganho está na digitalização da operação: a média de digitização da supply chain é de 43% e só 2% dos executivos a tratam como prioridade digital, mas a digitalização agressiva pode elevar o EBIT em 3,2% ao ano e a receita em 2,3%. (mckinsey.com)
+
+Fonte: McKinsey – Rethinking the future: A new operating model for gas distributor success.
+Insight Chave: O timing do orçamento é sensível porque projetos de capex podem estourar custos em até 70% e prazos em até 60% quando falta visibilidade ponta a ponta; a digitalização do ciclo de capex foi associada a aceleração de 10% a 20% no cronograma, eficiência de orçamento de 5% a 10% e potencial de até 30% de ganho de eficiência operacional. (mckinsey.com)
+
+Fonte: ANP – SRD-GLP / IBP – Perspectivas para o setor de combustíveis em 2025.
+Insight Chave: O mercado de GLP mostra crescimento moderado, não explosivo: o IBP projeta alta de 1,5% na demanda em 2025, para 7,7 milhões de toneladas, e de 0,9% em 2026, para 7,8 milhões; ao mesmo tempo, a ANP já digitalizou autorizações para um mercado com mais de 70 mil revendedores, reforçando a pressão por compliance e automação. (ibp.org.br)
+</pesquisa_mercado>
+
+Gere o Passo 1 da cadência.
+
+assistant
+Fonte: IBP – Downstream.
+Insight Chave: A cadeia de GLP no Brasil enfrenta um gargalo logístico estrutural: o IBP aponta que 90% dos derivados de petróleo ainda circulam por caminhões, com carência crônica de ferrovias, dutos e hidrovias; o próprio instituto estima R$ 3,1 bilhões em investimentos portuários em 10 anos para destravar a movimentação. (portal.ibp.org.br)
+
+Fonte: McKinsey – Digital transformation: Raising supply-chain performance to new levels.
+Insight Chave: O maior espaço de ganho está na digitalização da operação: a média de digitização da supply chain é de 43% e só 2% dos executivos a tratam como prioridade digital, mas a digitalização agressiva pode elevar o EBIT em 3,2% ao ano e a receita em 2,3%. (mckinsey.com)
+
+Fonte: McKinsey – Rethinking the future: A new operating model for gas distributor success.
+Insight Chave: O timing do orçamento é sensível porque projetos de capex podem estourar custos em até 70% e prazos em até 60% quando falta visibilidade ponta a ponta; a digitalização do ciclo de capex foi associada a aceleração de 10% a 20% no cronograma, eficiência de orçamento de 5% a 10% e potencial de até 30% de ganho de eficiência operacional. (mckinsey.com)
+
+Fonte: ANP – SRD-GLP / IBP – Perspectivas para o setor de combustíveis em 2025.
+Insight Chave: O mercado de GLP mostra crescimento moderado, não explosivo: o IBP projeta alta de 1,5% na demanda em 2025, para 7,7 milhões de toneladas, e de 0,9% em 2026, para 7,8 milhões; ao mesmo tempo, a ANP já digitalizou autorizações para um mercado com mais de 70 mil revendedores, reforçando a pressão por compliance e automação. (ibp.org.br)
+
+Reasoning
+Empty reasoning item
+Web Search
+Searched the web
+Reasoning
+Considering energy transition sources
+
+I might want to use SRD-GLP as a starting point. It could be helpful to include an official source about energy transition and ESG. I’m thinking about searching for information from IBP or McKinsey on methane emissions or low-carbon topics, though that might not be absolutely necessary. I should prioritize finding a recent official source on ESG in the sector to enhance my insights. Let’s explore this further!
+
+Web Search
+Searched the web
+Reasoning
+Assessing capex efficiency
+
+This highlights the importance of capex and budget timing. Capex projects can exceed costs by 70% and schedules by 60% due to limited visibility. The digital capex console could improve schedule acceleration by 10-20% and capital budget efficiency by 5-10%, which is great for the user's timing and budget concerns. I should consider ESG reports on methane emissions but may need to explore McKinsey insights about gas distributors and regulatory constraints. I should search for information about 70k revendedores and compliance.
+
+Identifying key sources
+
+I can utilize three main sources for my analysis:
+
+The IBP downstream report highlights that 90% of road transport relies on insufficient rail, pipelines, and waterways, raising costs and accident risks.
+McKinsey's supply chain digitization insights show that 43% digitization correlates with 3.2% EBIT and 2.3% revenue growth.
+McKinsey's gas distributor model indicates that capex overruns can go up to 70%, but digitalization could enable 10-20% schedule acceleration and 5-10% budget efficiency.
+I might also consider the IBP 2025 outlook for GLP demand, but it seems I should look into official ANP lines regarding compliance for 70k revendors, especially since I’m encountering an internal error referencing a website.
+
+Web Search
+Searched the web
+Reasoning
+Searching for recent sources
+
+I need to find more up-to-date information regarding the operations model for gas distributors. There's a possibility that recent developments might have occurred, and older sources might not reflect the current industry standards or practices. I wonder what the latest trends or challenges are that these businesses are facing. Let me search for recent articles or reports that could provide insights into current operations in the gas distribution sector. Alright, let's get started!
+
+Web Search
+Searched the web
+Reasoning
+Exploring energy insights
+
+I’m thinking about gathering more sources related to regulations, ESG, and recent energy transition impacts. I'm aiming for 3-4 insights. First, there's the logistical bottleneck with 90% of derived petroleum transported by road in Brazil, indicating high freight dependence. Then, I’ll look into digitalization ROI, which reportedly can improve EBIT and revenue. Also, trends forecast GLP demand growth, indicating steady progress. Lastly, I want to explore the regulatory pressures surrounding digitization and compliance, focusing on 70k vendors.
+
+Clarifying insights for analysis
+
+I should consider mentioning the conservative view on demand growth at only 1.5%, while the disruptive perspective highlights that a digital supply chain can unlock 3.2% EBIT and 2-4 pp EBITDA. However, since the output contract specifies including only 3-4 insights without extra commentary, I’ll ensure to label them as "Fonte" and "Insight Chave." For sourcing, I might focus on strategic information, particularly data on network complexity and road dependence from IBP.
+
+Web Search
+Searched the web
+Reasoning
+Searching for LPG sources
+
+I need to find sector-specific sources on LPG or gas. I'm thinking of searching through official or sector portals in Brazil, plus the International Energy Agency (IEA). I could also check resources like ANP or IBP. It’ll be important to focus only on the sources I find through my searches. I should also look into quantifying market, ESG, and regulatory impacts related to the LPG sector.
+
+Web Search
+Searched the web
+Reasoning
+Planning LPG Insights
+
+I’m thinking that if I need to use tools, I should search for insights backed by three reliable sources. I likely need to identify the LPG distribution sector in Brazil and look into official industry sources about logistical bottlenecks and trends.
+
+For strategic subquestions, I’ll consider:
+
+What are the main operational bottlenecks in LPG distribution?
+What management trends are influencing ROI in the distribution sector?
+What ESG regulations are impacting LPG market trends?
+I’ll perform a search to gather relevant insights for these points.
+
+Searching for Reliable Sources
+
+I need to find sources from reputable firms like McKinsey, BCG, Accenture, Bain, PwC, and Gartner, or even check official sector portals. For the LPG sector, the International Energy Agency (IEA) might be useful. I should prioritize those sources but could also look at the Brazilian IBP and relevant associations for detailed insights.
+
+I'm thinking about using search queries focused on gas, oil & gas, logistics, digital transformation, and ESG to gather quantifiable data. Let’s proceed!
+
+user
+<business_context>
+Empresa: Nacional Gás
+Setor: 159
+
+Resumo Estratégico:
+
+<h1>[RESUMO ESTRATÉGICO]</h1># Contexto Geral Há orçamento sendo montado a partir de agosto, com retomada na segunda semana; o principal problema indicado é o timing, devido à existência de outras pendências mais latentes. # Desafios - Timing inadequado para a execução - Existência de muitas outras pendências mais latentes - Orçamento em fase de montagem (iniciando em agosto) # Objetivos - Ajustar a execução ao cronograma com retomada na segunda semana - Consolidar e fechar o orçamento iniciado em agosto # Oportunidades - Planejar a retomada na segunda semana para destravar o projeto - Aproveitar o momento em que o orçamento estiver sendo montado a partir de agosto </business_context>
+<email_history>
+[]
+</email_history>
+
+<task_update>
+Inicie a pesquisa para a etapa 1.
+</task_update>
+
+Output
+621t
+Reasoning
+Preparing concise, value-driven response
+
+Choosing a focused budget insight
+
+assistant
+{
+  "commentary": "Passo 1 estruturado com agradecimento, insight novo e contextualizado ao momento orçamentário da Nacional Gás, sem citar fontes de forma técnica e com CTA de baixo atrito.",
+  "titulo": "Um ponto que pode ajudar no orçamento de agosto",
+  "corpo_html": "<p>Olá, [Nome].</p><p>Obrigado pela conversa anterior.</p><p>Ao olhar o momento da Nacional Gás, me chamou atenção um ponto que pode ser útil já na montagem do orçamento: em distribuição de gás, projetos costumam perder prazo e orçamento quando a gestão não tem visibilidade ponta a ponta entre planejamento, operação, fornecedores e execução de campo.</p><p>Isso fica ainda mais crítico em um mercado de GLP que deve crescer de forma moderada nos próximos ciclos. Na prática, quando o volume não acelera muito, o ganho vem menos de expansão e mais de previsibilidade operacional — o que ajuda a proteger margem, evitar retrabalho e reduzir pressão sobre o CAPEX aprovado.</p><p>Talvez o melhor timing agora não seja “acelerar tudo”, mas garantir que a retomada da segunda semana já aconteça com critérios claros de priorização e acompanhamento.</p><p>Se fizer sentido, eu posso te mandar em seguida um resumo de 3 pontos objetivos que costumam ajudar a dar mais segurança a esse tipo de retomada.</p><p>Abraços,<br>[Sua Assinatura]</p>"
+}
+
+Previous Response
+resp_0bea7dcd05c7555c006a385f42eab8819d8c397b57569985ff

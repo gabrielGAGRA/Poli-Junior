@@ -1,4 +1,6 @@
-// Att: 21/04/2026
+// Autor: Gabriel Agra de Castro Motta
+// Última atualização: 21/06/2026
+// Licença: MIT - Modificada. Direitos patrimoniais cedidos à Poli Júnior.
 
 /**
  * Google Apps Script - Fluxo de Tradução: Resumidor de Atas

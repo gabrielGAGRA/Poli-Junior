@@ -1,0 +1,132 @@
+System: <personality_and_writing_controls>
+- Persona: Vendedor ativo da Poli Júnior (POLI-USP) que já conduzia o caso. Fale sempre na primeira pessoa ("sei que", "nossa conversa").
+- Canal: E-mail consultivo B2B de nurturing.
+- Tom: Síntese executiva densa. Conclusões precisas sobre impacto financeiro/operacional.
+- Regra de Saudação: Use unicamente "Bom dia, [Nome do Lead]" (se houver nome do lead) ou "Olá." (se não houver nome do lead). Jamais saude a empresa ou "time".
+- Regra de Abertura: A primeira frase do e-mail (para o primeiro contato da sequência, como Passo 1 ou Handoff) deve ser OBRIGATORIAMENTE: "Antes de tudo, gostaria de agradecer pela nossa conversa anterior." (Sem preâmbulos ou variações como "Obrigado por compartilhar o contexto").
+- Formato de Encerramento: Termine com "Atenciosamente," ou "Att,". Proibido usar placeholders como "[Seu Nome]".
+- Banimento de Perspectiva Externa: Evite se portar como um agente ou observador externo (banido usar "Vi no histórico que...", "Vi no resumo que..." ou "Vi que a discussão acabou esfriando"). Use "Sei que..." ou "Em nossa última conversa...".
+- Proibido citar fontes técnicas (ex: "segundo o site X"). Use frases naturais ("Vi um relatório recente da McKinsey que...").
+- CTAs devem ser sempre de baixo atrito.
+</personality_and_writing_controls>
+
+<email_history_calibration>
+- O bloco <historico_emails> deve ser utilizado para calibrar o tom do e-mail e garantir a continuidade da conversa. Proibido usar o resumo para isso.
+</email_history_calibration>
+
+<dig_deeper_nudge>
+Não se limite à primeira conexão óbvia do insight de pesquisa. Conecte os dados técnicos ao negócio do lead evidenciando riscos de obsolescência ou problemas de escalabilidade implícitos.
+</dig_deeper_nudge>
+
+<instruction_priority>
+- As regras de Saudação, Abertura e Perspectiva de Vendedor Ativo são prioritárias.
+</instruction_priority>
+
+<business_logic_cadence>
+Siga a lógica para o passo recebido:
+- PASSO 1 (Handoff): Agradeça a conversa anterior (iniciando obrigatoriamente com "Antes de tudo...") e apresente um insight da pesquisa que agregue valor imediato.
+- PASSO 3 (Pergunta Provocativa): Use um dado da pesquisa para formular uma pergunta estratégica que gere reflexão sobre o setor do cliente.
+- PASSO 5 (Artigo/Relatório): Atue como curador. Conecte a discussão anterior a um novo desenvolvimento de mercado encontrado na pesquisa.
+</business_logic_cadence>
+
+<rules>
+- Proibido repetir insights já enviados em e-mails anteriores (analise o histórico). 
+- Proibido citar fontes técnicas (ex: "segundo o site X"). Use frases naturais.
+</rules>
+
+<chain_of_thought_and_grounding>
+Use o campo 'commentary' para rascunhar sua linha de raciocínio (CoT) antes de gerar o e-mail final.
+</chain_of_thought_and_grounding>
+
+<verification_loop>
+- Verifique se o insight da pesquisa foi devidamente contextualizado para o negócio do lead. 
+- Garanta que a estrutura respeita os limites de comprimento (conciso e denso).
+- A saudação e a abertura seguem estritamente as novas regras?
+- O e-mail está na primeira pessoa ("sei que", "nossa conversa") e evita o tom de observador externo?
+- Valide se o formato final é estritamente o JSON solicitado. 
+</verification_loop>
+
+<output_contract>
+Retorne apenas o JSON estruturado: {"commentary": "...", "titulo": "...", "corpo_html": "..."}. 
+</output_contract>
+
+User: 
+<business_context>
+Nome do Lead: Vander Voltolini
+Empresa: Yuny incorporadora
+Setor: 171
+
+Resumo Estratégico:
+<h1>[RESUMO ESTRATÉGICO]</h1># Contexto Geral Yuny Incorporadora é uma construtora com obras majoritariamente em São Paulo, com foco em prédios residenciais de médio e alto padrão. Possui o Yunylab, setor de inovação para fomentar novas tecnologias e melhorar a experiência de compra e moradia. O contato é um consultor imobiliário (Vander Voltolini) via outbound WhatsApp, com encaminhamento provável para outro decisor. Foi mencionado um projeto piloto/proposta relacionada a uma plataforma de gestão de imóveis para centralizar informações de construtoras e terrenos e abranger regiões de alto padrão. # Desafios - Lead diagnosticado com Parkinson, com dificuldade para fechar agenda/avançar em crise. - Projeto/piloto com escopo “confuso demais”, com dificuldade de entendimento. - Necessidade de centralizar informações de construtoras e de terrenos em uma plataforma. - Alinhar se será possível ser incluído nos “10 primeiros resultados” (precisa de avaliação). - Dificuldade em marcar/progredir com a proposta no momento. # Objetivos - Centralizar e organizar informações de construtoras e terrenos em uma plataforma de gestão de imóveis para regiões de alto padrão. - Implantar funcionalidades alinhadas ao tema/abordagem do site, com gestão dinâmica via CMS (Strapi). - Definir e tornar claro o escopo fechado e quais funcionalidades serão implementadas. - Fechar contratação dentro de um timing estimado de 3 a 5 meses. - Ajustar orçamento, pois a faixa de 65k a 90k foi considerada alta pelo lead (com intenção de negociar). # Oportunidades - Definir e refinAR o escopo do piloto (reduzir “confusão”) e transformar em MVP com funcionalidades claras. - Estruturar proposta com entregas por sprints (dev, testes, deploy e, se houver, migração/gestão de mudança/período assistido). - Negociar faixa de budget com base em parâmetros de precificação por ITIP (ex.: 1300/1200/1100) e sprints (dev e extras) para viabilizar decisão. - Revisar estratégia de SEO/posicionamento para atender o requisito de “estar nos 10 primeiros resultados”, a partir do material que será enviado.
+</business_context>
+
+<email_history>
+[]
+</email_history>
+
+
+
+<task_update>
+Inicie a pesquisa para a etapa 1.
+</task_update>
+
+
+Assistant: Fonte: Planejamento NTec  
+Insight Chave: Quais são as principais dores de escalabilidade e operação digital no setor de incorporação imobiliária de médio/alto padrão em São Paulo, especialmente na centralização de dados de construtoras, terrenos e funis comerciais?
+
+Fonte: Planejamento NTec  
+Insight Chave: Quais as tecnologias emergentes ou padrões de interface que os concorrentes deste lead estão adotando para Apps/Websites?
+
+Fonte: Planejamento NTec  
+Insight Chave: Quais tendências de stack estão mais presentes entre concorrentes e players do setor: Low-code vs. Custom, Cloud-native, CMS dinâmico, automação de marketing e integração com CRM?
+
+User: [DADOS DO LEAD]
+<contexto_lead>
+Nome do Lead: Vander Voltolini
+Empresa: Yuny incorporadora
+Setor: 171
+
+Resumo Estratégico:
+<h1>[RESUMO ESTRATÉGICO]</h1># Contexto Geral Yuny Incorporadora é uma construtora com obras majoritariamente em São Paulo, com foco em prédios residenciais de médio e alto padrão. Possui o Yunylab, setor de inovação para fomentar novas tecnologias e melhorar a experiência de compra e moradia. O contato é um consultor imobiliário (Vander Voltolini) via outbound WhatsApp, com encaminhamento provável para outro decisor. Foi mencionado um projeto piloto/proposta relacionada a uma plataforma de gestão de imóveis para centralizar informações de construtoras e terrenos e abranger regiões de alto padrão. # Desafios - Lead diagnosticado com Parkinson, com dificuldade para fechar agenda/avançar em crise. - Projeto/piloto com escopo “confuso demais”, com dificuldade de entendimento. - Necessidade de centralizar informações de construtoras e de terrenos em uma plataforma. - Alinhar se será possível ser incluído nos “10 primeiros resultados” (precisa de avaliação). - Dificuldade em marcar/progredir com a proposta no momento. # Objetivos - Centralizar e organizar informações de construtoras e terrenos em uma plataforma de gestão de imóveis para regiões de alto padrão. - Implantar funcionalidades alinhadas ao tema/abordagem do site, com gestão dinâmica via CMS (Strapi). - Definir e tornar claro o escopo fechado e quais funcionalidades serão implementadas. - Fechar contratação dentro de um timing estimado de 3 a 5 meses. - Ajustar orçamento, pois a faixa de 65k a 90k foi considerada alta pelo lead (com intenção de negociar). # Oportunidades - Definir e refinAR o escopo do piloto (reduzir “confusão”) e transformar em MVP com funcionalidades claras. - Estruturar proposta com entregas por sprints (dev, testes, deploy e, se houver, migração/gestão de mudança/período assistido). - Negociar faixa de budget com base em parâmetros de precificação por ITIP (ex.: 1300/1200/1100) e sprints (dev e extras) para viabilizar decisão. - Revisar estratégia de SEO/posicionamento para atender o requisito de “estar nos 10 primeiros resultados”, a partir do material que será enviado.
+</contexto_lead>
+
+[HISTÓRICO]
+<historico_emails>
+[]
+</historico_emails>
+
+[PESQUISA]
+<pesquisa_mercado>
+Fonte: Planejamento NTec  
+Insight Chave: Quais são as principais dores de escalabilidade e operação digital no setor de incorporação imobiliária de médio/alto padrão em São Paulo, especialmente na centralização de dados de construtoras, terrenos e funis comerciais?
+
+Fonte: Planejamento NTec  
+Insight Chave: Quais as tecnologias emergentes ou padrões de interface que os concorrentes deste lead estão adotando para Apps/Websites?
+
+Fonte: Planejamento NTec  
+Insight Chave: Quais tendências de stack estão mais presentes entre concorrentes e players do setor: Low-code vs. Custom, Cloud-native, CMS dinâmico, automação de marketing e integração com CRM?
+</pesquisa_mercado>
+
+[CASES]
+<reference_cases_summary>
+ID: CASE_01 | Setor: Saúde / Bem-estar e Tecnologia | Dores: necessidade de validação de mercado, falta de validação de conceito, ausência de MVP estruturado, necessidade de adequação às demandas dos usuários
+ID: CASE_02 | Setor: Saúde / Diagnósticos Médicos | Dores: demora na entrega de exames físicos, perda de contato com gestantes, processos logísticos e operacionais demorados, dificuldade de acesso a resultados
+ID: CASE_03 | Setor: Moda / Tecnologia | Dores: limitações orçamentárias, prazos apertados, necessidade de desenvolvimento de software sob medida
+ID: CASE_04 | Setor: Educação / Tecnologia | Dores: escassez de mão de obra de desenvolvimento, gargalo na implementação de protótipos, necessidade de expandir a capacidade de engenharia, rigidez na contratação tradicional
+ID: CASE_05 | Setor: Tecnologia / Serviços Jurídicos | Dores: necessidade de validação de mercado, falta de definição de modelo de negócios, falta de protótipo de design, ausência de presença web
+ID: CASE_06 | Setor: Saúde / Tecnologia Social | Dores: risco de depressão gestacional em mães de baixa renda, falta de acompanhamento de saúde contínuo, barreiras de acesso a especialistas de saúde mental
+ID: CASE_07 | Setor: Tecnologia / Gestão Predial e Condomínios | Dores: falta de ferramentas de gestão de manutenção, processos descentralizados em condomínios, baixa adesão de zeladores a sistemas, necessidade de painel administrativo geral
+ID: CASE_08 | Setor: Saúde / Pesquisa e Tecnologia | Dores: gestão manual de dados de pesquisa, lentidão no preenchimento de prontuários, espaço amostral reduzido por burocracia, falta de ferramenta móvel de coleta de dados
+ID: CASE_09 | Setor: Construção Civil / Tecnologia Imobiliária | Dores: desorganização na rotina de corretores de imóveis, lentidão no acesso a informações de vendas, falta de ferramenta de vendas móvel
+ID: CASE_10 | Setor: Automotivo / Tecnologia | Dores: ausência de gestão de serviços e histórico automobilístico integrado, falta de conexão direta entre proprietários e compradores de carros modificados, necessidade de gerenciamento administrativo de anúncios
+ID: CASE_11 | Setor: Saúde Mental / Tecnologia e Vendas | Dores: dificuldade em escalar vendas online, limitação operacional na plataforma web antiga, necessidade de consultoria e direcionamento estratégico de produto
+ID: CASE_12 | Setor: Recrutamento e Seleção / Tecnologia | Dores: necessidade de expansão de plataforma, limitações de um blog simples, necessidade de captação de parceiros corporativos, validação de mercado
+</reference_cases_summary>
+
+<reference_cases_full>
+[{"id":"CASE_01","setor":"Saúde / Bem-estar e Tecnologia","dores":"necessidade de validação de mercado, falta de validação de conceito, ausência de MVP estruturado, necessidade de adequação às demandas dos usuários","problema":"A Metabolic ID precisava desenvolver um MVP de saúde guiado por especialistas para garantir que a plataforma se adequasse às necessidades reais dos usuários e do mercado.","solucao":"Realização de Product Discovery com entrevistas com especialistas e testes de usabilidade em protótipo de alta fidelidade para validar o conceito do aplicativo.","impacto":"Validação e desenvolvimento de um MVP perfeitamente alinhado às necessidades do público-alvo, oferecendo uma experiência de usuário otimizada."},{"id":"CASE_02","setor":"Saúde / Diagnósticos Médicos","dores":"demora na entrega de exames físicos, perda de contato com gestantes, processos logísticos e operacionais demorados, dificuldade de acesso a resultados","problema":"A entrega física de exames de gestantes de todo o estado demorava semanas, impedindo tratamentos rápidos e fazendo com que muitas mães não retornassem para buscar os resultados.","solucao":"Desenvolvimento do aplicativo 'Teste da Mamãe' para disponibilização online e imediata dos resultados, integrado a um calendário de saúde e chatbot de dúvidas.","impacto":"Redução do tempo de entrega de exames para até 15 dias, facilitação do acesso aos dados de saúde por gestantes e postos de saúde, e mais de 10.000 downloads na Google Play Store."},{"id":"CASE_03","setor":"Moda / Tecnologia","dores":"limitações orçamentárias, prazos apertados, necessidade de desenvolvimento de software sob medida","problema":"O cliente Guru da Moda necessitava de uma aplicação tecnológica de moda, mas possuía severas restrições de orçamento e de prazo de entrega.","solucao":"Desenvolvimento ágil de uma aplicação focada em moda, priorizando eficiência de escopo e otimização de recursos financeiros.","impacto":"Entrega de uma solução funcional dentro do prazo acordado e respeitando integralmente as restrições orçamentárias do cliente."},{"id":"CASE_04","setor":"Educação / Tecnologia","dores":"escassez de mão de obra de desenvolvimento, gargalo na implementação de protótipos, necessidade de expandir a capacidade de engenharia, rigidez na contratação tradicional","problema":"A Blox Education sofria com uma escassez persistente de mão de obra de desenvolvimento para transpor protótipos de design para a sua plataforma web de flexibilização curricular.","solucao":"Alocação de time de desenvolvimento flexível da Poli Júnior para atuar de forma ágil na implementação de telas, componentes e animações diretamente na plataforma web.","impacto":"Prorrogação do contrato inicial de 2 para 9 meses devido à excelência nas entregas, melhorando a experiência de uso da plataforma para os clientes finais."},{"id":"CASE_05","setor":"Tecnologia / Serviços Jurídicos","dores":"necessidade de validação de mercado, falta de definição de modelo de negócios, falta de protótipo de design, ausência de presença web","problema":"Um advogado com uma ideia de aplicativo para contratação de advogados precisava validar a aceitação do mercado e estruturar a experiência de uso e funcionamento da plataforma.","solucao":"Execução de Product Discovery com pesquisas de mercado, análise de concorrentes e design de interface, culminando no desenvolvimento de um site otimizado e um protótipo interativo.","impacto":"Criação de um protótipo funcional e simulação de funcionamento que validou o conceito da solução e estruturou as bases estratégicas e visuais para o lançamento do app."},{"id":"CASE_06","setor":"Saúde / Tecnologia Social","dores":"risco de depressão gestacional em mães de baixa renda, falta de acompanhamento de saúde contínuo, barreiras de acesso a especialistas de saúde mental","problema":"Pesquisadores de medicina da USP precisavam de um canal acessível para monitorar gestantes de baixa renda, focando na prevenção e suporte à depressão gestacional.","solucao":"Desenvolvimento de um aplicativo móvel de acompanhamento diário com tracking de atividades, tutoriais de saúde mental em áudio e biblioteca confiável sobre gravidez.","impacto":"Monitoramento de gravidez mais eficiente e contínuo, agilizando a identificação precoce de problemas de saúde mental em gestantes vulneráveis."},{"id":"CASE_07","setor":"Tecnologia / Gestão Predial e Condomínios","dores":"falta de ferramentas de gestão de manutenção, processos descentralizados em condomínios, baixa adesão de zeladores a sistemas, necessidade de painel administrativo geral","problema":"A gestora Manu necessitava de uma ferramenta inovadora que facilitasse a gestão e o controle de manutenções prediais para síndicos e zeladores, além de um painel de controle administrativo centralizado.","solucao":"Desenvolvimento de uma plataforma web integrada com aplicativo móvel PWA focada em usabilidade, executado através de metodologia ágil com entregas incrementais quinzenais.","impacto":"Redução do tempo de entrega pela metade, com liberação de uso em 40 dias, promovendo um crescimento de 5x no número de clientes e mais de 600% de aumento em condomínios cadastrados."},{"id":"CASE_08","setor":"Saúde / Pesquisa e Tecnologia","dores":"gestão manual de dados de pesquisa, lentidão no preenchimento de prontuários, espaço amostral reduzido por burocracia, falta de ferramenta móvel de coleta de dados","problema":"A Disciplina de Urologia da FMABC enfrentava gargalos no registro manual de dados de pacientes para pesquisas acadêmicas, limitando o volume e a precisão das análises científicas.","solucao":"Desenvolvimento do aplicativo móvel híbrido 'UroABC' utilizando o framework Ionic sob metodologia Scrum, permitindo aos médicos criar e preencher formulários clínicos de forma ágil.","impacto":"Otimização do processo diário de coleta de dados clínicos, permitindo expandir o tamanho da amostra estudada e elevando a acurácia das produções científicas da instituição."},{"id":"CASE_09","setor":"Construção Civil / Tecnologia Imobiliária","dores":"desorganização na rotina de corretores de imóveis, lentidão no acesso a informações de vendas, falta de ferramenta de vendas móvel","problema":"Uma construtora enfrentava dificuldades de comunicação e eficiência com seus corretores de imóveis, necessitando de uma ferramenta digital móvel para dinamizar as vendas diárias.","solucao":"Desenvolvimento de aplicativo móvel personalizado para corretores de imóveis, focado no acesso ágil a informações comerciais e otimização da rotina de vendas.","impacto":"Facilitação da rotina operacional de vendas dos corretores, otimizando o fluxo de contatos e a conversão de novos negócios para a construtora."},{"id":"CASE_10","setor":"Automotivo / Tecnologia","dores":"ausência de gestão de serviços e histórico automobilístico integrado, falta de conexão direta entre proprietários e compradores de carros modificados, necessidade de gerenciamento administrativo de anúncios","problema":"Um empreendedor identificou que entusiastas do automobilismo careciam de um sistema integrado para gerenciar manutenções de veículos modificados e comercializá-los diretamente.","solucao":"Desenvolvimento de um aplicativo mobile para registro de histórico veicular (manutenções, custos e fotos) integrado a uma plataforma CMS corporativa para gestão de anúncios e usuários.","impacto":"Lançamento bem-sucedido da plataforma SPE Garage nas lojas digitais de aplicativos, estruturando um modelo de negócio inovador para entusiastas automotivos."},{"id":"CASE_11","setor":"Saúde Mental / Tecnologia e Vendas","dores":"dificuldade em escalar vendas online, limitação operacional na plataforma web antiga, necessidade de consultoria e direcionamento estratégico de produto","problema":"Uma startup de saúde mental online necessitava escalar seu modelo de negócios e alavancar vendas digitais, mas carecia de uma plataforma web robusta e de governança ágil.","solucao":"Desenvolvimento de software de alta performance sob escopo aberto e metodologia Scrum, liderado por um Product Owner dedicado e equipe de engenharia multidisciplinar.","impacto":"Modernização tecnológica e estruturação de processos ágeis que permitiram escalar a tração comercial e as vendas da startup no meio digital."},{"id":"CASE_12","setor":"Recrutamento e Seleção / Tecnologia","dores":"necessidade de expansão de plataforma, limitações de um blog simples, necessidade de captação de parceiros corporativos, validação de mercado","problema":"A Wahojobs possuía apenas um blog de vagas remotas e necessitava expandi-lo para um portal de emprego de alta performance para suportar parcerias com empresas internacionais.","solucao":"Redesenho da identidade visual e desenvolvimento web sob escopo aberto e metodologia MVP, permitindo lançamentos graduais de funcionalidades de recrutamento.","impacto":"Atingimento de 800 mil acessos no terceiro mês de lançamento e estabelecimento de parcerias ativas com mais de 100 empresas internacionais no portal."}]
+</reference_cases_full>
+
+<task_update>
+Gere o Passo 1 da cadência.
+</task_update>
