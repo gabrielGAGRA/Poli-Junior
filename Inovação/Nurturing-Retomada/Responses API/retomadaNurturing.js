@@ -97,7 +97,7 @@ function syncAndSummarize() {
         let hitProcessingLimit = false;
 
         let deals = PipedriveRepository.fetchDealsByFilter(11955);
-        
+
         // Fase 1: Desduplicar TODOS os cards antes de qualquer filtro de estágio ou processamento
         deals = deduplicateDeals(deals);
 
@@ -250,7 +250,7 @@ function syncAndSummarize() {
                 const results = OpenAIRepository.runWorkflowsLocally(workflowsToRun, {
                     maxRuntimeMs: MAX_EXECUTION_TIME - (Date.now() - SCRIPT_START_TIME),
                     chunkSize: Number(SUMMARY_OPS.OPENAI_CHUNK_SIZE || BATCH_OPS.OPENAI_CHUNK_SIZE || 5),
-                    onSuccess: function(res) {
+                    onSuccess: function (res) {
                         const resultText = res.result.output_text || res.result;
                         const content = `<h1>${AGENT_CONFIG.RESUMO_PREFIX}</h1>\n${resultText}`;
                         const dealId = res.meta.dealId;
@@ -606,7 +606,7 @@ function executeEmailCadence() {
                 const results = OpenAIRepository.runWorkflowsLocally(workflowsToRun, {
                     maxRuntimeMs: MAX_EXECUTION_TIME - (Date.now() - SCRIPT_START_TIME),
                     chunkSize: Number(EMAIL_OPS.OPENAI_CHUNK_SIZE || BATCH_OPS.OPENAI_CHUNK_SIZE || 5),
-                    onSuccess: function(res) {
+                    onSuccess: function (res) {
                         try {
                             const emailData = typeof res.result === 'string' ? JSON.parse(res.result) : res.result;
                             const dealId = res.meta.dealId;
@@ -802,7 +802,7 @@ function checkIfInternalError(errorMsg) {
     // 1. OpenAI Limit Reached/Server Error (429 or >=500)
     // 2. Network/Fetch errors (e.g. "No HTTP Response returned", dns/network/timeout)
     // 3. fetchAll failed entirely
-    if (msg.includes("OpenAI Limit Reached/Server Error") || 
+    if (msg.includes("OpenAI Limit Reached/Server Error") ||
         msg.includes("No HTTP Response returned") ||
         msg.includes("fetchAll failed entirely") ||
         msg.includes("Network connection") ||
@@ -1540,10 +1540,11 @@ const OpenAI_ResponsesAPI = {
         else if (options.reasoning_effort) payload.reasoning = { effort: options.reasoning_effort };
         if (options.temperature !== undefined) payload.temperature = options.temperature;
         if (options.top_p !== undefined) payload.top_p = options.top_p;
-        if (options.max_completion_tokens !== undefined) {
-            payload.max_completion_tokens = options.max_completion_tokens;
+        const maxTokens = options.max_output_tokens;
+        if (maxTokens !== undefined) {
+            payload.max_output_tokens = maxTokens;
         } else {
-            payload.max_completion_tokens = 2000; // Limite padrão para evitar pré-alocação exagerada de tokens no TPM
+            payload.max_output_tokens = 800; // Limite padrão reduzido para 1000 para liberar espaço no TPM e aumentar paralelismo
         }
 
         return payload;
@@ -1838,9 +1839,9 @@ var OpenAIRepository = {
                         console.error(`[ERROR] Workflow failed. Module ID: ${state.workflowId}, Error: ${state.error.message}`);
                         pendingLogs.push([currentTimestamp, state.data.meta.dealId, state.workflowId, safeInput, "", duration, state.error.message]);
                         const isInternal = checkIfInternalError(state.error.message);
-                        allResponses.push({ 
-                            meta: state.data.meta, 
-                            result: null, 
+                        allResponses.push({
+                            meta: state.data.meta,
+                            result: null,
                             errorType: 'EXECUTION_FAIL',
                             errorMsg: state.error.message,
                             isInternal: isInternal

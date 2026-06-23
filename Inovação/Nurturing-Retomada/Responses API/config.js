@@ -51,13 +51,13 @@ const CONFIG_BASE = {
             // O tempo máximo de execução é unificado via MAX_EXECUTION_TIME em config_tecnico.js.
             get GAS_RUNTIME_BUDGET_MS() { return MAX_EXECUTION_TIME; },
             // Tempo máximo reservado para a chamada/batch da OpenAI dentro do fluxo de resumo.
-            OPENAI_CHUNK_SIZE: 4,
+            OPENAI_CHUNK_SIZE: 6,
             EMPTY_NOTES_DELETE_CAP: 100
         },
 
         EMAIL: {
             get GAS_RUNTIME_BUDGET_MS() { return MAX_EXECUTION_TIME; },
-            OPENAI_CHUNK_SIZE: 3
+            OPENAI_CHUNK_SIZE: 5
         },
 
         METADATA: {
@@ -82,7 +82,7 @@ const CONFIG_BASE = {
 
         BATCH: {
             get OPENAI_BATCH_RUNTIME_BUDGET_MS() { return MAX_EXECUTION_TIME; },
-            OPENAI_CHUNK_SIZE: 3,
+            OPENAI_CHUNK_SIZE: 4,
             LOG_BATCH_SHEET_NAME: "IA - Retomada (Logs)"
         }
     },
